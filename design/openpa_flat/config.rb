@@ -24,4 +24,4 @@ output_style = :compact
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
-add_import_path "../../../../extension/ocbootstrap/design/ocbootstrap/scss"
+add_import_path "/Users/luca/git/ocbootstrap/design/ocbootstrap/scss"

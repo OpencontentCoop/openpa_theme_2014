@@ -27,7 +27,10 @@
 
 </head>
 <body class="no-js {$pagedata.current_theme}">
-<script type="text/javascript">{literal}//<![CDATA[var UiContext = {/literal}"{$ui_context}"{literal}, UriPrefix = {/literal}{'/'|ezurl()}{literal}, PathArray = [{/literal}{if is_set( $pagedata.path_array[0].node_id )}{foreach $pagedata.path_array|reverse as $path}{$path.node_id}{delimiter},{/delimiter}{/foreach}{/if}{literal}];(function(){var c = document.body.className;c = c.replace(/no-js/, 'js');document.body.className = c;})();//]]>{/literal}</script>
+
+<script type="text/javascript">{literal}//<![CDATA[
+(function(){var c = document.body.className;c = c.replace(/no-js/, 'js');document.body.className = c;})();
+//]]>{/literal}</script>
 
 <div id="page">
 
@@ -40,12 +43,12 @@
 {cache-block expiry=86400 keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
 
     {if and( $pagedata.top_menu, $pagedata.is_login_page|not() )}
-    {include uri='design:nav/nav-main.tpl'}
+      {include uri='design:page_topmenu.tpl'}
     {/if}
 
-    {*if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
+    {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
         {include uri='design:page_toolbar.tpl'}
-    {/if*}
+    {/if}
 
     {if and( $pagedata.is_homepage|not(), $pagedata.is_search_page|not(), $pagedata.show_path, array( 'edit', 'browse' )|contains( $ui_context )|not(), is_set( $module_result.content_info ) )}
         {include uri='design:breadcrumb.tpl'}
