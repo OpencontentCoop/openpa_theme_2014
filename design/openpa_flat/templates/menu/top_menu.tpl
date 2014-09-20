@@ -7,39 +7,47 @@
 
         <ul class="horizontal_list main_menu clearfix">
             {def $top_menu_node_ids = openpaini( 'TopMenu', 'NodiCustomMenu', array() )}
-            {if openpaini( 'TopMenu', 'NodiCustomMenu', false() )|not()}
-                {def $root_node=fetch( 'content', 'node', hash( 'node_id', $pagedata.root_node) )
-                     $top_menu_items=fetch( 'content', 'list', hash( 'parent_node_id', $pagedata.root_node,
-                                            'sort_by', $root_node.sort_array,
-                                            'class_filter_type', 'include',
-                                            'load_data_map', false(),
-                                            'class_filter_array', openpaini( 'TopMenu', 'IdentificatoriMenu' ),
-                                            'limit', openpaini( 'TopMenu', 'LimitePrimoLivello', 4 ) ) )}
-                {foreach $top_menu_items as $node}
-                    {set $top_menu_node_ids = $top_menu_node_ids|append( $node.node_id )}
-                {/foreach}
-            {/if}
 
             <li class="menu-item firstli {if $current_node_id|eq(ezini( 'NodeSettings', 'RootNode', 'content.ini' ))}current{/if}">
                 <a title="Link a homepage" href={'/'|ezurl()}><b>Home</b></a>
             </li>
 
-            {def $top_menu_node_ids_count = $top_menu_node_ids|count()
-                 $position = array()}
+            {def $top_menu_node_ids_count = $top_menu_node_ids|count()}
 
             {if $top_menu_node_ids_count}
-                {foreach $top_menu_node_ids as $key => $id}
-                    {set $position = array()}
-                    {if $key|eq(0)}
-                        {set $position = $position|append( "firstli" )}
-                    {/if}
-                    {if $top_menu_node_ids_count|eq( $key|inc )}
-                        {set $position = $position|append( "lastli" )}
-                    {/if}
 
-                    {include uri='design:menu/cached/topmenu.tpl' root_node_id=$id position=$position}
-                    {*top_menu_cached( hash( 'root_node_id', $id, 'position', $position ) )*}
-
+                {foreach $top_menu_node_ids as $id}
+                    {def $tree_menu = tree_menu( hash( 'root_node_id', $id, 'scope', 'top_menu'))}
+                    <li class="menu-item{if or($tree_menu.item.node_id|eq($current_node_id), $pagedata.path_id_array|contains($tree_menu.item.node_id))} current{/if}">
+                        {include name=top_menu uri='design:menu/top_menu_item.tpl' menu_item=$tree_menu bold=true()}
+                        {if $tree_menu.has_children}
+                            {if $tree_menu.max_recursion|eq(1)}
+                                <div class="sub_menu_wrap">
+                                    <ul class="sub_menu">
+                                        {foreach $tree_menu.children as $child}
+                                            <li>{include name="top_sub_menu" uri='design:menu/top_menu_item.tpl' menu_item=$child}</li>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                            {else}
+                                <div class="sub_menu_wrap items-{count($tree_menu.children)}">
+                                    {foreach $tree_menu.children as $child}
+                                    <div class="sub_menu-item">
+                                        {include name="top_sub_menu" uri='design:menu/top_menu_item.tpl' menu_item=$child bold=true()}
+                                        {if $child.has_children}
+                                            <ul class="sub_menu">
+                                                {foreach $child.children as $sub_child}
+                                                    <li>{include name="top_sub_menu" uri='design:menu/top_menu_item.tpl' menu_item=$sub_child}</li>
+                                                {/foreach}
+                                            </ul>
+                                        {/if}
+                                    </div>
+                                    {/foreach}
+                                </div>
+                            {/if}
+                        {/if}
+                    </li>
+                    {undef $tree_menu}
                 {/foreach}
             {/if}
 

@@ -2,76 +2,55 @@
 -------------------------------------------------
 */
 
-a.logo{
-  display: block;
-  img{
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-/* =typography
--------------------------------------------------
-*/
-
 .abstract{
+  @extend .clearfix;
   margin-bottom: $line-height-computed;
   font-size: floor(($font-size-base * 1.15));
   font-weight: 200;
   line-height: 1.4;
-}
-
-small.date{
-    display: block;
-}
-
-/* =nav-main
--------------------------------------------------
-*/
-
-.nav-main{
-  .navbar-collapse.in{
-    overflow-y: visible !important;
-  }
-  //.dropdown-toggle{        /* disable these rules      */
-  //  @extend .hidden-sm;    /* to have a full           */
-  //  @extend .hidden-md;    /* dropdown menu            */
-  //  @extend .hidden-lg;    /* also on sm,md,lg screens */
-  //}
-  .nav-parent{
-    display: none;      /* enable this to have full dropdown     */
-    //@extend .hidden-xs;   /* disable this to have full-dropdown        */
-  }
-
-  .dropdown-toggle i{
-    @media (max-width: $screen-sm-min){
-      float: right;
-    }
-    margin: 3px 0 0 4px;
-  }
-
-  .open{
-    .dropdown-toggle i.fa-chevron-down{@extend .fa-chevron-up;}
-  }
-}
-
-/* =nav-tools
--------------------------------------------------
-*/
-
-.nav-tools{
-  &.navbar-default{
-    background-color: transparent;
-    border: none;
-  }
-  #login .panel{
-    background-color: $navbar-default-link-active-bg !important;
-    padding: 10px;
-    z-index: 1200;
-    @media (min-width: $screen-sm-min){
-      width: 280px !important;
+  .image{
+    &.pull-left{
+      margin: 0 1em .5em 0;
     }
   }
+  ul {
+    list-style: outside disc;
+    margin-left: 1em;
+  }
+  ul li {
+    position: relative;
+    left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.main_image{
+  @extend .photoframe;
+  @extend .shadow;
+  @extend .r_corners;
+  @extend .wrapper;
+  @extend .f_left;
+  @extend .f_xs_none;
+  @extend .m_xs_right_0;
+  @extend .m_xs_bottom_30;
+  @extend .d_xs_inline_b;
+  @extend .m_right_20;
+}
+
+.content-title h1{
+  color: $brand-secondary;
+  text-transform: uppercase;
+  small{
+    font-weight: unset;
+    font-size: 50%;
+    text-transform: none;
+    @extend .d_xs_none;
+  }
+}
+
+.content-detail > .row{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* =nav-facets

@@ -124,7 +124,7 @@
             sticky();
 
             // current menu
-            $('[role="navigation"] ul > li > a').each( function(e){
+            $('[role="navigation"] ul > li:not(.context-menu) > a').each( function(e){
                 var node = $(this).data( 'contentnode' );
                 if (node) {
                     var href = $(this).attr( 'href' );
@@ -207,10 +207,10 @@
         };
         rmenu();
 
-        $('.side_menu').on('click', 'a', function (e) {
-            if ($(this).parent().children('ul').length) {
-                $(this).parent().toggleClass('active').end();
-                $(this).parent().next().slideToggle();
+        $('.side_menu').on('click', 'span', function (e) {
+            if ($(this).closest('li').children('ul').length) {
+                $(this).closest('li').toggleClass('active');
+                //$(this).closest('li').next().slideToggle();
                 e.preventDefault();
             }
         });

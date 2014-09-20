@@ -9,7 +9,7 @@
          $aree_tematiche_level_2_count=0
          $current_node_in_path_2 = first_set($pagedata.path_array[2].node_id, 0  )}
 
-    <li class="menu-item firstli">
+    <li class="menu-item context-menu firstli">
         {include uri='design:menu/cached/topmenu_item.tpl' node=$aree_tematiche b=true()}
         {if $aree_tematiche_level_2|count()}
             <div class="sub_menu_wrap">

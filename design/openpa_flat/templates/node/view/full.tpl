@@ -12,11 +12,9 @@
 
     <div class="content-title">
 
-        <h1>{$node.name|wash()}</h1>
-
-        {if $openpa.content_date.show_date}
-            {include uri=$openpa.content_date.template}
-        {/if}
+        <h1>
+            {$node.name|wash()}
+        </h1>
 
     </div>
 
@@ -26,12 +24,15 @@
 
     <div class="content-main{if $openpa.control_menu.show_side_menu|not()} wide{/if}">
 
+        {include uri=$openpa.content_main.template}
 
+        {include uri=$openpa.content_detail.template}
 
+        {if $openpa.content_date.show_date}
+            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
+        {/if}
 
     </div>
 
-    {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
-    {*include uri='design:parts/content-related.tpl'*}
 
 </div>

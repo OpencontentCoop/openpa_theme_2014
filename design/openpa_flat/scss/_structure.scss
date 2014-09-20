@@ -1,24 +1,25 @@
 .content-title{
-  @extend .col-sm-12;
+  @extend .col-md-12;
+  @extend .m_bottom_20;
 }
 
 .nav-section,
 .nav-facets{
-  @extend .col-sm-3;
+  @extend .col-md-3;
 }
 
 .content-main{
-  @extend .col-sm-9;
+  @extend .col-md-9;
   &.wide{
-    @extend .col-sm-12;
+    @extend .col-md-12;
   }
   .full-stack &{
-    @extend .col-sm-6;
+    @extend .col-md-6;
   }
 }
 
 .content-related{
-  @extend .col-sm-3;
+  @extend .col-md-3;
 }
 
 

@@ -340,9 +340,14 @@ li:hover .tooltip,a:hover .tooltip,button:hover .tooltip{
   background:#f2f4f5;
   padding:9px 0;
 }
-.widget figcaption{
-  background:#323a45;
+.widget_title{
+  background:$brand-secondary;
   padding:15px 20px 14px;
+  *{
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+  }
 }
 .widget figcaption[class*="relative"]{
   padding-right:85px;
@@ -538,7 +543,7 @@ aside .addthis_widget_container{
   cursor:pointer;
 }
 .a_title.active{
-  background:#323a45;
+  background:$brand-secondary;
 }
 .a_title [class*="us_icon"]{
   position:absolute;
