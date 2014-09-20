@@ -207,5 +207,13 @@
         };
         rmenu();
 
+        $('.side_menu').on('click', 'a', function (e) {
+            if ($(this).parent().children('ul').length) {
+                $(this).parent().toggleClass('active').end();
+                $(this).parent().next().slideToggle();
+                e.preventDefault();
+            }
+        });
+
     });
 })(jQuery);

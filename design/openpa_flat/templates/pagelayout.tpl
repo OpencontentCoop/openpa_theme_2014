@@ -3,27 +3,28 @@
 <!--[if IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" class="ie ie9" lang="{$site.http_equiv.Content-language|wash}"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="{$site.http_equiv.Content-language|wash}"><!--<![endif]-->
 <head>
-    {def $basket_is_empty = cond( $current_user.is_logged_in, fetch( shop, basket ).is_empty, 1 )
-         $user_hash = concat( $current_user.role_id_list|implode( ',' ), ',', $current_user.limited_assignment_value_list|implode( ',' ) )}
+
+{def $basket_is_empty = cond( $current_user.is_logged_in, fetch( shop, basket ).is_empty, 1 )
+     $user_hash_cache_key = concat( $current_user.role_id_list|implode( ',' ), ',', $current_user.limited_assignment_value_list|implode( ',' ) )}
 
 
-    {if is_set( $extra_cache_key )|not}
-        {def $extra_cache_key = ''}
-    {/if}
+{if is_set( $extra_cache_key )|not}
+    {def $extra_cache_key = ''}
+{/if}
 
 {cache-block expiry=86400  keys=array( $module_result.uri, $basket_is_empty, $current_user.contentobject_id, $extra_cache_key )}
-    {def $pagedata = openpapagedata()
-         $locales = fetch( 'content', 'translation_list' )
-         $current_node_id = $pagedata.node_id}
+{def $pagedata = openpapagedata()
+     $locales = fetch( 'content', 'translation_list' )
+     $current_node_id = $pagedata.node_id}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Site: {ezsys( 'hostname' )} -->
-    {if ezsys( 'hostname' )|contains( 'opencontent' )}<meta name="robots" content="NOINDEX,NOFOLLOW" />{/if}
+<!-- Site: {ezsys( 'hostname' )} -->
+{if ezsys( 'hostname' )|contains( 'opencontent' )}<meta name="robots" content="NOINDEX,NOFOLLOW" />{/if}
 
-    {include uri='design:page_head.tpl'}
-    {include uri='design:page_head_style.tpl'}
-    {include uri='design:page_head_script.tpl'}
+{include uri='design:page_head.tpl'}
+{include uri='design:page_head_style.tpl'}
+{include uri='design:page_head_script.tpl'}
 
 </head>
 <body class="no-js {$pagedata.current_theme}">
@@ -40,9 +41,9 @@
 
 {/cache-block}
 
-{cache-block expiry=86400 keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
+{cache-block expiry=86400 keys=array( $module_result.uri, $user_hash_cache_key, $extra_cache_key )}
 
-    {if and( $pagedata.top_menu, $pagedata.is_login_page|not() )}
+    {if and( $pagedata.top_menu, $pagedata.is_login_page|not(), $pagedata.is_edit|not )}
       {include uri='design:page_topmenu.tpl'}
     {/if}
 
@@ -59,7 +60,7 @@
 
     {include uri='design:page_mainarea.tpl'}
 
-{cache-block keys=array( $module_result.uri, $user_hash, $access_type.name, $extra_cache_key )}
+{cache-block keys=array( $module_result.uri, $user_hash_cache_key, $access_type.name, $extra_cache_key )}
 
     {include uri='design:page_footer.tpl'}
 

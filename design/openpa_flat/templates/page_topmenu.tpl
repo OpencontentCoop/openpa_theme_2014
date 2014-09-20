@@ -9,7 +9,7 @@
         <span class="centered_db "></span>
     </button>
 
-    {include uri=concat('design:menu/', $pagedata.top_menu, '.tpl')}
+    {include uri=concat('design:menu/top_menu.tpl')}
 
   </section>
 </div>

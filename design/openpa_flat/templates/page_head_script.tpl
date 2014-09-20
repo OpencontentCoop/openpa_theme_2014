@@ -6,6 +6,7 @@ var UiContext = {/literal}"{$ui_context}"{literal}, UriPrefix = {/literal}{'/'|e
 {ezscript_load( array(
   'ezjsc::jquery',
   'ezjsc::jqueryUI',
+  'ezjsc::jqueryio',
   'bootstrap/tab.js',
   'bootstrap/dropdown.js',
   'bootstrap/collapse.js',
