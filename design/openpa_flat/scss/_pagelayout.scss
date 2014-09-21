@@ -233,19 +233,19 @@ body{
   left: 0;
   width: 200px;
   &.items-2{
-    width: 360px;
+    width: $submenu_item_width * 2 + 20px;
   }
   &.items-3{
-    width: 540px;
+    width: $submenu_item_width * 3 + 20px;
   }
   &.items-4{
-    width: 720px;
+    width: $submenu_item_width * 4 + 20px;
   }
   &.items-5{
-    width: 900px;
+    width: $submenu_item_width * 5 + 20px;
   }
   &.items-6{
-    width: 1080px;
+    width: $submenu_item_width * 6 + 20px;
   }
   @extend .w_xs_auto;
   padding: 0;
@@ -268,7 +268,7 @@ body{
   visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 350px;
+  max-height: 450px;
   &:after {
     content: "";
     width: 100%;
@@ -305,7 +305,7 @@ body{
 
   .sub_menu-item{
     margin: 10px 0;
-    width: 180px;
+    width: $submenu_item_width;
     @extend .w_xs_auto;
     @extend .f_left;
     @extend .f_xs_none;
