@@ -6465,7 +6465,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; color: #696e6e; background: #
 .btn-extra-menu .badge { color: #8e2140; background-color: white; }
 
 /* line 227, ../scss/_pagelayout.scss */
-.sub_menu_wrap { position: absolute; left: 0; width: 180px; padding: 0; background: #fff; border-top-width: 3px; border-top-style: solid; border-color: #428944; margin-top: 10px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -webkit-transform: translateY(35px); -moz-transform: translateY(35px); -o-transform: translateY(35px); -ms-transform: translateY(35px); transform: translateY(35px); opacity: 0; visibility: hidden; overflow-x: hidden; overflow-y: auto; max-height: 350px; }
+.sub_menu_wrap { position: absolute; left: 0; width: 200px; padding: 0; background: #fff; border-top-width: 3px; border-top-style: solid; border-color: #428944; margin-top: 10px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -webkit-transform: translateY(35px); -moz-transform: translateY(35px); -o-transform: translateY(35px); -ms-transform: translateY(35px); transform: translateY(35px); opacity: 0; visibility: hidden; overflow-x: hidden; overflow-y: auto; max-height: 350px; }
 /* line 235, ../scss/_pagelayout.scss */
 .sub_menu_wrap.items-2 { width: 360px; }
 /* line 238, ../scss/_pagelayout.scss */
@@ -6485,7 +6485,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; color: #696e6e; background: #
 /* line 298, ../scss/_pagelayout.scss */
 .sub_menu_wrap ul.sub_menu li a { display: block; padding: 7.7px 20px; }
 /* line 306, ../scss/_pagelayout.scss */
-.sub_menu_wrap .sub_menu-item { margin: 10px 0; width: 200px; }
+.sub_menu_wrap .sub_menu-item { margin: 10px 0; width: 180px; }
 
 /* line 326, ../scss/_pagelayout.scss */
 #menu_button { background: #428944; padding: 7px 10px; width: 60px; }

@@ -231,7 +231,7 @@ body{
   @extend .r_corners;
   position: absolute;
   left: 0;
-  width: 180px;
+  width: 200px;
   &.items-2{
     width: 360px;
   }
@@ -305,7 +305,7 @@ body{
 
   .sub_menu-item{
     margin: 10px 0;
-    width: 200px;
+    width: 180px;
     @extend .w_xs_auto;
     @extend .f_left;
     @extend .f_xs_none;
