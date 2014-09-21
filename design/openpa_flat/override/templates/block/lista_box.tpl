@@ -1,5 +1,5 @@
 {def $openpa= object_handler($block)}
-{set_defaults('show_title', true())}
+{set_defaults(hash('show_title', true()))}
 
 {if $show_title}
 <div class="widget {$block.view}">

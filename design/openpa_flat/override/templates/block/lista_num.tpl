@@ -1,5 +1,5 @@
 {def $openpa= object_handler($block)}
-{set_defaults('show_title', true())}
+{set_defaults(hash('show_title', true()))}
 
 {if $show_title}
 <div class="widget {$block.view}">
@@ -13,6 +13,7 @@
              root_node=$openpa.root_node
              i_view=line
              autoplay=0
+             image_class=squarethumb
              show_number=2}
     </div>
 

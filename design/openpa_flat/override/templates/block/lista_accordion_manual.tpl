@@ -1,5 +1,5 @@
 {def $openpa= object_handler($block)}
-{set_defaults( hash('show_title', true()) )}
+{set_defaults( hash('show_title', true(), 'items_per_row', 4) )}
 
 {if $show_title}
 <div class="widget {$block.view}">
@@ -9,7 +9,7 @@
 {/if}
     <div class="{if $show_title}widget_content {/if}accordion-container">
         {include uri='design:atoms/panels.tpl'
-        items_per_row=4
+        items_per_row=$items_per_row
         items=$openpa.content
         root_node=$openpa.root_node}
     </div>

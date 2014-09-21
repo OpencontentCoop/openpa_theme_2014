@@ -1,7 +1,7 @@
 {def $valid_nodes = $block.valid_nodes}
 {if $valid_nodes|count()|gt(0)}
 
-<div class="widget {$block.view}">
+<div class="widget_tabs {$block.view}">
 
 
 	{if $block.name}<h2 class="block-title">{$block.name}</h2>{else}<h2 class="hide">Altre informazioni</h2>{/if}

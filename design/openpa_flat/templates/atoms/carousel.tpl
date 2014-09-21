@@ -1,7 +1,8 @@
 {set_defaults( hash(
     'i_view', 'carousel',
     'items', array(),
-    'show_number', 1
+    'show_number', 1,
+    'image_class', 'carousel'
 ))}
 
 {if and( $root_node, $items )}
@@ -13,7 +14,7 @@
     <div id="carousel_{$root_node.node_id}" class="owl-carousel">
         {foreach $items as $item}
             <div class="item">
-                {node_view_gui content_node=$item view=$i_view image_class=carousel}
+                {node_view_gui content_node=$item view=$i_view image_class=$image_class}
             </div>
         {/foreach}
     </div>
