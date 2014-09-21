@@ -231,21 +231,21 @@ body{
   @extend .r_corners;
   position: absolute;
   left: 0;
-  width: 200px;
+  width: 180px;
   &.items-2{
-    width: 400px;
+    width: 360px;
   }
   &.items-3{
-    width: 600px;
+    width: 540px;
   }
   &.items-4{
-    width: 800px;
+    width: 720px;
   }
   &.items-5{
-    width: 1000px;
+    width: 900px;
   }
-  &.items-5{
-    width: 1200px;
+  &.items-6{
+    width: 1080px;
   }
   @extend .w_xs_auto;
   padding: 0;

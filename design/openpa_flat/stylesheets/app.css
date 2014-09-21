@@ -6465,17 +6465,17 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; color: #696e6e; background: #
 .btn-extra-menu .badge { color: #8e2140; background-color: white; }
 
 /* line 227, ../scss/_pagelayout.scss */
-.sub_menu_wrap { position: absolute; left: 0; width: 200px; padding: 0; background: #fff; border-top-width: 3px; border-top-style: solid; border-color: #428944; margin-top: 10px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -webkit-transform: translateY(35px); -moz-transform: translateY(35px); -o-transform: translateY(35px); -ms-transform: translateY(35px); transform: translateY(35px); opacity: 0; visibility: hidden; overflow-x: hidden; overflow-y: auto; max-height: 350px; }
+.sub_menu_wrap { position: absolute; left: 0; width: 180px; padding: 0; background: #fff; border-top-width: 3px; border-top-style: solid; border-color: #428944; margin-top: 10px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -webkit-transform: translateY(35px); -moz-transform: translateY(35px); -o-transform: translateY(35px); -ms-transform: translateY(35px); transform: translateY(35px); opacity: 0; visibility: hidden; overflow-x: hidden; overflow-y: auto; max-height: 350px; }
 /* line 235, ../scss/_pagelayout.scss */
-.sub_menu_wrap.items-2 { width: 400px; }
+.sub_menu_wrap.items-2 { width: 360px; }
 /* line 238, ../scss/_pagelayout.scss */
-.sub_menu_wrap.items-3 { width: 600px; }
+.sub_menu_wrap.items-3 { width: 540px; }
 /* line 241, ../scss/_pagelayout.scss */
-.sub_menu_wrap.items-4 { width: 800px; }
+.sub_menu_wrap.items-4 { width: 720px; }
 /* line 244, ../scss/_pagelayout.scss */
-.sub_menu_wrap.items-5 { width: 1000px; }
+.sub_menu_wrap.items-5 { width: 900px; }
 /* line 247, ../scss/_pagelayout.scss */
-.sub_menu_wrap.items-5 { width: 1200px; }
+.sub_menu_wrap.items-6 { width: 1080px; }
 /* line 272, ../scss/_pagelayout.scss */
 .sub_menu_wrap:after { content: ""; width: 100%; height: 10px; display: block; position: absolute; left: 0; top: -13px; }
 /* line 281, ../scss/_pagelayout.scss */
