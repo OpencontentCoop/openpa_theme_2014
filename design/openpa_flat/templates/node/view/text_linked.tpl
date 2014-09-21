@@ -1,5 +1,8 @@
-{if $node.class_identifier|eq('link')}
-  <a href={$node.data_map.location.content|ezurl()} title="{$node.name|wash()}">{$$node.name|wash()}</a>
-{else}
-  <a href={$node.url_alias|ezurl()}>{$node.name}</a>
-{/if}
+{def $openpa = object_handler($node)}
+<a href="{$openpa.content_link.full_link}">
+    {if is_set( $text )}
+        {$text|wash()}
+    {else}
+        {$node.name|wash()}
+    {/if}
+</a>

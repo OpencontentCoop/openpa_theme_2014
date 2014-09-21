@@ -62,9 +62,11 @@
 
 {cache-block keys=array( $module_result.uri, $user_hash_cache_key, $access_type.name, $extra_cache_key )}
 
-    {include uri='design:page_footer.tpl'}
-
 </div>
+
+{include uri='design:page_footer.tpl'}
+
+
 
 {include uri='design:page_footer_script.tpl'}
 

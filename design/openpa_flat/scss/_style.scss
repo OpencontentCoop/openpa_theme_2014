@@ -112,3 +112,60 @@
   overflow:hidden;
   white-space:nowrap;
 }
+
+
+/* =widget_tabs
+-------------------------------------------------
+*/
+.widget_tabs{
+  .tab-content{
+    @extend .tabs_content;
+    @extend .shadow;
+    @extend .r_corners;
+  }
+  .nav-tabs{
+    border: none !important;
+    @extend .tabs_nav;
+    @extend .f_xs_none;
+    li{
+      a{
+        border: none !important;
+        @extend .bg_light_color_1;
+        @extend .color_dark;
+        @extend .tr_delay_hover;
+        @extend .r_corners;
+        @extend .d_block;
+      }
+      &.active{
+        @extend .ui-tabs-active;
+      }
+    }
+  }
+}
+
+/* =carousel
+-------------------------------------------------
+*/
+.carousel-caption{
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 20px 10px;
+  right: 0;
+  text-align: left;
+  width: 100%;
+  h3{
+    @extend .slider_title_4;
+    @extend .color_light;
+    @extend .t_align_c;
+    a{
+      @extend .color_light;
+      font-weight: bold;
+    }
+  }
+}
+
+p.link{
+  text-align: right;
+}

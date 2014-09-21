@@ -15,6 +15,7 @@ body{
   @extend .relative;
   @extend .w_xs_auto;
   background:#fafbfb;
+  padding-bottom: 20px;
 }
 
 #header{
@@ -362,7 +363,7 @@ body{
   }
 }
 
-.nav-section .widget{
+.widget{
   @extend .shadow;
   @extend .r_corners;
   @extend .wrapper;

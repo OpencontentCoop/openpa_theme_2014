@@ -2,8 +2,6 @@
     {set-block scope=root variable=cache_ttl}0{/set-block}
 {/if}
 
-{$openpa.content_extra_info|attribute(show,2)}
-
 {if $openpa.content_tools.editor_tools}
     {include uri=$openpa.content_tools.template}
 {/if}
@@ -19,7 +17,7 @@
     </div>
 
     {if $openpa.control_menu.show_side_menu}
-        {include uri='design:full/parts/section_left.tpl'}
+        {include uri='design:openpa/full/parts/section_left.tpl'}
     {/if}
 
     <div class="content-main{if $openpa.control_menu.show_side_menu|not()} wide{/if}">

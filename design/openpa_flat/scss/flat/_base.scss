@@ -87,6 +87,9 @@
   -moz-border-radius:4px;
   border-radius:4px;
 }
+.r_corners_top{
+  @include border-top-radius(4px);
+}
 .vc_child:after{
   content:"";
   display:inline-block;
