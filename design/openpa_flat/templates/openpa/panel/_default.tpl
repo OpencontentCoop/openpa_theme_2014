@@ -1,6 +1,6 @@
 <div class="t_align_c">
     {if $node|has_attribute('image')}
-        {include uri='design:atoms/image.tpl' item=$node image_class=squaremedium css_classes="m_bottom_15"}
+        {include uri='design:atoms/image.tpl' item=$node image_class=medium css_classes="m_bottom_15"}
     {/if}
     <div class="caption">
         <h4 class="fw_medium color_dark">
