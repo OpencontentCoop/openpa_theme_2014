@@ -4,7 +4,7 @@
 	 $classes= openpaini( 'GestioneClassi', 'classi_da_escludere_dai_blocchi_ezflow', array())}
 {set_defaults( hash('show_title', true()) )}
 
-{if $show_title}
+{if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
     <div class="widget_title">
         <h3><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
@@ -155,6 +155,6 @@
 
 {/if}
 
-{if $show_title}
+{if and( $show_title, $block.name|ne('') )}
 </div>
 {/if}

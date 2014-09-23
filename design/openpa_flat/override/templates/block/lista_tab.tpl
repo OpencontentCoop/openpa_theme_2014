@@ -18,12 +18,6 @@
         {foreach $valid_nodes as $index => $child}
         <div class="tab-pane{if $index|eq(0)} active{/if}" id="{$block.id}-{$child.name|slugize()}">
             {node_view_gui content_node=$child view=panel}
-            <p class="link">
-                <a href={$child.url_alias|ezurl()} title="{$child.name|wash()}">
-                    Vai a {$child.name|wash()}
-                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
-                </a>
-            </p>
         </div>
         {/foreach}
     </div>

@@ -9,7 +9,11 @@
 <div class="content-view-full class-{$node.class_identifier} row">
 
     <div class="content-title">
-        <h1>{$node.name|wash()}</h1>
+
+        <h1>
+            {$node.name|wash()}
+        </h1>
+
     </div>
 
     {if $openpa.control_menu.show_side_menu}
@@ -20,11 +24,8 @@
 
         {include uri=$openpa.content_main.template}
 
-        {include uri=$openpa.content_detail.template}
-
-        {if $openpa.content_date.show_date}
-            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
-        {/if}
+        {include uri=$openpa.content_children.views.calendar.template
+                 current_calendar_view=$openpa.content_children.views.calendar.current_view }
 
     </div>
 

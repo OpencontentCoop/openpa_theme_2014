@@ -1,9 +1,4 @@
-{ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js') )}
-{ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css' ) )}
-
-{set_defaults(hash(
-  'height', 600
-))}
+{set_defaults(hash('height', 60, 'map_type', 'osm' ))}
 
 {def $markers = fetch( 'ocbtools', 'map_markers', hash( 'parent_node_id', $node.node_id ) )}
 
@@ -12,7 +7,11 @@
 <div class="row">
   <div class="col-md-9">
 	<div id="map-{$node.node_id}" style="height: {$height}px; width: 100%"></div>
-	
+
+{if $map_type|eq('osm')}
+
+    {ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js') )}
+    {ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css' ) )}
 	<script>
 	L.Icon.Default.imagePath = {'javascript/plugins/leaflet/images'|ezdesign()};
 	var map = L.map( 'map-{$node.node_id}' );
@@ -37,11 +36,25 @@
 	  {rdelim});
 	{rdelim});
 	</script>
+
+{elseif $map_type|eq('google')}
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    {ezscript_require( 'ezflgmapview.js' )}
+    <script type="text/javascript"><!--
+    var data_{$node.node_id} = {$markers|json_encode()};
+    google.maps.event.addDomListener(window, 'load', function(){ldelim}
+        eZFLGMapView( 'map-{$node.node_id}', new google.maps.LatLng(data_{$node.node_id}[0].lat,data_{$node.node_id}[0].lng), 13, data_{$node.node_id} );
+    {rdelim} );
+    --></script>
+
+{/if}
+
   </div>
   <div class="col-md-3">
 	<ul class="list-markers-text list-unstyled" style="height: {$height}px;overflow-y: auto">
 	{foreach $markers as $i => $marker}
-	  <li><a data-id="{$i}" href='{$marker.urlAlias}'>{$marker.popupMsg}</a></li>
+	  <li><a id="map-{$node.node_id}-{$i}" data-id="{$i}" href='{$marker.urlAlias}'>{$marker.popupMsg}</a></li>
 	{/foreach}
 	</ul>
   </div>

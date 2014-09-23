@@ -7,16 +7,20 @@
         <h3><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
     </div>
 {/if}
-    <div class="{if and( $show_title, $block.name|ne('') )}widget_content {/if}carousel-container">
-        {include uri='design:atoms/carousel.tpl'
-                items=$openpa.content
-                root_node=$openpa.root_node
-                autoplay=0
-                nav_controls=true()
-                nav_indicators= false()
-                interval=10000}
+    <div class="{if and( $show_title, $block.name|ne('') )}widget_content {/if}carousel-both-control">
+        {include name="carousel"
+		  uri='design:atoms/carousel.tpl'
+		  items=$openpa.content
+		  css_id=$block.id
+		  root_node=$openpa.root_node
+		  autoplay=10000
+		  pagination=true()
+		  navigation= false()
+		  items_per_row=1}
     </div>
 
 {if and( $show_title, $block.name|ne('') )}
 </div>
 {/if}
+
+{unset_defaults(array('show_title'))}

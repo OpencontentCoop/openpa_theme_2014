@@ -1,8 +1,18 @@
 {def $openpa = object_handler($node)}
-<a href="{$openpa.content_link.full_link}">
+<a href="{$openpa.content_link.full_link}" title="Link a {if is_set( $text )}{$text|wash()}{else}{$node.name|wash()}">
     {if is_set( $text )}
-        {$text|wash()}
+        {if is_set( $shorten )}
+            {$text|shorten($shorten)|wash()}
+        {else}
+            {$text|wash()}
+        {/if}
+
     {else}
-        {$node.name|wash()}
+        {if is_set( $shorten )}
+            {$node.name|shorten($shorten)|wash()}
+        {else}
+            {$node.name|wash()}
+        {/if}
+
     {/if}
 </a>

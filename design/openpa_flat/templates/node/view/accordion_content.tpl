@@ -5,6 +5,5 @@
 <p class="link">
     <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">
         Vai a {$node.name|wash()}
-        <span class="glyphicon glyphicon-circle-arrow-right"></span>
     </a>
 </p>

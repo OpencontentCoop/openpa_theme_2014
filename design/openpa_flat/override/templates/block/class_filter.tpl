@@ -23,7 +23,7 @@
 
     {if $nodes|count()|gt(0)}
 
-        {if $show_title}
+        {if and( $show_title, $block.name|ne('') )}
         <div class="widget {$block.view}">
 
             <div class="widget_title">
@@ -55,7 +55,7 @@
                     </div>
                 </fieldset>
             </form>
-        {if $show_title}
+        {if and( $show_title, $block.name|ne('') )}
             </div>
         </div>
         {/if}

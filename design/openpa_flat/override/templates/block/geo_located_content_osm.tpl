@@ -19,11 +19,11 @@
         <h3>{$block.name|wash()}</h3>
     </div>
     <div class="widget_content">
-{/if}
+        {/if}
 
-    {include uri='design:parts/children/map.tpl' map_type="google" view='line' node=hash( node_id, root)}
+        {include uri='design:parts/children/map.tpl' view='line' node=hash( node_id, root)}
 
-{if and( $show_title, $block.name|ne('') )}
+        {if and( $show_title, $block.name|ne('') )}
     </div>
 </div>
 {/if}

@@ -26,15 +26,7 @@
 
         {include uri=$openpa.content_detail.template}
 
-		{if $node|has_attribute( 'children_view' )}
-		  {include uri=concat('design:openpa/full/parts/children/', $node.data_map.children_view.class_content.options[$node.data_map.children_view.value[0]].name|downcase(), '.tpl')}
-		{else}
-		  {include uri='design:openpa/full/parts/children/default.tpl' view='line'}
-		{/if}
-
-		{if $openpa.content_date.show_date}
-            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
-        {/if}
+        {include uri=$openpa.content_children.template}
 
     </div>
 

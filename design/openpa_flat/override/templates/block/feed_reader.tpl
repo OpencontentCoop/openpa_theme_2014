@@ -7,7 +7,7 @@
      $offset = $block.custom_attributes.offset
      $res = feedreader( $source, $limit, $offset )}
 
-{if $show_title}
+{if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
 
     <div class="widget_title">
@@ -28,7 +28,7 @@
 
     </div>
 
-{if $show_title}
+{if and( $show_title, $block.name|ne('') )}
     </div>
 </div>
 {/if}

@@ -4,14 +4,14 @@
 
 {set_defaults( hash('show_title', true()) )}
 
-{if $show_title}
+{if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
     <div class="widget_title">
         <h3><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
     </div>
 {/if}
 
-<div class="{if $show_title}widget_content {/if}">
+<div class="{if and( $show_title, $block.name|ne('') )}widget_content {/if}">
 
 {if $valid_nodes_count|eq(1)}
 
@@ -127,6 +127,6 @@
 	</div>
 {/if}
 
-{if $show_title}
+{if and( $show_title, $block.name|ne('') )}
 </div>
 {/if}

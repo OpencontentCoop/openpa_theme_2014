@@ -9,19 +9,20 @@
 </div>
 *}
 
-{if $show_title}
-<div class="widget {$block.view}">
-    <div class="widget_title">
-        <h3><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
-    </div>
+<div class="relative carousel-top-control {if or( $show_title|not(), $block.name|eq('') )}title-placeholder{/if} {$block.view}">
+
+    {if and( $show_title, $block.name|ne('') )}
+        <h3 class="widget_title"><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
 {/if}
-    <div class="{if $show_title}widget_content {/if}accordion-container">
+
+    <div class="{if and( $show_title, $block.name|ne('') )}widget_content {/if}panels-container">
     {include uri='design:atoms/panels.tpl'
              items_per_row=$items_per_row
              items=$openpa.content
+             image_class=widemedium
              root_node=$openpa.root_node}
     </div>
 
-{if $show_title}
 </div>
-{/if}
+
+{unset_defaults( array('show_title', 'items_per_row') )}

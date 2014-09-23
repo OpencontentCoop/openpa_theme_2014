@@ -4,7 +4,7 @@
 {def $area = fetch( 'content', 'node', hash( 'node_id', $block.custom_attributes.parent_node_id ) )
      $current_user = fetch( 'user', 'current_user' )}
 
-    {if $show_title}
+    {if and( $show_title, $block.name|ne('') )}
     <div class="widget {$block.view}">
 
         <div class="widget_title">
@@ -32,7 +32,7 @@
             </form>
         
         {/if}
-    {if $show_title}
+    {if and( $show_title, $block.name|ne('') )}
         </div>
     </div>
     {/if}

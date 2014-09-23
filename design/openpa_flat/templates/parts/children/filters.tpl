@@ -17,7 +17,7 @@
 			  page_limit=$page_limit}  
 	{else}
 	
-	 {include uri='design:parts/children.tpl' view='line'}
+	 {include uri='design:parts/children/default.tpl' view='line'}
 	
 	{/if}
   </div>

@@ -1,6 +1,6 @@
 <div class="row frontpage">
     
-    <div class="col-md-8">    
+    <div class="col-md-9">    
         {if and( is_set( $zones[0].blocks ), $zones[0].blocks|count() )}
         {foreach $zones[0].blocks as $block}
         {if or( $block.valid_nodes|count(), 
@@ -15,7 +15,7 @@
     
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-3">
     
     {if and( is_set( $zones[1].blocks ), $zones[1].blocks|count() )}
     {foreach $zones[1].blocks as $block}

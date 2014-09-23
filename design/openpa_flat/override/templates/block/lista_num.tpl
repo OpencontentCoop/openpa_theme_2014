@@ -1,22 +1,19 @@
-{def $openpa= object_handler($block)}
+{def $openpa = object_handler($block)}
 {set_defaults(hash('show_title', true()))}
 
-{if $show_title}
-<div class="widget {$block.view}">
-    <div class="widget_title">
-        <h3><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
-    </div>
-{/if}
-    <div class="{if $show_title}widget_content {/if}carousel-container">
-    {include uri='design:atoms/carousel.tpl'
-             items=$openpa.content
-             root_node=$openpa.root_node
-             i_view=line
-             autoplay=0
-             image_class=squarethumb
-             show_number=2}
-    </div>
+<div class="relative carousel-top-control {if or( $show_title|not(), $block.name|eq('') )}title-placeholder{/if} {$block.view}">
 
-{if $show_title}
-</div>
+{if and( $show_title, $block.name|ne('') )}
+    <h3 class="widget_title"><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
 {/if}
+
+{include uri='design:atoms/carousel.tpl'
+         css_id=$block.id
+         items=$openpa.content
+         root_node=$openpa.root_node
+         i_view=panel
+         autoplay=0
+         image_class=squaremedium
+         items_per_row=2}
+</div>
+{unset_defaults(array('show_title'))}
