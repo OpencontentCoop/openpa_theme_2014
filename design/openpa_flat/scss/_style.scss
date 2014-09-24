@@ -138,6 +138,7 @@ h3.widget_title {
 }
 
 .widget {
+  @extend .m_bottom_10;
   .widget_title {
     background: $brand-secondary;
     padding: 15px 20px 14px;
@@ -158,7 +159,12 @@ h3.widget_title {
   background: #fff;
 }
 
+.widget_single{
+  @extend .m_bottom_10;
+}
+
 .widget_tabs {
+  @extend .m_bottom_10;
   .tab-content {
     @extend .tabs_content;
     @extend .shadow;

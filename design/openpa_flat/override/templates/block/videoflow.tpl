@@ -13,29 +13,16 @@
 {/if}
 
 <div class="widget {$block.view}">
-    <div class="widget_title">
-        <h3>{$block.name|wash()}</h3>
-    </div>
-    <div class="widget_content">
 
-{*
-{if $flash_node.parent.data_map.image.has_content}
-	{def $image_content = $flash_node.parent.data_map.image.content}
-	{if $image_content.is_valid}
-		{def $image = $image_content['ezflowmediablock']}
-	{elseif $flash_node.data_map.image.has_content}			
-		{def $image_content = $flash_node.data_map.image.content}
-		{if $image_content.is_valid}
-			{def $image = $image_content['ezflowmediablock']}
-		{/if}
-	{/if}
-{elseif $flash_node.data_map.image.has_content}			
-	{def $image_content = $flash_node.data_map.image.content}
-	{if $image_content.is_valid}
-		{def $image = $image_content['ezflowmediablock']}
-	{/if}
-{/if}
-*}
+        <div class="widget_title">
+        {if $block.name|ne('')}
+            <h3>{$block.name|wash()}</h3>
+        {else}
+            <h3><a title="{$flash_node.name|wash()}" href={$flash_node.url_alias|ezurl}>{$flash_node.name|shorten(73)|wash()}</a></h3>
+        {/if}
+        </div>
+
+    <div class="widget_content">
 
 {if $flash_node.data_map.cover.has_content}	
 	{def $image_content = $flash_node.data_map.cover.content}
@@ -60,15 +47,6 @@
 		{/if}
 	{/if}
 {/if}
-	
-<div class="square-box-gray video-description float-break"> 
-	<div class="attribute-header">
-	<h3>
-        <a title="{$flash_node.data_map.abstract.content.output.output_text|explode("<br />")|implode(" ")|strip_tags()|trim()}" href={$flash_node.url_alias|ezurl}>
-			{$flash_node.name|shorten(73)|wash()}
-		</a>
-  	</h3> 
-	</div>
 
     <div class="webtv-content">
         {if $image}
@@ -76,15 +54,14 @@
         {else}
             {def $style = concat( 'display:block;width:', $width, ';height:', $height, ';' )}        
         {/if}
-        {include uri="design:content/mediaplayer/video_player.tpl" attribute=$attribute params=hash( 'style', $style, 'image', 'icons/logo-player.png' )}
+        {include name=video_player uri="design:content/mediaplayer/video_player.tpl" attribute=$attribute params=hash( 'style', $style, 'image', 'icons/logo-player.png' )}
     </div>
     
-	<div class="bottom-content">
-		<a class="arrows" title="Entra nella sezione specifica {$flash_node.parent.name}" href={$flash_node.parent.url_alias|ezurl()}>
-			<span class="arrows-blue-r">Entra in {$flash_node.parent.name}</span>
+	<p class="link">
+		<a title="Entra nella sezione specifica {$flash_node.parent.name}" href={$flash_node.parent.url_alias|ezurl()}>
+			Entra in {$flash_node.parent.name}
 		</a>
-	</div>
-</div>
+	</p>
 
 
 

@@ -35,7 +35,7 @@
                 autoPlay: {cond( $autoplay|gt(0), $autoplay, 'false')},
                 navigation: {cond( $navigation|gt(0), 'true', 'false')},
                 pagination: {cond( $pagination|gt(0), 'true', 'false')},
-                navigationText: {cond( $navigation_text|gt(0), $navigation_text, false )}
+                navigationText: {cond( $navigation_text|ne(false()), $navigation_text, false )}
                 {rdelim});
             {rdelim});
     </script>
