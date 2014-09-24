@@ -20,15 +20,15 @@ ViewName[gmap]=Google Map
 [Singolo]
 Name=Oggetto singolo
 ViewName[]
-ViewName[singolo_img]=Solo immagine (grande)
-ViewName[singolo_imgtit]=Immagine e Titolo (grande)
-ViewName[singolo_img_interne]=Solo immagine (media, con titolo blocco)
+ViewName[singolo_img]=Solo immagine
+ViewName[singolo_imgtit]=Banner
+ViewName[singolo_img_interne]=Titolo e immagine
 ViewName[singolo_imgtit_interne]=Immagine e Titolo (media)
-ViewName[singolo_img_interne_piccolo]=Solo immagine (con blocco titolo)
-ViewName[singolo_imgtit_interne_piccolo]=Immagine e Titolo (media, con titolo blocco)
-ViewName[singolo_box_piccolo]=Titolo, immagine (piccola) e abstract (con blocco titolo)
-ViewName[singolo_box]=Titolo, immagine e abstract (con blocco titolo)
-ViewName[singolo_banner]=Titolo, immagine (piccola) e abstract (con blocco titolo, sfondo grigio)
+ViewName[singolo_img_interne_piccolo]=Line
+ViewName[singolo_imgtit_interne_piccolo]=Immagine e Titolo (con titolo blocco)
+ViewName[singolo_box_piccolo]=Line (immagine piccola con blocco titolo)
+ViewName[singolo_box]=Line (con blocco titolo)
+ViewName[singolo_banner]=Line (con blocco titolo, sfondo grigio)
 
 [Lista]
 Name=Lista di oggetti (assegnare un contenitore)

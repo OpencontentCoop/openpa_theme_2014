@@ -4,7 +4,7 @@
         <h3>{node_view_gui content_node=$valid_node view=text_linked text=$block.name}</h3>
     </div>
     <div class="widget_content">
-        {node_view_gui content_node=$valid_node view=line}
+        {node_view_gui content_node=$valid_node view=line image_class=small}
     </div>
 </div>
 
