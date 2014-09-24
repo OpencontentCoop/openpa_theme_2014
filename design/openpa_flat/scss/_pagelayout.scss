@@ -245,9 +245,9 @@ body{
     width: $submenu_item_width * 5 + 20px;
   }
   &.items-6{
-    width: $submenu_item_width * 5 + 20px;
+    width: $submenu_item_width * 5;
     .sub_menu-item{
-      width: $submenu_item_width - 20px;
+      width: $submenu_item_width - 30px;
     }
   }
   @extend .w_xs_auto;
