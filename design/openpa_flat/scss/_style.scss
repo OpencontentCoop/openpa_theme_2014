@@ -1,6 +1,9 @@
 /* =typography
 -------------------------------------------------
 */
+.content-main a{
+  text-decoration: underline;
+}
 
 .abstract {
   @extend .clearfix;
