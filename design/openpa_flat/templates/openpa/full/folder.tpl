@@ -26,7 +26,7 @@
 
         {include uri=$openpa.content_detail.template}
 
-        {include uri=$openpa.content_children.template}
+        {include uri=$openpa.control_children.template}
 
     </div>
 

@@ -20,16 +20,7 @@
 
         {include uri=$openpa.content_main.template}
 
-        {include uri=$openpa.content_detail.template}
-
-        {include uri=$openpa.content_infocollection.template}
-
-        {include uri=$openpa.control_children.template}
-
-        {if $openpa.content_date.show_date}
-            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
-        {/if}
-
+        {attribute_view_gui attribute=$node|attribute( 'survey' )}
 
 
     </div>
