@@ -1,5 +1,5 @@
 {def $openpa = object_handler($block)}
-{set_defaults(hash('show_title', true()))}
+{set_defaults(hash('show_title', true(), 'items_per_row', 2))}
 
 <div class="relative carousel-top-control {if or( $show_title|not(), $block.name|eq('') )}title-placeholder{/if} {$block.view}">
 
@@ -14,6 +14,6 @@
          i_view=panel
          autoplay=0
          image_class=squaremedium
-         items_per_row=2}
+         items_per_row=$items_per_row}
 </div>
-{unset_defaults(array('show_title'))}
+{unset_defaults(array('show_title','items_per_row'))}
