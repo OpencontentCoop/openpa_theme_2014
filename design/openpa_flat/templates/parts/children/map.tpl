@@ -60,4 +60,9 @@
   </div>
 
 </div>
+ 
+{else}
+
+{editor_warning( "Nessuna georeferenza trovata" )}
+  
 {/if}
