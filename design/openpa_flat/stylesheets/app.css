@@ -5238,12 +5238,12 @@ q { quotes: none; }
 embed { vertical-align: top; }
 
 /* line 28, ../scss/flat/_reset.scss */
-input, button { -webkit-appearance: none; outline: none; }
+input, button { outline: none; }
 
-/* line 32, ../scss/flat/_reset.scss */
+/* line 31, ../scss/flat/_reset.scss */
 button::-moz-focus-inner { border: 0; }
 
-/* line 35, ../scss/flat/_reset.scss */
+/* line 34, ../scss/flat/_reset.scss */
 html, body { height: 100%; }
 
 /* line 1, ../scss/flat/_base.scss */
