@@ -113,6 +113,7 @@
   right:0;
   top:26%;
   z-index:189;
+  @extend .reset_ul;
 }
 .social_widgets > li{
   margin-bottom:4px;

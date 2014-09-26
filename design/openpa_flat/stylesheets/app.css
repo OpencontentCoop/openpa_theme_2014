@@ -5232,7 +5232,7 @@ b, strong { font-weight: bold !important; }
 
 /*ul,ol{*/
 /* line 19, ../scss/flat/_reset.scss */
-.reset_ul, #header .header-top ul, .menu_wrap ul, .side_menu, .side_menu ul { list-style: none; }
+.reset_ul, .social_widgets, #header .header-top ul, .menu_wrap ul, .side_menu, .side_menu ul { list-style: none; }
 
 /* line 22, ../scss/flat/_reset.scss */
 q { quotes: none; }
@@ -5562,7 +5562,7 @@ h5 { font-size: 1.15em; }
 h6 { font-size: 1em; }
 
 /* line 18, ../scss/flat/_typography.scss */
-.color_dark, .widget_tabs .nav-tabs li a, #header .header-bottom .header-searchbox .info dl dd, #header .header-bottom .header-searchbox .info dl dd a, .sub_menu_wrap ul.sub_menu li a, .sub_menu_wrap b, .side_menu .menu-handler { color: #292f38; }
+.color_dark, .widget_tabs .nav-tabs li a, #header .header-bottom .header-searchbox .info dl dd, #header .header-bottom .header-searchbox .info dl dd a, .sub_menu_wrap ul.sub_menu li a, .sub_menu_wrap b, .side_menu .menu-handler { color: #111; }
 
 /* line 21, ../scss/flat/_typography.scss */
 .color_grey { color: #838a8f; }
@@ -5625,7 +5625,7 @@ s { color: #6a6a6a; }
 .bg_light_color_3 { background: #fff; }
 
 /* line 82, ../scss/flat/_typography.scss */
-.bg_color_dark_1 { background: #292f38; }
+.bg_color_dark_1 { background: #111; }
 
 /* line 85, ../scss/flat/_typography.scss */
 .bg_color_dark_2 { background: #323a45; }
@@ -5721,55 +5721,55 @@ s { color: #6a6a6a; }
 /* line 111, ../scss/flat/_navigation.scss */
 .social_widgets { position: fixed; right: 0; top: 26%; z-index: 189; }
 
-/* line 117, ../scss/flat/_navigation.scss */
+/* line 118, ../scss/flat/_navigation.scss */
 .social_widgets > li { margin-bottom: 4px; transition: all .4s ease; }
 
-/* line 121, ../scss/flat/_navigation.scss */
+/* line 122, ../scss/flat/_navigation.scss */
 .social_widgets > li.opened { -webkit-transform: translateX(-265px); -moz-transform: translateX(-265px); -o-transform: translateX(-265px); -ms-transform: translateX(-265px); transform: translateX(-265px); z-index: 1; }
 
-/* line 129, ../scss/flat/_navigation.scss */
+/* line 130, ../scss/flat/_navigation.scss */
 .c_info_list, .w_break { word-break: break-all; }
 
-/* line 132, ../scss/flat/_navigation.scss */
+/* line 133, ../scss/flat/_navigation.scss */
 .c_info_list .contact_e { padding-left: 20px; display: block; }
 
-/* line 136, ../scss/flat/_navigation.scss */
+/* line 137, ../scss/flat/_navigation.scss */
 .c_info_list i { line-height: inherit; }
 
-/* line 142, ../scss/flat/_navigation.scss */
+/* line 143, ../scss/flat/_navigation.scss */
 .vertical_list_type_2 li, .vertical_list_type_3 li, .vertical_list_type_4 li { position: relative; padding-left: 17px; }
 
-/* line 146, ../scss/flat/_navigation.scss */
+/* line 147, ../scss/flat/_navigation.scss */
 .vertical_list_type_5 li { position: relative; padding-left: 20px; }
 
-/* line 152, ../scss/flat/_navigation.scss */
+/* line 153, ../scss/flat/_navigation.scss */
 .vertical_list_type_2 li:before, .vertical_list_type_3 li:before, .vertical_list_type_4 li:before { content: ""; width: 6px; height: 6px; display: block; position: absolute; left: 0; top: 8px; }
 
-/* line 161, ../scss/flat/_navigation.scss */
+/* line 162, ../scss/flat/_navigation.scss */
 .vertical_list_type_3 li:before { background: transparent; border-width: 1px; border-style: solid; }
 
-/* line 166, ../scss/flat/_navigation.scss */
+/* line 167, ../scss/flat/_navigation.scss */
 .vertical_list_type_6 li > span { min-width: 14px; }
 
-/* line 170, ../scss/flat/_navigation.scss */
+/* line 171, ../scss/flat/_navigation.scss */
 .vertical_list_type_5 li > i, .vertical_list_type_5 li > span { position: absolute; left: 0; top: 2px; }
 
-/* line 175, ../scss/flat/_navigation.scss */
+/* line 176, ../scss/flat/_navigation.scss */
 .vertical_list_type_5 li > span { top: 0; }
 
-/* line 179, ../scss/flat/_navigation.scss */
+/* line 180, ../scss/flat/_navigation.scss */
 .vertical_list_type_7, .vertical_list_type_8 { counter-reset: itemcount; }
 
-/* line 183, ../scss/flat/_navigation.scss */
+/* line 184, ../scss/flat/_navigation.scss */
 .vertical_list_type_7 li, .vertical_list_type_8 li { counter-increment: itemcount; position: relative; padding-left: 40px; }
 
-/* line 188, ../scss/flat/_navigation.scss */
+/* line 189, ../scss/flat/_navigation.scss */
 .vertical_list_type_8 li { padding-left: 30px; }
 
-/* line 191, ../scss/flat/_navigation.scss */
+/* line 192, ../scss/flat/_navigation.scss */
 .vertical_list_type_7 li:before { content: "0" counter(itemcount); display: block; position: absolute; top: 6px; left: 0; text-align: center; width: 30px; font-weight: 500; height: 30px; padding-top: 2px; border-width: 2px; border-style: solid; letter-spacing: -.5px; }
 
-/* line 206, ../scss/flat/_navigation.scss */
+/* line 207, ../scss/flat/_navigation.scss */
 .vertical_list_type_8 li:before { content: counter(itemcount); display: block; position: absolute; top: 3px; left: 0; text-align: center; width: 20px; font-weight: 500; height: 20px; }
 
 /* -----------------------------------
@@ -6430,6 +6430,45 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; color: #696e6e; background: #
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) { /* line 472, ../scss/_pagelayout.scss */
   .side_menu a > span:before, .side_menu a > span:after { margin-left: -5px; } }
+/* line 481, ../scss/_pagelayout.scss */
+.social_icons li a { display: block; width: 39.5px; height: 40px; color: #838a8f; }
+
+/* line 487, ../scss/_pagelayout.scss */
+.social_icons li a i[class^="fa "] { line-height: 40px; }
+
+/* line 490, ../scss/_pagelayout.scss */
+.social_icons .facebook:hover a, .sw_button.facebook { background: #3b5998; }
+
+/* line 491, ../scss/_pagelayout.scss */
+.social_icons .twitter:hover a, .sw_button.twitter, .tw_color { background: #2daae1; }
+
+/* line 492, ../scss/_pagelayout.scss */
+.social_icons .google_plus:hover a { background: #f63e28; }
+
+/* line 493, ../scss/_pagelayout.scss */
+.social_icons .rss:hover a { background: #ff7e00; }
+
+/* line 494, ../scss/_pagelayout.scss */
+.social_icons .pinterest:hover a { background: #cb2027; }
+
+/* line 495, ../scss/_pagelayout.scss */
+.social_icons .instagram:hover a { background: #835e42; }
+
+/* line 496, ../scss/_pagelayout.scss */
+.social_icons .linkedin:hover a { background: #0073b2; }
+
+/* line 497, ../scss/_pagelayout.scss */
+.social_icons .vimeo:hover a { background: #44b0de; }
+
+/* line 498, ../scss/_pagelayout.scss */
+.social_icons .youtube:hover a { background: #ff3132; }
+
+/* line 499, ../scss/_pagelayout.scss */
+.social_icons .flickr:hover a { background: #ff0084; }
+
+/* line 500, ../scss/_pagelayout.scss */
+.social_icons .envelope:hover a, .sw_button.contact { background: #1abc9c; }
+
 /* -----------------------------------
 
 	18. Responsive changes

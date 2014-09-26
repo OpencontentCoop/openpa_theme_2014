@@ -477,3 +477,24 @@ body{
 ul.breadcrumb{
   @extend .d_xs_none;
 }
+
+.social_icons li a{
+  display:block;
+  width:39.5px;
+  height:40px;
+  color:#838a8f;
+}
+.social_icons li a i[class^="fa "]{
+  line-height: 40px;
+}
+.social_icons .facebook:hover a,.sw_button.facebook{background:#3b5998;}
+.social_icons .twitter:hover a,.sw_button.twitter,.tw_color{background:#2daae1;}
+.social_icons .google_plus:hover a{background:#f63e28;}
+.social_icons .rss:hover a{background:#ff7e00;}
+.social_icons .pinterest:hover a{background:#cb2027;}
+.social_icons .instagram:hover a{background:#835e42;}
+.social_icons .linkedin:hover a{background:#0073b2;}
+.social_icons .vimeo:hover a{background:#44b0de;}
+.social_icons .youtube:hover a{background:#ff3132;}
+.social_icons .flickr:hover a{background:#ff0084;}
+.social_icons .envelope:hover a,.sw_button.contact{background:#1abc9c;}
