@@ -5546,6 +5546,20 @@ mark { background: #428944; color: #fff; }
 /* line 337, ../scss/flat/_base.scss */
 .clearfix:after, .abstract:after, #header .header-top ul:after, .menu_wrap:after, .sub_menu_wrap:after { content: ""; display: block; clear: both; }
 
+/* -----------------------------------
+
+	3. Color Scheme
+
+------------------------------------- */
+/* line 11, ../scss/flat/_colors.scss */
+a, a[class*="color"]:not(.color_light):hover, .scheme_color, .close_product:hover, .search_button:hover, #header .header-bottom .header-searchbox .search form button:hover, .close_search_form:hover, blockquote:before, .banner_type_2.red b, #footer a.color_light:hover, #footer .carousel-caption h3 a:hover, .carousel-caption h3 #footer a:hover, #footer .menu_wrap li.menu-item > a:hover, .menu_wrap #footer li.menu-item > a:hover, .close_fieldset:hover, .text_cs_hover:hover, .tweet_list a:hover, [class*="alert_box"].error i[class^="fa "], label[class*="required"]:after, .vertical_list_type_7 li:before, .first_letter_1 > .fl, .info_block_type_1:hover [class*="icon_wrap"] { color: #428944; }
+
+/* line 26, ../scss/flat/_colors.scss */
+.count, .bg_scheme_color, .button_type_3:hover .count.type_2, .button_type_3.active .count.type_2, .tp-bullets.simplebullets.round .bullet:hover, .tp-bullets.simplebullets.round .bullet.selected, .tp-bullets.simplebullets.navbar .bullet:hover, .tp-bullets.simplebullets.navbar .bullet.selected, [class*="button_type_"].bg_dark_color:hover, .banner:hover [class*="button_type_"].bg_dark_color, [class*="button_type_"].bg_cs_hover:hover, #go_to_top:hover, .sw_button.googlemap, .ui-slider:after, .vertical_list_type_2 li:before, .camera_wrap .camera_pag .camera_pag_ul .cameracurrent, .camera_wrap .camera_prev:hover, .camera_wrap .camera_next:hover, .flex-control-nav .flex-active, .flex-direction-nav a:hover, .vertical_list_type_4 li:before, .vertical_list_type_8 li:before, .first_letter_2 > .fl, .info_block_type_2:hover [class*="icon_wrap"], #shopping_button:hover > a .count { background: #428944; }
+
+/* line 29, ../scss/flat/_colors.scss */
+.select_color.red { background-color: #d9534f; }
+
 /* line 1, ../scss/flat/_typography.scss */
 h2 { font-size: 1.71em; line-height: 1em; }
 
@@ -6163,6 +6177,12 @@ aside .addthis_widget_container { min-width: 284px; }
 
 /* line 632, ../scss/flat/_main-contents.scss */
 .big_video_container > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* line 639, ../scss/flat/_main-contents.scss */
+.sw_button { width: 40px; height: 40px; color: #fff; font-size: 1.3em; -webkit-border-top-left-radius: 4px; -moz-border-top-left-radius: 4px; border-top-left-radius: 4px; -webkit-border-bottom-left-radius: 4px; -moz-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; border-width: 0; }
+
+/* line 652, ../scss/flat/_main-contents.scss */
+.sw_button:hover { -webkit-animation: jump .4s ease; -moz-animation: jump .4s ease; animation: jump .4s ease; }
 
 /* -----------------------------------
 

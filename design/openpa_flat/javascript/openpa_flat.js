@@ -215,5 +215,11 @@
             }
         });
 
+        (function () {
+            $('.sw_button').on('click', function () {
+                $(this).parent().toggleClass('opened').siblings().removeClass('opened');
+            });
+        })();
+
     });
 })(jQuery);

@@ -27,11 +27,5 @@ label[class*="required"]:after,.vertical_list_type_7 li:before,.first_letter_1 >
   background:$brand-primary;
 }
 .select_color.red{
-  background-color:$brand-primary;
-}
-.tp-leftarrow:hover,.tp-rightarrow:hover{
-  background: #d55a4e
-}
-::-webkit-scrollbar-thumb{
-  background:$brand-primary;
+  background-color:$brand-danger;
 }
