@@ -12,6 +12,7 @@
           </iframe>
         </div>
     </li>
+    {*
     <!--twitter feed-->
     <li class="relative">
         <button class="sw_button t_align_c twitter"><i class="fa fa-twitter"></i></button>
@@ -21,20 +22,17 @@
             <a role="button" class="btn btn-lg btn-info" href="https://twitter.com/">Seguici su Twitter</a>
         </div>
     </li>
+    *}
     <!--contact form-->
     <li class="relative">
         <button class="sw_button t_align_c contact"><i class="fa fa-envelope-o"></i></button>
         <div class="sw_content">
             <h3 class="color_dark m_bottom_20">Iscriviti alla newsletter</h3>
 
-            <form id="contactform" class="mini">
-                <input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="text" name="cf_name"
-                       placeholder="Nome"/>
-                <input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="email" name="cf_email"
-                       placeholder="Email"/>
-                <button type="submit" class="btn btn-lg r_corners mw_0 tr_all_hover color_dark bg_light_color_2">
-                    Invia
-                </button>
+            <form id="contactform" class="mini" action="{'content/view/full/4721'|ezurl(no)}">
+                {*<input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="text" name="cf_name" placeholder="Nome"/>
+                <input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="email" name="cf_email" placeholder="Email"/>*}
+                <button type="submit" class="btn btn-lg r_corners mw_0 tr_all_hover color_dark bg_light_color_2">Accedi al form</button>
             </form>
         </div>
     </li>
