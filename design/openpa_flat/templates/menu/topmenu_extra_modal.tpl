@@ -13,7 +13,7 @@
         {attribute_view_gui attribute=$extra_item.data_map.abstract}
       </div>
       <div class="modal-footer">
-        <a href="{$extra_item.data_map.location.content}" class="btn btn-extra-menu">{$extra_item.data_map.short_name.content|wash()}</a>
+        <a href="{$extra_item.data_map.location.content}" class="btn btn-extra-menu">{$extra_item.data_map.location.data_text|wash()}</a>
       </div>
     </div>
   </div>

@@ -66,6 +66,8 @@
 
 {include uri='design:page_footer.tpl'}
 
+{include uri='design:page_social.tpl'}
+
 
 
 {include uri='design:page_footer_script.tpl'}
