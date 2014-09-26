@@ -246,7 +246,6 @@ body{
   }
   &.items-6{
     width: $submenu_item_width * 5;
-    left: -$submenu_item_width;
     .sub_menu-item{
       width: $submenu_item_width - 40px;
     }
@@ -324,6 +323,14 @@ body{
     @extend .m_bottom_5;
     @extend .m_top_5;
     @extend .d_inline_b;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .sub_menu_wrap {
+    &.items-6{
+      left: -$submenu_item_width;
+    }
   }
 }
 
