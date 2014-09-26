@@ -1,7 +1,7 @@
 {if not( is_set($show_link) )}
   {def $show_link = true()}
 {/if}
-{if and( is_set( $href ), $href|eq( 'no-link' )}
+{if and( is_set( $href ), $href|eq( 'no-link' ))}
   {set $show_link = false()}
 {/if}
 {if not( is_set($show_newline) )}

@@ -499,3 +499,25 @@ ul.breadcrumb{
 .social_icons .flickr:hover a{background:#ff0084;}
 .social_icons .envelope:hover a,.sw_button.contact{background:#1abc9c;}
 .sw_button.googlemap{background: $brand-primary}
+
+#go_to_top{
+  width:40px;
+  height:40px;
+  color:#fff;
+  background:#262c34;
+  position:fixed;
+  left:47%;
+  margin:-20px 0 0 620px;
+  top:75%;
+  font-size:1.65em;
+  @extend .t_align_c;
+  @extend .r_corners;
+  @extend .tr_all_hover;
+  border-width: 0;
+  &:hover{
+    background: $brand-primary;
+  }
+  &.animate_horizontal_finished{
+    opacity:.5;
+  }
+}

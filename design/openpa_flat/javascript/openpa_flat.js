@@ -216,6 +216,15 @@
         });
 
         (function () {
+            $('#go_to_top').waypointInit('animate_horizontal_finished', '0px', 0, true);
+            $('#go_to_top').on('click', function () {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+        })();
+
+        (function () {
             $('.sw_button').on('click', function () {
                 $(this).parent().toggleClass('opened').siblings().removeClass('opened');
             });
