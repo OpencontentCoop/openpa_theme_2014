@@ -30,8 +30,8 @@ Filters[]=centerimg=850;440;0;0
 [squaremini]
 Reference=original
 Filters[]
-Filters[]=geometry/scalewidthdownonly=150
-Filters[]=centerimg=64;64
+Filters[]=geometry/scalewidthdownonly=100
+Filters[]=centerimg=50;50
 
 [squarethumb]
 Reference=original

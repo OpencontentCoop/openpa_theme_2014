@@ -16,7 +16,7 @@
         {include uri='design:openpa/full/parts/section_left.tpl'}
     {/if}
 
-    <div class="content-main{if $openpa.control_menu.show_side_menu|not()} wide{/if}">
+    <div class="content-main{if and( $openpa.control_menu.show_extra_menu|not(), $openpa.control_menu.show_side_menu|not() )} wide{elseif and( $openpa.control_menu.show_side_menu, $openpa.control_menu.show_extra_menu )} full-stack{/if}">
 
         {include uri=$openpa.content_main.template}
 
@@ -30,9 +30,10 @@
             <p class="pull-right">{include uri=$openpa.content_date.template}</p>
         {/if}
 
-
-
     </div>
 
+    {if $openpa.control_menu.show_extra_menu}
+      {include uri='design:openpa/full/parts/section_right.tpl'}
+    {/if}
 
 </div>

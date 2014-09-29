@@ -10,7 +10,11 @@
 {section show=$attribute.content.relation_list}
 {section var=Relations loop=$attribute.content.relation_list}
 {if $Relations.item.in_trash|not()}
-    {content_view_gui view=embed show_link=$show_link content_object=fetch( content, object, hash( object_id, $Relations.item.contentobject_id ) )}
+    {if is_set( $node_view )}
+      {node_view_gui content_node=fetch( content, object, hash( object_id, $Relations.item.contentobject_id ) ).main_node view=$node_view}
+    {else}
+      {content_view_gui view=embed show_link=$show_link content_object=fetch( content, object, hash( object_id, $Relations.item.contentobject_id ) )}
+    {/if}
     {if $show_newline}<br />{/if}
 {/if}
 {/section}

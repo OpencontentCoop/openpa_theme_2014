@@ -11,7 +11,7 @@
     <div class="content-title">
 
         <h1>
-            {$node.name|wash()}
+            Area {$node.name|wash()}
         </h1>
 
     </div>

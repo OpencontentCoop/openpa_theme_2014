@@ -6,10 +6,22 @@
         <dl class="dl-horizontal">
 
             <dt>Ultima modifica di:</dt>
-            <dd><a href={$node.creator.main_node.url_alias|ezurl}>{$node.creator.name}</a> il {$node.object.modified|l10n(shortdatetime)}</dd>
+            <dd>
+              {if $node.creator.main_node}
+              <a href={$node.creator.main_node.url_alias|ezurl}>{$node.creator.name}</a> il {$node.object.modified|l10n(shortdatetime)}
+              {else}
+              ?
+              {/if}
+            </dd>
 
             <dt>Creato da:</dt>
-            <dd><a href={$node.object.owner.main_node.url_alias|ezurl}>{$node.object.owner.name}</a> il {$node.object.published|l10n(shortdatetime)}</dd>
+            <dd>
+              {if and( $node.object.owner, $node.object.owner.main_node )}
+              <a href={$node.object.owner.main_node.url_alias|ezurl}>{$node.object.owner.name}</a> il {$node.object.published|l10n(shortdatetime)}
+              {else}
+              ?
+              {/if}
+            </dd>
 
             <dt>Nodo:</dt>
             <dd>{$node.node_id}</dd>
@@ -22,7 +34,7 @@
                 <dd>
                     <ul class="list-unstyled">
                     {foreach $node.object.assigned_nodes as $item}
-                        <li><a href={$item|ezurl()}>{$item.path_with_names}</a> {if $item.node_id|eq($node.object.main_node_id)}(principale){/if}</li>
+                        <li><a href={$item.url_alias|ezurl()}>{$item.path_with_names}</a> {if $item.node_id|eq($node.object.main_node_id)}(principale){/if}</li>
                     {/foreach}
                     </ul>
                 </dd>

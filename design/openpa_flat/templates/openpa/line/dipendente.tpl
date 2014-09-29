@@ -1,4 +1,4 @@
-{set_defaults(hash('image_class', 'squarethumb'))}
+{set_defaults(hash('image_class', 'small'))}
 <div class="class-{$node.class_identifier} media">
 
     {if $node|has_attribute( 'image' )}

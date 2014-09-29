@@ -75,17 +75,9 @@ $show_link = true()}
 
             {if $day_events_count|ne(0)}
                 <div class="tab-pane active" id="oggi">
-                    <div class="cycle-slideshow" data-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.media">
+                    <div class="cycle-slideshow" data-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                         {foreach $day_events as $index => $child}
-                            <div class="media">
-                                <div class="pull-left calendar-date">
-                                    <span class="month">{$child.from|datetime( 'custom', '%M' )}</span>
-                                    <span class="day">{$child.from|datetime( 'custom', '%j' )}</span>
-                                </div>
-                                <div class="media-body">
-                                    {node_view_gui content_node=$child.node view=text_linked shorten=80}
-                                </div>
-                            </div>
+                            {include uri="design:calendar/list_item.tpl" item=$child}
                         {/foreach}
                     </div>
                 </div>
@@ -93,17 +85,9 @@ $show_link = true()}
 
             {if $prossimi_count|gt(0)}
             <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide">
-                <div class="cycle-slideshow" data-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.media">
+                <div class="cycle-slideshow" data-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                     {foreach $prossimi as $index => $child}
-                        <div class="media">
-                            <div class="pull-left calendar-date">
-                                <span class="month">{$child.from|datetime( 'custom', '%M' )}</span>
-                                <span class="day">{$child.from|datetime( 'custom', '%j' )}</span>
-                            </div>
-                            <div class="media-body">
-                                {node_view_gui content_node=$child.node view=text_linked shorten=80}
-                            </div>
-                        </div>
+                        {include uri="design:calendar/list_item.tpl" item=$child}
                     {/foreach}
                 </div>
             </div>
