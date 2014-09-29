@@ -5209,16 +5209,17 @@ h3.widget_title { color: #201f1e; padding: 15px 0 14px; text-transform: uppercas
 .events .widget_content ul.nav li, .events .widget_content .nav-facets ul.nav-sub li, .nav-facets .events .widget_content ul.nav-sub li { display: inline-block; float: none; }
 /* line 308, ../scss/_style.scss */
 .events .widget_content ul.nav li.active .a, .events .widget_content .nav-facets ul.nav-sub li.active .a, .nav-facets .events .widget_content ul.nav-sub li.active .a { background: #428944; }
-/* line 314, ../scss/_style.scss */
-.events .calendar-date { width: 60px; }
-/* line 316, ../scss/_style.scss */
+/* line 315, ../scss/_style.scss */
 .events .calendar-date .month { background: #428944; font-size: 1.1em; line-height: 1; color: #fff; display: block; text-align: center; padding: 5px 3px; text-transform: uppercase; }
-/* line 326, ../scss/_style.scss */
+/* line 325, ../scss/_style.scss */
 .events .calendar-date .day { background: #fff; color: #428944; font-size: 2em; font-weight: bold; display: block; border: 1px solid #428944; padding: 8px 3px; text-align: center; }
-/* line 337, ../scss/_style.scss */
+/* line 336, ../scss/_style.scss */
 .events .media { margin-bottom: 15px; height: 80px; }
 
-/* line 344, ../scss/_style.scss */
+/* line 342, ../scss/_style.scss */
+.event-item { padding-bottom: 5px; }
+
+/* line 347, ../scss/_style.scss */
 .cycle-next.disabled, .cycle-prev.disabled { display: none; }
 
 /* line 1, ../scss/flat/_reset.scss */

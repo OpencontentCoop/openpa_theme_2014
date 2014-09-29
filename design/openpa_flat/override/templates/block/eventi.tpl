@@ -19,14 +19,14 @@ $show_link = true()}
 {*debug-log var=$calendarDataDay.fetch_parameters msg='Blocco eventi fetch oggi'*}
 
 {def $day_events = $calendarDataDay.events
-    $day_events_count = $calendarDataDay.search_count
-    $prossimi = array()
-    $prossimi_count = 0}
+     $day_events_count = $calendarDataDay.search_count
+     $prossimi = array()
+     $prossimi_count = 0}
 
 {if $calendarDataOther}
 {*debug-log var=$calendarDataOther.fetch_parameters msg='Blocco eventi fetch secondo tab'*}
     {set $prossimi = $calendarDataOther.events
-    $prossimi_count = $calendarDataOther.search_count}
+         $prossimi_count = $calendarDataOther.search_count}
 {/if}
 
 {if and( $prossimi_count|eq(0), $day_events_count|eq(0) )}
@@ -36,6 +36,15 @@ $show_link = true()}
 {else}
 
     {ezscript_require(array( 'ezjsc::jquery', 'jquery.cycle2.min.js', 'jquery.cycle2.carousel.min.js' ))}
+    <script>{literal}
+      $(function() {
+        "use strict";
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          console.log(this);
+          $( '.cycle-slideshow' ).cycle('destroy').cycle();
+        })
+      });
+    {/literal}</script>
 
     {if $block.name|ne('')}
     <div class="widget events {$block.view}">
@@ -75,7 +84,7 @@ $show_link = true()}
 
             {if $day_events_count|ne(0)}
                 <div class="tab-pane active" id="oggi">
-                    <div class="cycle-slideshow" data-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
+                    <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                         {foreach $day_events as $index => $child}
                             {include uri="design:calendar/list_item.tpl" item=$child}
                         {/foreach}
@@ -85,7 +94,7 @@ $show_link = true()}
 
             {if $prossimi_count|gt(0)}
             <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide">
-                <div class="cycle-slideshow" data-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
+                <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                     {foreach $prossimi as $index => $child}
                         {include uri="design:calendar/list_item.tpl" item=$child}
                     {/foreach}
