@@ -5,10 +5,13 @@
   text-decoration: underline;
 }
 
+.content-main{
+  font-size: floor(($font-size-base * 1.15));
+}
+
 .abstract {
   @extend .clearfix;
   margin-bottom: $line-height-computed;
-  font-size: floor(($font-size-base * 1.15));
   font-weight: 200;
   line-height: 1.4;
   .image {
