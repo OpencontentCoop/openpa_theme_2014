@@ -66,14 +66,14 @@
 
     <a	class="player no-js-hide"
         href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.content.contentobject_attribute_id,"/video")|ezurl}
-        style={if is_set($params.style)}{$params.style}{else}"display:block;width:{$width}px;height:{$height}px;"{/if}
+        style={if is_set($params.style)}{$params.style}{else}"background:#000;display:block;width:100%;height:{$height}px;"{/if}
         title="{$object.name|wash()}"
         id="video-{$attribute.contentobject_id}">
-            {if $cover}
+            {*if $cover}
                 {attribute_view_gui attribute=$cover image_class=$cover_image_class}
-            {else}
+            {else
                 <img class='default' src={if is_set($params.image)}{$params.image|ezimage()}{else}{'play.png'|ezimage()}{/if} alt="{$object.name|wash()}" />
-            {/if}
+            {if*}
     </a>
     
 

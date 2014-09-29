@@ -4,7 +4,9 @@
       <div class="widget">
           {if $node.node_id|ne($openpa.control_menu.side_menu.root_node.node_id)}
           <div class="widget_title">
-              <h3>{$openpa.control_menu.side_menu.root_node.name|wash()}</h3>
+              <h3>
+				{node_view_gui content_node=$openpa.control_menu.side_menu.root_node view=text_linked}
+			  </h3>
           </div>
           {/if}
           <div class="widget_content">

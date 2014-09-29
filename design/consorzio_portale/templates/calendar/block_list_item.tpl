@@ -8,6 +8,9 @@
         <span class="day">{$item.from|datetime( 'custom', '%j' )}</span>
     </div>
     <div class="col-xs-8">
+	  {if $item.from|datetime( 'custom', '%H')|ne('00')}
+	  <small>ore {$item.from|datetime( 'custom', '%H:%i')}</small>
+	  {/if}
       {node_view_gui content_node=$item.node view=text_linked shorten=80 text=concat( $prefix, $item.node.name )}
     </div>
 </div>

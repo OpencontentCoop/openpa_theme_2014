@@ -1,8 +1,10 @@
 <div class="info">
+{if or( is_set($pagedata.contacts.telefono), is_set($pagedata.contacts.email) )}
   <dl>
     <dd>
-      <b>+39 0461 987139</b>
-      <a href="mailto:info@comunitrentini.it"><b>info@comunitrentini.it</b></a>
+      <b>{$pagedata.contacts.telefono}</b>
+      <a href="mailto:{$pagedata.contacts.email}"><b>{$pagedata.contacts.email}</b></a>
     </dd>
   </dl>
 </div>
+{/if}
