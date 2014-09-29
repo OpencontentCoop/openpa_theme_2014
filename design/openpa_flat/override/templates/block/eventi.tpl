@@ -84,7 +84,7 @@ $show_link = true()}
 
             {if $day_events_count|ne(0)}
                 <div class="tab-pane active" id="oggi">
-                    <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
+                    <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=4 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                         {foreach $day_events as $index => $child}
                             {include uri="design:calendar/list_item.tpl" item=$child}
                         {/foreach}
@@ -94,7 +94,7 @@ $show_link = true()}
 
             {if $prossimi_count|gt(0)}
             <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide">
-                <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=3 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
+                <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=4 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                     {foreach $prossimi as $index => $child}
                         {include uri="design:calendar/list_item.tpl" item=$child}
                     {/foreach}

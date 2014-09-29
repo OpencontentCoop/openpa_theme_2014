@@ -5092,10 +5092,10 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify { text-align: j
 .content-main a { text-decoration: underline; }
 
 /* line 8, ../scss/_style.scss */
-.content-main { font-size: 16px; }
+.content-main { font-size: 16px; line-height: 1.4; }
 
-/* line 12, ../scss/_style.scss */
-.abstract { margin-bottom: 20px; font-weight: 200; line-height: 1.4; }
+/* line 13, ../scss/_style.scss */
+.abstract { margin-bottom: 20px; font-weight: 200; }
 /* line 18, ../scss/_style.scss */
 .abstract .image.pull-left, .abstract .image.object-left { margin: 0 1em .5em 0; }
 /* line 22, ../scss/_style.scss */

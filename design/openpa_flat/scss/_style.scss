@@ -7,13 +7,13 @@
 
 .content-main{
   font-size: floor(($font-size-base * 1.15));
+  line-height: 1.4;
 }
 
 .abstract {
   @extend .clearfix;
   margin-bottom: $line-height-computed;
   font-weight: 200;
-  line-height: 1.4;
   .image {
     &.pull-left {
       margin: 0 1em .5em 0;
