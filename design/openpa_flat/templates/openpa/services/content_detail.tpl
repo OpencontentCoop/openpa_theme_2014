@@ -1,5 +1,5 @@
 {if $openpa.content_detail.has_content}
-<div class="content-detail">
+<div class="content-detail well">
 {foreach $openpa.content_detail.attributes as $openpa_attribute}
     <div class="row">
         {if $openpa_attribute.full.show_label}

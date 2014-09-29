@@ -47,7 +47,7 @@
       {include uri='design:page_topmenu.tpl'}
     {/if}
 
-    {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
+    {if and( $pagedata.website_toolbar, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
         {include uri='design:page_toolbar.tpl'}
     {/if}
 
@@ -66,7 +66,9 @@
 
 {include uri='design:page_footer.tpl'}
 
-{include uri='design:page_social.tpl'}
+{if array( 'edit', 'browse' )|contains( $ui_context )|not()}
+  {include uri='design:page_social.tpl'}
+{/if}
 
 <button class="animate_ftl" id="go_to_top"><i class="fa fa-angle-up"></i></button>
 

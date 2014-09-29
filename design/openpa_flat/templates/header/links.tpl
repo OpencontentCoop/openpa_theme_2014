@@ -13,7 +13,7 @@
     {/foreach}
   {/if}
 
-    <li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>
+    {*<li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>*}
 
   </ul>
 </div>

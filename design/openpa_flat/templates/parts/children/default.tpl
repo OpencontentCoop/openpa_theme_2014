@@ -7,7 +7,7 @@
   'type', 'exclude',
   'fetch_type', 'list',
   'parent_node', $node,
-  'image_class', 'squaremini'
+  'image_class', 'small'
 ))}
 
 

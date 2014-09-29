@@ -1,32 +1,35 @@
-{def $contacts = hash(
-'telefono', '+39 0461 987139',
-'fax', '+39 0461 981978',
-'mail', 'info@comunitrentini.it',
-'pec', 'consorzio@pec.comunitrentini.it',
-'indirizzo', 'TRENTO - Via Torre Verde 23',
-)}
 <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30 m_top_20">
     <ul class="list-unstyled vertical_list">
-        <li><a href="tel:{$contacts.telefono}">
+        {if is_set($pagedata.contacts.telefono)}
+		<li><a href="tel:{$pagedata.contacts.telefono}">
                 <i class="fa fa-phone-square"></i>
-                {$contacts.telefono}
+                {$pagedata.contacts.telefono}
             </a>
         </li>
-        <li><a href="tel:{$contacts.fax}">
+		{/if}
+		{if is_set($pagedata.contacts.fax)}
+        <li><a href="tel:{$pagedata.contacts.fax}">
                 <i class="fa fa-fax"></i>
-                {$contacts.fax}
+                {$pagedata.contacts.fax}
             </a></li>
-        <li><a href="mailto:{$contacts.mail}">
+        {/if}
+		{if is_set($pagedata.contacts.email)}
+		<li><a href="mailto:{$pagedata.contacts.email}">
                 <i class="fa fa-envelope-o"></i>
-                {$contacts.mail}
+                {$pagedata.contacts.email}
             </a></li>
-        <li><a href="mailto:{$contacts.pec}">
+        {/if}
+		{if is_set($pagedata.contacts.pec)}
+		<li><a href="mailto:{$pagedata.contacts.pec}">
                 <i class="fa fa-envelope"></i>
-                {$contacts.pec}
+                {$pagedata.contacts.pec}
             </a></li>
-        <li><a href="http://maps.google.com/maps?q={$contacts.indirizzo|urlencode}">
+        {/if}
+		{if is_set($pagedata.contacts.indirizzo)}
+		<li><a href="http://maps.google.com/maps?q={$pagedata.contacts.indirizzo|urlencode}">
                 <i class="fa fa-building"></i>
-                {$contacts.indirizzo}
+                {$pagedata.contacts.indirizzo}
             </a></li>
+		{/if}		
     </ul>
 </div>
