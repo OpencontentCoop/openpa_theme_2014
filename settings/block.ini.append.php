@@ -43,7 +43,7 @@ ViewName[lista_carousel_rassegna_oggi]=Schede (carousel rassegna oggi)
 [Lista3]
 Name=Lista di oggetti (assegnati singolarmente) - MAX 5
 ViewName[]
-ViewName[lista_accordion_manual]=Schede (accordion)
+ViewName[lista_accordion_manual]=Panelli
 ViewName[lista_box2]=Box a 3 colonne (3 oggetti)
 ViewName[lista_box4]=Box ultimi figli (3 oggetti)
 ViewName[lista_tab]=Schede (tab)
@@ -51,7 +51,7 @@ ViewName[lista_tab]=Schede (tab)
 [Lista4]
 Name=Lista di oggetti (assegnati singolarmente) - MAX 15
 ViewName[]
-ViewName[lista_accordion_manual]=Schede (accordion)
+ViewName[lista_accordion_manual]=Panelli
 ViewName[lista_box2]=Box a 3 colonne (3 oggetti)
 ViewName[lista_tab]=Schede (tab)
 

@@ -90,8 +90,8 @@
                 {if is_set( $calendarData.day_by_day[$day_id] )}
                     {if $calendarData.day_by_day[$day_id].count|gt(0)}
                         <ul>
-                            {foreach $calendarData.day_by_day[$day_id].events as $event max 4}
-                                <li><a class="has-tooltip" href={$event.main_url_alias|ezurl()} title="{$event.name|wash()}" data-toggle="tooltip" data-placement="top">{$event.name|wash()}</a></li>
+                            {foreach $calendarData.day_by_day[$day_id].events as $event max 4}                                
+                                {include uri="design:calendar/list_item.tpl" item=$event}
                             {/foreach}
 
                             {if $calendarData.day_by_day[$day_id].count|gt(4)}

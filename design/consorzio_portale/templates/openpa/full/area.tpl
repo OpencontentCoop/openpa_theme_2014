@@ -38,7 +38,7 @@
             <div class="tab-content">
             {foreach $unique_zone.blocks as $index => $block}
                 <div class="tab-pane{if $index|eq(0)} active{/if}" id="{$block.name|slugize()}">
-                    {block_view_gui block=$block show_title=false()}
+                    {block_view_gui block=$block show_title=false() items_per_row=3}
                 </div>
             {/foreach}
         </div>

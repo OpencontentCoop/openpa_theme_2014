@@ -9,7 +9,7 @@
 {/if}
 
     {foreach $openpa.content as $item}
-        {node_view_gui content_node=$item view=line}
+        {node_view_gui content_node=$item view=line image_class=small}
     {/foreach}
 
 {if and( $show_title, $block.name|ne('') )}

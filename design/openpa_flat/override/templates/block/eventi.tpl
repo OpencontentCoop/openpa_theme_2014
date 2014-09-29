@@ -60,7 +60,7 @@ $show_link = true()}
 
     {/if}
 
-        {if $prossimi_count|gt(0)}
+        {if and( $day_events_count|gt(0), $prossimi_count|gt(0) )}
         <ul class="nav nav-tabs" role="tablist">
             {if $day_events_count|ne(0)}
                 <li class="active eventi-oggi">
@@ -86,7 +86,7 @@ $show_link = true()}
                 <div class="tab-pane active" id="oggi">
                     <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=4 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                         {foreach $day_events as $index => $child}
-                            {include uri="design:calendar/list_item.tpl" item=$child}
+                            {include uri="design:calendar/block_list_item.tpl" item=$child}
                         {/foreach}
                     </div>
                 </div>
@@ -96,7 +96,7 @@ $show_link = true()}
             <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide">
                 <div class="cycle-slideshow" data-cycle-allow-wrap=false data-cycle-timeout=0 data-cycle-fx=carousel data-cycle-next=".cycle-next" data-cycle-prev=".cycle-prev" data-cycle-carousel-visible=4 data-cycle-carousel-vertical=true data-cycle-slides="> div.event-item">
                     {foreach $prossimi as $index => $child}
-                        {include uri="design:calendar/list_item.tpl" item=$child}
+                        {include uri="design:calendar/block_list_item.tpl" item=$child}
                     {/foreach}
                 </div>
             </div>

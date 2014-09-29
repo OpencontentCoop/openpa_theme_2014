@@ -41,9 +41,9 @@ $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $node,
                         css_id=concat( 'carousel-day-', $calendarDay.identifier )
                         items=$items
                         root_node=$node
-                        i_view=panel
+                        i_view=line
                         autoplay=0
-                        image_class=squarethumb
+                        image_class=squaremini
                         items_per_row=2}
 
                 {undef $items}
