@@ -13,7 +13,7 @@
   &.wide{
     @extend .col-md-12;
   }
-  .full-stack &{
+  &.full-stack {
     @extend .col-md-6;
   }
 }
