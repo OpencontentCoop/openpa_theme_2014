@@ -57,26 +57,3 @@ i[class^="fa "]{
 .glyphicon_item i[class^="fa "]{
   font-size:60px;
 }
-.icon_wrap_1{
-  width:60px;
-  height:60px;
-  font-size:26px;
-}
-.icon_wrap_2{
-  font-size:26px;
-}
-.info_block_type_3 .icon_wrap_2{
-  margin-left:-45px;
-}
-.info_block_type_1 .icon_wrap_1{
-  margin-left:-80px;
-}
-.info_block_type_2:hover [class*="icon_wrap"]{
-  color:#ecf0f1
-}
-[class*="info_block_"]:hover [class*="icon_wrap"]{
-  -webkit-animation:jump .4s ease;
-  -moz-animation:jump .4s ease;
-  -o-animation:jump .4s ease;
-  animation:jump .4s ease;
-}

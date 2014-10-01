@@ -339,3 +339,44 @@ mark{
   display:block;
   clear:both;
 }
+
+.icon_wrap_1{
+  width:60px;
+  height:60px;
+  font-size:26px;
+}
+.icon_wrap_2{
+  font-size:26px;
+}
+
+.info_block_type_1{
+  padding-left:80px;
+}
+
+.info_block_type_1 .icon_wrap_1 {
+  margin-left: -80px;
+}
+
+.info_block_type_1 .icon_wrap_1{
+  margin-left:-80px;
+}
+
+.info_block_type_1:hover [class*="icon_wrap"]{
+  color: $brand-primary;
+  background:#ecf0f1;
+}
+
+.info_block_type_2:hover [class*="icon_wrap"]{
+  color:#ecf0f1
+}
+
+.info_block_type_3 .icon_wrap_2{
+  margin-left:-45px;
+}
+
+[class*="info_block_"]:hover [class*="icon_wrap"]{
+  -webkit-animation:jump .4s ease;
+  -moz-animation:jump .4s ease;
+  -o-animation:jump .4s ease;
+  animation:jump .4s ease;
+}
