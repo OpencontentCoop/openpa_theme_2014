@@ -208,6 +208,21 @@ h3.widget_title {
   }
 }
 
+.owl-controls {
+  .owl-buttons {
+    .owl-next, .owl-prev {
+      margin: 0 0 0 3px;
+      border-radius: 4px;
+      background: $gray-lighter;
+      color: $text-color;
+      &:hover {
+        background: $brand-primary;
+        color: #fff;
+      }
+    }
+  }
+}
+
 .carousel-top-control {
   &.title-placeholder {
     padding-top: 42px;
@@ -217,16 +232,6 @@ h3.widget_title {
       position: absolute;
       right: 0;
       top: -32px;
-      .owl-next, .owl-prev {
-        margin: 0 0 0 3px;
-        border-radius: 4px;
-        background: $gray-lighter;
-        color: $text-color;
-        &:hover {
-          background: $brand-primary;
-          color: #fff;
-        }
-      }
     }
   }
   .caption {
