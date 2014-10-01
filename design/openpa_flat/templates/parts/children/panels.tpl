@@ -21,13 +21,13 @@
                                                   'sort_by', $parent_node.sort_array,
                                                   'limit', $page_limit )|merge( $params ) ) }
 {if $children_count}
-  <div class="content-view-children">  
+  <div class="content-view-children panels-container">  
 	{foreach $children as $i => $child }
 	  {if $i|eq(0)}
 		<div class="row">
 	  {/if}
 	  <div class="col-md-4">
-		{node_view_gui content_node=$child view=panel}
+		{node_view_gui content_node=$child view=panel image_class=widemedium}
 	  </div>
 	  {if eq(sum($i,1)|mod(3),0)}
 		</div>

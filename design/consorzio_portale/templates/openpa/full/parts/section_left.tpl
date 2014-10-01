@@ -19,21 +19,10 @@
       </div>
     {/if}
 
-    {if count( $openpa.content_ruoli_comune.ruoli.struttura )}
-      <div class="widget">
-        <div class="widget_title">
-          <h3>Riferimenti</h3>
-        </div>
-        <div class="widget_content">
-          <ul class="list-unstyled">
-          {foreach $openpa.content_ruoli_comune.ruoli.struttura as $ruolo}
-            <li>
-              {attribute_view_gui attribute=$ruolo.data_map.utente node_view=line}
-            </li>
-          {/foreach}
-          </ul>
-        </div>
-      </div>
-    {/if}
+    {if $node.class_identifier|eq( 'area' )}
+	  {include uri='design:openpa/full/parts/area.tpl'}
+	{elseif $node.class_identifier|eq( 'scheda_informativa' )}
+	  {include uri='design:openpa/full/parts/scheda_informativa.tpl'}
+	{/if}
 
 </div>

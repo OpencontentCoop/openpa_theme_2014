@@ -8,15 +8,6 @@
         <h4 class="fw_medium color_dark">
             <a href="{$openpa.content_link.full_link}">{$node.name|wash()}</a>
         </h4>
-
-        {$node|abstract()}
-
-        <p class="link">
-            <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">
-                Leggi tutto
-            </a>
-        </p>
-
     </div>
 </div>
 
