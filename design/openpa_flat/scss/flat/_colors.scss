@@ -11,7 +11,11 @@ label[class*="required"]:after,.vertical_list_type_7 li:before,.first_letter_1 >
   color:$brand-secondary;
 }
 
-.count,.bg_scheme_color,.button_type_3:hover .count.type_2,
+.bg_scheme_color{
+  background: $brand-primary;
+}
+
+.count,.button_type_3:hover .count.type_2,
 .button_type_3.active .count.type_2,
 .tp-bullets.simplebullets.round .bullet:hover,
 .tp-bullets.simplebullets.round .bullet.selected,
