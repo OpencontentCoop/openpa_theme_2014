@@ -172,6 +172,7 @@ h3.widget_title {
 
 .widget_tabs {
   @extend .m_bottom_10;
+  font-size: $font-size-base;
   .tab-content {
     @extend .tabs_content;
     @extend .shadow;
