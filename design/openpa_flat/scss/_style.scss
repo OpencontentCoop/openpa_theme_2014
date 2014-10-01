@@ -390,3 +390,29 @@ h3.widget_title {
     }
   }
 }
+
+blockquote{
+  font-style:italic;
+  background:#fff;
+  line-height:1.55em;
+  padding:20px 10px 15px 50px;
+  &:before{
+    content:"“";
+    position:absolute;
+    font-size:50px;
+    font-weight:bold;
+    width:20px;
+    left:19px;
+    top:26px;
+    color: $brand-primary;
+  }
+  &:after{
+    content:"";
+    width:17px;
+    height:10px;
+    background:url("../images/blockquote_arrow.png") no-repeat;
+    position:absolute;
+    left:20px;
+    bottom:-10px;
+  }
+}

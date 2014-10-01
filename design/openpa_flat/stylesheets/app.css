@@ -5240,6 +5240,13 @@ h3.widget_title { color: #201f1e; padding: 15px 0 14px; text-transform: uppercas
 /* line 387, ../scss/_style.scss */
 .infographic_item dl dd { font-size: 1.3em; line-height: 1em; }
 
+/* line 394, ../scss/_style.scss */
+blockquote { font-style: italic; background: #fff; line-height: 1.55em; padding: 20px 10px 15px 50px; }
+/* line 399, ../scss/_style.scss */
+blockquote:before { content: "“"; position: absolute; font-size: 50px; font-weight: bold; width: 20px; left: 19px; top: 26px; color: #428944; }
+/* line 409, ../scss/_style.scss */
+blockquote:after { content: ""; width: 17px; height: 10px; background: url("../images/blockquote_arrow.png") no-repeat; position: absolute; left: 20px; bottom: -10px; }
+
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .menu_wrap *, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }
 
@@ -5598,7 +5605,7 @@ mark { background: #428944; color: #fff; }
 
 ------------------------------------- */
 /* line 10, ../scss/flat/_colors.scss */
-a, a[class*="color"]:not(.color_light):hover, .scheme_color, .close_product:hover, .search_button:hover, #header .header-bottom .header-searchbox .search form button:hover, .close_search_form:hover, blockquote:before, .banner_type_2.red b, #footer a.color_light:hover, #footer .carousel-caption h3 a:hover, .carousel-caption h3 #footer a:hover, #footer .menu_wrap li.menu-item > a:hover, .menu_wrap #footer li.menu-item > a:hover, .close_fieldset:hover, .text_cs_hover:hover, .tweet_list a:hover, [class*="alert_box"].error i[class^="fa "], label[class*="required"]:after, .vertical_list_type_7 li:before, .first_letter_1 > .fl { color: #201f1e; }
+a, a[class*="color"]:not(.color_light):hover, .scheme_color, .close_product:hover, .search_button:hover, #header .header-bottom .header-searchbox .search form button:hover, .close_search_form:hover, .banner_type_2.red b, #footer a.color_light:hover, #footer .carousel-caption h3 a:hover, .carousel-caption h3 #footer a:hover, #footer .menu_wrap li.menu-item > a:hover, .menu_wrap #footer li.menu-item > a:hover, .close_fieldset:hover, .text_cs_hover:hover, .tweet_list a:hover, [class*="alert_box"].error i[class^="fa "], label[class*="required"]:after, .vertical_list_type_7 li:before, .first_letter_1 > .fl { color: #201f1e; }
 
 /* line 14, ../scss/flat/_colors.scss */
 .bg_scheme_color { background: #428944; }
