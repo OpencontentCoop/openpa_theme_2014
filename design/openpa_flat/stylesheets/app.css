@@ -5241,10 +5241,10 @@ h3.widget_title { color: #201f1e; padding: 15px 0 14px; text-transform: uppercas
 .infographic_item dl dd { font-size: 1.3em; line-height: 1em; }
 
 /* line 394, ../scss/_style.scss */
-blockquote { font-style: italic; background: #fff; line-height: 1.55em; padding: 20px 10px 15px 50px; }
-/* line 399, ../scss/_style.scss */
+blockquote { border: none; font-style: italic; background: #fff; line-height: 1.55em; padding: 20px 10px 15px 50px; }
+/* line 400, ../scss/_style.scss */
 blockquote:before { content: "“"; position: absolute; font-size: 50px; font-weight: bold; width: 20px; left: 19px; top: 26px; color: #428944; }
-/* line 409, ../scss/_style.scss */
+/* line 410, ../scss/_style.scss */
 blockquote:after { content: ""; width: 17px; height: 10px; background: url("../images/blockquote_arrow.png") no-repeat; position: absolute; left: 20px; bottom: -10px; }
 
 /* line 1, ../scss/flat/_reset.scss */
