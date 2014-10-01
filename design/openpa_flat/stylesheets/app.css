@@ -5229,13 +5229,7 @@ h3.widget_title { color: #201f1e; padding: 15px 0 14px; text-transform: uppercas
 .events .media { margin-bottom: 15px; height: 80px; }
 
 /* line 373, ../scss/_style.scss */
-.event-item { padding-bottom: 5px; }
-
-/* line 376, ../scss/_style.scss */
-.cycle-carousel-wrap { width: 100%; }
-
-/* line 378, ../scss/_style.scss */
-.cycle-next.disabled, .cycle-prev.disabled { display: none; }
+.infographic_item i[class^="fa "] { font-size: 60px; }
 
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .menu_wrap *, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }
