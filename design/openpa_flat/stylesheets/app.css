@@ -5232,10 +5232,10 @@ h3.widget_title { color: #201f1e; padding: 15px 0 14px; text-transform: uppercas
 .infographic_item i[class^="fa "] { font-size: 60px; }
 
 /* line 377, ../scss/_style.scss */
-.infographic_item { padding: 20px; height: 130px; }
+.infographic_item { padding: 20px; min-height: 130px; }
 
 /* line 381, ../scss/_style.scss */
-.infographic_item dl dt { font-size: 2.6em; line-height: 1em; margin-bottom: 3px; }
+.infographic_item dl dt { font-size: 2.4em; line-height: 1em; margin-bottom: 3px; }
 
 /* line 386, ../scss/_style.scss */
 .infographic_item dl dd { font-size: 1.3em; line-height: 1em; }
