@@ -368,10 +368,12 @@ h3.widget_title {
     margin-bottom: 15px;
     height: 80px;
   }
-}
-
-.event-item{
-  margin-bottom: 10px;
+  .owl-controls{
+    margin-top: 0;
+  }
+  .event-item{
+    margin-bottom: 10px;
+  }
 }
 
 .infographic_item i[class^="fa "]{
