@@ -371,5 +371,19 @@ h3.widget_title {
 }
 
 .infographic_item i[class^="fa "]{
-  font-size: 60px;
+  font-size:60px;
+}
+
+.infographic_item{
+  padding:20px;
+  height:130px;
+}
+.infographic_item dl dt{
+  font-size:2.6em;
+  line-height: 1em;
+  margin-bottom:3px;
+}
+.infographic_item dl dd{
+  font-size:1.3em;
+  line-height: 1em;
 }
