@@ -308,9 +308,10 @@ h3.widget_title {
         float: none;
         a {
           @extend .btn;
+          font-size: 13px;
         }
         &.active .a {
-          background: $brand-primary;
+          @extend .btn-primary;
         }
       }
     }
