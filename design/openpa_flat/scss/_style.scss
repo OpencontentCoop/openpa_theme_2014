@@ -310,7 +310,7 @@ h3.widget_title {
           @extend .btn;
           font-size: 13px;
         }
-        &.active .a {
+        &.active a {
           @extend .btn-primary;
         }
       }
