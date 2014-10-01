@@ -44,6 +44,26 @@
   margin-top: 0;
 }
 
+.embed_image {
+  @extend .photoframe;
+  @extend .shadow;
+  @extend .r_corners;
+  @extend .wrapper;
+  @extend .f_xs_none;
+  @extend .m_xs_right_0;
+  @extend .m_xs_bottom_30;
+  @extend .d_xs_inline_b;
+  margin-top: 0;
+}
+
+.object-left .embed_image{
+  @extend .m_right_20;
+}
+
+.object-right .embed_image{
+  @extend .m_left_20;
+}
+
 .content-title h1 {
   color: $brand-secondary;
   text-transform: uppercase;
