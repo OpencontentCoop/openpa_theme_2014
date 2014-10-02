@@ -11,7 +11,7 @@
 		
 		<p class="f_size_medium m_bottom_10 ">{$node.object.published||l10n(date)}</p>
 
-        <p class="m_bottom_10">
+    <p class="m_bottom_10">
 		  {$node|abstract()|openpa_shorten(270)}
 		</p>
 

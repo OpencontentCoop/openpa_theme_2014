@@ -62,11 +62,15 @@
 
 {cache-block keys=array( $module_result.uri, $user_hash_cache_key, $access_type.name, $extra_cache_key )}
 
+{if is_unset($pagedata)}
+    {def $pagedata = openpapagedata()}
+{/if}
+
 </div>
 
 {include uri='design:page_footer.tpl'}
 
-{if array( 'edit', 'browse' )|contains( $ui_context )|not()}
+{if and( $pagedata.is_login_page|not(), array( 'edit', 'browse' )|contains( $ui_context )|not() )}
   {include uri='design:page_social.tpl'}
 {/if}
 

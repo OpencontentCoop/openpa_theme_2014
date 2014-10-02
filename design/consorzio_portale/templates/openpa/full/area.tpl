@@ -12,7 +12,9 @@
 
     <div class="content-title">
 
+        {if ezini( 'NodeSettings', 'RootNode', 'content.ini' )|ne($node.node_id)}
         <h1>Area {$node.name|wash()}</h1>
+        {/if}
 
     </div>
 
@@ -43,10 +45,6 @@
             {/foreach}
         </div>
         {undef $zones $unique_zone}
-        {/if}
-
-        {if $openpa.content_date.show_date}
-            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
         {/if}
 
     </div>

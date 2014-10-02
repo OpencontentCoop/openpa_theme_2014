@@ -35,7 +35,16 @@
                                                            'class_filter_array', array( 'image', 'video' ),
                                                            'sort_by', $node.sort_array ) )}
           
-          {include uri='design:atoms/gallery.tpl' items=$children thumbnail_class=squaremedium}
+           {include name="carousel"
+					uri='design:atoms/carousel.tpl'
+					items=$children
+					css_id=concat( 'gallery', $node.node_id)
+					root_node=$node
+					autoplay=0
+					i_view=image
+					pagination=false()
+					navigation= true()
+					items_per_row=1}
         {/if}
 
     </div>

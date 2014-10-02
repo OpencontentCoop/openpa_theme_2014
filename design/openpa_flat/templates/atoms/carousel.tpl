@@ -18,9 +18,11 @@
 
     <div id="carousel_{$css_id}" class="owl-carousel">
         {foreach $items as $item}
+            {if $item|has_attribute( 'image' )}
             <div class="item">
                 {node_view_gui content_node=$item view=$i_view image_class=$image_class}
             </div>
+            {/if}
         {/foreach}
     </div>
 

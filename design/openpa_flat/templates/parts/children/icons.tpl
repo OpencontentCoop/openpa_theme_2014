@@ -1,7 +1,7 @@
 {set_defaults( hash(
-  'page_limit', 16,  
+  'page_limit', 9,  
   'delimiter', '',
-  'exclude_classes', appini( 'ContentViewChildren', 'ExcludeClasses', array( 'image', 'video' ) ),
+  'exclude_classes', openpaini( 'ExcludedClassesAsChild', 'FromFolder', array( 'image', 'infobox', 'global_layout' ) ),
   'include_classes', array(),
   'type', 'exclude',
   'fetch_type', 'list',
@@ -17,26 +17,21 @@
 
 {def $children_count = fetch( openpa, concat( $fetch_type, '_count' ), hash( 'parent_node_id', $parent_node.node_id )|merge( $params ) )
 	 $children = fetch( openpa, $fetch_type, hash( 'parent_node_id', $parent_node.node_id,
-												  'offset', $view_parameters.offset,
-                                                  'sort_by', $parent_node.sort_array,
-                                                  'limit', $page_limit )|merge( $params ) ) }
+                                                 'offset', $view_parameters.offset,
+                                                 'sort_by', $parent_node.sort_array,
+                                                 'limit', $page_limit )|merge( $params ) ) }
 {if $children_count}
   <div class="content-view-children">  
 	{foreach $children as $i => $child }
 	  {if $i|eq(0)}
-		<div class="row">
+		<div class="row clearfix">
 	  {/if}
-	  <div class="col-sm-2">		
-		  {if $child|has_attribute( 'image' )}			
-			{include uri='design:atoms/image.tpl' href=$child.url_alias|ezurl() item=$child image_class=squarethumb alignment=center image_css_class="img-circle"}  
-		  {/if}
-		  <div class="caption">
-			<h5 class="text-center"><a href={$child.url_alias|ezurl()} alt="{'Read more'|i18n('ocbootstrap')} {$child.name|wash()}">{$child.name|wash()}</a></h5>
-		  </div>		
+	  <div class="col-lg-4 col-md-4 col-sm-4 m_bottom_45 m_xs_bottom_30">		
+		  {node_view_gui content_node=$child view=line_with_icon}      
 	  </div>
-	  {if eq(sum($i,1)|mod(6),0)}
+	  {if eq(sum($i,1)|mod(3),0)}
 		</div>
-		<div class="row">
+		<div class="row clearfix">
 	  {/if}
 	  {if $i|eq($page_limit|sub(1))}
 		</div>

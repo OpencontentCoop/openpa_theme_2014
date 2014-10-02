@@ -11,13 +11,13 @@
             <a href="{$openpa.content_link.full_link}">{$node.name|wash()}</a>
         </h3>
         
-		{if $openpa.content_ruoli_comune.ruoli.dipendente}
-            <ul class="list-unstyled color_dark">
-            {foreach $openpa.content_ruoli_comune.ruoli.dipendente as $ruolo}
-                <li><b>{node_view_gui content_node=$ruolo view=ruolo}</b></li>
-            {/foreach}
-            </ul>
-        {/if}
+      {if $openpa.content_ruoli_comune.ruoli.dipendente}
+        <ul class="list-unstyled color_dark">
+        {foreach $openpa.content_ruoli_comune.ruoli.dipendente as $ruolo}
+            <li><b>{node_view_gui content_node=$ruolo view=ruolo}</b></li>
+        {/foreach}
+        </ul>
+      {/if}
 		
 		{$node|abstract()}
     </div>

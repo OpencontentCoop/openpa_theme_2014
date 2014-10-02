@@ -1,28 +1,40 @@
 <div class="nav-section">
 
-    {if count($tree_menu.children)|gt(0)}
-      <div class="widget">
-          {if $node.node_id|ne($openpa.control_menu.side_menu.root_node.node_id)}
-          <div class="widget_title">
-              <h3>
-				{node_view_gui content_node=$openpa.control_menu.side_menu.root_node view=text_linked}
-			  </h3>
-          </div>
-          {/if}
-          <div class="widget_content">
-              <ul class="side_menu">
-                  {foreach $tree_menu.children as $menu_item}
-                      {include name=side_menu uri='design:menu/side_menu_item.tpl' menu_item=$menu_item current_node=$node}
-                  {/foreach}
-             </ul>
-          </div>
-      </div>
-    {/if}
-
-    {if $node.class_identifier|eq( 'area' )}
-	  {include uri='design:openpa/full/parts/area.tpl'}
-	{elseif $node.class_identifier|eq( 'scheda_informativa' )}
+  {if $node.class_identifier|eq( 'area' )}
+	  {*include uri='design:openpa/full/parts/side_menu.tpl'*}
+    {include uri='design:openpa/full/parts/area.tpl'}
+	
+  {elseif $node.class_identifier|eq( 'scheda_informativa' )}
+	  {include uri='design:openpa/full/parts/side_menu.tpl'}
 	  {include uri='design:openpa/full/parts/scheda_informativa.tpl'}
-	{/if}
+  
+  {elseif $node.class_identifier|eq( 'progetto' )}
+	  {include uri='design:openpa/full/parts/side_menu.tpl'}
+    {include uri='design:openpa/full/parts/progetto.tpl'}	
+  
+  {else}
+  
+    {def $parent = $node|find_first_parent( array( 'progetto', 'scheda_informativa', 'area' ) )}
+    
+    {if and( $parent, $parent.class_identifier|eq( 'progetto' ) )}
+      {include uri='design:openpa/full/parts/side_menu.tpl'}
+      {include uri='design:openpa/full/parts/progetto.tpl' node=$parent openpa=object_handler($parent)}
+    
+    {elseif and( $parent, $parent.class_identifier|eq( 'scheda_informativa' ) )}
+      {include uri='design:openpa/full/parts/side_menu.tpl'}
+      {include uri='design:openpa/full/parts/scheda_informativa.tpl' node=$parent openpa=object_handler($parent)}
+    
+    {elseif and( $parent, $parent.class_identifier|eq( 'area' ) )}
+      {*include uri='design:openpa/full/parts/side_menu.tpl'*}
+      {include uri='design:openpa/full/parts/area.tpl' node=$parent openpa=object_handler($parent)}
+      
+    {else}
+      {include uri='design:openpa/full/parts/side_menu.tpl'}
+    
+    {/if}
+  
+  {/if}
 
+
+  
 </div>

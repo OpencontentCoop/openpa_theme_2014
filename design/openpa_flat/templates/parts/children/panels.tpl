@@ -1,7 +1,7 @@
 {set_defaults( hash(
   'page_limit', 24,  
   'delimiter', '',
-  'exclude_classes', appini( 'ContentViewChildren', 'ExcludeClasses', array( 'image', 'video' ) ),
+  'exclude_classes', openpaini( 'ExcludedClassesAsChild', 'FromFolder', array( 'image', 'infobox', 'global_layout' ) ),
   'include_classes', array(),
   'type', 'exclude',
   'fetch_type', 'list',

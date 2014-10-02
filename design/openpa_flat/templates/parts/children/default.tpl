@@ -2,7 +2,7 @@
   'page_limit', 10,
   'view', 'line',
   'delimiter', '',
-  'exclude_classes', appini( 'ExcludedClassesAsChild', 'FromFolder', array( 'image', 'infobox', 'gallery', 'global_layout' ) ),
+  'exclude_classes', openpaini( 'ExcludedClassesAsChild', 'FromFolder', array( 'image', 'infobox', 'global_layout' ) ),
   'include_classes', array(),
   'type', 'exclude',
   'fetch_type', 'list',

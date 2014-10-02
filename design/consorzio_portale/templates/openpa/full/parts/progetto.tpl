@@ -7,7 +7,6 @@
   </div>
   <div class="widget_content">
 	
-  {def $exclude_users = array()}
 	{if $area}	  
 		{if count( $area_openpa.content_ruoli_comune.ruoli.struttura )}
 		  {foreach $area_openpa.content_ruoli_comune.ruoli.struttura as $ruolo}
@@ -15,23 +14,14 @@
         <h3>Responsabile</h3>        
 			  {foreach $ruolo.data_map.utente.content.relation_list as $user}
           {content_view_gui view=dipendente_struttura content_object=fetch( content, object, hash( object_id, $user.contentobject_id ) ) struttura=fetch( content, object, hash( object_id, $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id ) )}
-          {set $exclude_users = $exclude_users|append($user.contentobject_id)}
         {/foreach}
 			{/if}
 		  {/foreach}
 		{/if}	  
 	{/if}
 	{if count( $openpa.content_ruoli_comune.ruoli.struttura )}
-	  {def $ruoli = array()}
-    {foreach $openpa.content_ruoli_comune.ruoli.struttura as $ruolo}      
-      {*foreach $ruolo.data_map.utente.content.relation_list as $user}
-        {if $exclude_users|contains($user.contentobject_id)|not()}
-          {set $ruoli = $ruoli|append( $ruolo )}
-        {/if}
-      {/foreach}
-		{/foreach}
-    {foreach $ruoli as $ruolo*}
-      <h3>{$ruolo.name|wash()}</h3>
+	  {foreach $openpa.content_ruoli_comune.ruoli.struttura as $ruolo}
+		  <h3>{$ruolo.name|wash()}</h3>
       {foreach $ruolo.data_map.utente.content.relation_list as $user}
         {content_view_gui view=dipendente_struttura content_object=fetch( content, object, hash( object_id, $user.contentobject_id ) ) struttura=fetch( content, object, hash( object_id, $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id ) )}
       {/foreach}

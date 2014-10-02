@@ -28,12 +28,6 @@
 
         {include uri=$openpa.control_children.template}
 
-        {if $openpa.content_date.show_date}
-            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
-        {/if}
-
-
-
     </div>
 
 
