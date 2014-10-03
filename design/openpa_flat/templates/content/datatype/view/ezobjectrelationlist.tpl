@@ -13,6 +13,9 @@
     {if is_set( $node_view )}
       {node_view_gui content_node=fetch( content, object, hash( object_id, $Relations.item.contentobject_id ) ).main_node view=$node_view}
     {else}
+	  {if current_object_id()|eq($Relations.item.contentobject_id )}
+		{set $show_link = false()}
+	  {/if}
       {content_view_gui view=embed show_link=$show_link content_object=fetch( content, object, hash( object_id, $Relations.item.contentobject_id ) )}
     {/if}
     {if $show_newline}<br />{/if}

@@ -29,10 +29,16 @@
 	{/if}
 	</ul>
 	
-	{if $node|has_attribute( 'consulente' )}
+	{def $consulenti = fetch( ezfind, search, hash( class_id, array( 'consulente' ), filter, array( concat( 'submeta_progetto___id_si:',  $node.contentobject_id ) ), sort_by, hash( name, asc ) ) )}
+	{if $consulenti['SearchCount']|gt(0)}
 	  <h3>Consulenti</h3>
-	  <p>{attribute_view_gui attribute=$node|attribute( 'consulente' ) show_newline=true()}</p>
+	  <ul class="list-unstyled">
+	  {foreach $consulenti['SearchResult']  as $item}
+		<li>{node_view_gui content_node=$item view=text_linked}</li>
+	  {/foreach}
+	  </ul>
 	{/if}
+	{undef $consulenti}
 	
   </div>
 </div>

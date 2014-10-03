@@ -56,9 +56,10 @@ ViewName[lista_box2]=Box a 3 colonne (3 oggetti)
 ViewName[lista_tab]=Schede (tab)
 
 [Eventi]
-Name=Eventi (oggi e prossimamente)
+Name=Eventi
 ViewName[]
-ViewName[eventi]=Eventi (tab)
+ViewName[eventi]=Eventi
+ViewName[eventi_manual]=Eventi singoli
 
 [Iosono]
 Name=Schede Homepage (Io sono, eventi della vita, ecc...)

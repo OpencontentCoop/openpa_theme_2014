@@ -16,9 +16,9 @@
     {/if}
     
     <a class="color_dark d_block bt_link" href="{$object.main_node.url_alias|ezurl(no)}"><b>{$object.name|wash()}</b></a>
-    {if and( is_set( $hide_link_struttura ), $hide_link_struttura|eq(true()) )}
-      <span class="color_dark d_block bt_link">{$name}</span>
+    {if current_object_id()|eq($struttura.id)}
+      <span class="color_dark d_block bt_link wrapper">{$name}</span>
     {else}
-      <a class="color_dark d_block bt_link" href="{$struttura.main_node.url_alias|ezurl(no)}">{$name}</a>
+      <a class="color_dark d_block bt_link wrapper" href="{$struttura.main_node.url_alias|ezurl(no)}">{$name}</a>
     {/if}
 </div>

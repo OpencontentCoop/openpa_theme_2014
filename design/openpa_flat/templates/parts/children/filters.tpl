@@ -15,7 +15,7 @@
 
 <div class="row">
   <div class="col-md-8">
-	{if $data.is_search_request}	  	  
+	{if and( $data.is_search_request, is_set( $view_parameters.class_id ) )}
 	 {include name=class_search_form_result
 			  uri='design:parts/class_search_form_result.tpl'
 			  data=$data

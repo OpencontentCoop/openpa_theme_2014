@@ -1,40 +1,10 @@
 {if count( $openpa.content_ruoli_comune.ruoli.struttura )}
 <div class="widget">
-	<div class="widget_title">    
-    {if $node.node_id|eq($openpa.control_menu.side_menu.root_node.node_id)}
-      <h3>Riferimenti</h3>
-    {else}
-      <h3>{node_view_gui content_node=$openpa.control_menu.side_menu.root_node view=text_linked}</h3>
-      <small>Riferimenti</small>
-    {/if}
+	<div class="widget_title">        	
+      <h3>Riferimenti</h3>    
 	</div>
 	<div class="widget_content">
-    {def $exclude_users_filter = array()}
-	  
-    {foreach $openpa.content_ruoli_comune.ruoli.struttura as $ruolo}
-		{if $ruolo.name|eq("Responsabile")}
-        <h3>Responsabile</h3>        
-			  {foreach $ruolo.data_map.utente.content.relation_list as $user}
-          {content_view_gui
-            view=dipendente_struttura
-            content_object=fetch( content, object, hash( object_id, $user.contentobject_id ) )
-            struttura=fetch( content, object, hash( object_id, $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id ) )
-            hide_link_struttura=cond( $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id|eq($node.contentobject_id), true(), false() )}
-          {set $exclude_users_filter = $exclude_users_filter|append( concat( '-meta_id_si:', $user.contentobject_id ) )}
-        {/foreach}
-			{/if}
-	  {/foreach}
-    
-    {def $staff = fetch( ezfind, search, hash( subtree_array, array( $node.node_id ), class_id, array( 'dipendente' ), filter, cond( count($exclude_users_filter)|gt(0), $exclude_users_filter, null() ), sort_by, hash( 'extra_priority_si', desc ) ) )}
-    {if $staff['SearchCount']|gt(0)}
-      <h3>Staff</h3>      
-      {foreach $staff['SearchResult']  as $item}
-        {content_view_gui view=dipendente_ruoli content_object=$item.object}
-        {delimiter}<br />{/delimiter}
-      {/foreach}
-    {/if}
-    
-    {undef $exclude_users_filter $staff}
+	  {include uri="design:openpa/parts/staff_area.tpl" node=$node}
 	</div>
 </div>
 {/if}
