@@ -6678,7 +6678,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
   /* line 241, ../scss/flat/_responsive.scss */
   .p_xs_hr_0 { padding-left: 0px !important; padding-right: 0px !important; }
   /* line 245, ../scss/flat/_responsive.scss */
-  .f_xs_none, .main_image, .embed_image, .widget_tabs .nav-tabs, #header .header-bottom .header-searchbox .search form button, #navigation nav, .menu_wrap li.menu-item, .sub_menu_wrap .sub_menu-item { float: none; }
+  .f_xs_none, .main_image, .embed_image, .widget_tabs .nav-tabs, #header .header-bottom .header-searchbox .search form button, #navigation .main-nav, .menu_wrap li.menu-item, .sub_menu_wrap .sub_menu-item { float: none; }
   /* line 248, ../scss/flat/_responsive.scss */
   .f_xs_left { float: left; }
   /* line 251, ../scss/flat/_responsive.scss */
@@ -6690,7 +6690,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
   /* line 261, ../scss/flat/_responsive.scss */
   .d_xs_centered { margin-left: auto; margin-right: auto; }
   /* line 265, ../scss/flat/_responsive.scss */
-  .d_xs_none, .content-title h1 small, #navigation nav, .sub_menu_wrap, ul.breadcrumb { display: none; }
+  .d_xs_none, .content-title h1 small, #navigation .main-nav, .sub_menu_wrap, ul.breadcrumb { display: none; }
   /* line 268, ../scss/flat/_responsive.scss */
   .w_xs_auto, #page, .sub_menu_wrap, .sub_menu_wrap .sub_menu-item { width: auto !important; }
   /* line 271, ../scss/flat/_responsive.scss */
@@ -6698,7 +6698,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
   /* line 274, ../scss/flat/_responsive.scss */
   .t_xs_align_c, #header .header-top .header-top-left, #header .header-top .header-top-center, #header .header-top .header-top-right, #header .header-bottom .header-logo, #header .header-bottom .header-searchbox .info, .menu_wrap { text-align: center; }
   /* line 277, ../scss/flat/_responsive.scss */
-  .t_xs_align_l, #navigation nav { text-align: left; }
+  .t_xs_align_l, #navigation .main-nav { text-align: left; }
   /* line 280, ../scss/flat/_responsive.scss */
   .m_xs_bottom_0 { margin-bottom: 0px; }
   /* line 283, ../scss/flat/_responsive.scss */

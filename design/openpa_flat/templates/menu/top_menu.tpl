@@ -1,4 +1,4 @@
-<nav role="navigation">
+<div class="main-nav" role="navigation">
     {if is_area_tematica()}
 
         {include uri=concat('design:menu/area_tematica_top.tpl')}
@@ -56,4 +56,4 @@
         </ul>
 
     {/if}
-</nav>
+</div>

@@ -1,4 +1,4 @@
-<footer id="footer">
+<div id="footer">
 
 {if and( $ui_context|ne( 'edit' ), $ui_context|ne( 'browse' ), $pagedata.is_login_page|not() )}
     <div class="footer_top_part">
@@ -24,4 +24,4 @@
     </div>
   </div>
 
-</footer>
+</div>
