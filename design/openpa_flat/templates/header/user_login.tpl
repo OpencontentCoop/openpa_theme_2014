@@ -1,4 +1,4 @@
-<nav class="header-top-center">
+<div class="header-top-center">
 <ul>
 
   {if $current_user.is_logged_in}
@@ -22,4 +22,4 @@
   {/if}
 
 </ul>
-</nav>
+</div>

@@ -1,4 +1,4 @@
-<header id="header" role="banner">
+<div id="header" role="banner">
 
   {if $pagedata.is_login_page|not()}
   <section class="header-top">
@@ -12,13 +12,13 @@
   </section>
   {/if}
 
-  <section class="header-bottom container">
+  <div class="header-bottom container">
     <div class="clearfix row">
       {include uri='design:header/logo.tpl'}
       {if $pagedata.is_login_page|not()}
         {include uri='design:header/searchbox.tpl'}
       {/if}
     </div>
-  </section>
+  </div>
 
-</header>
+</div>
