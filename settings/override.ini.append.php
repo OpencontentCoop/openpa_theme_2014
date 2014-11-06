@@ -323,3 +323,10 @@ MatchFile=block/gmap.tpl
 Subdir=templates
 Match[type]=GMap
 Match[view]=gmap
+
+[block_html]
+Source=block/view/view.tpl
+MatchFile=block/html.tpl
+Subdir=templates
+Match[type]=HTML
+Match[view]=html

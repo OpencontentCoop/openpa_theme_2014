@@ -44,6 +44,7 @@
 					i_view=image
 					pagination=false()
 					navigation= true()
+          image_class=imagefull
 					items_per_row=1}
         {/if}
 

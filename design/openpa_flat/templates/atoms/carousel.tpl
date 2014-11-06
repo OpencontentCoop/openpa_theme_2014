@@ -26,7 +26,7 @@
         {/foreach}
     </div>
 
-    <script>
+    <script type="text/javascript">
         $(document).ready(function() {ldelim}
             $("#carousel_{$css_id}").owlCarousel({ldelim}
                 items : {$items_per_row},

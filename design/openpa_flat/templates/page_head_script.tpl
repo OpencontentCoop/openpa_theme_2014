@@ -20,9 +20,7 @@ var UiContext = {/literal}"{$ui_context}"{literal}, UriPrefix = {/literal}{'/'|e
   'bootstrap/scrollspy.js',
   'bootstrap/transition.js',
   'waypoints.min.js',
-  'openpa_flat.js',
-  ezini( 'JavaScriptSettings', 'JavaScriptList', 'design.ini' ),
-  ezini( 'JavaScriptSettings', 'FrontendJavaScriptList', 'design.ini' )
+  'openpa_flat.js'
 ))}
 
 <!--[if lt IE 9]>
