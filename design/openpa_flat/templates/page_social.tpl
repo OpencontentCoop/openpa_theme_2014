@@ -33,7 +33,7 @@
             <form id="contactform" class="mini" action="{'content/view/full/4721'|ezurl(no)}">
                 {*<input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="text" name="cf_name" placeholder="Nome"/>
                 <input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="email" name="cf_email" placeholder="Email"/>*}
-                <button type="submit" class="btn btn-lg r_corners mw_0 tr_all_hover color_dark bg_light_color_2">Accedi al form</button>
+                {*<button type="submit" class="btn btn-lg r_corners mw_0 tr_all_hover color_dark bg_light_color_2">Accedi al form</button>
             </form>
         </div>
     </li>

@@ -23,6 +23,7 @@ var UiContext = {/literal}"{$ui_context}"{literal}, UriPrefix = {/literal}{'/'|e
   'openpa_flat.js'
 ))}
 
-<!--[if lt IE 9]>
-<script type="text/javascript" src={"javascript/respond.js"|ezdesign()} ></script>
+<!--[if lt IE 9]>    
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>        
+<script type="text/javascript" src={"javascript/respond.min.js"|ezdesign()} ></script>
 <![endif]-->

@@ -6,5 +6,5 @@
       <a href="mailto:{$pagedata.contacts.email}"><b>{$pagedata.contacts.email}</b></a>
     </dd>
   </dl>
-</div>
 {/if}
+</div>
