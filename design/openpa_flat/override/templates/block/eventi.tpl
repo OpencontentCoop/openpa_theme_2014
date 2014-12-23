@@ -1,4 +1,4 @@
-{def $valid_node = $block.valid_nodes[0]
+{def $valid_node = cond( is_set( $block.valid_nodes[0] ), $block.valid_nodes[0], false() )
      $show_link = true()}
 
 {if and( $valid_node|not(), is_set( $block.custom_attributes.source ) )}
