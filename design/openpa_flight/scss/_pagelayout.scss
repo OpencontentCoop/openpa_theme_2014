@@ -116,9 +116,9 @@ body{
 }
 
 #navigation .main-nav{
+  @extend .f_left;
   @extend .f_xs_none;
   @extend .d_xs_none;
-  @extend .t_xs_align_l;
 }
 
 .menu_wrap{
@@ -170,8 +170,9 @@ body{
     @extend .m_xs_bottom_5;
     > a{
       @extend .tr_delay_hover;
-      @extend .color_light;
+      @extend .color_dark;
       @extend .tt_uppercase;
+      @extend .r_corners;
     }
     &.extra-menu-item{
       @extend .f_right;

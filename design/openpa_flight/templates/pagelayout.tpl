@@ -62,7 +62,7 @@
                 {/if}
               </a>
             </div>
-            <div class="header-menu">
+            <div class="header-menu" id="navigation">
               <div class="clearfix t_sm_align_l f_left f_sm_none relative s_form_wrap m_sm_bottom_15 p_xs_hr_0 m_xs_bottom_5">
                 <!--button for responsive menu-->
                 <button id="menu_button" class="r_corners centered_db d_none tr_all_hover d_xs_block m_xs_bottom_5">
