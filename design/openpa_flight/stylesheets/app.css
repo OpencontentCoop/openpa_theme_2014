@@ -5072,10 +5072,10 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify { text-align: j
 .login-menu { background-color: #fff; width: 270px; z-index: 1001; padding: 10px; }
 
 /* line 50, ../scss/_structure.scss */
-.video-wrapper { max-width: 100%; width: 600px; }
+.video-container { height: 0; overflow: hidden; padding-bottom: 56.25%; padding-top: 30px; position: relative; }
 
-/* line 55, ../scss/_structure.scss */
-.video-container { height: 0; overflow: hidden; padding-bottom: 56.25%; position: relative; }
+/* line 57, ../scss/_structure.scss */
+.video-container iframe, .video-container object, .video-container embed { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
 
 /* =typography
 -------------------------------------------------
