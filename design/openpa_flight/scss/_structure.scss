@@ -46,3 +46,15 @@
     z-index: 1001;
     padding: 10px;
 }
+
+.video-wrapper {
+  max-width: 100%;
+  width: 600px;
+}
+
+.video-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
