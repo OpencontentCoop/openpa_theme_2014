@@ -5214,62 +5214,64 @@ h3.widget_title { color: #201f1e; padding: 15px 0 14px; text-transform: uppercas
 .carousel-top-control .caption { padding-right: 10px; }
 
 /* line 263, ../scss/_style.scss */
-.carousel-caption { background-color: rgba(0, 0, 0, 0.5); bottom: 0; left: 0; margin: 0; padding: 0 20px 30px; right: 0; text-align: left; width: 100%; }
-/* line 272, ../scss/_style.scss */
-.carousel-caption h3 { font-size: 2em; line-height: 1em; }
-/* line 277, ../scss/_style.scss */
-.carousel-caption h3 a { font-weight: bold; }
-
+.carousel-caption { bottom: 0; left: 0; margin: 0; padding: 0 20px 30px; right: 0; text-align: left; width: 100%; }
+/* line 271, ../scss/_style.scss */
+.carousel-caption h3 { background-color: rgba(0, 0, 0, 0.5); display: inline-block; padding: 12px; font-size: 2em; line-height: 1em; }
+/* line 279, ../scss/_style.scss */
+.carousel-caption h3 a { font-weight: bold; text-decoration: none; }
 /* line 285, ../scss/_style.scss */
+.carousel-caption p { background: #428944; color: #fff; display: inline-block; font-size: 1.2em; margin: 0; padding: 5px; }
+
+/* line 296, ../scss/_style.scss */
 .carousel-both-control .carousel-caption { padding-bottom: 30px; }
-/* line 288, ../scss/_style.scss */
+/* line 299, ../scss/_style.scss */
 .carousel-both-control .owl-pagination { bottom: 0; position: absolute; width: 100%; }
-/* line 293, ../scss/_style.scss */
+/* line 304, ../scss/_style.scss */
 .carousel-both-control .owl-pagination .owl-page span { background: #fff !important; }
-/* line 297, ../scss/_style.scss */
+/* line 308, ../scss/_style.scss */
 .carousel-both-control .owl-pagination .owl-page.active span { background: #428944 !important; }
 
-/* line 306, ../scss/_style.scss */
+/* line 317, ../scss/_style.scss */
 .panels-container .media { padding: 10px; }
-/* line 309, ../scss/_style.scss */
+/* line 320, ../scss/_style.scss */
 .panels-container .media .main_image { float: none; margin: 0 0 10px; box-shadow: 0 0 #fff; border: none; border-radius: 0; }
-/* line 316, ../scss/_style.scss */
+/* line 327, ../scss/_style.scss */
 .panels-container .media .caption { padding: 10px; }
 
-/* line 324, ../scss/_style.scss */
-.events .widget_content ul.nav, .events .widget_content .nav-facets ul.nav-sub, .nav-facets .events .widget_content ul.nav-sub { margin-top: -15px; text-align: center; text-transform: uppercase; font-size: .8em; margin-bottom: 10px; border: none; }
-/* line 332, ../scss/_style.scss */
-.events .widget_content ul.nav li, .events .widget_content .nav-facets ul.nav-sub li, .nav-facets .events .widget_content ul.nav-sub li { display: inline-block; float: none; }
 /* line 335, ../scss/_style.scss */
-.events .widget_content ul.nav li a, .events .widget_content .nav-facets ul.nav-sub li a, .nav-facets .events .widget_content ul.nav-sub li a { font-size: 13px; }
+.events .widget_content ul.nav, .events .widget_content .nav-facets ul.nav-sub, .nav-facets .events .widget_content ul.nav-sub { margin-top: -15px; text-align: center; text-transform: uppercase; font-size: .8em; margin-bottom: 10px; border: none; }
+/* line 343, ../scss/_style.scss */
+.events .widget_content ul.nav li, .events .widget_content .nav-facets ul.nav-sub li, .nav-facets .events .widget_content ul.nav-sub li { display: inline-block; float: none; }
 /* line 346, ../scss/_style.scss */
+.events .widget_content ul.nav li a, .events .widget_content .nav-facets ul.nav-sub li a, .nav-facets .events .widget_content ul.nav-sub li a { font-size: 13px; }
+/* line 357, ../scss/_style.scss */
 .events .calendar-date .month { background: #428944; font-size: 1.1em; line-height: 1; color: #fff; display: block; text-align: center; padding: 5px 3px; text-transform: uppercase; }
-/* line 356, ../scss/_style.scss */
-.events .calendar-date .day { background: #fff; color: #428944; font-size: 2em; font-weight: bold; display: block; border: 1px solid #428944; padding: 8px 3px; text-align: center; }
 /* line 367, ../scss/_style.scss */
+.events .calendar-date .day { background: #fff; color: #428944; font-size: 2em; font-weight: bold; display: block; border: 1px solid #428944; padding: 8px 3px; text-align: center; }
+/* line 378, ../scss/_style.scss */
 .events .media { margin-bottom: 15px; height: 80px; }
-/* line 371, ../scss/_style.scss */
+/* line 382, ../scss/_style.scss */
 .events .owl-controls { margin-top: 0; }
-/* line 374, ../scss/_style.scss */
+/* line 385, ../scss/_style.scss */
 .events .event-item { margin-bottom: 10px; }
 
-/* line 379, ../scss/_style.scss */
+/* line 390, ../scss/_style.scss */
 .infographic_item i[class^="fa "] { font-size: 60px; }
 
-/* line 383, ../scss/_style.scss */
+/* line 394, ../scss/_style.scss */
 .infographic_item { padding: 20px; min-height: 130px; }
-/* line 386, ../scss/_style.scss */
+/* line 397, ../scss/_style.scss */
 .infographic_item dl { margin-bottom: 0; }
-/* line 388, ../scss/_style.scss */
+/* line 399, ../scss/_style.scss */
 .infographic_item dl dt { font-size: 2.4em; line-height: 1em; margin-bottom: 3px; }
-/* line 393, ../scss/_style.scss */
+/* line 404, ../scss/_style.scss */
 .infographic_item dl dd { font-size: 1.3em; line-height: 1em; }
 
-/* line 400, ../scss/_style.scss */
+/* line 411, ../scss/_style.scss */
 blockquote { border: none; font-style: italic; background: #fff; line-height: 1.55em; padding: 20px 10px 15px 50px; }
-/* line 406, ../scss/_style.scss */
+/* line 417, ../scss/_style.scss */
 blockquote:before { content: "“"; position: absolute; font-size: 50px; font-weight: bold; width: 20px; left: 19px; top: 26px; color: #428944; }
-/* line 416, ../scss/_style.scss */
+/* line 427, ../scss/_style.scss */
 blockquote:after { content: ""; width: 17px; height: 10px; background: url("../images/blockquote_arrow.png") no-repeat; position: absolute; left: 20px; bottom: -10px; }
 
 /* line 1, ../scss/flat/_reset.scss */
