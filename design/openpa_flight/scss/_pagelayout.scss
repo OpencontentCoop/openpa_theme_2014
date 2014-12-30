@@ -147,6 +147,10 @@ body{
     display: block;
     padding: 9px 10px 10px;
     text-decoration: none !important;
+    font-size: 1.2em;
+    b{
+      font-weight: normal !important;
+    }
   }
 
   .main_menu > li:hover > .sub_menu_wrap{
