@@ -22,7 +22,10 @@
   @extend .col-md-3;
 }
 
-
+.content-view-children .media {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
 
 .figure{
     @extend .text-center;

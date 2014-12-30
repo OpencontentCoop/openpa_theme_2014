@@ -5059,48 +5059,51 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify { text-align: j
 /* line 710, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 #ezwt_create_chosen a.chosen-single { line-height: 28px; height: 28px; margin-top: -10px; }
 
-/* line 27, ../scss/_structure.scss */
+/* line 25, ../scss/_structure.scss */
+.content-view-children .media { margin-bottom: 20px; padding-bottom: 20px; }
+
+/* line 30, ../scss/_structure.scss */
 .figure { margin: 1em 0; }
 
-/* line 35, ../scss/_structure.scss */
+/* line 38, ../scss/_structure.scss */
 .social-buttons { margin: 1em 0; }
 
-/* line 39, ../scss/_structure.scss */
+/* line 42, ../scss/_structure.scss */
 .nav-main .dropdown-toggle i { margin: 2px 0 0 4px; }
 
-/* line 43, ../scss/_structure.scss */
+/* line 46, ../scss/_structure.scss */
 .login-menu { background-color: #fff; width: 270px; z-index: 1001; padding: 10px; }
 
-/* line 50, ../scss/_structure.scss */
+/* line 53, ../scss/_structure.scss */
 .video-container { height: 0; overflow: hidden; padding-bottom: 56.25%; padding-top: 30px; position: relative; }
 
-/* line 57, ../scss/_structure.scss */
+/* line 60, ../scss/_structure.scss */
 .video-container iframe, .video-container object, .video-container embed { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
 
-/* line 68, ../scss/_structure.scss */
+/* line 71, ../scss/_structure.scss */
 ul.org-chart li, ul.org-chart ul li { list-style: none; text-indent: 0; }
 
-/* line 74, ../scss/_structure.scss */
+/* line 77, ../scss/_structure.scss */
 ul.org-chart li:before { content: ""; }
 
-/* line 76, ../scss/_structure.scss */
+/* line 79, ../scss/_structure.scss */
 ul.org-chart ul, ul.org-chart ul ul { margin: 0; padding: 0; }
 
-/* line 82, ../scss/_structure.scss */
+/* line 85, ../scss/_structure.scss */
 ul.org-chart li { margin-bottom: 20px; }
 
-/* line 86, ../scss/_structure.scss */
+/* line 89, ../scss/_structure.scss */
 ul.org-chart ul li { padding: 10px 0 10px 50px; margin: 0 0 0 50px; }
 
-/* line 91, ../scss/_structure.scss */
+/* line 94, ../scss/_structure.scss */
 ul.org-chart li div.vcard { padding: 15px; margin: 0; min-height: 50px; background: #eee; display: inline-block; font-size: 16px; }
-/* line 98, ../scss/_structure.scss */
+/* line 101, ../scss/_structure.scss */
 ul.org-chart li div.vcard a { color: #000; text-decoration: underline; }
 
-/* line 104, ../scss/_structure.scss */
+/* line 107, ../scss/_structure.scss */
 ul.org-chart ul li { background: url("../images/org-tree-mid.gif") no-repeat left -15px; }
 
-/* line 108, ../scss/_structure.scss */
+/* line 111, ../scss/_structure.scss */
 ul.org-chart ul li:last-child { background: url("../images/org-tree-last.gif") no-repeat left -15px; }
 
 /* =typography
