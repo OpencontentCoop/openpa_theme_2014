@@ -259,6 +259,9 @@
   .w_xs_auto{
     width:auto !important;
   }
+  .mw_xs_none{
+    max-width: none;
+  }
   .w_xs_fullr{
     width:100%;
   }
@@ -400,6 +403,9 @@
   }
   .w_mxs_full{
     width:100%;
+  }
+  .mw_mxs_none{
+    max-width: none;
   }
 }
 @media only screen and (max-width:393px){

@@ -275,7 +275,7 @@ h3.widget_title {
     font-size: 2em;
     line-height: 1em;
     @extend .color_light;
-    @extend .t_align_c;
+    margin-bottom: 0;
     a {
       @extend .color_light;
       font-weight: bold;
@@ -283,7 +283,7 @@ h3.widget_title {
     }
   }
   p {
-    background: $brand-primary;
+    background: lighten($brand-primary, 60%);
     color: #fff;
     display: inline-block;
     font-size: 1.2em;
@@ -434,3 +434,5 @@ blockquote{
     bottom:-10px;
   }
 }
+
+.owl-theme .owl-controls .owl-page span { opacity: 1 };
