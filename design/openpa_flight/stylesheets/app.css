@@ -5277,6 +5277,9 @@ blockquote:after { content: ""; width: 17px; height: 10px; background: url("../i
 /* line 438, ../scss/_style.scss */
 .owl-theme .owl-controls .owl-page span { opacity: 1; }
 
+/* line 440, ../scss/_style.scss */
+legend { font-size: 1em; }
+
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }
 
