@@ -183,6 +183,7 @@
   .popup{
     width:750px;
   }
+  .media .media-body{clear: none}
 }
 @media only screen and (max-width:768px){
   .h_bot_part{
@@ -351,6 +352,7 @@
   .responsive_table tr:nth-child(2n){
     background:#F8FCFD;
   }
+
 }
 @media only screen and (max-width:480px){
   .dropdown_list{
@@ -414,4 +416,5 @@
   .d_exs_block{
     display:block;
   }
+  .media .media-body{clear: left}
 }
