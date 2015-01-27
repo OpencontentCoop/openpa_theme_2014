@@ -42,8 +42,8 @@
 					root_node=$node
 					autoplay=0
 					i_view=image
-					pagination=false()
-					navigation= true()
+					pagination=true()
+					navigation= false()
           image_class=imagefull
 					items_per_row=1}
         {/if}

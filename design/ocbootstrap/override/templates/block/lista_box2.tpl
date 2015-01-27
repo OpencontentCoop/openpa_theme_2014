@@ -16,13 +16,11 @@
 {if $valid_nodes_count|eq(1)}
 
     {set $children=fetch( 'content', 'list',  hash( 'parent_node_id', $valid_nodes[0].node_id, 'sort_by', $valid_nodes[0].sort_array, 'limit', 6 ) )}
-    {if $children|count()}
-        <ul>							 
+    <div class="well well-sm">
+    {if $children|count()}        
+        <ul class="list-unstyled">						 
             {foreach $children as $child}
-            <li>
-                <span class="details">
-                    {$child.object.published|datetime(custom, '%j %F %Y')}
-                </span>
+            <li>                
                 {node_view_gui content_node=$child view=text_linked}
             </li>
             {/foreach}
@@ -30,20 +28,20 @@
     {else}
         <p>Nessun contenuto disponibile in {$valid_nodes[0].name|wash()}</p>
     {/if}
+    </div>
 
 
 {elseif $valid_nodes_count|eq(2)}
 
-<div class="row">
-	
+  <div class="row">	
         <div class="col-md-6">
         {set $children=fetch( 'content', 'list',  hash( 'parent_node_id', $valid_nodes[0].node_id,'sort_by', $valid_nodes[0].sort_array, 'limit', 6 ) )}
-        {if $children|count()}
-            <h4>{$valid_nodes[0].name|wash()}</h4>
-            <ul>							 
+        <h4>{$valid_nodes[0].name|wash()}</h4>
+        <div class="well well-sm">
+        {if $children|count()}            
+            <ul class="list-unstyled">						 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li>                    
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -52,15 +50,16 @@
             <p>Nessun contenuto disponibile in {$valid_nodes[0].name|wash()}</p>
         {/if}
         </div>
+        </div>
 	
 	    <div class="col-md-6">
         {set $children=fetch( 'content', 'list',  hash( 'parent_node_id', $valid_nodes[1].node_id,'sort_by', $valid_nodes[0].sort_array, 'limit', 6 ) )}
-        {if $children|count()}
-            <h4>{$valid_nodes[1].name|wash()}</h4>
-            <ul>							 
+        <h4>{$valid_nodes[1].name|wash()}</h4>
+        <div class="well well-sm">
+        {if $children|count()}            
+            <ul class="list-unstyled">						 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li>                    
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -68,6 +67,7 @@
         {else}
             <p>Nessun contenuto disponibile in {$valid_nodes[1].name|wash()}</p>
         {/if}
+        </div>
         </div>
 	</div>
 	
@@ -76,12 +76,12 @@
     <div class="row">
         <div class="col-md-4">
         {set $children=fetch( 'content', 'list',  hash( 'parent_node_id', $valid_nodes[0].node_id,'sort_by', $valid_nodes[0].sort_array, 'limit', 4 ) )}
-        {if $children|count()}
-            <h4>{$valid_nodes[0].name|wash()}</h4>
-            <ul>							 
+        <h4>{$valid_nodes[0].name|wash()}</h4>
+        <div class="well well-sm">
+        {if $children|count()}            
+            <ul class="list-unstyled">						 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li>                    
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -90,15 +90,16 @@
             <p>Nessun contenuto disponibile in {$valid_nodes[0].name|wash()}</p>
         {/if}
         </div>
+        </div>
 	
 	    <div class="col-md-4">
         {set $children=fetch( 'content', 'list',  hash( 'parent_node_id', $valid_nodes[1].node_id,'sort_by', $valid_nodes[0].sort_array, 'limit', 4 ) )}
-        {if $children|count()}
-            <h4>{$valid_nodes[1].name|wash()}</h4>
-            <ul>							 
+        <h4>{$valid_nodes[1].name|wash()}</h4>
+        <div class="well well-sm">
+        {if $children|count()}            
+            <ul class="list-unstyled">						 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li>                    
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -107,15 +108,16 @@
             <p>Nessun contenuto disponibile in {$valid_nodes[1].name|wash()}</p>
         {/if}
         </div>
+        </div>
         
         <div class="col-md-4">
         {set $children=fetch( 'content', 'list',  hash( 'parent_node_id', $valid_nodes[2].node_id,'sort_by', $valid_nodes[0].sort_array, 'limit', 4 ) )}
-        {if $children|count()}
-            <h4>{$valid_nodes[2].name|wash()}</h4>
-            <ul>							 
+        <h4>{$valid_nodes[2].name|wash()}</h4>
+        <div class="well well-sm">
+        {if $children|count()}            
+            <ul class="list-unstyled">						 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li>                    
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -124,9 +126,10 @@
             <p>Nessun contenuto disponibile in {$valid_nodes[2].name|wash()}</p>
         {/if}
         </div>
-	</div>
+        </div>
+    </div>
 {/if}
-
+</div>
 {if and( $show_title, $block.name|ne('') )}
 </div>
 {/if}

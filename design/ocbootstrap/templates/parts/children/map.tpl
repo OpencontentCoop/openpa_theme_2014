@@ -1,60 +1,54 @@
-{set_defaults(hash('height', 60, 'map_type', 'osm' ))}
+{ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js', 'Leaflet.MakiMarkers.js', 'leaflet.markercluster.js') )}
+{ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css', 'MarkerCluster.css', 'MarkerCluster.Default.css' ) )}
+    
+{set_defaults(hash(
+  'height', 600,
+  'map_type', 'osm',
+  'class_identifiers', array()
+))}
+{set $height = $height|explode('px')|implode('')}
 
-{def $markers = fetch( 'ocbtools', 'map_markers', hash( 'parent_node_id', $node.node_id ) )}
+{def $markers = fetch( 'ocbtools', 'map_markers', hash( 'parent_node_id', $node.node_id, class_identifiers, $class_identifiers ) )}
+
 
 {if $markers|count()}
 
 <div class="row">
   <div class="col-md-9">
 	<div id="map-{$node.node_id}" style="height: {$height}px; width: 100%"></div>
-
-{if $map_type|eq('osm')}
-
-    {ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js') )}
-    {ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css' ) )}
-	<script>
-	L.Icon.Default.imagePath = {'javascript/plugins/leaflet/images'|ezdesign()};
-	var map = L.map( 'map-{$node.node_id}' );
-	var markers = [];
-	var markersObjects = {$markers|json_encode()};
-	$.each( markersObjects, function(i,m){ldelim}           
-		marker = L.marker([m.lat,m.lon]).addTo(map);	
-		marker.bindPopup( "<h3><a href='"+m.urlAlias+"'>"+m.popupMsg+"</a><h3>");
-		markers[i] = marker;
-	{rdelim});            
-	var group = new L.featureGroup( markers );
-	map.fitBounds(group.getBounds());    
-	L.tileLayer({literal}'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'{/literal}, {ldelim}
-		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-		maxZoom: 18
-	{rdelim}).addTo(map);
-	$(document).ready( function(){ldelim}
-	  $('.list-markers-text a').bind( 'click', function(e){ldelim}
-		var id = $(this).data('id');
-		markers[id].openPopup();
-		e.preventDefault();
-	  {rdelim});
-	{rdelim});
-	</script>
-
-{elseif $map_type|eq('google')}
-
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    {ezscript_require( 'ezflgmapview.js' )}
-    <script type="text/javascript"><!--
-    var data_{$node.node_id} = {$markers|json_encode()};
-    google.maps.event.addDomListener(window, 'load', function(){ldelim}
-        eZFLGMapView( 'map-{$node.node_id}', new google.maps.LatLng(data_{$node.node_id}[0].lat,data_{$node.node_id}[0].lng), 13, data_{$node.node_id} );
-    {rdelim} );
-    --></script>
-
-{/if}
-
+	
+	<script>            
+  var tiles = L.tileLayer('//{ldelim}s{rdelim}.tile.openstreetmap.org/{ldelim}z{rdelim}/{ldelim}x{rdelim}/{ldelim}y{rdelim}.png', {ldelim}maxZoom: 18,attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'{rdelim});
+  var map = L.map('map-{$node.node_id}').addLayer(tiles);
+  map.scrollWheelZoom.disable();
+  var markersList = [];
+  var markers = L.markerClusterGroup();
+  var markersObjects = {$markers|json_encode()};
+  
+  $.each( markersObjects, function(i,m){ldelim}
+    var customIcon = L.MakiMarkers.icon({ldelim}icon: "star", color: "#e5b200", size: "l"{rdelim}); //https://www.mapbox.com/maki/
+    markersList[i] = L.marker([m.lat,m.lon],{ldelim}icon:customIcon{rdelim})
+    markersList[i].bindPopup( "<h3><a href='"+m.urlAlias+"'>"+m.popupMsg+"</a><h3>");
+    markers.addLayer(markersList[i]);                 
+    map.addLayer(markers);
+    map.fitBounds(markers.getBounds());
+  {rdelim});                
+  $(document).ready( function(){ldelim}        
+    $('.list-markers-text a').bind( 'click', function(e){ldelim}
+    var id = $(this).data('id');
+    var m = markersList[id];
+    markers.zoomToShowLayer(m, function() {ldelim}
+        m.openPopup();
+    {rdelim});        
+    e.preventDefault();
+    {rdelim});
+  {rdelim});
+  </script>
   </div>
   <div class="col-md-3">
-	<ul class="list-markers-text list-unstyled" style="height: {$height}px;overflow-y: auto">
+	<ul class="list-markers-text list-unstyled" style="height: {$height}px;overflow-y: auto">    
 	{foreach $markers as $i => $marker}
-	  <li><a id="map-{$node.node_id}-{$i}" data-id="{$i}" href='{$marker.urlAlias}'>{$marker.popupMsg}</a></li>
+	  <li><a data-id="{$i}" href='{$marker.urlAlias}'>{$marker.popupMsg}</a></li>
 	{/foreach}
 	</ul>
   </div>

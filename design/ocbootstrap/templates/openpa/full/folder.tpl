@@ -25,8 +25,6 @@
 
     <div class="content-main{if and( $openpa.control_menu.show_extra_menu|not(), $show_left|not() )} wide{elseif and( $show_left, $openpa.control_menu.show_extra_menu )} full-stack{/if}">
 
-    <div class="content-main{if $openpa.control_menu.show_side_menu|not()} wide{/if}">
-
         {include uri=$openpa.content_main.template}
 
         {include uri=$openpa.content_detail.template}

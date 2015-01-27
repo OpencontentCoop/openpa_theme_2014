@@ -17,12 +17,10 @@
         {ezcss_require( array( 'plugins/owl-carousel/owl.carousel.css', 'plugins/owl-carousel/owl.theme.css', "plugins/blueimp/blueimp-gallery.css" ) )}
 
     <div id="carousel_{$css_id}" class="owl-carousel">
-        {foreach $items as $item}
-            {if $item|has_attribute( 'image' )}
+        {foreach $items as $item}            
             <div class="item">
                 {node_view_gui content_node=$item view=$i_view image_class=$image_class}
-            </div>
-            {/if}
+            </div>            
         {/foreach}
     </div>
 

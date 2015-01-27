@@ -26,10 +26,10 @@
 	  {if $i|eq(0)}
 		<div class="row">
 	  {/if}
-	  <div class="col-md-4">
+	  <div class="col-md-6">
 		{node_view_gui content_node=$child view=panel image_class=widemedium}
 	  </div>
-	  {if eq(sum($i,1)|mod(3),0)}
+	  {if eq(sum($i,1)|mod(2),0)}
 		</div>
 		<div class="row">
 	  {/if}

@@ -7,8 +7,9 @@
 {if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
     <div class="widget_title">
-        <h3><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
+        <h3>{$block.name|wash()}</h3>
     </div>
+    <div class="widget_content">
 {/if}
 {if $valid_nodes_count|eq(1)}
 
@@ -156,5 +157,6 @@
 {/if}
 
 {if and( $show_title, $block.name|ne('') )}
+  </div>
 </div>
 {/if}

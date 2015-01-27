@@ -79,6 +79,20 @@ Match[class_identifier]=image
 ############################################ BLOCK
 ############################################
 
+[block_gmapitems_geo_located_content]
+Source=block/view/view.tpl
+MatchFile=block/geo_located_content.tpl
+Subdir=templates
+Match[type]=GMapItems
+Match[view]=geo_located_content
+
+[block_gmapitems_geo_located_content_osm]
+Source=block/view/view.tpl
+MatchFile=block/geo_located_content_osm.tpl
+Subdir=templates
+Match[type]=GMapItems
+Match[view]=geo_located_content_osm
+
 [block_accesso_area_riservata]
 Source=block/view/view.tpl
 MatchFile=block/accesso_area_riservata.tpl
@@ -298,14 +312,14 @@ Match[view]=lista_carousel
 
 [block_lista_carousel_rassegna]
 Source=block/view/view.tpl
-MatchFile=block/lista_carousel.tpl
+MatchFile=block/lista_carousel_simple.tpl
 Subdir=templates
 Match[type]=Lista
 Match[view]=lista_carousel_rassegna
 
 [block_lista_carousel_rassegna_oggi]
 Source=block/view/view.tpl
-MatchFile=block/lista_carousel.tpl
+MatchFile=block/lista_carousel_simple.tpl
 Subdir=templates
 Match[type]=Lista
 Match[view]=lista_carousel_rassegna_oggi

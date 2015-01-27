@@ -13,7 +13,7 @@
 <div class="content-view-full class-{$node.class_identifier} row">
 
     <div class="content-title">
-        <h1>{$node.name|wash()}</h1>
+        <h1>{$node.name|wash()}</h1>        
     </div>
 
     {if $show_left}
@@ -30,10 +30,6 @@
 
         {include uri=$openpa.control_children.template}
 
-        {if $openpa.content_date.show_date}
-            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
-        {/if}
-
     </div>
 
     {if $openpa.control_menu.show_extra_menu}
@@ -41,3 +37,10 @@
     {/if}
 
 </div>
+
+
+{if $openpa.content_date.show_date}
+  <div class="row"><div class="col-md-12">
+    <p class="pull-right">{include uri=$openpa.content_date.template}</p>
+  </div></div>
+{/if}

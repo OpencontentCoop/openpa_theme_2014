@@ -21,7 +21,7 @@
     <div class="widget_content">
 {/if}
 
-    {include uri='design:parts/children/map.tpl' map_type="google" view='line' node=hash( node_id, root)}
+    {include uri='design:parts/children/map.tpl' map_type="google" view='line' node=hash( node_id, $root) class_identifiers=$block.custom_attributes.class|explode(',')}
 
 {if and( $show_title, $block.name|ne('') )}
     </div>

@@ -31,7 +31,9 @@
 
 {if and( $prossimi_count|eq(0), $day_events_count|eq(0) )}
 
+{if fetch( 'user', 'has_access_to', hash( 'module', 'openpa', 'function', 'editor_tools' ) )}
 {editor_warning( "Nessun evento in programma" )}
+{/if}
 
 {else}
     

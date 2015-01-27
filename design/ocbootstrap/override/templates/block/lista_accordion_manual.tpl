@@ -1,5 +1,5 @@
 {def $openpa= object_handler($block)}
-{set_defaults( hash('show_title', true(), 'items_per_row', 4) )}
+{set_defaults( hash('show_title', true(), 'items_per_row', 3) )}
 
 <div class="{$block.view}">
 

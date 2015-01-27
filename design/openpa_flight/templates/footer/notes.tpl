@@ -1,5 +1,5 @@
 {def $footer_notes = fetch( 'openpa', 'footer_notes' )}
-<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+<div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_30">
     <h3 class="color_light_2 m_bottom_20">{ezini('SiteSettings','SiteName')}</h3>
     {if $footer_notes}
         <div class="block">{attribute_view_gui attribute=$footer_notes}</div>

@@ -14,16 +14,15 @@
 
 {if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
-
     <div class="widget_title">
         <h3>{$block.name|wash()}</h3>
     </div>
     <div class="widget_content">
-        {/if}
+{/if}
 
-        {include uri='design:parts/children/map.tpl' view='line' node=hash( node_id, root)}
+    {include uri='design:parts/children/map.tpl' map_type="osm" view='line' node=hash( node_id, $root) class_identifiers=$block.custom_attributes.class|explode(',')}
 
-        {if and( $show_title, $block.name|ne('') )}
+{if and( $show_title, $block.name|ne('') )}
     </div>
 </div>
 {/if}

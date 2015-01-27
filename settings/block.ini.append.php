@@ -30,17 +30,17 @@ ViewName[singolo_imgtit_interne]=Immagine e Titolo (media)
 ViewName[singolo_img_interne_piccolo]=Full
 ViewName[singolo_imgtit_interne_piccolo]=Immagine e Titolo (con titolo blocco)
 ViewName[singolo_box_piccolo]=Line (immagine piccola con blocco titolo)
-ViewName[singolo_box]=Line (con blocco titolo)
+ViewName[singolo_box]=Line
 ViewName[singolo_banner]=Line (con blocco titolo, sfondo grigio)
 
 [Lista]
 Name=Lista di oggetti (assegnare un contenitore)
 ViewName[]
-ViewName[lista_num]=Panelli (carousel)
+ViewName[lista_num]=Panelli (carousel) [Mostra solo elementi con immagine]
 ViewName[lista_accordion]=Panelli
 ViewName[lista_box]=Elenco
-ViewName[lista_carousel]=Banner (carousel)
-ViewName[lista_carousel_rassegna]=Schede (carousel rassegna)
+ViewName[lista_carousel]=Banner (carousel) [Mostra solo elementi con immagine]
+ViewName[lista_carousel_rassegna]=Pannelli (carousel)
 ViewName[lista_carousel_rassegna_oggi]=Schede (carousel rassegna oggi)
 
 [Lista3]

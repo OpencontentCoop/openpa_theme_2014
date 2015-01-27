@@ -2,17 +2,21 @@
     
     <div class="col-md-8">    
 
-        {if and( is_set( $zones[0].blocks ), $zones[0].blocks|count() )}
-        {foreach $zones[0].blocks as $block}
-        {if or( $block.valid_nodes|count(), 
-            and( is_set( $block.custom_attributes), $block.custom_attributes|count() ), 
-            and( eq( ezini( $block.type, 'ManualAddingOfItems', 'block.ini' ), 'disabled' ), ezini_hasvariable( $block.type, 'FetchClass', 'block.ini' )|not ) )}
-            {block_view_gui block=$block}
-        {else}
-            {skip}
-        {/if}        
-        {/foreach}
-        {/if}
+        <div class="row">
+          <div class="col-md-12">
+            {if and( is_set( $zones[0].blocks ), $zones[0].blocks|count() )}
+            {foreach $zones[0].blocks as $block}
+            {if or( $block.valid_nodes|count(), 
+                and( is_set( $block.custom_attributes), $block.custom_attributes|count() ), 
+                and( eq( ezini( $block.type, 'ManualAddingOfItems', 'block.ini' ), 'disabled' ), ezini_hasvariable( $block.type, 'FetchClass', 'block.ini' )|not ) )}
+                {block_view_gui block=$block}
+            {else}
+                {skip}
+            {/if}        
+            {/foreach}
+            {/if}
+          </div>
+        </div>
         
         <div class="row">
             <div class="col-md-6">
@@ -43,17 +47,21 @@
             </div>
         </div>
 
-        {if and( is_set( $zones[4].blocks ), $zones[4].blocks|count() )}
-        {foreach $zones[4].blocks as $block}
-        {if or( $block.valid_nodes|count(), 
-            and( is_set( $block.custom_attributes), $block.custom_attributes|count() ), 
-            and( eq( ezini( $block.type, 'ManualAddingOfItems', 'block.ini' ), 'disabled' ), ezini_hasvariable( $block.type, 'FetchClass', 'block.ini' )|not ) )}
-            {block_view_gui block=$block}
-        {else}
-            {skip}
-        {/if}        
-        {/foreach}
-        {/if}
+        <div class="row">
+          <div class="col-md-12">
+            {if and( is_set( $zones[4].blocks ), $zones[4].blocks|count() )}
+            {foreach $zones[4].blocks as $block}
+            {if or( $block.valid_nodes|count(), 
+                and( is_set( $block.custom_attributes), $block.custom_attributes|count() ), 
+                and( eq( ezini( $block.type, 'ManualAddingOfItems', 'block.ini' ), 'disabled' ), ezini_hasvariable( $block.type, 'FetchClass', 'block.ini' )|not ) )}
+                {block_view_gui block=$block}
+            {else}
+                {skip}
+            {/if}        
+            {/foreach}
+            {/if}
+          </div>
+        </div>
     
     </div>
     
@@ -64,7 +72,7 @@
     {if or( $block.valid_nodes|count(), 
         and( is_set( $block.custom_attributes), $block.custom_attributes|count() ), 
         and( eq( ezini( $block.type, 'ManualAddingOfItems', 'block.ini' ), 'disabled' ), ezini_hasvariable( $block.type, 'FetchClass', 'block.ini' )|not ) )}
-        {block_view_gui block=$block}
+        {block_view_gui block=$block items_per_row=1}
     {else}
         {skip}
     {/if}

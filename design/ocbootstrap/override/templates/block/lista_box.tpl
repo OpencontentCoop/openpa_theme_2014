@@ -6,6 +6,7 @@
     <div class="widget_title">
         <h3><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
     </div>
+    <div class="widget_content">
 {/if}
 
     {foreach $openpa.content as $item}
@@ -13,5 +14,6 @@
     {/foreach}
 
 {if and( $show_title, $block.name|ne('') )}
+  </div>
 </div>
 {/if}

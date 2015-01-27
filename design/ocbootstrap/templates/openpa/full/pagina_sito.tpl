@@ -27,12 +27,18 @@
 
         {include uri=$openpa.content_detail.template}
 
-        {include uri=$openpa.control_children.template}
+        {if and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
+          {include uri=$openpa.content_albotelematico.container_template}    
+        {else}
+          {include uri=$openpa.control_children.template}
+        {/if}
 
     </div>
-    
-    {if $openpa.control_menu.show_extra_menu}    
-      {include uri='design:openpa/full/parts/section_right.tpl'}
-    {/if}
 
 </div>
+
+{if $openpa.content_date.show_date}
+  <div class="row"><div class="col-md-12">
+    <p class="pull-right">{include uri=$openpa.content_date.template}</p>
+  </div></div>
+{/if}

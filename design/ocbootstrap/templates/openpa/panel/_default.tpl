@@ -8,6 +8,16 @@
         <h4 class="fw_medium color_dark">
             <a href="{$openpa.content_link.full_link}">{$node.name|wash()}</a>
         </h4>
+        {if $node|has_abstract()}
+        <p class="m_bottom_10">
+          {$node|abstract()|openpa_shorten(270)}
+        </p>
+    
+        <p class="link">
+          <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">Leggi</a>
+        </p>
+        {/if}
+        
     </div>
 </div>
 
