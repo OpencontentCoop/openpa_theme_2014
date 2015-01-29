@@ -1,7 +1,7 @@
+{if openpaini( 'Seo', 'GoogleAnalyticsAccountID', false() )}
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', "{appini('GoogleAnalytics','Account')}"]);
-  _gaq.push(['_setDomainName', "{appini('GoogleAnalytics','DomainName')}"]);
+  _gaq.push(['_setAccount', '{openpaini( 'Seo', 'GoogleAnalyticsAccountID' )}']);  
   _gaq.push(['_setAllowLinker', true]);
   _gaq.push(['_trackPageview']);
   (function() {ldelim}
@@ -10,3 +10,4 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   {rdelim})();
 </script>
+{/if}
