@@ -33,7 +33,10 @@
   {if is_set($pagedata.contacts.web)}
     <li><a href="{$pagedata.contacts.web}">
         <i class="fa fa-link"></i>
-        {$pagedata.contacts.web}
+        {def $linkParts = $pagedata.contacts.web|explode('//')}
+        {if is_set( $linkParts[1] )}
+          {$linkParts[1]}
+        {/if}
       </a></li>
   {/if}
 </ul>
