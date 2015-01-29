@@ -32,7 +32,7 @@
   {/if}
   {if is_set($pagedata.contacts.web)}
     <li><a href="{$pagedata.contacts.web}">
-        <i class="fa fa-building"></i>
+        <i class="fa fa-link"></i>
         {$pagedata.contacts.web}
       </a></li>
   {/if}
