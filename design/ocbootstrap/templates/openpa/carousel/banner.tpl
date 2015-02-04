@@ -9,9 +9,12 @@
 
 
 <div class="carousel-caption">
-    <h3>	
+    <h3>
+      {def $openpa=$node|object_handler()}
       <a href="{$openpa.content_link.full_link}">{$node.name|wash()}</a>	
     </h3>
-    <p>{$node|abstract()|oc_shorten(400)}</p>
+    {if $node|has_attribute('subtitle')}
+      <p>{$node|attribute('subtitle').content|wash()|oc_shorten(400)}</p>
+    {/if}
 </div>
 </div>

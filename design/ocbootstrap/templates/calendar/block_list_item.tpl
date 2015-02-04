@@ -3,9 +3,9 @@
 	   $to = $item.from|datetime( 'custom', '%j' )
 	   $node = $item.node}	
 {else}
-  {def $from = $item.data_map.from_time.timestamp|datetime( 'custom', '%M' )
-	   $to = $item.data_map.from_time.content.timestamp|datetime( 'custom', '%j' )
-	   $node = $item}
+  {def $from = $item.data_map.from_time.content.timestamp|datetime( 'custom', '%M' )
+	     $to = $item.data_map.from_time.content.timestamp|datetime( 'custom', '%j' )
+	     $node = $item}
 {/if}
 
 <div class="row event-item">

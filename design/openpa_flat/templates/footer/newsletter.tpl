@@ -5,5 +5,5 @@
         Iscriviti alla newsletter, rimani aggiornato sulle ultime
         novità!</p>
 
-    <a href="#" class="btn btn-lg btn-primary">Iscrivi ora</a>
+    <a href={"newsletter/subscribe"|ezurl} class="btn btn-lg btn-primary">Iscriviti ora</a>
 </div>
