@@ -1,12 +1,12 @@
 {def $reviews_count = fetch( content, tree_count, hash( parent_node_id, 1, class_filter_type, include, class_filter_array, array( 'review' ), limitation, array() ) )}
 {if $reviews_count|gt(0)}
 
-<div class="header-searchbox" style="margin-top: 0">
+<div class="col-md-7 hidden-xs" style="margin-top: 0">
   {ezscript_require(array('ezjsc::jquery', 'jquery.cycle2.min.js'))}
   <div class="cycle-slideshow" data-cycle-slides="> div.row">
     {foreach fetch( content, tree, hash( parent_node_id, 1, class_filter_type, include, class_filter_array, array( 'review' ), limit, 10, sort_by, array( 'published', false() ), limitation, array() ) ) as $index => $review}
       <div class="row" style="width: 100%{if $index|gt(0)} visibility:hidden{/if}">
-        <div class="col-md-9">
+        <div class="col-xs-10">
           <div class="popover left" style="display: block; position: relative; max-width: none;">
             <div class="arrow"></div>      
             <div class="popover-content">        
@@ -15,7 +15,7 @@
             </div>
           </div>        
         </div>
-        <div class="col-md-3 text-left">
+        <div class="col-xs-2 text-left">
           <img style="height: 80px; width: 80px;" height="80" width="80" src="{$review.data_map.image.content.round_thumb.full_path|ezroot(no)}" />    
         </div>
       </div>

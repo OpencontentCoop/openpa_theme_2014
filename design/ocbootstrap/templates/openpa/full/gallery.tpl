@@ -36,16 +36,17 @@
                                                            'sort_by', $node.sort_array ) )}
           
            {include name="carousel"
-					uri='design:atoms/carousel.tpl'
-					items=$children
-					css_id=concat( 'gallery', $node.node_id)
-					root_node=$node
-					autoplay=0
-					i_view=image
-					pagination=true()
-					navigation= false()
-          image_class=imagefull
-					items_per_row=1}
+                    uri='design:atoms/carousel.tpl'
+                    items=$children
+                    css_id=concat( 'gallery', $node.node_id)
+                    root_node=$node
+                    autoplay=0
+                    i_view=image
+                    pagination=false()
+                    navigation=true()
+                    top_pagination_position=true()
+                    image_class=imagefull
+                    items_per_row=1}
         {/if}
 
     </div>

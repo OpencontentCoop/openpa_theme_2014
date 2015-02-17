@@ -6,6 +6,7 @@
     'image_class', 'carousel',
     'navigation', true(),
     'pagination', false(),
+    'top_pagination_position', false(),
     'navigation_text', concat( "['", '<i class="fa fa-angle-left"></i>', "','", '<i class="fa fa-angle-right"></i>', "']"),
     'css_id', $root_node.node_id
 ))}
@@ -36,6 +37,7 @@
                 navigation: {cond( $navigation|gt(0), 'true', 'false')},
                 pagination: {cond( $pagination|gt(0), 'true', 'false')},
                 navigationText: {cond( $navigation_text|ne(false()), $navigation_text, false )}
+                {if $top_pagination_position},afterInit : function(elem){ldelim}var that = this;that.owlControls.prependTo(elem){rdelim}{/if}
                 {rdelim});
             {rdelim});
     </script>
