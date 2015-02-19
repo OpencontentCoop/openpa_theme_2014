@@ -77,7 +77,7 @@
 				{if and( $pagination, gt( $currentPage, 1 ))}
 					<div id="survey-pagination" class="clearfix" style="display: none;">
 						<div class="pull-right">
-							<a href="javascript://" onclick="switchPage(2)" class="btn btn-success btn-lg">Next</a>
+							<a href="javascript://" onclick="switchPage(2)" class="btn btn-success btn-lg">Avanti</a>
 							<p class="hide">1/{$currentPage}</p>
 						</div>
 					</div>
@@ -114,10 +114,10 @@
 		currentPage = page;
 		$('#survey-page'+currentPage).show();
 		if( currentPage > 1 ) {
-			var pagination = '<div class="pull-left"><a href="javascript://" onclick="switchPage(' + (page-1) + ')" class="btn btn-success btn-lg">Previous</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
+			var pagination = '<div class="pull-left"><a href="javascript://" onclick="switchPage(' + (page-1) + ')" class="btn btn-success btn-lg">Indietro</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
 		}
 		if( currentPage < surveyPages ) {
-			var pagination = '<div class="pull-right"><a href="javascript://" onclick="switchPage(' + (page+1) + ')" class="btn btn-success btn-lg">Next</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
+			var pagination = '<div class="pull-right"><a href="javascript://" onclick="switchPage(' + (page+1) + ')" class="btn btn-success btn-lg">Avanti</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
 		}
 		$('#survey-pagination').html( pagination );
 	}
