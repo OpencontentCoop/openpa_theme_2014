@@ -113,11 +113,12 @@
 		$('#survey-page'+currentPage).hide();
 		currentPage = page;
 		$('#survey-page'+currentPage).show();
+		var pagination = '';
 		if( currentPage > 1 ) {
-			var pagination = '<div class="pull-left"><a href="javascript://" onclick="switchPage(' + (page-1) + ')" class="btn btn-success btn-lg">Indietro</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
+			pagination += '<div class="pull-left"><a href="javascript://" onclick="switchPage(' + (page-1) + ')" class="btn btn-success btn-lg">Indietro</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
 		}
 		if( currentPage < surveyPages ) {
-			var pagination = '<div class="pull-right"><a href="javascript://" onclick="switchPage(' + (page+1) + ')" class="btn btn-success btn-lg">Avanti</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
+			pagination += '<div class="pull-right"><a href="javascript://" onclick="switchPage(' + (page+1) + ')" class="btn btn-success btn-lg">Avanti</a><p class="hide">' + page + '/' + surveyPages + '</p></div>';
 		}
 		$('#survey-pagination').html( pagination );
 	}
