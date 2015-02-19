@@ -132,9 +132,9 @@
 	function toggleQuestion( question ) {
 		$('#question-container-'+question).toggle();
 		if( $('#question-container-'+question).is(":visible") ) {
-			$('#toggle-'+question).html( 'Hide question ' + question );
+			$('#toggle-'+question).html( 'Nascondi domanda ' + question );
 		}else{
-			$('#toggle-'+question).html( 'Show question ' + question );
+			$('#toggle-'+question).html( 'Mostra domanda ' + question );
 		}
 	}
 	{/literal}
