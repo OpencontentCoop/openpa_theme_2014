@@ -6460,7 +6460,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
 /* line 161, ../scss/_pagelayout.scss */
 .menu_wrap > li { z-index: 101; }
 /* line 165, ../scss/_pagelayout.scss */
-.menu_wrap .main_menu > li > a { display: block; padding: 9px 10px 10px; text-decoration: none !important; font-size: 1.3em; }
+.menu_wrap .main_menu > li > a { display: block; padding: 9px 10px 10px; text-decoration: none !important; font-size: 1.2em; }
 /* line 170, ../scss/_pagelayout.scss */
 .menu_wrap .main_menu > li > a b { font-weight: normal !important; }
 /* line 175, ../scss/_pagelayout.scss */
