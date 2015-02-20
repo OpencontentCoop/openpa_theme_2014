@@ -95,6 +95,7 @@ body{
       @extend .t_md_align_l;
       h1{
         @extend .f_size_big;
+        margin: 5px 0 0 0;
       }
     }
 
@@ -111,6 +112,7 @@ body{
       @extend .col-lg-2;
       @extend .col-md-2;
       @extend .col-sm-12;
+      @extend .col-xs-12;
       @extend .m_top_10;
       form{
         @extend .relative;
