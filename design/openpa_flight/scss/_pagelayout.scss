@@ -77,15 +77,31 @@ body{
     padding-bottom: 27px;
 
     .header-logo{
-      @extend .col-lg-2;
-      @extend .col-md-12;
+      @extend .col-xs-4;
+      @extend .col-sm-2;
+      @extend .col-md-1;
+      @extend .col-lg-1;
       @extend .t_md_align_c;
       @extend .m_md_bottom_15;
     }
 
+    .header-title{
+      @extend .col-xs-7;
+      @extend .t_xs_align_l;
+      @extend .col-lg-2;
+      @extend .col-sm-10;
+      @extend .col-md-2;
+      @extend .m_sm_top_20;
+      @extend .t_md_align_l;
+      h1{
+        @extend .f_size_big;
+      }
+    }
+
     .header-menu{
-      @extend .col-lg-8;
-      @extend .col-md-10;
+      @extend .col-sm-12;
+      @extend .col-md-7;
+      @extend .col-xs-12;
       @extend .clearfix;
       @extend .t_sm_align_c;
       @extend .m_top_10;
