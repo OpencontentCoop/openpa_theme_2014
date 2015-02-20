@@ -95,7 +95,8 @@ body{
       @extend .t_md_align_l;
       h1{
         @extend .f_size_big;
-        margin: 15px 0 0 0;
+        @extend .m_top_15;
+        @extend .m_xs_top_0;
       }
     }
 
