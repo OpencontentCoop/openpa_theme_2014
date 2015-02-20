@@ -95,7 +95,7 @@ body{
       @extend .t_md_align_l;
       h1{
         @extend .f_size_big;
-        margin: 5px 0 0 0;
+        margin: 15px 0 0 0;
       }
     }
 
@@ -105,7 +105,7 @@ body{
       @extend .col-xs-12;
       @extend .clearfix;
       @extend .t_sm_align_c;
-      @extend .m_top_10;
+      @extend .m_top_20;
     }
 
     .header-searchbox{
@@ -113,7 +113,7 @@ body{
       @extend .col-md-2;
       @extend .col-sm-12;
       @extend .col-xs-12;
-      @extend .m_top_10;
+      @extend .m_top_20;
       form{
         @extend .relative;
         input{
