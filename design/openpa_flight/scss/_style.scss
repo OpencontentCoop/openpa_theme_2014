@@ -317,6 +317,7 @@ h3.widget_title {
   .media {
     @extend .widget;
     padding: 10px;
+    background:#fff;
     .main_image {
       float: none;
       margin: 0 0 10px;
