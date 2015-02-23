@@ -202,6 +202,7 @@ h3.widget_title {
   @extend .no-shadow;
   overflow: visible !important;
   .tab-content {
+    border-bottom: 3px solid $brand-primary;
     @extend .tabs_content;
     @extend .shadow;
     @extend .r_corners;
@@ -221,7 +222,7 @@ h3.widget_title {
     border: none !important;
     @extend .tabs_nav;
     @extend .f_xs_none;
-    font-size: 1em !important;
+    font-size: .9em !important;
     li {
       a {
         border: none !important;
@@ -232,6 +233,7 @@ h3.widget_title {
         padding: 5px 8px !important;
         text-transform: uppercase;
         text-decoration: none;
+        margin-bottom: 0 !important;
       }
       &.active a{
         background: $brand-primary;
