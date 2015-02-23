@@ -440,7 +440,7 @@ blockquote{
 
 legend{font-size: 1em}
 
-.media-panel
+.panels-container .media-panel
 {
   figure {
     background-repeat: no-repeat !important;
@@ -467,6 +467,9 @@ legend{font-size: 1em}
     }
     .abstract{
       font-size: 0.9em;
+    }
+    p.link{
+      margin-bottom: 0;
     }
   }
 }

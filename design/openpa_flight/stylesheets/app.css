@@ -5341,15 +5341,17 @@ blockquote:after { content: ""; width: 17px; height: 10px; background: url("../i
 legend { font-size: 1em; }
 
 /* line 445, ../scss/_style.scss */
-.media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
+.panels-container .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
 /* line 455, ../scss/_style.scss */
-.media-panel .media { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
+.panels-container .media-panel .media { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
 /* line 459, ../scss/_style.scss */
-.media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
+.panels-container .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
 /* line 464, ../scss/_style.scss */
-.media-panel .media h4 a { text-decoration: none; }
+.panels-container .media-panel .media h4 a { text-decoration: none; }
 /* line 468, ../scss/_style.scss */
-.media-panel .media .abstract { font-size: 0.9em; }
+.panels-container .media-panel .media .abstract { font-size: 0.9em; }
+/* line 471, ../scss/_style.scss */
+.panels-container .media-panel .media p.link { margin-bottom: 0; }
 
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }
@@ -5464,7 +5466,7 @@ html, body { height: 100%; }
 .r_corners, .main_image, .embed_image, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, #header .header-bottom .header-searchbox form input, .menu_wrap li.menu-item > a, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
 /* line 90, ../scss/flat/_base.scss */
-.r_corners_top, .media-panel figure { border-top-right-radius: 4px; border-top-left-radius: 4px; }
+.r_corners_top, .panels-container .media-panel figure { border-top-right-radius: 4px; border-top-left-radius: 4px; }
 
 /* line 93, ../scss/flat/_base.scss */
 .vc_child:after { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
