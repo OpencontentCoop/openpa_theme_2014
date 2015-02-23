@@ -5267,8 +5267,10 @@ h3.widget_title a { color: #ffffff; text-decoration: none; }
 .widget_tabs .tab-content p.link a { font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 100; }
 /* line 221, ../scss/_style.scss */
 .widget_tabs .nav-tabs { border: none !important; font-size: .9em !important; }
-/* line 227, ../scss/_style.scss */
-.widget_tabs .nav-tabs li a { border: none !important; background: #999999; color: #fff; padding: 5px 8px !important; text-transform: uppercase; text-decoration: none; margin-bottom: 0 !important; }
+/* line 226, ../scss/_style.scss */
+.widget_tabs .nav-tabs li { margin-bottom: 0 !important; }
+/* line 228, ../scss/_style.scss */
+.widget_tabs .nav-tabs li a { border: none !important; background: #999999; color: #fff; padding: 5px 8px !important; text-transform: uppercase; text-decoration: none; }
 /* line 238, ../scss/_style.scss */
 .widget_tabs .nav-tabs li.active a { background: #428944; color: #fff; border: none !important; }
 
@@ -5363,6 +5365,8 @@ legend { font-size: 1em; }
 .panels-container .media-panel .media .abstract { font-size: 0.9em; }
 /* line 488, ../scss/_style.scss */
 .panels-container .media-panel .media p.link { margin-bottom: 0; }
+/* line 492, ../scss/_style.scss */
+.panels-container .media-panel .panel-label { background: #428944; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; }
 
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }
