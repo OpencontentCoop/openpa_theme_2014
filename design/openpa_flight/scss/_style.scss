@@ -188,7 +188,7 @@ h3.widget_title {
 }
 
 .nav-section .widget .widget_title {
-  background-color: $brand-secondary;
+  background-color: $gray;
   padding: 15px 20px 14px;
   color: #ffffff;
   * {
@@ -390,7 +390,7 @@ h3.widget_title {
   .calendar-date {
     .month {
       background: $brand-primary;
-      font-size: 1.1em;
+      font-size: 1em;
       line-height: 1;
       color: #fff;
       display: block;
@@ -402,6 +402,7 @@ h3.widget_title {
       background: #fff;
       color: $brand-primary;
       font-size: 2em;
+      line-height: 1em;
       font-weight: bold;
       display: block;
       border: 1px solid $brand-primary;
