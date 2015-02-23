@@ -5353,20 +5353,20 @@ blockquote:after { content: ""; width: 17px; height: 10px; background: url("../i
 /* line 456, ../scss/_style.scss */
 legend { font-size: 1em; }
 
-/* line 460, ../scss/_style.scss */
+/* line 459, ../scss/_style.scss */
+.panels-container .panel-label { background: #428944; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; }
+/* line 470, ../scss/_style.scss */
 .panels-container .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
-/* line 471, ../scss/_style.scss */
-.panels-container .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
-/* line 476, ../scss/_style.scss */
-.panels-container .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
 /* line 481, ../scss/_style.scss */
+.panels-container .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
+/* line 486, ../scss/_style.scss */
+.panels-container .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
+/* line 491, ../scss/_style.scss */
 .panels-container .media-panel .media h4 a { text-decoration: none; }
-/* line 485, ../scss/_style.scss */
+/* line 495, ../scss/_style.scss */
 .panels-container .media-panel .media .abstract { font-size: 0.9em; }
-/* line 488, ../scss/_style.scss */
+/* line 498, ../scss/_style.scss */
 .panels-container .media-panel .media p.link { margin-bottom: 0; }
-/* line 492, ../scss/_style.scss */
-.panels-container .media-panel .panel-label { background: #428944; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; }
 
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }
