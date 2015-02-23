@@ -226,7 +226,6 @@ h3.widget_title {
         border: none !important;
         background: $gray-light;
         color: #fff;
-        @extend .tr_delay_hover;
         @extend .r_corners;
         @extend .d_block;
         padding: 5px 8px;
@@ -235,6 +234,8 @@ h3.widget_title {
       }
       &.active a{
         background: $brand-primary;
+        color: #fff;
+        border: none !important;
       }
     }
   }
