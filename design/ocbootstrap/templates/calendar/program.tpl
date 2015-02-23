@@ -25,7 +25,7 @@
 
           <div class="calendar-day-program float-break row events" id="day-{$calendarDay.identifier}">
 
-            <div class="calendar-date col-xs-4 col-sm-2">
+            <div class="calendar-date col-xs-4 col-sm-3 col-md-2">
               <span class="month">{$calendarDay.start|datetime( 'custom', '%M' )}</span>
               <span class="day">{$calendarDay.start|datetime( 'custom', '%j' )}</span>
             </div>
@@ -38,11 +38,11 @@
                     {/if}
                 </h3>-->
               
-              <div class="calendar-date col-xs-8 col-sm-10">
-                <div class="row">                  
+              <div class="calendar-date col-xs-8 col-sm-9 col-md-10">
+                <div class="row panels-container">                  
                   {foreach $calendarDay.events as $event}
                     <div class="col-md-{$col-width}">
-                      {node_view_gui view=line content_node=$event.node image_class=small}
+                      {node_view_gui view=panel content_node=$event.node image_class=small}
                     </div>
                     {delimiter modulo=$modulo}</div><div class="row">{/delimiter}
                   {/foreach}

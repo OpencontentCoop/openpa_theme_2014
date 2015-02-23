@@ -12,8 +12,15 @@
       <li>{node_view_gui content_node=$link view="text_linked"}</li>
     {/foreach}
   {/if}
+  {if is_set( $pagedata.contacts.telefono )}
+    <li><a href="tel:{$pagedata.contacts.telefono}"><i class="fa fa-phone-square"></i> {$pagedata.contacts.telefono}</a></li>
+  {/if}
+  
+  {if is_set( $pagedata.contacts.email )}
+    <li><a href="mailto:{$pagedata.contacts.email}"><i class="fa fa-envelope-o"></i> {$pagedata.contacts.email}</a></li>
+  {/if}
 
-    {*<li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>*}
+  {*<li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>*}
 
   </ul>
 </div>

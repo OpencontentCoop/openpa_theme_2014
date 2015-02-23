@@ -75,7 +75,7 @@
     {/if}
 
         {if and( $day_events_count|gt(0), $prossimi_count|gt(0) )}
-        <ul class="nav nav-tabs" role="tablist">
+        <ul class="list-inline events-tabs" role="tablist">
             {if $day_events_count|ne(0)}
                 <li class="active eventi-oggi">
                     <a href="#oggi" data-toggle="tab">

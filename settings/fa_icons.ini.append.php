@@ -1,7 +1,7 @@
 <?php /*
 
 [ClassIcons]
-_fallback=fa-circle
+_fallback=fa-file
 parere=fa-mortar-board
 normativa=fa-bell
 circolare=fa-cogs

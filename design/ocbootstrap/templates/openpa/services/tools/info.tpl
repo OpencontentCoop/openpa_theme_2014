@@ -64,7 +64,7 @@
   </dd>
 
   <dt>Tipo: </dt>
-  <dd>{$node.class_name} ({$node.class_identifier} {$node.object.contentclass_id})</dd>
+  <dd><a target="_blank" href="{concat('openpa/classes/', $node.class_identifier)|ezurl(no)}">{$node.class_name} ({$node.class_identifier} {$node.object.contentclass_id})</a></dd>
 
   {if $openpa.content_virtual.folder}
 	  <dt>Folder virtuale:</dt>

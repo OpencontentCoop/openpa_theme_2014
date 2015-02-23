@@ -9,11 +9,11 @@
 {/if}
 
 <div class="row event-item">
-    <div class="col-xs-4 calendar-date">
+    <div class="col-xs-4 col-sm-3 calendar-date">
         <span class="month">{$from}</span>
         <span class="day">{$to}</span>
     </div>
-    <div class="col-xs-8">
+    <div class="col-xs-8 col-sm-9">
         {node_view_gui content_node=$node view=text_linked shorten=80}
     </div>
 </div>

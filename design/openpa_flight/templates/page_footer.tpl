@@ -7,7 +7,7 @@
 
               {include uri='design:footer/notes.tpl'}
 
-              {*include uri='design:footer/contacts.tpl'*}
+              {include uri='design:footer/contacts.tpl'}
 
               {include uri='design:footer/links.tpl'}
 

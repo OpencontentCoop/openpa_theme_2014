@@ -58,7 +58,7 @@ $(document).ready(function(){
 {if and( $content_object.can_create, $is_container )}
 <div id="ezwt-creataction" class="ezwt-actiongroup">
 <label for="ezwt-create" class="hide">Create:</label>
-{def $can_create_class_list = ezcreateclasslistgroups( $content_object.can_create_class_list )}
+{def $can_create_class_list = ezcreateclasslistgroups( $content_object.can_create_class_list )}  
   {if $can_create_class_list|count()}
   <select name="ClassID" id="ezwt-create" data-placeholder="{"Create here"||i18n('design/admin/node/view/full')}">
   <option></option>
@@ -100,7 +100,6 @@ $(document).ready(function(){
 {/if}
 
 <a href={concat( "websitetoolbar/sort/", $current_node.node_id )|ezurl()} title="{'Sorting'|i18n( 'design/standard/parts/website_toolbar' )}"><img src={"websitetoolbar/ezwt-icon-sort.png"|ezimage} alt="{'Sorting'|i18n( 'design/standard/parts/website_toolbar' )}" /></a>
-
 </div>
 
 <div id="ezwt-miscaction" class="ezwt-actiongroup">
@@ -132,6 +131,10 @@ $(document).ready(function(){
 {if ezini( 'SiteSettings', 'AdditionalLoginFormActionURL' )}{* has_access_to_limitation('user', 'login', hash('SiteAccess', '<!-- SiteAccessName -->')) *}
     <a href="{ezini( 'SiteSettings', 'AdditionalLoginFormActionURL' )|explode('user/login')[0]}{$current_node.url_alias}" target="_blank" title="{'Go to admin interface.'|i18n( 'design/standard/parts/website_toolbar' )}"><img src={"websitetoolbar/ezwt-icon-admin.png"|ezimage} alt="{'Go to admin interface.'|i18n( 'design/standard/parts/website_toolbar' )}" /></a>
 {/if}
+
+  <a href={concat('content/view/full/',ezini('NodeSettings', 'MediaRootNode', 'content.ini'))|ezurl} class="btn btn-default btn-xs" style="vertical-align: super;">Media</a>
+  <a href={concat('content/view/full/',ezini('NodeSettings', 'UserRootNode', 'content.ini'))|ezurl} class="btn btn-default btn-xs" style="vertical-align: super;">Utenti</a>
+
 
 </div>
 </form>
@@ -172,6 +175,7 @@ $(document).ready(function(){
 
 </div>
 {/if}
+
 
 {include uri='design:parts/websitetoolbar/help.tpl'}
 
