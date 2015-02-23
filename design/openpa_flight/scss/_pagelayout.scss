@@ -30,10 +30,11 @@ body{
   .header-top{
 
     padding: 4px 0;
-    border-bottom: 1px solid $gray-lighter;
+    background-color: $gray;
 
     a{
-      @extend .default_t_color;
+      color: #fff;
+      @extend .f_size_medium;
     }
 
     ul{
@@ -471,6 +472,7 @@ body{
 
 ul.breadcrumb{
   @extend .d_xs_none;
+  background: #fff;
 }
 
 .social_icons li a{
