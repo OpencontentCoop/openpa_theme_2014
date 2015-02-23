@@ -221,6 +221,7 @@ h3.widget_title {
     border: none !important;
     @extend .tabs_nav;
     @extend .f_xs_none;
+    font-size: 1em;
     li {
       a {
         border: none !important;
@@ -228,7 +229,7 @@ h3.widget_title {
         color: #fff;
         @extend .r_corners;
         @extend .d_block;
-        padding: 5px 8px;
+        padding: 5px 8px !important;
         text-transform: uppercase;
         text-decoration: none;
       }
