@@ -20,6 +20,9 @@
 
 .content-related{
   @extend .col-md-3;
+  ul{
+    margin-bottom: 0;
+  }
 }
 
 .content-view-children .media {
