@@ -5341,9 +5341,15 @@ blockquote:after { content: ""; width: 17px; height: 10px; background: url("../i
 legend { font-size: 1em; }
 
 /* line 445, ../scss/_style.scss */
-.media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: transparent !important; margin: 0; min-height: 200px; }
-/* line 454, ../scss/_style.scss */
+.media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
+/* line 455, ../scss/_style.scss */
 .media-panel .media { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
+/* line 459, ../scss/_style.scss */
+.media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
+/* line 464, ../scss/_style.scss */
+.media-panel .media h4 a { text-decoration: none; }
+/* line 468, ../scss/_style.scss */
+.media-panel .media .abstract { font-size: 0.9em; }
 
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }
