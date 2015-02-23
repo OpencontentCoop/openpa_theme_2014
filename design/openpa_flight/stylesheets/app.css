@@ -5260,7 +5260,7 @@ h3.widget_title a { color: #ffffff; text-decoration: none; }
 /* line 200, ../scss/_style.scss */
 .widget_tabs { overflow: visible !important; }
 /* line 204, ../scss/_style.scss */
-.widget_tabs .tab-content { border-bottom: 3px solid #428944; }
+.widget_tabs .tab-content { border-top: 3px solid #428944; }
 /* line 209, ../scss/_style.scss */
 .widget_tabs .tab-content p.link { text-align: right; display: block; color: #428944; }
 /* line 215, ../scss/_style.scss */
