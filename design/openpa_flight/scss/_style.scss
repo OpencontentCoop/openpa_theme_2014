@@ -145,10 +145,13 @@
 }
 
 p.link {
-  text-align: left;
+  text-align: right;
   a {
-    color: $brand-primary;
     text-transform: uppercase;
+    text-decoration: none;
+    @extend .btn;
+    @extend .btn-default;
+    @extend .btn-sm;
   }
 }
 
