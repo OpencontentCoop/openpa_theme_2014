@@ -164,7 +164,6 @@ h3.widget_title {
   margin: 0 0  10px;
   font-size: .9em;
   @extend .r_corners;
-  font-weight: bold;
   display: inline-block;
   a{
     color: #ffffff;
@@ -202,7 +201,7 @@ h3.widget_title {
   @extend .m_bottom_10;
   @extend .no-shadow;
   font-size: $font-size-base;
-  overflow: visible;
+  overflow: visible !important;
   .tab-content {
     @extend .tabs_content;
     @extend .shadow;
