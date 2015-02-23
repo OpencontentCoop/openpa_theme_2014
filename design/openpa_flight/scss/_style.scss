@@ -200,7 +200,6 @@ h3.widget_title {
 .widget_tabs {
   @extend .m_bottom_10;
   @extend .no-shadow;
-  font-size: $font-size-base;
   overflow: visible !important;
   .tab-content {
     @extend .tabs_content;
@@ -234,7 +233,7 @@ h3.widget_title {
         text-transform: uppercase;
         text-decoration: none;
       }
-      &.active {
+      &.active a{
         background: $brand-primary;
       }
     }
