@@ -173,7 +173,7 @@ h3.widget_title {
 
 .widget {
   @extend .m_bottom_10;
-  .widget{
+  .widget_title h3{
     @extend h3.widget_title;
   }
 }

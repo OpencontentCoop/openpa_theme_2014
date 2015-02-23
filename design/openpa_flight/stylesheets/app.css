@@ -5242,9 +5242,9 @@ p.link a { color: #428944; text-transform: uppercase; }
 -------------------------------------------------
 */
 /* line 159, ../scss/_style.scss */
-h3.widget_title, .widget .widget, .panels-container .media .widget, .widget .panels-container .media, .panels-container .widget .media, .panels-container .media .media { background-color: #428944; color: #ffffff; padding: 5px 8px; text-transform: uppercase; margin: 0 0  10px; font-size: .9em; display: inline-block; }
+h3.widget_title, .widget .widget_title h3, .panels-container .media .widget_title h3 { background-color: #428944; color: #ffffff; padding: 5px 8px; text-transform: uppercase; margin: 0 0  10px; font-size: .9em; display: inline-block; }
 /* line 168, ../scss/_style.scss */
-h3.widget_title a, .widget .widget a, .panels-container .media .widget a, .widget .panels-container .media a, .panels-container .widget .media a, .panels-container .media .media a { color: #ffffff; text-decoration: none; }
+h3.widget_title a, .widget .widget_title h3 a, .panels-container .media .widget_title h3 a { color: #ffffff; text-decoration: none; }
 
 /* line 181, ../scss/_style.scss */
 .nav-section .widget .widget_title, .nav-section .panels-container .media .widget_title, .panels-container .nav-section .media .widget_title { background: #201f1e; padding: 15px 20px 14px; }
@@ -5482,7 +5482,7 @@ html, body { height: 100%; }
 .circle { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 
 /* line 85, ../scss/flat/_base.scss */
-.r_corners, .main_image, .embed_image, h3.widget_title, .widget .widget, .panels-container .media .widget, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, .panels-container .panel-label, #header .header-bottom .header-searchbox form input, .menu_wrap li.menu-item > a, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.r_corners, .main_image, .embed_image, h3.widget_title, .widget .widget_title h3, .panels-container .media .widget_title h3, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, .panels-container .panel-label, #header .header-bottom .header-searchbox form input, .menu_wrap li.menu-item > a, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
 /* line 90, ../scss/flat/_base.scss */
 .r_corners_top, .panels-container .media-panel figure { border-top-right-radius: 4px; border-top-left-radius: 4px; }
