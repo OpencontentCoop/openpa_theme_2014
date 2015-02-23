@@ -164,6 +164,8 @@ h3.widget_title {
   margin: 0 0  10px;
   font-size: .9em;
   @extend .r_corners;
+  font-weight: bold;
+  display: inline-block;
   a{
     color: #ffffff;
   }
