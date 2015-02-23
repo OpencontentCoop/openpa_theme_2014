@@ -225,14 +225,17 @@ h3.widget_title {
     li {
       a {
         border: none !important;
-        @extend .bg_light_color_1;
-        @extend .color_dark;
+        background: $gray-light;
+        color: #fff;
         @extend .tr_delay_hover;
         @extend .r_corners;
         @extend .d_block;
+        padding: 5px 8px;
+        text-transform: uppercase;
+        text-decoration: none;
       }
       &.active {
-        @extend .ui-tabs-active;
+        background: $brand-primary;
       }
     }
   }
