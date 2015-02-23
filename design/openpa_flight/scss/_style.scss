@@ -221,7 +221,7 @@ h3.widget_title {
     border: none !important;
     @extend .tabs_nav;
     @extend .f_xs_none;
-    font-size: 1em;
+    font-size: 1em !important;
     li {
       a {
         border: none !important;

@@ -5264,7 +5264,7 @@ h3.widget_title a { color: #ffffff; text-decoration: none; }
 /* line 214, ../scss/_style.scss */
 .widget_tabs .tab-content p.link a { font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 100; }
 /* line 220, ../scss/_style.scss */
-.widget_tabs .nav-tabs { border: none !important; font-size: 1em; }
+.widget_tabs .nav-tabs { border: none !important; font-size: 1em !important; }
 /* line 226, ../scss/_style.scss */
 .widget_tabs .nav-tabs li a { border: none !important; background: #999999; color: #fff; padding: 5px 8px !important; text-transform: uppercase; text-decoration: none; }
 /* line 236, ../scss/_style.scss */
