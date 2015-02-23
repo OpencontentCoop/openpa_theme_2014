@@ -168,6 +168,7 @@ h3.widget_title {
   display: inline-block;
   a{
     color: #ffffff;
+    text-decoration: none;
   }
 }
 
@@ -201,6 +202,7 @@ h3.widget_title {
   @extend .m_bottom_10;
   @extend .no-shadow;
   font-size: $font-size-base;
+  overflow: visible;
   .tab-content {
     @extend .tabs_content;
     @extend .shadow;
@@ -242,7 +244,7 @@ h3.widget_title {
     .owl-next, .owl-prev {
       margin: 0 0 0 3px;
       border-radius: 4px;
-      background: $gray-lighter;
+      background: $gray-light;
       color: $text-color;
       &:hover {
         background: $brand-primary;
