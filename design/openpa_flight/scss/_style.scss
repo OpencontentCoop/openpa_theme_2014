@@ -179,12 +179,16 @@ h3.widget_title {
 }
 
 .nav-section .widget .widget_title {
-  background: $brand-secondary;
+  background-color: $brand-secondary;
   padding: 15px 20px 14px;
+  color: #ffffff;
   * {
     padding: 0;
     margin: 0;
     color: #ffffff;
+    background-color: $brand-secondary;
+    text-transform: none;
+    font-size: 1.3em;
   }
 }
 
