@@ -6467,7 +6467,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
 /* line 20, ../scss/_pagelayout.scss */
 #header { border-top-width: 3px; border-top-style: solid; width: inherit; }
 /* line 30, ../scss/_pagelayout.scss */
-#header .header-top { padding: 4px 0; background-color: #555555; }
+#header .header-top { padding: 8px 0; background-color: #555555; }
 /* line 35, ../scss/_pagelayout.scss */
 #header .header-top a { color: #fff; }
 /* line 76, ../scss/_pagelayout.scss */
