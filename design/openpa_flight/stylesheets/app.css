@@ -5367,6 +5367,10 @@ legend { font-size: 1em; }
 .panels-container .media-panel .media .abstract { font-size: 0.9em; }
 /* line 500, ../scss/_style.scss */
 .panels-container .media-panel .media p.link { margin-bottom: 0; }
+/* line 505, ../scss/_style.scss */
+.panels-container .panel-story { font-size: .8em; color: #428944; }
+/* line 508, ../scss/_style.scss */
+.panels-container .panel-story a { color: #428944; text-decoration: none; font-weight: bold; }
 
 /* line 1, ../scss/flat/_reset.scss */
 .reset, #header p, #header ul, .side_menu { background: transparent; border: 0 none; font-weight: inherit; margin: 0; padding: 0; border: 0; outline: 0; vertical-align: top; }

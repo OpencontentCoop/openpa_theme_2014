@@ -502,4 +502,14 @@ legend{font-size: 1em}
       }
     }
   }
+  .panel-story {
+    font-size: .8em;
+    color: $brand-primary;
+    a{
+      color: $brand-primary;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+  }
 }
