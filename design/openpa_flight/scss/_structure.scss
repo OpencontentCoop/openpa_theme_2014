@@ -68,6 +68,8 @@
 }
 
 .dashboard .panel {
+  position: relative;
+  padding-top: 40px;
   h2{
     background: $gray;
     color: #fff;
@@ -78,10 +80,6 @@
     position: absolute;
     top: 40px;
     border-bottom-right-radius: $border-radius-base;
-  }
-  .panel-body{
-    position: relative;
-    margin-top: 40px;
   }
 }
 
