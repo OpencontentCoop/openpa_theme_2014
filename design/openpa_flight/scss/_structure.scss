@@ -67,6 +67,23 @@
   width: 100%;
 }
 
+.dashboard .panel {
+  h2{
+    background: $gray;
+    color: #fff;
+    font-size: 1.5em;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    border-bottom-right-radius: $border-radius-base;
+  }
+  .panel-body{
+    position: relative;
+    margin-top: 40px;
+  }
+}
 
 ul.org-chart li,
 ul.org-chart ul li {
