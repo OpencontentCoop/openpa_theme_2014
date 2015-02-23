@@ -5083,7 +5083,7 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify { text-align: j
 /* line 70, ../scss/_structure.scss */
 .dashboard .panel { position: relative; padding-top: 40px; }
 /* line 73, ../scss/_structure.scss */
-.dashboard .panel h2 { background: #555555; color: #fff; font-size: 1.5em; left: 0; margin: 0; padding: 10px; position: absolute; top: 40px; border-bottom-right-radius: 4px; }
+.dashboard .panel h2 { background: #555555; color: #fff; font-size: 1.5em; left: 0; margin: 0; padding: 10px; position: absolute; top: 0; border-bottom-right-radius: 4px; }
 
 /* line 86, ../scss/_structure.scss */
 ul.org-chart li, ul.org-chart ul li { list-style: none; text-indent: 0; }
