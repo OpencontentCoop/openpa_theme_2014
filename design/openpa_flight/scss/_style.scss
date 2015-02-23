@@ -177,7 +177,11 @@ h3.widget_title {
     background: #fff;
     padding: 10px;
     h3{
-      @extend h3.widget_title;
+      padding: 5px 8px;
+      text-transform: uppercase;
+      margin: 0 0  10px;
+      font-size: .9em;
+      font-weight: bold;
     }
   }
 }
@@ -368,11 +372,15 @@ h3.widget_title {
       margin-bottom: 10px;
       border: none;
       li {
+        padding:0;
         a {
           background: $gray-lighter;
+          color: #gray;
+          padding: 5px 8px;
         }
         &.active a {
           background: $gray;
+          color: #fff;
         }
       }
     }
