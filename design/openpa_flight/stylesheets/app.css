@@ -5435,10 +5435,10 @@ html, body { height: 100%; }
 .f_size_small, #header .header-top ul, #header .header-top .header-top-left p { font-size: .85em; }
 
 /* line 52, ../scss/flat/_base.scss */
-.f_size_medium, #header .header-top a, #header .header-bottom .header-searchbox form input { font-size: .9em; }
+.f_size_medium, #header .header-bottom .header-searchbox form input { font-size: .9em; }
 
 /* line 55, ../scss/flat/_base.scss */
-.f_size_large, .side_menu > li > a, .side_menu ul.submenu-level-1 > li > a { font-size: 1.15em; }
+.f_size_large, #header .header-top a, .side_menu > li > a, .side_menu ul.submenu-level-1 > li > a { font-size: 1.15em; }
 
 /* line 58, ../scss/flat/_base.scss */
 .f_size_ex_large { font-size: 1.25em; }
