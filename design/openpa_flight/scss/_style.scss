@@ -159,10 +159,11 @@ p.link {
 h3.widget_title {
   background-color: $brand-primary;
   color: #ffffff;
-  padding: 15px 0 14px;
+  padding: 5px 8px;
   text-transform: uppercase;
-  margin: 0;
-  font-size: 1.3em;
+  margin: 0 0  10px;
+  font-size: .9em;
+  @extend .r_corners;
   a{
     color: #ffffff;
   }
