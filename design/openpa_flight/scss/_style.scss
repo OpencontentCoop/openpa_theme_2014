@@ -157,11 +157,15 @@ p.link {
 */
 
 h3.widget_title {
-  color: $brand-primary;
+  background-color: $brand-primary;
+  color: #ffffff;
   padding: 15px 0 14px;
   text-transform: uppercase;
   margin: 0;
   font-size: 1.3em;
+  a{
+    color: #ffffff;
+  }
 }
 
 .widget {
