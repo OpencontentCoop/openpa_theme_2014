@@ -5264,7 +5264,7 @@ h3.widget_title a { color: #ffffff; text-decoration: none; }
 .widget_tabs .nav-tabs li a { border: none !important; }
 
 /* line 244, ../scss/_style.scss */
-#page .owl-controls .owl-buttons .owl-next, #page .owl-controls .owl-buttons .owl-prev { margin: 0 0 0 3px; border-radius: 4px; background: #999999; color: #333333; }
+#page .owl-controls .owl-buttons .owl-next, #page .owl-controls .owl-buttons .owl-prev { margin: 0 0 0 3px; border-radius: 4px; background: #999999; color: #fff; }
 /* line 249, ../scss/_style.scss */
 #page .owl-controls .owl-buttons .owl-next:hover, #page .owl-controls .owl-buttons .owl-prev:hover { background: #428944; color: #fff; }
 
