@@ -5355,17 +5355,17 @@ legend { font-size: 1em; }
 
 /* line 459, ../scss/_style.scss */
 .panels-container .panel-label { background: #428944; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; }
-/* line 470, ../scss/_style.scss */
+/* line 471, ../scss/_style.scss */
 .panels-container .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
-/* line 481, ../scss/_style.scss */
+/* line 482, ../scss/_style.scss */
 .panels-container .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
-/* line 486, ../scss/_style.scss */
+/* line 487, ../scss/_style.scss */
 .panels-container .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
-/* line 491, ../scss/_style.scss */
+/* line 492, ../scss/_style.scss */
 .panels-container .media-panel .media h4 a { text-decoration: none; }
-/* line 495, ../scss/_style.scss */
+/* line 496, ../scss/_style.scss */
 .panels-container .media-panel .media .abstract { font-size: 0.9em; }
-/* line 498, ../scss/_style.scss */
+/* line 499, ../scss/_style.scss */
 .panels-container .media-panel .media p.link { margin-bottom: 0; }
 
 /* line 1, ../scss/flat/_reset.scss */
@@ -5478,7 +5478,7 @@ html, body { height: 100%; }
 .circle { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 
 /* line 85, ../scss/flat/_base.scss */
-.r_corners, .main_image, .embed_image, h3.widget_title, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, #header .header-bottom .header-searchbox form input, .menu_wrap li.menu-item > a, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.r_corners, .main_image, .embed_image, h3.widget_title, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, .panels-container .panel-label, #header .header-bottom .header-searchbox form input, .menu_wrap li.menu-item > a, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
 /* line 90, ../scss/flat/_base.scss */
 .r_corners_top, .panels-container .media-panel figure { border-top-right-radius: 4px; border-top-left-radius: 4px; }
