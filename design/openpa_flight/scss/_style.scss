@@ -340,24 +340,6 @@ h3.widget_title {
   }
 }
 
-.panels-container {
-  .media {
-    @extend .widget;
-    padding: 10px;
-    background:#fff;
-    .main_image {
-      float: none;
-      margin: 0 0 10px;
-      box-shadow: 0 0 #fff;
-      border: none;
-      border-radius: 0;
-    }
-    .caption {
-      padding: 10px;
-    }
-  }
-}
-
 .events {
   .widget_content{
     ul.events-tabs {
@@ -471,6 +453,21 @@ blockquote{
 legend{font-size: 1em}
 
 .panels-container, .leaflet-popup-content{
+  .media {
+    @extend .widget;
+    padding: 10px;
+    background:#fff;
+    .main_image {
+      float: none;
+      margin: 0 0 10px;
+      box-shadow: 0 0 #fff;
+      border: none;
+      border-radius: 0;
+    }
+    .caption {
+      padding: 10px;
+    }
+  }
   .panel-label{
     background: $brand-primary;
     left: 20px;
