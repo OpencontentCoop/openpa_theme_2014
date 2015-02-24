@@ -5395,11 +5395,14 @@ legend { font-size: 1em; }
 .panels-container .panel-story a, .leaflet-popup-content .panel-story a { color: #428944; text-decoration: none; font-weight: bold; }
 
 /* line 529, ../scss/_style.scss */
+.leaflet-popup-content .media-panel figure { min-width: 200px; }
+
+/* line 533, ../scss/_style.scss */
 .panels-container .owl-carousel .owl-item { padding: 5px; }
 
-/* line 534, ../scss/_style.scss */
+/* line 538, ../scss/_style.scss */
 ul.list-markers-text li a { padding: 5px 0; font-size: .9em; text-transform: uppercase; font-weight: bold; text-decoration: none; display: block; }
-/* line 541, ../scss/_style.scss */
+/* line 545, ../scss/_style.scss */
 ul.list-markers-text li a small { text-transform: none; font-weight: normal; display: block; }
 
 /* line 1, ../scss/flat/_reset.scss */
