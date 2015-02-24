@@ -369,7 +369,7 @@ h3.widget_title {
         padding:0;
         a {
           background: $gray-lighter;
-          color: #gray;
+          color: $gray;
           padding: 5px 8px;
           text-decoration: none;
         }
@@ -526,4 +526,8 @@ legend{font-size: 1em}
     }
 
   }
+}
+
+.panels-container .owl-carousel .owl-item {
+  padding:5px;
 }
