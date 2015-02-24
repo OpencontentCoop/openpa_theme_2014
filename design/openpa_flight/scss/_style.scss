@@ -490,6 +490,7 @@ legend{font-size: 1em}
       min-height: 200px;
       @extend .r_corners_top;
       border-bottom: 3px solid $brand-primary;
+      @extend .shadow;
     }
     .media{
       &.has-image {
@@ -526,8 +527,13 @@ legend{font-size: 1em}
   }
 }
 
-.leaflet-popup-content .media-panel figure{
-  min-width: 200px;
+.leaflet-popup-content {
+  .media{
+    @extend .no-shadow;
+  }
+  .media-panel figure{
+    min-width: 200px;
+  }
 }
 
 .panels-container .owl-carousel .owl-item {

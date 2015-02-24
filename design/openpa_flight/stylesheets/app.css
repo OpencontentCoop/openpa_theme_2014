@@ -5379,30 +5379,30 @@ legend { font-size: 1em; }
 .panels-container .panel-label, .leaflet-popup-content .panel-label { background: #428944; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; font-size: .9em; }
 /* line 484, ../scss/_style.scss */
 .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
-/* line 495, ../scss/_style.scss */
+/* line 496, ../scss/_style.scss */
 .panels-container .media-panel .media.has-image, .leaflet-popup-content .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
-/* line 500, ../scss/_style.scss */
+/* line 501, ../scss/_style.scss */
 .panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
-/* line 505, ../scss/_style.scss */
+/* line 506, ../scss/_style.scss */
 .panels-container .media-panel .media h4 a, .leaflet-popup-content .media-panel .media h4 a { text-decoration: none; }
-/* line 509, ../scss/_style.scss */
+/* line 510, ../scss/_style.scss */
 .panels-container .media-panel .media .abstract, .leaflet-popup-content .media-panel .media .abstract { font-size: 0.9em; }
-/* line 512, ../scss/_style.scss */
+/* line 513, ../scss/_style.scss */
 .panels-container .media-panel .media p.link, .leaflet-popup-content .media-panel .media p.link { margin-bottom: 0; }
-/* line 517, ../scss/_style.scss */
+/* line 518, ../scss/_style.scss */
 .panels-container .panel-story, .leaflet-popup-content .panel-story { font-size: .8em; color: #428944; }
-/* line 520, ../scss/_style.scss */
+/* line 521, ../scss/_style.scss */
 .panels-container .panel-story a, .leaflet-popup-content .panel-story a { color: #428944; text-decoration: none; font-weight: bold; }
 
-/* line 529, ../scss/_style.scss */
+/* line 534, ../scss/_style.scss */
 .leaflet-popup-content .media-panel figure { min-width: 200px; }
 
-/* line 533, ../scss/_style.scss */
+/* line 539, ../scss/_style.scss */
 .panels-container .owl-carousel .owl-item { padding: 5px; }
 
-/* line 538, ../scss/_style.scss */
+/* line 544, ../scss/_style.scss */
 ul.list-markers-text li a { padding: 5px 0; font-size: .9em; text-transform: uppercase; font-weight: bold; text-decoration: none; display: block; }
-/* line 545, ../scss/_style.scss */
+/* line 551, ../scss/_style.scss */
 ul.list-markers-text li a small { text-transform: none; font-weight: normal; display: block; }
 
 /* line 1, ../scss/flat/_reset.scss */
@@ -5701,10 +5701,10 @@ html, body { height: 100%; }
 .container3d { -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -o-transform-style: preserve-3d; -ms-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: perspective(600); -moz-transform: perspective(600); -o-transform: perspective(600); transform: perspective(600); perspective: 600px; }
 
 /* line 297, ../scss/flat/_base.scss */
-.shadow, .main_image, .embed_image, .widget_tabs .tab-content, .widget, .panels-container .media, .leaflet-popup-content .media { -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+.shadow, .main_image, .embed_image, .widget_tabs .tab-content, .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure, .widget, .panels-container .media, .leaflet-popup-content .media { -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
 
 /* line 304, ../scss/flat/_base.scss */
-.no-shadow, .widget_tabs { -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; box-shadow: none; }
+.no-shadow, .widget_tabs, .leaflet-popup-content .media { -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; box-shadow: none; }
 
 /* line 311, ../scss/flat/_base.scss */
 mark { background: #428944; color: #fff; }
