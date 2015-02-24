@@ -5377,23 +5377,23 @@ blockquote:after { content: ""; width: 17px; height: 10px; background: url("../i
 legend { font-size: 1em; }
 
 /* line 474, ../scss/_style.scss */
-.panels-container .panel-label { background: #428944; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; font-size: .9em; }
+.panels-container .panel-label, .leaflet-popup-content .panel-label { background: #428944; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; font-size: .9em; }
 /* line 487, ../scss/_style.scss */
-.panels-container .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
+.panels-container .media-panel figure, .leaflet-popup-content .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #428944; }
 /* line 498, ../scss/_style.scss */
-.panels-container .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
+.panels-container .media-panel .media.has-image, .leaflet-popup-content .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
 /* line 503, ../scss/_style.scss */
-.panels-container .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
+.panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
 /* line 508, ../scss/_style.scss */
-.panels-container .media-panel .media h4 a { text-decoration: none; }
+.panels-container .media-panel .media h4 a, .leaflet-popup-content .media-panel .media h4 a { text-decoration: none; }
 /* line 512, ../scss/_style.scss */
-.panels-container .media-panel .media .abstract { font-size: 0.9em; }
+.panels-container .media-panel .media .abstract, .leaflet-popup-content .media-panel .media .abstract { font-size: 0.9em; }
 /* line 515, ../scss/_style.scss */
-.panels-container .media-panel .media p.link { margin-bottom: 0; }
+.panels-container .media-panel .media p.link, .leaflet-popup-content .media-panel .media p.link { margin-bottom: 0; }
 /* line 520, ../scss/_style.scss */
-.panels-container .panel-story { font-size: .8em; color: #428944; }
+.panels-container .panel-story, .leaflet-popup-content .panel-story { font-size: .8em; color: #428944; }
 /* line 523, ../scss/_style.scss */
-.panels-container .panel-story a { color: #428944; text-decoration: none; font-weight: bold; }
+.panels-container .panel-story a, .leaflet-popup-content .panel-story a { color: #428944; text-decoration: none; font-weight: bold; }
 
 /* line 532, ../scss/_style.scss */
 .panels-container .owl-carousel .owl-item { padding: 5px; }
@@ -5513,10 +5513,10 @@ html, body { height: 100%; }
 .circle { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 
 /* line 85, ../scss/flat/_base.scss */
-.r_corners, .main_image, .embed_image, h3.widget_title, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, .panels-container .panel-label, #header .header-bottom .header-searchbox form input, .menu_wrap li.menu-item > a, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.r_corners, .main_image, .embed_image, h3.widget_title, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, .panels-container .panel-label, .leaflet-popup-content .panel-label, #header .header-bottom .header-searchbox form input, .menu_wrap li.menu-item > a, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
 /* line 90, ../scss/flat/_base.scss */
-.r_corners_top, .panels-container .media-panel figure { border-top-right-radius: 4px; border-top-left-radius: 4px; }
+.r_corners_top, .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure { border-top-right-radius: 4px; border-top-left-radius: 4px; }
 
 /* line 93, ../scss/flat/_base.scss */
 .vc_child:after { content: ""; display: inline-block; height: 100%; vertical-align: middle; }

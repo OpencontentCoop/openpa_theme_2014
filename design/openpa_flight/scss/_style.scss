@@ -470,7 +470,7 @@ blockquote{
 
 legend{font-size: 1em}
 
-.panels-container{
+.panels-container, .leaflet-popup-content{
   .panel-label{
     background: $brand-primary;
     left: 20px;
