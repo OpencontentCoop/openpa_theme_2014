@@ -67,6 +67,7 @@
 .content-title h1 {
   color: $brand-secondary;
   text-transform: uppercase;
+  font-weight: bold;
   small {
     font-weight: unset;
     font-size: 50%;
@@ -540,5 +541,10 @@ ul.list-markers-text {
     font-weight: bold;
     text-decoration: none;
     display: block;
+    small{
+      text-transform: none;
+      font-weight: normal;
+      display: block;
+    }
   }
 }
