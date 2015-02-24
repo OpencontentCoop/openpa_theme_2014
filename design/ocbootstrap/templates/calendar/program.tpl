@@ -1,3 +1,14 @@
+{ezscript_require(array( 'ezjsc::jquery' ) )}
+<script type="text/javascript">
+{literal}
+$(function() {	    
+    if (location.hash == '') {      
+      $("html, body").animate({ scrollTop: $("#today").offset().top });
+    }
+});
+{/literal}
+</script>
+
 {def $currentInterval = 'P1M'
      $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $node, 'params', hash( 'interval', $currentInterval, 'view', 'program' )|merge( $view_parameters ) ) )}
 
@@ -25,7 +36,7 @@
 
           <div class="calendar-day-program float-break row events" id="day-{$calendarDay.identifier}">
 
-            <div class="calendar-date col-xs-4 col-sm-3 col-md-2">
+            <div class="calendar-date col-xs-4 col-sm-3 col-md-2"{if $calendarDay.is_today} id="today"{/if}>
               <span class="month">{$calendarDay.start|datetime( 'custom', '%M' )}</span>
               <span class="day">{$calendarDay.start|datetime( 'custom', '%j' )}</span>
             </div>

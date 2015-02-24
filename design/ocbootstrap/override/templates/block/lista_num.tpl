@@ -4,7 +4,11 @@
 <div class="relative carousel-top-control panels-container {if or( $show_title|not(), $block.name|eq('') )}title-placeholder{/if} {$block.view}">
 
 {if and( $show_title, $block.name|ne('') )}
-    <h3 class="widget_title"><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
+    <h3 class="widget_title">
+	  {if $openpa.root_node}<a href={$openpa.root_node.url_alias|ezurl()}>{/if}
+	  {$block.name|wash()}
+	  {if $openpa.root_node}</a>{/if}
+	</h3>
 {/if}
 
 {include uri='design:atoms/carousel.tpl'

@@ -10,7 +10,7 @@
           </h4>
       
       <p class="abstract">
-        {$node|abstract()|openpa_shorten(270)}
+        {$node|abstract()}
       </p>
   
           <p class="link">

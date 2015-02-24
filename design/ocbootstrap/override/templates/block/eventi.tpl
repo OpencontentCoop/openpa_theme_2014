@@ -36,7 +36,7 @@
 {/if}
 
 {else}
-    
+{*
     {ezscript_require( array( 'ezjsc::jquery', 'plugins/owl-carousel/owl.carousel.min.js', "plugins/blueimp/jquery.blueimp-gallery.min.js" ) )}
     {ezcss_require( array( 'plugins/owl-carousel/owl.carousel.css', 'plugins/owl-carousel/owl.theme.css', "plugins/blueimp/blueimp-gallery.css" ) )}
     
@@ -51,7 +51,7 @@
             {rdelim});
         {rdelim});        
     </script>
-
+*}
 
     {if $block.name|ne('')}
     <div class="widget events {$block.view}">
@@ -100,7 +100,7 @@
                 <div class="tab-pane active" id="oggi">
                   <div class="event-carousel" id="first-event-carousel">
                     <div class="events">
-                      {foreach $day_events as $i => $child}                    
+                      {foreach $day_events as $i => $child max 10}                    
                         {include uri="design:calendar/block_list_item.tpl" item=$child}
                         {delimiter modulo=4}</div><div class="events">{/delimiter}
                       {/foreach}
@@ -113,7 +113,7 @@
             <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide event-carousel">
               <div class="event-carousel" id="second-event-carousel">
                 <div class="events">
-                  {foreach $prossimi as $i => $child}                  
+                  {foreach $prossimi as $i => $child max 10}                  
                     {include uri="design:calendar/block_list_item.tpl" item=$child}
                     {delimiter modulo=4}</div><div class="events">{/delimiter}
                   {/foreach}
