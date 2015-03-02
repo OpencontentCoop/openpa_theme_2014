@@ -55,7 +55,7 @@ $(function() {
                     <div class="col-md-{$col-width}">
                       {node_view_gui view=panel content_node=$event.node image_class=small}
                     </div>
-                    {delimiter modulo=$modulo}</div><div class="row">{/delimiter}
+                    {delimiter modulo=$modulo}</div><div class="row panels-container">{/delimiter}
                   {/foreach}
                 </div>
               </div>

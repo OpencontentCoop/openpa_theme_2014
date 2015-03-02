@@ -10,11 +10,11 @@
 
   {else}
 
-    {if fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'login' ) )}
+    {if ezmodule( 'user/login' )}
       <li id="login"><a href={concat("/user/login?url=",$module_result.uri)|ezurl} title="Esegui il login al sito">Accedi con il tuo account</a></li>
     {/if}
     
-    {if fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'register' ) )}
+    {if ezmodule( 'user/register' )}
       <li id="registeruser"><a href={"/user/register"|ezurl} title="Registrati al sito">Crea un account</a></li>
     {/if}
 

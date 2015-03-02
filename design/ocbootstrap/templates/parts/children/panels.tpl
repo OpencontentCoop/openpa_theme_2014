@@ -8,6 +8,7 @@
   'parent_node', $node
 ))}
 
+{def $col-width=6 $modulo=2}
 
 {if $type|eq( 'exclude' )}
 {def $params = hash( 'class_filter_type', 'exclude', 'class_filter_array', $exclude_classes )}
@@ -21,22 +22,15 @@
                                                   'sort_by', $parent_node.sort_array,
                                                   'limit', $page_limit )|merge( $params ) ) }
 {if $children_count}
-  <div class="content-view-children panels-container">  
-	{foreach $children as $i => $child }
-	  {if $i|eq(0)}
-		<div class="row">
-	  {/if}
-	  <div class="col-md-6">
-		{node_view_gui content_node=$child view=panel image_class=widemedium}
-	  </div>
-	  {if eq(sum($i,1)|mod(2),0)}
-		</div>
-		<div class="row">
-	  {/if}
-	  {if $i|eq($page_limit|sub(1))}
-		</div>
-	  {/if}	 
-	{/foreach}
+  <div class="content-view-children">  
+    <div class="row panels-container"> 
+    {foreach $children as $child }
+      <div class="col-md-{$col-width}">
+        {node_view_gui content_node=$child view=panel image_class=widemedium}
+      </div>
+      {delimiter modulo=$modulo}</div><div class="row panels-container">{/delimiter}
+    {/foreach}
+    </div>
   </div>
 
   {include name=navigator
