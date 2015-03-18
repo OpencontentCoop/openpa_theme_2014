@@ -28,20 +28,18 @@
         </div>
 	</div>
 	
-{elseif $valid_nodes_count|ge(3)}
-
-    <div class="row">
-        <div class="col-md-4">
-		  {node_view_gui content_node=$valid_nodes[0] view=line}
+{elseif $valid_nodes_count|ge(3)}    
+    {def $col-width=6 $modulo=2}
+    {if and( $valid_nodes_count|eq(3), mod( 12, $valid_nodes_count )|eq(0) )}
+      {set $col-width=4 $modulo=3}
+    {/if}
+    <div class="row"> 
+    {foreach $valid_nodes as $valid_node }
+      <div class="col-md-{$col-width}">
+        {node_view_gui content_node=$valid_node view=line}
         </div>
-	
-	    <div class="col-md-4">
-		  {node_view_gui content_node=$valid_nodes[1] view=line}
-        </div>
-        
-        <div class="col-md-4">
-		  {node_view_gui content_node=$valid_nodes[2] view=line}
-        </div>
+      {delimiter modulo=$modulo}</div><div class="row">{/delimiter}
+    {/foreach}
     </div>
 {/if}
 </div>
