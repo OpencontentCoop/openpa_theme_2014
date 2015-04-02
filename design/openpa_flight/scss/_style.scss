@@ -428,7 +428,7 @@ blockquote{
   line-height:1.55em;
   padding:20px 10px 15px 50px;
   &:before{
-    content:"“";
+    content:'"';
     position:absolute;
     font-size:50px;
     font-weight:bold;

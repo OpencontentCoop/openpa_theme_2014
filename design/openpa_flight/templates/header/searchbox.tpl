@@ -1,7 +1,7 @@
 <div class="header-searchbox">
   <div class="row clearfix">
     <div class="search">
-      <form action="{"/content/search"|ezurl(no)}" role="search">
+      <form action="{"/content/advancedsearch"|ezurl(no)}" role="search">
         <fieldset>
           <legend class="hide">Strumenti di ricerca</legend>
           {if $pagedata.is_edit}

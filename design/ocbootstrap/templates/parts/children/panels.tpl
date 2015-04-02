@@ -5,10 +5,10 @@
   'include_classes', array(),
   'type', 'exclude',
   'fetch_type', 'list',
-  'parent_node', $node
+  'parent_node', $node,
+  'col-width', 6,
+  'modulo', 2
 ))}
-
-{def $col-width=6 $modulo=2}
 
 {if $type|eq( 'exclude' )}
 {def $params = hash( 'class_filter_type', 'exclude', 'class_filter_array', $exclude_classes )}

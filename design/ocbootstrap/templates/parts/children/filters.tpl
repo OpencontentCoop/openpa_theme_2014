@@ -42,6 +42,10 @@
     {set $currentClass = $classes[0].id}  	
   {/if}
 
+  {if $currentClass|not()}
+    {set $currentClass = $classes[0].id}
+  {/if}
+  
   {if count( $classes )|gt(0)}
   <div class="col-md-4">
     <div class="widget">
