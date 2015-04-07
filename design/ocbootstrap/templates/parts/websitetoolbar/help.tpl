@@ -16,7 +16,7 @@ $(document).ready(function(){
 {/literal}</script>
 <div id="ezwt-help" class="hide">
     <a href="#" title="Mostra nascondi le informazioni per l'editor">
-        <i class="fa fa-info-circle"></i>
+        <i class="fa fa-info-circle fa-2x"></i>
     </a>
 </div>
 {undef $openpa}

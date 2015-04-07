@@ -12,7 +12,9 @@
     {def $extra_cache_key = ''}
 {/if}
 
-{cache-block expiry=86400  keys=array( $module_result.uri, $basket_is_empty, $current_user.contentobject_id, $extra_cache_key )}
+{def $browser = checkbrowser() $ie9 = 0}
+{if and( $browser.browser_name|eq('msie'), $browser.browser_math_number|lt(10) )}{set $ie9 = 1}{/if}
+{cache-block expiry=86400  keys=array( $module_result.uri, $basket_is_empty, $current_user.contentobject_id, $extra_cache_key, $ie9 )}
 {def $pagedata = openpapagedata()
      $locales = fetch( 'content', 'translation_list' )
      $current_node_id = $pagedata.node_id}

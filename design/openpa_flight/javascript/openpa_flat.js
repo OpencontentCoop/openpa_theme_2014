@@ -144,11 +144,11 @@
 
             function orientationChange() {
                 if ($(window).width() < 767) {
-                    button.off('click').on('click', function () {
+                    button.off('click tap').on('click tap', function () {
                         menuWrap.stop().slideToggle();
                         $(this).toggleClass('active');
                     });
-                    menu.children('li').children('a').off('click').on('click', function (e) {
+                    menu.children('li').children('a').off('click tap').on('click tap', function (e) {
                         var self = $(this);
                         self
                             .closest('li')
@@ -173,7 +173,7 @@
                     });
                 } else if ($(window).width() > 767) {
                     menuWrap.removeAttr('style').find('.sub_menu_wrap').removeAttr('style');
-                    menu.children('li').children('a').off('click');
+                    menu.children('li').children('a').off('click tap');
                 }
             }
 
