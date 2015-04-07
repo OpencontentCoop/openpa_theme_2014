@@ -77,6 +77,10 @@
 
 {include uri='design:page_extra.tpl'}
 
+{if is_set( $pagedata.homepage.data_map.sensor_footer_banner )}
+{include uri='design:parts/sensor_footer_banner.tpl' url=$pagedata.homepage.data_map.sensor_footer_banner.content name=sensor_ad}
+{/if}
+
 {/cache-block}
 
 <!--DEBUG_REPORT-->

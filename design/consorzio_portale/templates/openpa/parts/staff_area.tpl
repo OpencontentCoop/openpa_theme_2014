@@ -18,7 +18,7 @@
 {if $staff|count()|gt(0)}
   <h3>Staff</h3>
   {foreach $staff as $user}	
-	{content_view_gui view=dipendente_ruoli content_object=$user show_role_names=array( "Referente" )}
+	{content_view_gui view=dipendente_ruoli content_object=$user show_role_names=array( "Referente" ) show_abstract=true()}
 	{delimiter}<br />{/delimiter}
   {/foreach}
 {/if}

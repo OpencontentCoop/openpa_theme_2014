@@ -20,24 +20,25 @@
 	{else}
 	<span class="color_dark d_block bt_link"><b>{$object.name|wash()}</b></span>
 	{/if}
-    
-	{if and( $show_abstract, $main_node|has_abstract() )}
-	  <span class="color_dark ellipsis">{$main_node|abstract()|openpa_shorten(100)}</span>
-	
-	{elseif is_set( $show_role_names )}
-	  {def $ruoli = array()}
+  
+  {def $ruoli = array()}
+	{if is_set( $show_role_names )}	  
 	  {foreach $dipendente_openpa.content_ruoli_comune.ruoli.dipendente as $ruolo}
 		{if $show_role_names|contains( $ruolo.name )}
 		  {set $ruoli = $ruoli|append( $ruolo )}
 		{/if}
 	  {/foreach}
-	  {if count( $ruoli )|gt(0)}
+  {/if}
+	
+  {if count( $ruoli )|gt(0)}
 		<ul class="list-unstyled color_dark wrapper">
 		{foreach $ruoli as $ruolo}
 			<li>{node_view_gui content_node=$ruolo view=ruolo}</li>
 		{/foreach}
 		</ul>
-	  {/if}
+    
+  {elseif and( $show_abstract, $main_node|has_abstract() )}
+	  <span class="color_dark ellipsis">{$main_node|abstract()|openpa_shorten(100)}</span>
 	
 	{elseif $dipendente_openpa.content_ruoli_comune.ruoli.dipendente}
       <ul class="list-unstyled color_dark wrapper">
