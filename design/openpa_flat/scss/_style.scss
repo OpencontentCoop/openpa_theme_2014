@@ -423,3 +423,16 @@ blockquote{
     bottom:-10px;
   }
 }
+
+
+.owl-item .item img.img-responsive
+{
+    min-height: 350px;
+}
+
+.panels-container .media{
+    background:#fff;
+}
+
+div.survey-view label { display: inline-block; margin-bottom: 5px; margin-top: 10px; font-weight: bold; font-size: 18px; }
+div.survey-view div.radio label { display: inline-block; margin-bottom: 5px; margin-top: 3px; font-weight: normal; font-size: 15px; padding-left: 40px; }
