@@ -2763,7 +2763,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
 .btn-extra-menu .badge { color: #8e2140; background-color: #ffffff; }
 
 /* line 226, ../scss/_pagelayout.scss */
-.sub_menu_wrap { position: absolute; left: 0; width: 200px; padding: 0; background: #fff; border-top-width: 3px; border-top-style: solid; border-color: #428944; margin-top: 10px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -webkit-transform: translateY(35px); -moz-transform: translateY(35px); -o-transform: translateY(35px); -ms-transform: translateY(35px); transform: translateY(35px); opacity: 0; visibility: hidden; overflow-x: hidden; overflow-y: auto; max-height: 450px; }
+.sub_menu_wrap { position: absolute; left: 0; width: 200px; padding: 0; background: #fff; border-top-width: 3px; border-top-style: solid; border-color: #428944; margin-top: 10px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -webkit-transform: translateY(35px); -moz-transform: translateY(35px); -o-transform: translateY(35px); -ms-transform: translateY(35px); transform: translateY(35px); opacity: 0; visibility: hidden; }
 /* line 234, ../scss/_pagelayout.scss */
 .sub_menu_wrap.items-2 { width: 380px; }
 /* line 237, ../scss/_pagelayout.scss */
@@ -2776,12 +2776,12 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
 .sub_menu_wrap.items-6 { width: 900px; }
 /* line 248, ../scss/_pagelayout.scss */
 .sub_menu_wrap.items-6 .sub_menu-item { width: 140px; }
-/* line 274, ../scss/_pagelayout.scss */
+/* line 271, ../scss/_pagelayout.scss */
 .sub_menu_wrap:after { content: ""; width: 100%; height: 10px; display: block; position: absolute; left: 0; top: -13px; }
-/* line 283, ../scss/_pagelayout.scss */
+/* line 280, ../scss/_pagelayout.scss */
 .sub_menu_wrap:before { left: 16px; border-bottom-color: #428944; content: ""; width: 0; height: 0; border-left: 7px solid transparent; border-bottom-width: 8px; border-bottom-style: solid; border-right: 7px solid transparent; position: absolute; top: -8px; right: 16px; }
-/* line 298, ../scss/_pagelayout.scss */
-.sub_menu_wrap ul.sub_menu { margin: 10px 0; }
+/* line 295, ../scss/_pagelayout.scss */
+.sub_menu_wrap ul.sub_menu { margin: 10px 0; overflow-x: hidden; overflow-y: auto; max-height: 450px; }
 /* line 300, ../scss/_pagelayout.scss */
 .sub_menu_wrap ul.sub_menu li a { display: block; padding: 7.7px 20px; }
 /* line 308, ../scss/_pagelayout.scss */
@@ -3347,26 +3347,4 @@ div.DTFC_LeftFootWrapper table { border-top: none; }
   /* line 169, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
   .dataTables_wrapper .datatables-top .dataTables_paginate, .dataTables_wrapper .datatables-bottom .dataTables_paginate { text-align: center; float: none; margin-left: 0; margin-right: 0; }
   /* line 175, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-  .dataTables_wrapper .datatables-top .dataTables_length, .dataTables_wrapper .datatables-bottom .dataTables_length { text-align: center; display: inline-block; float: none; } }
-/* line 20, ../../../../ocbootstrap/design/ocbootstrap/scss/bootstrap/_mixins.scss */
-.dataTables_wrapper:before, .dataTables_wrapper:after { content: " "; display: table; }
-/* line 25, ../../../../ocbootstrap/design/ocbootstrap/scss/bootstrap/_mixins.scss */
-.dataTables_wrapper:after { clear: both; }
-/* line 185, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .dataTables_length { margin: 13px 10px 5px 10px; float: left; }
-/* line 190, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .dataTables_filter { margin: 10px 10px 5px 10px; float: right; }
-/* line 195, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .dataTables_info { padding: 0; margin: 4px 10px 10px 10px; }
-/* line 200, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .dataTables_paginate { margin-right: 10px; }
-/* line 203, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .dataTables_paginate .pagination { margin: 0; }
-/* line 209, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .filter_column input[type="text"] { display: block; width: 100%; min-height: 30px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-/* line 230, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .sorting:after { font-family: FontAwesome; font-weight: normal; font-style: normal; text-decoration: inherit; -webkit-font-smoothing: antialiased; *margin-right: .3em; opacity: 0.3; filter: alpha(opacity=30); content: "\f0dc"; float: right; }
-/* line 238, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .sorting_asc:after { font-family: FontAwesome; font-weight: normal; font-style: normal; text-decoration: inherit; -webkit-font-smoothing: antialiased; *margin-right: .3em; opacity: 0.3; filter: alpha(opacity=30); content: "\f0de"; float: right; }
-/* line 246, ../../../../ocbootstrap/design/ocbootstrap/scss/datatable/_bootstrap-datatable.scss */
-.dataTables_wrapper .sorting_desc:after { font-family: FontAwesome; font-weight: normal; font-style: normal; text-decoration: inherit; -webkit-font-smoothing: antialiased; *margin-right: .3em; opacity: 0.3; filter: alpha(opacity=30); content: "\f0dd"; float: right; }
+  .dataTables_wrapper .datatables-top .dataTables_length, .dataTables_wrapper .datatables-bottom .dataTables_length { text-align: center; display: inline-block; float: none; }

@@ -267,10 +267,7 @@ body{
   -ms-transform: translateY(35px);
   transform: translateY(35px);
   opacity: 0;
-  visibility: hidden;
-  overflow-x: hidden;
-  overflow-y: auto;
-  max-height: 450px;
+  visibility: hidden;  
   &:after {
     content: "";
     width: 100%;
@@ -297,6 +294,9 @@ body{
 
   ul.sub_menu{
     margin: 10px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 450px;
     li a {
       @extend .color_dark;
       @extend .tr_delay_hover;
