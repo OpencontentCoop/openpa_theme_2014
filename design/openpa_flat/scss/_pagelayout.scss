@@ -458,12 +458,8 @@ body{
     margin:-1px 0 0 -4px;
   }
 
-  li .submenu{
+  li:not(.active) .submenu{
     display: none;
-  }
-  
-  li.active .submenu{
-    display: block;
   }
 
   li.active > a,li.current > a{

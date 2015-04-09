@@ -845,8 +845,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
 .side_menu a > span { display: block; width: 23px; height: 23px; line-height: 23px; position: absolute; right: 0; top: 50%; margin-top: -11.5px; }
 .side_menu a > span:before, .side_menu a > span:after { content: ""; width: 9px; height: 9px; background: url("../images/plusminus.png") no-repeat; position: absolute; display: block; top: 50%; left: 50%; margin: -5px 0 0 -4px; -webkit-transition: opacity .4s ease; -moz-transition: opacity .4s ease; -o-transition: opacity .4s ease; transition: opacity .4s ease; }
 .side_menu a > span:after { height: 1px; width: 8px; background-position: 0 -9px; margin: -1px 0 0 -4px; }
-.side_menu li .submenu { display: none; }
-.side_menu li.active .submenu { display: block; }
+.side_menu li:not(.active) .submenu { display: none; }
 .side_menu li.active > a, .side_menu li.current > a { color: #22802d; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) { .side_menu a > span:before, .side_menu a > span:after { margin-left: -5px; } }
