@@ -143,38 +143,33 @@
                 button = $('#menu_button');
 
             function orientationChange() {
-                if ($(window).width() < 767) {
-                    button.off('click tap').on('click tap', function () {
-                        menuWrap.stop().slideToggle();
-                        $(this).toggleClass('active');
-                    });
-                    menu.children('li').children('a').off('click tap').on('click tap', function (e) {
-                        var self = $(this);
-                        self
-                            .closest('li')
-                            .toggleClass('current_click')
-                            .find('.sub_menu_wrap')
-                            .stop()
-                            .slideToggle()
-                            .end()
-                            .closest('li')
-                            .siblings('li')
-                            .removeClass('current_click')
-                            .children('a').removeClass('prevented').parent()
-                            .find('.sub_menu_wrap')
-                            .stop()
-                            .slideUp();
-                        if (!(self.hasClass('prevented'))) {
-                            e.preventDefault();
-                            self.addClass('prevented');
-                        } else {
-                            self.removeClass('prevented');
-                        }
-                    });
-                } else if ($(window).width() > 767) {
-                    menuWrap.removeAttr('style').find('.sub_menu_wrap').removeAttr('style');
-                    menu.children('li').children('a').off('click tap');
-                }
+                button.off('click tap').on('click tap', function () {
+                    menuWrap.stop().slideToggle();
+                    $(this).toggleClass('active');
+                });
+                menu.children('li').children('a').off('click tap').on('click tap', function (e) {
+                    var self = $(this);
+                    self
+                        .closest('li')
+                        .toggleClass('current_click')
+                        .find('.sub_menu_wrap')
+                        .stop()
+                        .slideToggle()
+                        .end()
+                        .closest('li')
+                        .siblings('li')
+                        .removeClass('current_click')
+                        .children('a').removeClass('prevented').parent()
+                        .find('.sub_menu_wrap')
+                        .stop()
+                        .slideUp();
+                    if (!(self.hasClass('prevented'))) {
+                        e.preventDefault();
+                        self.addClass('prevented');
+                    } else {
+                        self.removeClass('prevented');
+                    }
+                });
             }
 
             orientationChange();

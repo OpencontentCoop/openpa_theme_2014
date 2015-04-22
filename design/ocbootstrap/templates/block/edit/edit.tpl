@@ -136,6 +136,28 @@
                                 {/foreach}
                             </select>
                         {/case}
+                        {case match = 'class_select'}                          
+                          {def $class_list = fetch( class, list, hash( sort_by, array( 'name', true() ) ) )}
+                          <select class="select_to_string" onchange="select_to_string(this)">
+                          <option></option>
+                          {foreach $class_list as $class}
+                            <option value="{$class.identifier}">{$class.name|wash()}</option>
+                          {/foreach}
+                          </select>
+                          {undef $class_list}
+                          <input id="block-custom_attribute-{$block_id}-{$loop_count}" class="textfield block-control" type="text" name="ContentObjectAttribute_ezpage_block_custom_attribute_{$attribute.id}[{$zone_id}][{$block_id}][{$custom_attrib}]" value="{$block.custom_attributes[$custom_attrib]|wash()}" />
+                        {/case}
+                        {case match = 'state_select'}
+                          {def $state_list = object_state_list()}
+                          <select class="select_to_string" onchange="select_to_string(this)">
+                          <option></option>
+                          {foreach $state_list as $id => $name}
+                            <option value="{$id}">{$name|wash()}</option>
+                          {/foreach}
+                          </select>
+                          {undef $state_list}
+                          <input id="block-custom_attribute-{$block_id}-{$loop_count}" class="textfield block-control" type="text" name="ContentObjectAttribute_ezpage_block_custom_attribute_{$attribute.id}[{$zone_id}][{$block_id}][{$custom_attrib}]" value="{$block.custom_attributes[$custom_attrib]|wash()}" />
+                        {/case}
                         {case}
                         <input id="block-custom_attribute-{$block_id}-{$loop_count}" class="textfield block-control" type="text" name="ContentObjectAttribute_ezpage_block_custom_attribute_{$attribute.id}[{$zone_id}][{$block_id}][{$custom_attrib}]" value="{$block.custom_attributes[$custom_attrib]|wash()}" />
                         {/case}
