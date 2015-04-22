@@ -75,7 +75,7 @@ output_style = :compact
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = false
+# line_comments = false
 
 
 # If you prefer the indented syntax, you might want to regenerate this
@@ -84,6 +84,7 @@ line_comments = false
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
+add_import_path "/Users/luca/git/openpa_theme_2014/design/openpa_flat/scss"
 add_import_path "/Users/luca/git/ocbootstrap/design/ocbootstrap/scss"
 
 on_stylesheet_saved do |path|
