@@ -16,39 +16,40 @@
       </div>
     {/if}
     {if current_object_id()|ne($object.id)}
-	<a class="color_dark d_block bt_link" href="{$main_node.url_alias|ezurl(no)}"><b>{$object.name|wash()}</b></a>
-	{else}
-	<span class="color_dark d_block bt_link"><b>{$object.name|wash()}</b></span>
-	{/if}
+    <a class="color_dark d_block bt_link" href="{$main_node.url_alias|ezurl(no)}"><b>{$object.name|wash()}</b></a>
+    {else}
+    <span class="color_dark d_block bt_link"><b>{$object.name|wash()}</b></span>
+    {/if}
   
-  {def $ruoli = array()}
-	{if is_set( $show_role_names )}	  
-	  {foreach $dipendente_openpa.content_ruoli_comune.ruoli.dipendente as $ruolo}
-		{if $show_role_names|contains( $ruolo.name )}
-		  {set $ruoli = $ruoli|append( $ruolo )}
-		{/if}
-	  {/foreach}
-  {/if}
-	
-  {if count( $ruoli )|gt(0)}
-		<ul class="list-unstyled color_dark wrapper">
-		{foreach $ruoli as $ruolo}
-			<li>{node_view_gui content_node=$ruolo view=ruolo}</li>
-		{/foreach}
-		</ul>
-    
-  {elseif and( $show_abstract, $main_node|has_abstract() )}
-	  <span class="color_dark ellipsis">{$main_node|abstract()|openpa_shorten(100)}</span>
-	
-	{elseif $dipendente_openpa.content_ruoli_comune.ruoli.dipendente}
-      <ul class="list-unstyled color_dark wrapper">
+    {def $ruoli = array()}
+    {if is_set( $show_role_names )}	  
       {foreach $dipendente_openpa.content_ruoli_comune.ruoli.dipendente as $ruolo}
-          <li>{node_view_gui content_node=$ruolo view=ruolo}</li>
+      {if $show_role_names|contains( $ruolo.name )}
+        {set $ruoli = $ruoli|append( $ruolo )}
+      {/if}
+      {/foreach}
+    {/if}
+    
+    {if and( $show_abstract, $main_node|has_attribute( 'abstract' ) )}
+      {attribute_view_gui attribute=$main_node|attribute( 'abstract' )}
+      
+    {elseif count( $ruoli )|gt(0)}
+      <ul class="list-unstyled color_dark wrapper">
+      {foreach $ruoli as $ruolo}
+        <li>{node_view_gui content_node=$ruolo view=ruolo}</li>
       {/foreach}
       </ul>
-    	
+      
+    {*
+    {elseif $dipendente_openpa.content_ruoli_comune.ruoli.dipendente}
+        <ul class="list-unstyled color_dark wrapper">
+        {foreach $dipendente_openpa.content_ruoli_comune.ruoli.dipendente as $ruolo}
+            <li>{node_view_gui content_node=$ruolo view=ruolo}</li>
+        {/foreach}
+        </ul>
+    *}
+    
     {/if}
-        
 </div>
 
 {undef $dipendente_openpa $main_node}

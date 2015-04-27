@@ -9,37 +9,35 @@
 {def $tree_menu = tree_menu( hash( 'root_node_id', $openpa.control_menu.side_menu.root_node.node_id, 'user_hash', $openpa.control_menu.side_menu.user_hash, 'scope', 'side_menu' ))
      $show_left = and( $openpa.control_menu.show_side_menu, count( $tree_menu.children )|gt(0) )}
 
+
 <div class="content-view-full class-{$node.class_identifier} row">
 
     <div class="content-title">
-
-      <h1>{$node.name|wash()}</h1>
-
+        <h1>{$node.name|wash()}</h1>        
     </div>
 
     {if $show_left}
-      {include uri='design:openpa/full/parts/section_left.tpl'}
+        {include uri='design:openpa/full/parts/section_left.tpl'}
     {/if}
 
-    <div class="content-main{if and( $openpa.control_menu.show_extra_menu|not(), $show_left|not() )} wide{elseif and( $show_left, $openpa.control_menu.show_extra_menu )} full-stack{/if}">
+    <div class="content-main{if $show_left|not()} wide{/if}">
 
-        {include uri=$openpa.content_main.template}
+        <div class="media">
+          {if is_set( $openpa.content_main.parts.image )}
+              {include uri='design:atoms/image.tpl' item=$node image_class=large css_classes="main_image" image_css_class="media-object tr_all_long_hover"}
+          {/if}          
+          {if is_set( $openpa.content_main.parts.full_text )}
+              {attribute_view_gui attribute=$openpa.content_main.parts.full_text.contentobject_attribute}
+          {/if}    
+        </div>
 
-        {include uri=$openpa.content_detail.template}        
-
-        {if and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
-          {include uri=$openpa.content_albotelematico.container_template}    
-        {else}
-          {include uri=$openpa.control_children.template}
-        {/if}
+        {include uri=$openpa.content_detail.template}
+        
 
     </div>
-    
-    {if $openpa.control_menu.show_extra_menu}
-      {include uri='design:openpa/full/parts/section_right.tpl'}
-    {/if}
 
 </div>
+
 
 {if $openpa.content_date.show_date}
   <div class="row"><div class="col-md-12">

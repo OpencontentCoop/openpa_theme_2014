@@ -8,10 +8,10 @@
                       'debug.css',
                       'websitetoolbar.css',
                       ezini( 'StylesheetSettings', 'CSSFileList', 'design.ini' ),
-                      ezini( 'StylesheetSettings', 'FrontendCSSFileList', 'design.ini' ) ), 'all', 'text/css', 'stylesheet', '', cond( $ie9|eq(1), 0, 3 ) )}
+                      ezini( 'StylesheetSettings', 'FrontendCSSFileList', 'design.ini' ) ), 'all', 'text/css', 'stylesheet', false(), cond( $ie9|eq(1), 0, 3 ) )}
 {else}
   {ezcss_load( array( 'app.css',
                       'app_2.css',
                       'debug.css',
-                      'websitetoolbar.css' ), 'all', 'text/css', 'stylesheet', '', cond( $ie9|eq(1), 0, 3 ) )}
+                      'websitetoolbar.css' ), 'all', 'text/css', 'stylesheet', false(), cond( $ie9|eq(1), 0, 3 ) )}
 {/if}

@@ -165,6 +165,39 @@
                 menu = $('.main_menu'),
                 button = $('#menu_button');
 
+            function isEndScroll( $submenu ){
+                var submenuViewTop = $submenu.offset().top;
+                var submenuViewBottom = submenuViewTop + $submenu.height();
+                var $lastli = $( 'li', $submenu ).last();                
+                var lastliTop = $lastli.offset().top;
+                var lastliBottom = lastliTop + $lastli.height();                
+                return (lastliTop <= submenuViewBottom); 
+            }
+            function menuScrollHelper() {
+                $.each( $('.sub_menu_wrap > .sub_menu'), function(){                    
+                    if ( $('li', $(this) ).length > 11 ){
+                        if ($(this).parent().find('span.scroll-helper').length == 0) {
+                            var $helper = $('<span class="scroll-helper">Altro</span>');
+                            $helper.css({
+                                'background': 'none repeat scroll 0 0 #eee',
+                                'border-bottom-left-radius': '4px',
+                                'border-bottom-right-radius': '4px',
+                                'cursor': 'pointer',
+                                'font-size': '0.8em',
+                                'line-height': '30px',
+                                'height': '30px',
+                                'margin-top': '-30px',
+                                'position': 'absolute',
+                                'text-align': 'center',
+                                'width': '100%',
+                                'box-shadow': '0 1px 2px rgba(0, 0, 0, 0.15)'
+                            });                            
+                            $(this).parent().append( $helper );                            
+                        }                        
+                    }
+                });                
+            }
+            
             function orientationChange() {
                 if ($(window).width() < 767) {
                     button.off('click').on('click', function () {
@@ -197,12 +230,28 @@
                 } else if ($(window).width() > 767) {
                     menuWrap.removeAttr('style').find('.sub_menu_wrap').removeAttr('style');
                     menu.children('li').children('a').off('click');
+                    menuScrollHelper();
                 }
             }
 
-            orientationChange();
+            orientationChange();            
 
             $(window).on('resize', orientationChange);
+            
+            $(document).on( 'click', 'span.scroll-helper', function(){
+                var $submenu = $(this).parent().find( '.sub_menu' );
+                $submenu.stop().animate({
+                    scrollTop: $submenu.scrollTop()+200
+                });                
+            });
+            $('.sub_menu_wrap >.sub_menu').scroll( function(){
+                var $helper = $(this).parent().find( 'span.scroll-helper' );                
+                if (isEndScroll($(this))) {
+                    $helper.hide();
+                }else{
+                    $helper.show();
+                }
+            });
 
         };
         rmenu();

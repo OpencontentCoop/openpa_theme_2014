@@ -20,7 +20,7 @@
         {include uri='design:openpa/full/parts/section_left.tpl'}
     {/if}
 
-    <div class="content-main{if and( $openpa.control_menu.show_extra_menu|not(), $show_left|not() )} wide{elseif and( $show_left, $openpa.control_menu.show_extra_menu )} full-stack{/if}">
+    <div class="content-main{if $show_left|not()} wide{/if}">
 
         <div class="well">
           {include uri=$openpa.content_main.template}
@@ -44,10 +44,10 @@
             {if $i|eq(0)}
             <div class="row clearfix">
             {/if}
-            <div class="col-lg-4 col-md-4 col-sm-4 m_bottom_45 m_xs_bottom_30">		              
+            <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_45 m_xs_bottom_30">		              
               {node_view_gui content_node=$child view=line_with_icon}      
             </div>
-            {if eq(sum($i,1)|mod(3),0)}
+            {if eq(sum($i,1)|mod(2),0)}
             </div>
             <div class="row clearfix">
             {/if}
@@ -61,9 +61,5 @@
         
         
     </div>
-
-    {if $openpa.control_menu.show_extra_menu}
-      {include uri='design:openpa/full/parts/section_right.tpl'}
-    {/if}
 
 </div>

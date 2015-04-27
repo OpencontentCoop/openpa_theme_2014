@@ -7,34 +7,66 @@
   </div>
   <div class="widget_content">
 	
-	{if $area}	  
+  {* vedi https://support.opencontent.it/consorzio_comuni/ticket/1734 *}
+  
+  {def $exclude_users = array()
+       $current_ruoli = array()
+       $area_ruoli = array()}
+       
+  {if count( $openpa.content_ruoli_comune.ruoli.struttura )}
+    {foreach $openpa.content_ruoli_comune.ruoli.struttura as $ruolo}      
+      {set $current_ruoli = $current_ruoli|append( $ruolo )}
+      {foreach $ruolo.data_map.utente.content.relation_list as $user}
+        {set $exclude_users = $exclude_users|append( $user.contentobject_id)}
+      {/foreach}
+	  {/foreach}
+	{/if}
+  {if $area}	  
 		{if count( $area_openpa.content_ruoli_comune.ruoli.struttura )}
 		  {foreach $area_openpa.content_ruoli_comune.ruoli.struttura as $ruolo}
-			{if $ruolo.name|eq("Responsabile")}
-        <h3>Responsabile</h3>        
+			{if $ruolo.name|eq("Responsabile")}        
 			  {foreach $ruolo.data_map.utente.content.relation_list as $user}
-          {content_view_gui view=dipendente_struttura content_object=fetch( content, object, hash( object_id, $user.contentobject_id ) ) struttura=fetch( content, object, hash( object_id, $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id ) )}
+          {if $exclude_users|contains($user.contentobject_id)|not()}
+            {set $area_ruoli = $area_ruoli|append( $ruolo )}
+          {/if}
         {/foreach}
 			{/if}
 		  {/foreach}
 		{/if}	  
 	{/if}
-	{if count( $openpa.content_ruoli_comune.ruoli.struttura )}
-	  {foreach $openpa.content_ruoli_comune.ruoli.struttura as $ruolo}
-		  <h3>{$ruolo.name|wash()}</h3>
+  
+	{if count( $area_ruoli )|gt(0)}	  		
+		{foreach $area_ruoli as $ruolo}
+      <h3>Responsabile</h3>        
       {foreach $ruolo.data_map.utente.content.relation_list as $user}
         {content_view_gui view=dipendente_struttura content_object=fetch( content, object, hash( object_id, $user.contentobject_id ) ) struttura=fetch( content, object, hash( object_id, $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id ) )}
       {/foreach}
-	  {/foreach}
+    {/foreach}
+	{/if}
+	{if count( $current_ruoli )|gt(0)}
+    {def $ruolo_name = false()}
+	{foreach $current_ruoli as $ruolo}      
+      {if $ruolo_name|ne($ruolo.name)}
+		<h3>{$ruolo.name|wash()}</h3>
+		{set $ruolo_name = $ruolo.name}
+	  {/if}
+      {foreach $ruolo.data_map.utente.content.relation_list as $user}
+        {content_view_gui view=dipendente_struttura content_object=fetch( content, object, hash( object_id, $user.contentobject_id ) ) struttura=fetch( content, object, hash( object_id, $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id ) )}
+      {/foreach}
+	{/foreach}
+	{undef $ruolo_name}
 	{/if}
 	</ul>
 	
-	{def $consulenti = fetch( ezfind, search, hash( class_id, array( 'consulente' ), filter, array( concat( 'submeta_progetto___id_si:',  $node.contentobject_id ) ), sort_by, hash( name, asc ) ) )}
+	{def $consulenti = fetch( ezfind, search, hash( class_id, array( 'consulente' ), filter, array( concat( 'submeta_servizio___id_si:',  $node.contentobject_id ) ), sort_by, hash( extra_priority_si, desc ) ) )}
 	{if $consulenti['SearchCount']|gt(0)}
 	  <h3>Consulenti</h3>
 	  <ul class="list-unstyled">
 	  {foreach $consulenti['SearchResult']  as $item}
-		<li>{node_view_gui content_node=$item view=text_linked}</li>
+		<li>
+      <a class="color_dark d_block bt_link" href="{$item.url_alias|ezurl(no)}"><b>{$item.name|wash()}</b></a>
+      <span class="color_dark d_block bt_link wrapper">{$item|abstract()}</span>
+    </li>
 	  {/foreach}
 	  </ul>
 	{/if}
@@ -54,7 +86,7 @@
 </div>
 {/if}
 
-{def $news = fetch( ezfind, search, hash( subtree_array, array( $node.node_id ), class_id, array( 'avviso' ), limit, 3, sort_by, hash( published, desc ) ) )}
+{*def $news = fetch( ezfind, search, hash( subtree_array, array( $node.node_id ), class_id, array( 'avviso' ), limit, 3, sort_by, hash( published, desc ) ) )}
 {if $news['SearchCount']|gt(0)}
 <div class="widget">
   <div class="widget_title">
@@ -78,4 +110,4 @@
     </ul>
   </div>
 </div>
-{/if}
+{/if*}

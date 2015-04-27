@@ -20,7 +20,7 @@
 </div>
 {/if}
 
-{def $news = fetch( ezfind, search, hash( subtree_array, array( $node.node_id ), class_id, array( 'avviso' ), limit, 3, sort_by, hash( published, desc ) ) )}
+{*def $news = fetch( ezfind, search, hash( subtree_array, array( $node.node_id ), class_id, array( 'avviso' ), limit, 3, sort_by, hash( published, desc ) ) )}
 {if $news['SearchCount']|gt(0)}
 <div class="widget">
   <div class="widget_title">
@@ -45,4 +45,4 @@
   </div>
 </div>
 {/if}
-{undef $news}
+{undef $news*}

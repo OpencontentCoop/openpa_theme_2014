@@ -3,7 +3,7 @@
   <dl>
     <dd>
       <b>{$pagedata.contacts.telefono}</b>
-      <a href="mailto:{$pagedata.contacts.email}"><b>{$pagedata.contacts.email}</b></a>
+      <a href="mailto:{$pagedata.contacts.email}"><b><small>{$pagedata.contacts.email}</small></b></a>
     </dd>
   </dl>
 {/if}

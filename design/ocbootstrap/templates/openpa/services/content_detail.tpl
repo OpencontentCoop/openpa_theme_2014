@@ -14,3 +14,5 @@
 {/foreach}
 </div>
 {/if}
+
+{include uri=$openpa.content_attachment.template}
