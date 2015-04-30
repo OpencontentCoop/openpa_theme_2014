@@ -1,7 +1,7 @@
 {def $is_dynamic = false()
      $is_custom = false()
      $fetch_params = array()
-     $action = $block.action}
+     $action = cond( is_set( $block.action ), $block.action, false() )}
 
 {if and( eq( ezini( $block.type, 'ManualAddingOfItems', 'block.ini' ), 'disabled' ),
          ezini_hasvariable( $block.type, 'FetchClass', 'block.ini' ) )}
@@ -22,7 +22,9 @@
         <em id="block-expand-{$block_id}" class="trigger {if $action|eq( 'add' )}collapse{else}expand{/if}"></em> {ezini( $block.type, 'Name', 'block.ini' )} {if ne( $block.name, '' )}- {$block.name|wash()}{/if}
     </div>
     <div class="button-right">
-        <input id="block-up-{$block_id}" class="block-control" type="image" src="{'ezpage/block_up.gif'|ezimage(no)}" name="CustomActionButton[{$attribute.id}_move_block_up-{$zone_id}-{$block_id}]" alt="{'Move up'|i18n( 'design/standard/block/edit' )}" title="{'Move up'|i18n( 'design/standard/block/edit' )}" /> <input id="block-down-{$block_id}" class="block-control" type="image" src="{'ezpage/block_down.gif'|ezimage(no)}" name="CustomActionButton[{$attribute.id}_move_block_down-{$zone_id}-{$block_id}]" alt="{'Move down'|i18n( 'design/standard/block/edit' )}" title="{'Move down'|i18n( 'design/standard/block/edit' )}" /> <input id="block-remove-{$block_id}" class="block-control" type="image" src="{'ezpage/block_del.gif'|ezimage(no)}" name="CustomActionButton[{$attribute.id}_remove_block-{$zone_id}-{$block_id}]" title="{'Remove'|i18n( 'design/standard/block/edit' )}" alt="{'Remove'|i18n( 'design/standard/block/edit' )}" value="{'Remove'|i18n( 'design/standard/block/edit' )}" onclick="return confirmDiscard( '{'Are you sure you want to remove this block?'|i18n( 'design/standard/block/edit' )}' );" />
+        <input id="block-up-{$block_id}" class="block-control" type="image" src="{'ezpage/block_up.gif'|ezimage(no)}" name="CustomActionButton[{$attribute.id}_move_block_up-{$zone_id}-{$block_id}]" alt="{'Move up'|i18n( 'design/standard/block/edit' )}" title="{'Move up'|i18n( 'design/standard/block/edit' )}" />
+        <input id="block-down-{$block_id}" class="block-control" type="image" src="{'ezpage/block_down.gif'|ezimage(no)}" name="CustomActionButton[{$attribute.id}_move_block_down-{$zone_id}-{$block_id}]" alt="{'Move down'|i18n( 'design/standard/block/edit' )}" title="{'Move down'|i18n( 'design/standard/block/edit' )}" />
+        <input id="block-remove-{$block_id}" class="block-control" type="image" src="{'ezpage/block_del.gif'|ezimage(no)}" name="CustomActionButton[{$attribute.id}_remove_block-{$zone_id}-{$block_id}]" title="{'Remove'|i18n( 'design/standard/block/edit' )}" alt="{'Remove'|i18n( 'design/standard/block/edit' )}" value="{'Remove'|i18n( 'design/standard/block/edit' )}" onclick="return confirmDiscard( '{'Are you sure you want to remove this block?'|i18n( 'design/standard/block/edit' )}' );" />
     </div>
 </div>
 <div class="block-content {if $action|eq( 'add' )}expanded{else}collapsed{/if}">
@@ -101,7 +103,7 @@
             {if ezini_hasvariable( $block.type, 'UseBrowseMode', 'block.ini' )}
                 {set $use_browse_mode = ezini( $block.type, 'UseBrowseMode', 'block.ini' )}
             {/if}
-            {if eq( $use_browse_mode[$custom_attrib], 'true' )}
+            {if and( is_set( $use_browse_mode[$custom_attrib] ), eq( $use_browse_mode[$custom_attrib], 'true' ) )}
                 {if is_set($custom_attribute_names[$custom_attrib])}<label>{$custom_attribute_names[$custom_attrib]}:</label>{/if}
                 <input id="block-choose-source-{$block_id}" class="button block-control" name="CustomActionButton[{$attribute.id}_custom_attribute_browse-{$zone_id}-{$block_id}-{$custom_attrib}]" type="submit" value="{'Choose source'|i18n( 'design/standard/block/edit' )}" />
                 <div class="source">
@@ -280,14 +282,14 @@
     </tr>
     {/if}
     <tr class="rotation">
-        <td colspan="3">{'Rotation:'|i18n( 'design/standard/block/edit' )} <input id="block-rotation-value-{$block_id}" class="textfield block-control" type="text" name="RotationValue_{$block_id}" value="{$block.rotation.value}" size="5" />
+        <td colspan="3">{'Rotation:'|i18n( 'design/standard/block/edit' )} <input id="block-rotation-value-{$block_id}" class="textfield block-control" type="text" name="RotationValue_{$block_id}" value="{if is_set( $block.rotation )}{$block.rotation.value}{/if}" size="5" />
             <select id="block-rotation-unit-{$block_id}" class="list block-control" name="RotationUnit_{$block_id}">
-                <option value="2" {if eq( $block.rotation.unit, 2 )}selected="selected"{/if}>{'min'|i18n( 'design/standard/block/edit' )}</option>
-                <option value="3" {if eq( $block.rotation.unit, 3 )}selected="selected"{/if}>{'hour'|i18n( 'design/standard/block/edit' )}</option>
-                <option value="4" {if eq( $block.rotation.unit, 4 )}selected="selected"{/if}>{'day'|i18n( 'design/standard/block/edit' )}</option>
+                <option value="2" {if and( is_set( $block.rotation ), eq( $block.rotation.unit, 2 ) )}selected="selected"{/if}>{'min'|i18n( 'design/standard/block/edit' )}</option>
+                <option value="3" {if and( is_set( $block.rotation ), eq( $block.rotation.unit, 3 ) )}selected="selected"{/if}>{'hour'|i18n( 'design/standard/block/edit' )}</option>
+                <option value="4" {if and( is_set( $block.rotation ), eq( $block.rotation.unit, 4 ) )}selected="selected"{/if}>{'day'|i18n( 'design/standard/block/edit' )}</option>
             </select>
 
-        {'Shuffle'|i18n( 'design/standard/block/edit' )} <input id="block-rotation-shuffle-{$block_id}" class="block-control" type="checkbox" {if eq( $block.rotation.type, 2 )}checked="checked"{/if} name="RotationShuffle_{$block_id}" /> <input id="block-set-rotation-{$block_id}" class="button block-control" type="submit" name="CustomActionButton[{$attribute.id}_set_rotation-{$zone_id}-{$block_id}]" value="{'Set'|i18n( 'design/standard/block/edit' )}" /></td>
+        {'Shuffle'|i18n( 'design/standard/block/edit' )} <input id="block-rotation-shuffle-{$block_id}" class="block-control" type="checkbox" {if and( is_set( $block.rotation ), eq( $block.rotation.type, 2 ) )}checked="checked"{/if} name="RotationShuffle_{$block_id}" /> <input id="block-set-rotation-{$block_id}" class="button block-control" type="submit" name="CustomActionButton[{$attribute.id}_set_rotation-{$zone_id}-{$block_id}]" value="{'Set'|i18n( 'design/standard/block/edit' )}" /></td>
     </tr>
 </table>
 <table border="0" cellspacing="1" class="items history" id="z:{$zone_id}_b:{$block_id}_h">
