@@ -1,5 +1,44 @@
 <?php /*
 
+############################################
+############################################ DATATYPE
+############################################
+
+[datatype_compensi]
+Source=content/datatype/view/ezmatrix.tpl
+MatchFile=datatype/compensi_matrix.tpl
+Subdir=templates
+Match[attribute_identifier]=compensi
+
+[ezstring_sito]
+Source=content/datatype/view/ezstring.tpl
+MatchFile=datatype/string_as_url.tpl
+Subdir=templates
+Match[attribute_identifier]=sito
+
+[datatype_binary_mp3]
+Source=content/datatype/view/ezbinaryfile.tpl
+MatchFile=datatype/file_mp3.tpl
+Subdir=templates
+Match[attribute_identifier]=mp3
+
+[datatype_video_seduta]
+Source=content/datatype/view/ezstring.tpl
+MatchFile=datatype/link_video.tpl
+Subdir=templates
+Match[attribute_identifier]=codice_video
+
+[datatype_video_seduta2]
+Source=content/datatype/view/ezstring.tpl
+MatchFile=datatype/link_video.tpl
+Subdir=templates
+Match[attribute_identifier]=codice_video_2
+
+[datatype_video_seduta3]
+Source=content/datatype/view/ezstring.tpl
+MatchFile=datatype/link_video.tpl
+Subdir=templates
+Match[attribute_identifier]=codice_video_3
 
 ############################################
 ############################################ EMBED
