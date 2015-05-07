@@ -53,4 +53,12 @@ oggetti_classificazione[]=fonte
 [GestioneAttributi]
 attributi_da_escludere[]=event/geo
 
+[SideMenu]
+
+IdentificatoriMenu_trasparenza[]
+IdentificatoriMenu_trasparenza[]=pagina_trasparenza
+
+SideMenuContextRootClasses[]
+SideMenuContextRootClasses[]=trasparenza
+
 */ ?>

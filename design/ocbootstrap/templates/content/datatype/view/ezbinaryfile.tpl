@@ -15,20 +15,17 @@
 {if $attribute.has_content}
 	{if $attribute.content}
 	{switch match=$icon}
-		{case match='no'}
-			File {$attribute.content.original_filename|shorten(30,' ... ','middle')} ({$attribute.content.filesize|si( byte )})               
-      <a class="btn btn-success pull-right" href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.id,"/file/",$attribute.content.original_filename)|ezurl} title="Scarica il file {$attribute.content.original_filename|wash( xhtml )}">
-        <i class="fa fa-download fa-2x"></i>
-      </a>
+		{case match='no'}			
 		{/case}
 		{case}
-			{$attribute.content.mime_type|mimetype_icon( $icon_size, $icon_title )}
-      {$attribute.content.original_filename|shorten(30,' ... ','middle')} ({$attribute.content.filesize|si( byte )})               
+			{$attribute.content.mime_type|mimetype_icon( $icon_size, $icon_title )}      
+		{/case}
+	{/switch}
       <a class="btn btn-success pull-right" href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.id,"/file/",$attribute.content.original_filename)|ezurl} title="Scarica il file {$attribute.content.original_filename|wash( xhtml )}">
         <i class="fa fa-download fa-2x"></i>
       </a>
-		{/case}
-	{/switch}
+      <span title="{$attribute.content.original_filename|wash( xhtml )}">{$attribute.content.original_filename|shorten(80,' ... ','middle')}</span>
+      <br /><small>(File {$attribute.content.mime_type} {$attribute.content.filesize|si( byte )})</small>      
 	{else}
 		<div class="message-error"><h2>{'The file could not be found.'|i18n( 'design/ezwebin/view/ezbinaryfile' )}</h2></div>
 	{/if}
