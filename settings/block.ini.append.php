@@ -50,6 +50,7 @@ ViewName[lista_accordion_manual]=Panelli
 ViewName[lista_box2]=Box a 3 colonne (3 oggetti)
 ViewName[lista_box4]=Box ultimi figli (3 oggetti)
 ViewName[lista_tab]=Schede (tab)
+ViewName[lista_carousel]=Banner (carousel) [Mostra solo elementi con immagine]
 
 [Lista4]
 Name=Lista di oggetti (assegnati singolarmente) - MAX 15

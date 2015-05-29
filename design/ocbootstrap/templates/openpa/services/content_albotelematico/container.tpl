@@ -6,12 +6,16 @@
 {/if}
 
 {if $current_state|eq( 'archivio' )}
-  {set $attribute_filter = array( array( 'state', "in", $openpa.content_albotelematico.archive_state_ids ) )}
+  {set $attribute_filter = array( array( 'state', "in", $openpa.content_albotelematico.archive_state_ids ) )}  
 {/if}
+
+{def $archvio_attribute_filter = array( array( 'state', "in", $openpa.content_albotelematico.archive_state_ids ) )}
 
 <div class="state-navigation m_bottom_20">
   <a class="button{if $current_state|eq('in_pubblicazione')} defaultbutton{/if}" href="{$node.url_alias|ezurl(no)}">In pubblicazione</a>
-  <a class="button{if $current_state|eq('archivio')} defaultbutton{/if}" href="{concat( $node.url_alias, '/(stato)/archivio')|ezurl(no)}">Archivio</a>
+  {if fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id, 'attribute_filter', $archvio_attribute_filter ))|gt(0)}
+	<a class="button{if $current_state|eq('archivio')} defaultbutton{/if}" href="{concat( $node.url_alias, '/(stato)/archivio')|ezurl(no)}">Archivio</a>
+  {/if}
 </div>
 
 {def $page_limit = openpaini( 'GestioneFigli', 'limite_paginazione', 25 )

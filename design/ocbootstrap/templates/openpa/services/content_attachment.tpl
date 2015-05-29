@@ -1,3 +1,16 @@
+{if $openpa.content_attachment.has_content}
+  <div class="row">
+  {foreach $openpa.content_attachment.attributes as $attribute}        
+    <div class="col-md-3">
+      <strong>{$attribute.contentclass_attribute_name|wash()}</strong>
+    </div>
+    <div class="col-md-9">
+	  {attribute_view_gui attribute=$attribute}
+    </div>	
+  {/foreach}
+  </div>
+{/if}
+
 {if $openpa.content_attachment.children_count}
   {foreach $openpa.content_attachment.children as $item}    
     <div class="alert alert-success">
@@ -18,4 +31,3 @@
     </div>      
   {/foreach}  
 {/if}
-

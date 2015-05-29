@@ -13,7 +13,7 @@
 <div class="content-view-full class-{$node.class_identifier} row">
 
     <div class="content-title">
-        <h1>{$node.name|wash()}</h1>
+        <h1>{$node.name|wash()}</h1>        
     </div>
 
     {if $show_left}
@@ -23,26 +23,12 @@
     <div class="content-main{if and( $openpa.control_menu.show_extra_menu|not(), $show_left|not() )} wide{elseif and( $show_left, $openpa.control_menu.show_extra_menu )} full-stack{/if}">
 
         {include uri=$openpa.content_main.template}
-        
-        {include struttura=$node uri='design:openpa/full/parts/struttura_responsabile.tpl'}    
-        
-        {include uri=$openpa.content_contacts.template}        
-        
-        {include struttura=$node uri='design:openpa/full/parts/struttura_personale.tpl'}    
 
         {include uri=$openpa.content_detail.template}
-        
+
         {include uri=$openpa.content_infocollection.template}
-        
-        <h3><i class="fa fa-sitemap"></i> Posizione nell'organigramma</h3>        
-        <ul class="org-chart">
-          <li>
-            <div class="vcard">{$node.name|wash()}</div>
-            {include node=$node title=false() title=false() icon=false() uri='design:parts/articolazioni_interne.tpl'}
-          </li>
-        </ul>
-        
-        {include uri=$openpa.control_children.template}
+
+        {include uri='design:parts/children/tree.tpl'}
 
     </div>
 
@@ -51,6 +37,7 @@
     {/if}
 
 </div>
+
 
 {if $openpa.content_date.show_date}
   <div class="row"><div class="col-md-12">

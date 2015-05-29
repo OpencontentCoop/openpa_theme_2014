@@ -363,6 +363,13 @@ Subdir=templates
 Match[type]=Lista
 Match[view]=lista_carousel_rassegna_oggi
 
+[block_lista_carousel3]
+Source=block/view/view.tpl
+MatchFile=block/lista_carousel.tpl
+Subdir=templates
+Match[type]=Lista3
+Match[view]=lista_carousel
+
 [block_iosono]
 Source=block/view/view.tpl
 MatchFile=block/iosono.tpl
