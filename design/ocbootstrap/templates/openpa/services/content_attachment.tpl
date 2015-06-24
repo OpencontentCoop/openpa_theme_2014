@@ -20,14 +20,16 @@
         </a>
       {else}
         <a class="btn btn-success pull-right" href="{$item.url_alias|ezurl(no)}">LEGGI</a>
-      {/if}
+      {/if}	  
       <p class="clearfix">
-        <strong>{$item.name|wash()}</strong>
+        <strong>{$item.name|wash()}</strong>		
         {if $item|has_attribute( 'file' )} 
           <br /><small>File {$item|attribute( 'file' ).content.original_filename} ({$item|attribute( 'file' ).content.filesize|si( byte )})</small>
         {/if}
       </p>
       {$item|abstract()}
+	  {include uri="design:parts/toolbar/node_edit.tpl" current_node=$item}
+	  {include uri="design:parts/toolbar/node_trash.tpl" current_node=$item}
     </div>      
   {/foreach}  
 {/if}

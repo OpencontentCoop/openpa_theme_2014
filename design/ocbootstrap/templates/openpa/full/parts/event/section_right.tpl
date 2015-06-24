@@ -22,6 +22,13 @@
           </p>        
         {/if}
         
+        {if $node|has_attribute( 'durata' )}
+          <p>
+            <strong>{$node.data_map.durata.contentclass_attribute_name}</strong>
+            {attribute_view_gui attribute=$node.data_map.durata}
+          </p>        
+        {/if}
+        
         {if $node|has_attribute( 'iniziativa' )}
         <div class="well well-sm">
           parte di:{attribute_view_gui attribute=$node|attribute( 'iniziativa' ) show_link=true()}
