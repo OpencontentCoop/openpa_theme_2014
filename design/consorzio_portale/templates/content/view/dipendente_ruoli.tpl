@@ -24,7 +24,7 @@
     {def $ruoli = array()}
     {if is_set( $show_role_names )}	  
       {foreach $dipendente_openpa.content_ruoli_comune.ruoli.dipendente as $ruolo}
-      {if $show_role_names|contains( $ruolo.name )}
+      {if or( $show_role_names|contains( $ruolo.name ), $show_role_names|eq('*') )}
         {set $ruoli = $ruoli|append( $ruolo )}
       {/if}
       {/foreach}

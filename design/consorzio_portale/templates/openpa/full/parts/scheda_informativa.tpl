@@ -35,6 +35,7 @@
 		{/if}	  
 	{/if}
   
+  {if $node.node_id|ne(6229)} {*eccezione attività produttive https://support.opencontent.it/consorzio_comuni/ticket/1897*}
 	{if count( $area_ruoli )|gt(0)}	  		
 		{foreach $area_ruoli as $ruolo}
       <h3>Responsabile</h3>        
@@ -42,6 +43,7 @@
         {content_view_gui view=dipendente_struttura content_object=fetch( content, object, hash( object_id, $user.contentobject_id ) ) struttura=fetch( content, object, hash( object_id, $ruolo.data_map.struttura_di_riferimento.content.relation_list[0].contentobject_id ) )}
       {/foreach}
     {/foreach}
+	{/if}
 	{/if}
 	{if count( $current_ruoli )|gt(0)}
     {def $ruolo_name = false()}

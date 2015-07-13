@@ -3,8 +3,8 @@
 	<div class="widget_title">        	
       <h3>Riferimenti</h3>    
 	</div>
-	<div class="widget_content">
-	  {include uri="design:openpa/parts/staff_area.tpl" node=$node}
+	<div class="widget_content">	  
+    {node_view_gui content_node=$node view=staff_area}
 	</div>
 </div>
 {/if}
