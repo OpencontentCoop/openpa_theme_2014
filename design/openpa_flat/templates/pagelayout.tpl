@@ -41,7 +41,11 @@
 {cache-block expiry=86400 keys=array( $module_result.uri, $user_hash_cache_key, $extra_cache_key )}
 
     {if and( $pagedata.top_menu, $pagedata.is_login_page|not(), $pagedata.is_edit|not )}
-      {include uri='design:page_topmenu.tpl'}
+        {if is_set( $pagedata.persistent_variable.topmenu_template_uri )}
+            {include uri=$pagedata.persistent_variable.topmenu_template_uri}
+        {else}
+            {include uri='design:page_topmenu.tpl'}
+        {/if}
     {/if}
 
     {if and( $pagedata.website_toolbar, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
