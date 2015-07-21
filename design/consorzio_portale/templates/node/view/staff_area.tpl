@@ -5,7 +5,7 @@
 	 $staff = fetch( 'openpa', 'ruoli', hash( 'subtree_array', array( $node.node_id ),
 											  'struttura_object_id', $node.contentobject_id,
                         'role_names_type', 'exclude',
-											  'role_names_array', array( "Responsabile", "Segreteria" ) ) )
+											  'role_names_array', array( "Responsabile", "Segreteria", "SenzaRuolo" ) ) )
 	 $segreteria = fetch( 'openpa', 'ruoli', hash( 'subtree_array', array( $node.node_id ),
 												   'struttura_object_id', $node.contentobject_id,
                            'role_names_type', 'include',

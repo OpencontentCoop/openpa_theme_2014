@@ -3,7 +3,7 @@
 													 'role_names_array', array( "Responsabile" ) ) )
 	 $staff = fetch( 'openpa', 'ruoli', hash( 'subtree_array', array( $node.node_id ),
 											  'role_names_type', 'exclude',
-											  'role_names_array', array( "Responsabile" ) ) )}
+											  'role_names_array', array( "Responsabile", "SenzaRuolo" ) ) )}
 
 
 {def $do_not_duplicate = array()
