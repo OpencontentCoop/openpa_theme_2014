@@ -217,6 +217,9 @@
     .sub_menu-item{
       float: left;
     }
+    ul.sub_menu{
+      display: block !important;
+    }
   }
 }
 
@@ -242,6 +245,9 @@
     }
     .sub_menu-item{
       float: left;
+    }
+    ul.sub_menu{
+      display: block !important;
     }
   }
 }
