@@ -4223,7 +4223,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
   .sub_menu_wrap.items-6 { width: 550px; }
   .sub_menu_wrap.items-6 .sub_menu-item { width: 110px; }
   .sub_menu_wrap .sub_menu-item { float: left; } }
-@media only screen and (min-width: 968px) { .sub_menu_wrap.items-2 ul.sub_menu, .sub_menu_wrap.items-3 ul.sub_menu, .sub_menu_wrap.items-4 ul.sub_menu, .sub_menu_wrap.items-5 ul.sub_menu, .sub_menu_wrap.items-6 ul.sub_menu { display: none; }
+@media only screen and (min-width: 768px) { .sub_menu_wrap.items-2 ul.sub_menu, .sub_menu_wrap.items-3 ul.sub_menu, .sub_menu_wrap.items-4 ul.sub_menu, .sub_menu_wrap.items-5 ul.sub_menu, .sub_menu_wrap.items-6 ul.sub_menu { display: none; }
   .sub_menu_wrap.items-2 .sub_menu-item, .sub_menu_wrap.items-3 .sub_menu-item, .sub_menu_wrap.items-4 .sub_menu-item, .sub_menu_wrap.items-5 .sub_menu-item, .sub_menu_wrap.items-6 .sub_menu-item { float: none; } }
 @media only screen and (max-width: 768px) { .h_bot_part { padding-top: 15px; padding-bottom: 15px; }
   .menu_wrap { background: transparent; }
