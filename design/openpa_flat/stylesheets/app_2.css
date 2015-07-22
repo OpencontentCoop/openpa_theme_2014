@@ -939,7 +939,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
   .sub_menu_wrap.items-3 { width: 550px; }
   .sub_menu_wrap.items-4 { width: 730px; }
   .sub_menu_wrap.items-5 { width: 910px; }
-  .sub_menu_wrap.items-6 { width: 550px; }
+  .sub_menu_wrap.items-6 { width: 700px; }
   .sub_menu_wrap.items-6 .sub_menu-item { width: 110px; }
   .sub_menu_wrap .sub_menu-item { float: left !important; }
   .sub_menu_wrap ul.sub_menu { display: block !important; } }
