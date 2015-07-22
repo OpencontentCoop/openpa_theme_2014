@@ -4209,7 +4209,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
   .m_sm_left_10 { margin-left: 10px; }
   .mw_sm_0 { min-width: 0; }
   .popup { width: 750px; } }
-@media only screen and (min-width: 992px) { .sub_menu_wrap.items-2 { width: 380px; }
+@media only screen and (min-width: 1100px) { .sub_menu_wrap.items-2 { width: 380px; }
   .sub_menu_wrap.items-3 { width: 560px; }
   .sub_menu_wrap.items-4 { width: 740px; }
   .sub_menu_wrap.items-5 { width: 920px; }
