@@ -291,7 +291,6 @@ body{
     margin: 10px 0;
     width: $submenu_item_width;
     @extend .w_xs_auto;
-    @extend .f_left;
     @extend .f_xs_none;
 //    &:not(.first){
 //      @extend .m_left_10;
