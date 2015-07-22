@@ -4213,7 +4213,7 @@ body { font: 300 14px/21px 'Roboto', 'sans-serif'; background: #232830; letter-s
   .sub_menu_wrap.items-3 { width: 560px; }
   .sub_menu_wrap.items-4 { width: 740px; }
   .sub_menu_wrap.items-5 { width: 920px; }
-  .sub_menu_wrap.items-6 { width: 900px; left: -180px; }
+  .sub_menu_wrap.items-6 { width: 900px; }
   .sub_menu_wrap.items-6 .sub_menu-item { width: 140px; } }
 @media only screen and (max-width: 768px) { .h_bot_part { padding-top: 15px; padding-bottom: 15px; }
   .menu_wrap { background: transparent; }
