@@ -3,11 +3,24 @@
 	18. Responsive changes
 
 ------------------------------------- */
-
-@media only screen and (max-width: 1200px){
+@media (min-width: $screen-sm-min) {
   .menu_wrap .main_menu > li > a{
     padding-left:27px;
     padding-right:27px;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .main_menu > li > a{
+    padding-left:16px;
+    padding-right:16px;
+  }
+  .menu_wrap .main_menu > li > a{
+    padding-left:12px;
+    padding-right:12px;
+  }
+  .sub_menu_wrap{
+    padding-right:0;
+    width:444px;
   }
   .zoomContainer{
     display:none !important;
@@ -89,18 +102,6 @@
   }
 }
 @media only screen and (max-width: 992px){
-  .main_menu > li > a{
-    padding-left:16px;
-    padding-right:16px;
-  }
-  .menu_wrap .main_menu > li > a{
-    padding-left:12px;
-    padding-right:12px;
-  }
-  .sub_menu_wrap{
-    padding-right:0;
-    width:444px;
-  }
   h1 > b{
     line-height: 1em;
   }
