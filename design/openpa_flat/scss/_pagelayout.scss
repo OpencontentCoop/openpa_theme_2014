@@ -307,14 +307,6 @@ body{
   }
 }
 
-@media only screen and (max-width: 992px){
-  .sub_menu_wrap {
-    &.items-6{
-      left: -$submenu_item_width;
-    }
-  }
-}
-
 #menu_button{
   @extend .centered_db;
   @extend .d_none;

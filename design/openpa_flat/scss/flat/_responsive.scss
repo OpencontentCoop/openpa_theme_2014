@@ -102,6 +102,11 @@
   }
 }
 @media only screen and (max-width: 992px){
+  .sub_menu_wrap {
+    &.items-6{
+      left: -$submenu_item_width;
+    }
+  }
   h1 > b{
     line-height: 1em;
   }
@@ -194,7 +199,7 @@
   }
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:992px){
   .sub_menu_wrap{
     &.items-2{
       width: $submenu_item_width * 2 + 20px;
