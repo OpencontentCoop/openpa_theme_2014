@@ -24,19 +24,18 @@
         </div>
     </li>
     {/if}
-    <!--contact form-->
+    {*<!--contact form-->
     <li class="relative">
         <button class="sw_button t_align_c contact"><i class="fa fa-envelope-o"></i></button>
         <div class="sw_content">
             <h3 class="color_dark m_bottom_20">Iscriviti alla newsletter</h3>
 
-            <form id="contactform" class="mini" action="{'content/view/full/4721'|ezurl(no)}">
-                {*<input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="text" name="cf_name" placeholder="Nome"/>
-                <input class="f_size_medium m_bottom_10 r_corners full_width form-control" type="email" name="cf_email" placeholder="Email"/>*}
+            <form id="contactform" class="mini" action="{'content/view/full/4721'|ezurl(no)}">                
                 <button type="submit" class="btn btn-lg r_corners mw_0 tr_all_hover color_dark bg_light_color_2">Iscriviti ora!</button>
             </form>
         </div>
     </li>
+	*}
     {if is_set($pagedata.contacts.indirizzo)}
     <li class="relative">
         <button class="sw_button t_align_c googlemap"><i class="fa fa-map-marker"></i></button>
