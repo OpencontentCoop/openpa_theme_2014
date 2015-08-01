@@ -3230,10 +3230,10 @@ p.link a { color: #8e2140; text-transform: uppercase; }
 */
 h3.widget_title { color: #9D9B9C; padding: 15px 0 14px; text-transform: uppercase; margin: 0; font-size: 1.7em; }
 
-.widget .widget_title, .panels-container .media .widget_title { background: #9D9B9C; padding: 15px 20px 14px; }
-.widget .widget_title *, .panels-container .media .widget_title * { padding: 0; margin: 0; color: #ffffff; }
+.widget .widget_title, .panels-container .media .widget_title, .leaflet-popup-content .media .widget_title { background: #9D9B9C; padding: 15px 20px 14px; }
+.widget .widget_title *, .panels-container .media .widget_title *, .leaflet-popup-content .media .widget_title * { padding: 0; margin: 0; color: #ffffff; }
 
-.widget figcaption[class*="relative"], .panels-container .media figcaption[class*="relative"] { padding-right: 85px; }
+.widget figcaption[class*="relative"], .panels-container .media figcaption[class*="relative"], .leaflet-popup-content .media figcaption[class*="relative"] { padding-right: 85px; }
 
 .widget_content { padding: 23px 20px 25px; background: #fff; }
 
@@ -3259,9 +3259,18 @@ h3.widget_title { color: #9D9B9C; padding: 15px 0 14px; text-transform: uppercas
 .carousel-both-control .owl-pagination .owl-page span { background: #fff !important; }
 .carousel-both-control .owl-pagination .owl-page.active span { background: #8e2140 !important; }
 
-.panels-container .media { padding: 10px; }
-.panels-container .media .main_image { float: none; margin: 0 0 10px; box-shadow: 0 0 #fff; border: none; border-radius: 0; }
-.panels-container .media .caption { padding: 10px; }
+.panels-container .media, .leaflet-popup-content .media { padding: 10px; background: #fff; }
+.panels-container .media .main_image, .leaflet-popup-content .media .main_image { float: none; margin: 0 0 10px; box-shadow: 0 0 #fff; border: none; border-radius: 0; }
+.panels-container .media .caption, .leaflet-popup-content .media .caption { padding: 10px; }
+.panels-container .panel-label, .leaflet-popup-content .panel-label { background: #8e2140; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; font-size: .9em; }
+.panels-container .media-panel figure, .leaflet-popup-content .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #8e2140; }
+.panels-container .media-panel .media.has-image, .leaflet-popup-content .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
+.panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
+.panels-container .media-panel .media h4 a, .leaflet-popup-content .media-panel .media h4 a { text-decoration: none; }
+.panels-container .media-panel .media .abstract, .leaflet-popup-content .media-panel .media .abstract { font-size: 0.9em; }
+.panels-container .media-panel .media p.link, .leaflet-popup-content .media-panel .media p.link { margin-bottom: 0; }
+.panels-container .panel-story, .leaflet-popup-content .panel-story { font-size: .8em; color: #8e2140; }
+.panels-container .panel-story a, .leaflet-popup-content .panel-story a { color: #8e2140; text-decoration: none; font-weight: bold; }
 
 .events .widget_content ul.nav, .events .widget_content .nav-facets ul.nav-sub, .nav-facets .events .widget_content ul.nav-sub { margin-top: -15px; text-align: center; text-transform: uppercase; font-size: .8em; margin-bottom: 10px; border: none; }
 .events .widget_content ul.nav li, .events .widget_content .nav-facets ul.nav-sub li, .nav-facets .events .widget_content ul.nav-sub li { display: inline-block; float: none; }
@@ -3364,9 +3373,9 @@ html, body { height: 100%; }
 
 .circle { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 
-.r_corners, .main_image, .embed_image, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, #header .header-bottom .header-searchbox .search form input, .sub_menu_wrap, .widget, .panels-container .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.r_corners, .main_image, .embed_image, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a, .panels-container .panel-label, .leaflet-popup-content .panel-label, #header .header-bottom .header-searchbox .search form input, .sub_menu_wrap, .widget, .panels-container .media, .leaflet-popup-content .media, .side_menu .menu-handler, #go_to_top { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
-.r_corners_top { border-top-right-radius: 4px; border-top-left-radius: 4px; }
+.r_corners_top, .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure { border-top-right-radius: 4px; border-top-left-radius: 4px; }
 
 .vc_child:after { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
 
@@ -3378,7 +3387,7 @@ html, body { height: 100%; }
 
 .relative, #page, #header .header-bottom .header-searchbox .search form, .menu_wrap, .menu_wrap li.menu-item, .side_menu a { position: relative; }
 
-.wrapper, .main_image, .embed_image, .widget, .panels-container .media { overflow: hidden; }
+.wrapper, .main_image, .embed_image, .widget, .panels-container .media, .leaflet-popup-content .media { overflow: hidden; }
 
 .ellipsis { display: block; overflow: hidden; text-overflow: ellipsis; }
 
@@ -3442,7 +3451,7 @@ html, body { height: 100%; }
 
 .m_bottom_5, .sub_menu_wrap b { margin-bottom: 5px; }
 
-.m_bottom_10, .widget, .panels-container .media, .widget_single, .widget_tabs { margin-bottom: 10px; }
+.m_bottom_10, .widget, .panels-container .media, .leaflet-popup-content .media, .widget_single, .widget_tabs { margin-bottom: 10px; }
 
 .m_bottom_12 { margin-bottom: 12px; }
 
@@ -3452,7 +3461,7 @@ html, body { height: 100%; }
 
 .m_bottom_25 { margin-bottom: 25px; }
 
-.m_bottom_30, .widget, .panels-container .media { margin-bottom: 30px; }
+.m_bottom_30, .widget, .panels-container .media, .leaflet-popup-content .media { margin-bottom: 30px; }
 
 .m_bottom_35 { margin-bottom: 35px; }
 
@@ -3484,7 +3493,7 @@ html, body { height: 100%; }
 
 .container3d { -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -o-transform-style: preserve-3d; -ms-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: perspective(600); -moz-transform: perspective(600); -o-transform: perspective(600); transform: perspective(600); perspective: 600px; }
 
-.shadow, .main_image, .embed_image, .widget_tabs .tab-content, .widget, .panels-container .media { -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+.shadow, .main_image, .embed_image, .widget_tabs .tab-content, .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure, .widget, .panels-container .media, .leaflet-popup-content .media { -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
 
 mark { background: #8e2140; color: #fff; }
 
@@ -3791,7 +3800,7 @@ hr { border-color: #ecf0f1; }
 
 .open_buttons > *:nth-child(3) { -webkit-transition-delay: .6s; -moz-transition-delay: .6s; -o-transition-delay: .6s; -ms-transition-delay: .6s; }
 
-.photoframe:not(.type_2):hover img, .main_image:not(.type_2):hover img, .embed_image:not(.type_2):hover img, .specials_item .d_block.wrapper:hover img, .specials_item .d_block.main_image:hover img, .specials_item .widget_tabs .nav-tabs li a.main_image:hover img, .widget_tabs .nav-tabs li .specials_item a.main_image:hover img, .specials_item .side_menu a.main_image:hover img, .side_menu .specials_item a.main_image:hover img, .specials_item .d_block.embed_image:hover img, .specials_item .widget_tabs .nav-tabs li a.embed_image:hover img, .widget_tabs .nav-tabs li .specials_item a.embed_image:hover img, .specials_item .side_menu a.embed_image:hover img, .side_menu .specials_item a.embed_image:hover img, .specials_item .widget_tabs .nav-tabs li a.wrapper:hover img, .widget_tabs .nav-tabs li .specials_item a.wrapper:hover img, .specials_item .widget_tabs .nav-tabs li a.widget:hover img, .widget_tabs .nav-tabs li .specials_item a.widget:hover img, .specials_item .widget_tabs .nav-tabs li .panels-container a.media:hover img, .widget_tabs .nav-tabs li .panels-container .specials_item a.media:hover img, .specials_item .panels-container .widget_tabs .nav-tabs li a.media:hover img, .panels-container .widget_tabs .nav-tabs li .specials_item a.media:hover img, .specials_item .d_block.widget:hover img, .specials_item .panels-container .d_block.media:hover img, .panels-container .specials_item .d_block.media:hover img, .specials_item .panels-container .side_menu a.media:hover img, .panels-container .side_menu .specials_item a.media:hover img, .specials_item .side_menu .panels-container a.media:hover img, .side_menu .panels-container .specials_item a.media:hover img, .specials_item .side_menu a.widget:hover img, .side_menu .specials_item a.widget:hover img, .specials_item .side_menu a.wrapper:hover img, .side_menu .specials_item a.wrapper:hover img { -webkit-transform: scale(1.08); -moz-transform: scale(1.08); -o-transform: scale(1.08); -ms-transform: scale(1.08); transform: scale(1.08); }
+.photoframe:not(.type_2):hover img, .main_image:not(.type_2):hover img, .embed_image:not(.type_2):hover img, .specials_item .d_block.wrapper:hover img, .specials_item .d_block.main_image:hover img, .specials_item .widget_tabs .nav-tabs li a.main_image:hover img, .widget_tabs .nav-tabs li .specials_item a.main_image:hover img, .specials_item .side_menu a.main_image:hover img, .side_menu .specials_item a.main_image:hover img, .specials_item .d_block.embed_image:hover img, .specials_item .widget_tabs .nav-tabs li a.embed_image:hover img, .widget_tabs .nav-tabs li .specials_item a.embed_image:hover img, .specials_item .side_menu a.embed_image:hover img, .side_menu .specials_item a.embed_image:hover img, .specials_item .widget_tabs .nav-tabs li a.wrapper:hover img, .widget_tabs .nav-tabs li .specials_item a.wrapper:hover img, .specials_item .widget_tabs .nav-tabs li a.widget:hover img, .widget_tabs .nav-tabs li .specials_item a.widget:hover img, .specials_item .widget_tabs .nav-tabs li .panels-container a.media:hover img, .widget_tabs .nav-tabs li .panels-container .specials_item a.media:hover img, .specials_item .panels-container .widget_tabs .nav-tabs li a.media:hover img, .panels-container .widget_tabs .nav-tabs li .specials_item a.media:hover img, .specials_item .widget_tabs .nav-tabs li .leaflet-popup-content a.media:hover img, .widget_tabs .nav-tabs li .leaflet-popup-content .specials_item a.media:hover img, .specials_item .leaflet-popup-content .widget_tabs .nav-tabs li a.media:hover img, .leaflet-popup-content .widget_tabs .nav-tabs li .specials_item a.media:hover img, .specials_item .d_block.widget:hover img, .specials_item .panels-container .d_block.media:hover img, .panels-container .specials_item .d_block.media:hover img, .specials_item .panels-container .side_menu a.media:hover img, .panels-container .side_menu .specials_item a.media:hover img, .specials_item .side_menu .panels-container a.media:hover img, .side_menu .panels-container .specials_item a.media:hover img, .specials_item .leaflet-popup-content .d_block.media:hover img, .leaflet-popup-content .specials_item .d_block.media:hover img, .specials_item .leaflet-popup-content .side_menu a.media:hover img, .leaflet-popup-content .side_menu .specials_item a.media:hover img, .specials_item .side_menu .leaflet-popup-content a.media:hover img, .side_menu .leaflet-popup-content .specials_item a.media:hover img, .specials_item .side_menu a.widget:hover img, .side_menu .specials_item a.widget:hover img, .specials_item .side_menu a.wrapper:hover img, .side_menu .specials_item a.wrapper:hover img { -webkit-transform: scale(1.08); -moz-transform: scale(1.08); -o-transform: scale(1.08); -ms-transform: scale(1.08); transform: scale(1.08); }
 
 .nav_buttons_wrap { margin-top: -4px; }
 
