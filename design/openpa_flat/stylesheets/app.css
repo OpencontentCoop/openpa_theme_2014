@@ -3272,6 +3272,8 @@ h3.widget_title { color: #201f1e; padding: 15px 0 14px; text-transform: uppercas
 .panels-container .panel-story { font-size: .8em; color: #428944; }
 .panels-container .panel-story a { color: #428944; text-decoration: none; font-weight: bold; }
 
+.panels-container .owl-carousel .owl-item { padding: 5px; }
+
 .events .widget_content ul.nav, .events .widget_content .nav-facets ul.nav-sub, .nav-facets .events .widget_content ul.nav-sub { margin-top: -15px; text-align: center; text-transform: uppercase; font-size: .8em; margin-bottom: 10px; border: none; }
 .events .widget_content ul.nav li, .events .widget_content .nav-facets ul.nav-sub li, .nav-facets .events .widget_content ul.nav-sub li { display: inline-block; float: none; }
 .events .widget_content ul.nav li a, .events .widget_content .nav-facets ul.nav-sub li a, .nav-facets .events .widget_content ul.nav-sub li a { font-size: 13px; }
