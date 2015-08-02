@@ -22,8 +22,12 @@
     </div>
     <div class="col-xs-8">
         {node_view_gui content_node=$node view=text_linked shorten=120}
-        {if $node.class_identifier|eq('seduta')}        
-        <p><small><i class="fa fa-download"></i> <a href="#">Scarica ordine del giorno</a></small></p>      
+        {if $node.class_identifier|eq('seduta')}
+          {if $node|has_attribute( 'convocazione' )}
+            {def $attribute = $node|attribute( 'convocazione' )}          
+            <p><small><i class="fa fa-download"></i> <a href="{concat( 'content/download/', $attribute.contentobject_id, '/', $attribute.id,'/version/', $attribute.version , '/file/', $attribute.content.original_filename|urlencode )|ezurl(no)}">Scarica ordine del giorno</a></small></p>      
+            {undef $attribute}
+          {/if}
         {/if}
     </div>
 </div>

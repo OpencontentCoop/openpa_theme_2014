@@ -17,8 +17,12 @@
           <li><i class="fa-li fa fa-group"></i>Presenti {if $node|has_attribute( 'presenti' )}{$node|attribute( 'presenti' ).content.relation_list|count()}{else}0{/if}</li>
           <li><i class="fa-li fa fa-tachometer "></i>Votazioni 0</li>
       </ul>
-      <ul class="fa-ul panel-story">          
-          <li><i class="fa-li fa fa-download"></i> <a href="#">Scarica ordine del giorno</a></li>
+      <ul class="fa-ul panel-story">
+        {if $node|has_attribute( 'convocazione' )}
+          {def $attribute = $node|attribute( 'convocazione' )}
+          <li><i class="fa-li fa fa-download"></i> <a href="{concat( 'content/download/', $attribute.contentobject_id, '/', $attribute.id,'/version/', $attribute.version , '/file/', $attribute.content.original_filename|urlencode )|ezurl(no)}">Scarica ordine del giorno</a></li>
+          {undef $attribute}
+        {/if}
           <li><i class="fa-li fa fa-download"></i> <a href="#">Scarica Verbale</a></li>          
       </ul>     
   
