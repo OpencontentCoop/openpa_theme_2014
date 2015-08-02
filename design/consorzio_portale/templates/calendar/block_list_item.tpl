@@ -22,5 +22,8 @@
     </div>
     <div class="col-xs-8">
         {node_view_gui content_node=$node view=text_linked shorten=120}
+        {if $node.class_identifier|eq('seduta')}        
+        <p><small><i class="fa fa-download"></i> <a href="#">Scarica ordine del giorno</a></small></p>      
+        {/if}
     </div>
 </div>
