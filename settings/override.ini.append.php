@@ -351,14 +351,14 @@ Match[view]=lista_carousel
 
 [block_lista_carousel_rassegna]
 Source=block/view/view.tpl
-MatchFile=block/lista_carousel_simple.tpl
+MatchFile=block/lista_num.tpl
 Subdir=templates
 Match[type]=Lista
 Match[view]=lista_carousel_rassegna
 
 [block_lista_carousel_rassegna_oggi]
 Source=block/view/view.tpl
-MatchFile=block/lista_carousel_simple.tpl
+MatchFile=block/lista_num.tpl
 Subdir=templates
 Match[type]=Lista
 Match[view]=lista_carousel_rassegna_oggi

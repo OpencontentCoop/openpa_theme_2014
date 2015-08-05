@@ -35,6 +35,35 @@ ViewName[singolo_banner]=Line (con blocco titolo, sfondo grigio)
 
 [Lista]
 Name=Lista di oggetti (assegnare un contenitore)
+[Lista]
+Name=Lista di oggetti (assegnare un contenitore)
+NumberOfValidItems=1
+NumberOfArchivedItems=0
+CustomAttributes[]=node_id
+UseBrowseMode[node_id]=true
+CustomAttributes[]=limite
+CustomAttributes[]=includi_classi
+CustomAttributes[]=escludi_classi
+CustomAttributes[]=ordinamento
+CustomAttributes[]=livello_profondita
+CustomAttributes[]=state_id
+CustomAttributeNames[]
+CustomAttributeNames[livello_profondita]=Livello di profondità nell'alberatura
+CustomAttributeNames[limite]=Numero di elementi
+CustomAttributeNames[includi_classi]=Tipologie di contenuto da includere
+CustomAttributeNames[escludi_classi]=Tipologie di contenuto da escludere (alternativo rispetto al precedente)
+CustomAttributeNames[ordinamento]=Ordina per
+CustomAttributeNames[state_id]=Stato
+CustomAttributeTypes[ordinamento]=select
+CustomAttributeTypes[includi_classi]=class_select
+CustomAttributeTypes[escludi_classi]=class_select
+CustomAttributeSelection_ordinamento[]
+CustomAttributeSelection_ordinamento[name]=Titolo
+CustomAttributeSelection_ordinamento[pubblicato]=Data di pubblicazione
+CustomAttributeSelection_ordinamento[modificato]=Data di ultima modifica
+CustomAttributeSelection_ordinamento[priority]=Priorità del nodo
+CustomAttributeTypes[state_id]=state_select
+ManualAddingOfItems=disabled
 ViewName[]
 ViewName[lista_num]=Panelli (carousel) [Mostra solo elementi con immagine]
 ViewName[lista_accordion]=Panelli
