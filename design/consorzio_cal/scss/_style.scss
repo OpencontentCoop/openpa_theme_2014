@@ -340,6 +340,9 @@ h3.widget_title {
       @extend .r_corners_top;
       border-bottom: 3px solid $brand-primary;
       @extend .shadow;
+      &.bg-contain{
+        background-size: contain !important;
+      }
     }
     .media{
       &.has-image {

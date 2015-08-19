@@ -1,6 +1,6 @@
 <div class="media-panel">
   {if $node|has_attribute('image')}
-      <figure style="background: url( {$node|attribute('image').content.imagefull.full_path|ezroot(no)} )"></figure>
+      <figure {if $node|has_attribute('image_full')}class="bg-contain"{/if} style="background: url( {$node|attribute('image').content.imagefull.full_path|ezroot(no)} )"></figure>
   {/if}
   
   <div class="media{if $node|has_attribute('image')} has-image{/if}">    
