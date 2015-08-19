@@ -22,8 +22,8 @@
 		{/case}
 	{/switch}
       <a href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.id,"/file/",$attribute.content.original_filename)|ezurl} title="Scarica il file {$attribute.content.original_filename|wash( xhtml )}">              
-        <span title="{$attribute.content.original_filename|wash( xhtml )}">{$attribute.content.original_filename|shorten(50,' ... ','middle')}</span>      
-        <br /><small> <i class="fa fa-download"></i> File {$attribute.content.mime_type} {$attribute.content.filesize|si( byte )}</small>
+        <span title="{$attribute.content.original_filename|wash( xhtml )}"><i class="fa fa-download"></i> Scarica il file</span>      
+        <small>(File {$attribute.content.mime_type} {$attribute.content.filesize|si( byte )})</small>
       </a>
 	{else}
 		{editor_warning('The file could not be found.'|i18n( 'design/ezwebin/view/ezbinaryfile' ) )}

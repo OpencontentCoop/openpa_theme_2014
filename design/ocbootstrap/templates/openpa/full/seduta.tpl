@@ -67,7 +67,7 @@
               </div>
             </div>
             
-            {if $stuff.count_documenti}
+            {*if $stuff.count_documenti}
             <div class="row">
               <div class="col-md-3"><strong>Documenti</strong></div>
               <div class="col-md-9">                
@@ -85,7 +85,7 @@
                 </div>      
               </div>
             </div>
-            {/if}
+            {/if*}
             
             {if $node|has_attribute( 'presenti' )}
             <div class="row">
