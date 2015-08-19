@@ -342,6 +342,7 @@ h3.widget_title {
       @extend .shadow;
       &.bg-contain{
         background-size: contain !important;
+        min-height: 300px;
       }
     }
     .media{

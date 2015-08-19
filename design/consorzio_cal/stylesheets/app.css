@@ -3264,7 +3264,7 @@ h3.widget_title { color: #6D6D6D; padding: 15px 0 14px; text-transform: uppercas
 .panels-container .media .caption, .leaflet-popup-content .media .caption { padding: 10px; }
 .panels-container .panel-label, .leaflet-popup-content .panel-label { background: #8e2140; left: 20px; padding: 5px 8px; position: absolute; text-transform: uppercase; top: 180px; color: #fff; font-size: .9em; }
 .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #8e2140; }
-.panels-container .media-panel figure.bg-contain, .leaflet-popup-content .media-panel figure.bg-contain { background-size: contain !important; }
+.panels-container .media-panel figure.bg-contain, .leaflet-popup-content .media-panel figure.bg-contain { background-size: contain !important; min-height: 300px; }
 .panels-container .media-panel .media.has-image, .leaflet-popup-content .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
 .panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
 .panels-container .media-panel .media h4 a, .leaflet-popup-content .media-panel .media h4 a { text-decoration: none; }

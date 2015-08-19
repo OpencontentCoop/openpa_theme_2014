@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.panels-container .media-panel figure.bg-contain, .leaflet-popup-content .media-panel figure.bg-contain { background-size: contain !important; }
+.panels-container .media-panel figure.bg-contain, .leaflet-popup-content .media-panel figure.bg-contain { background-size: contain !important; min-height: 300px; }
 .panels-container .media-panel .media.has-image, .leaflet-popup-content .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
 .panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
 .panels-container .media-panel .media h4 a, .leaflet-popup-content .media-panel .media h4 a { text-decoration: none; }
