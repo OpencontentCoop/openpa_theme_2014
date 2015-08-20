@@ -30,7 +30,7 @@
         {if and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
             {include uri=$openpa.content_albotelematico.container_template}
         {else}
-            {node_view_gui content_node=$node view=children}
+            {node_view_gui content_node=$node view=children view_parameters=$view_parameters}
         {/if}
 
     </div>
