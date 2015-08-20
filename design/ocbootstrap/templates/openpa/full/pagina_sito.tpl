@@ -28,9 +28,9 @@
         {include uri=$openpa.content_detail.template}        
 
         {if and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
-          {include uri=$openpa.content_albotelematico.container_template}    
+            {include uri=$openpa.content_albotelematico.container_template}
         {else}
-          {include uri=$openpa.control_children.template}
+            {node_view_gui content_node=$node view=children}
         {/if}
 
     </div>
