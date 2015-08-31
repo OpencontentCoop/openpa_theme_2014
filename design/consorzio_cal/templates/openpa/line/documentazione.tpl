@@ -25,8 +25,8 @@
                 <br /><small>File {$item|attribute( 'file' ).content.original_filename} ({$item|attribute( 'file' ).content.filesize|si( byte )})</small>
               {/if}
             </p>            
-          {include uri="design:parts/toolbar/node_edit.tpl" current_node=$item}
-          {include uri="design:parts/toolbar/node_trash.tpl" current_node=$item}
+          {include uri="design:parts/toolbar/node_edit.tpl" current_node=$item.main_node}
+          {include uri="design:parts/toolbar/node_trash.tpl" current_node=$item.main_node}
           </div>      
         {/foreach}  
         {/if}
