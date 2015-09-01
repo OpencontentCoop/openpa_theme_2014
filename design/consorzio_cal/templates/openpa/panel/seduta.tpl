@@ -18,7 +18,7 @@
           {*<li><i class="fa-li fa fa-tachometer "></i>Votazioni 0</li>*}
       </ul>
       <ul class="fa-ul panel-story">
-        {if $node|has_attribute( 'convocazione' )}
+        {if and( $node|has_attribute( 'convocazione' ), $stuff.current_state.identifier|eq('sent'))}
           {def $attribute = $node|attribute( 'convocazione' )}
           <li><i class="fa-li fa fa-download"></i> <a href="{concat( 'content/download/', $attribute.contentobject_id, '/', $attribute.id,'/version/', $attribute.version , '/file/', $attribute.content.original_filename|urlencode )|ezurl(no)}">Scarica ordine del giorno</a></li>
           {undef $attribute}

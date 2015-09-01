@@ -38,7 +38,7 @@
               <div class="col-md-9">{attribute_view_gui attribute=$node.data_map.luogo}</div>
             </div>
             
-            {if $node|has_attribute( 'convocazione' )}
+            {if and( $node|has_attribute( 'convocazione' ), $stuff.current_state.identifier|eq('sent'))}
               {def $attribute = $node|attribute( 'convocazione' )}
               <div class="row">
                 <div class="col-md-3"><strong>File convocazione</strong></div>
