@@ -161,7 +161,7 @@ h3.widget_title {
   padding: 15px 0 14px;
   text-transform: uppercase;
   margin: 0;
-  font-size: 1.7em;
+  font-size: 1.3em;
 }
 
 .widget {
@@ -270,7 +270,7 @@ h3.widget_title {
   text-align: left;
   width: 100%;
   h3 {
-    font-size: 2em;
+    font-size: 1.3em;
     line-height: 1em;
     @extend .color_light;
     @extend .t_align_c;
@@ -501,3 +501,7 @@ blockquote{
 
 div.survey-view label { display: inline-block; margin-bottom: 5px; margin-top: 10px; font-weight: bold; font-size: 18px; }
 div.survey-view div.radio label { display: inline-block; margin-bottom: 5px; margin-top: 3px; font-weight: normal; font-size: 15px; padding-left: 40px; }
+
+.content-view-block .block-title{
+  font-size: 1.3em;
+}
