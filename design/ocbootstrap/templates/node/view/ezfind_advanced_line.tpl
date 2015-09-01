@@ -21,7 +21,7 @@
 				<div class="blocco-attributi-utente">
 					{$valore.main_node.name}	
 				</div>
-				<strong> Telefono </strong> {attribute_view_gui href=nolink attribute=$node.data_map.tipo_telefono}
+				{*<strong> Telefono </strong> {attribute_view_gui href=nolink attribute=$node.data_map.tipo_telefono}*}
 	  		{/foreach}
 		{/if}
 
@@ -98,7 +98,7 @@
     {/if}
 
 		
-    {if is_set($node.data_map.telefono)}
+    {*if is_set($node.data_map.telefono)}
         {if $node.data_map.telefono.has_content}
             <p>
                 <strong>Telefono: </strong>
@@ -112,7 +112,7 @@
                 {attribute_view_gui attribute=$node.data_map.telefoni}
             </p>
         {/if}
-    {/if}
+    {/if*}
     
     {if is_set($node.data_map.incarico)}
         {if $node.data_map.incarico.has_content}
