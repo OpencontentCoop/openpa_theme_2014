@@ -3273,7 +3273,7 @@ h3.widget_title { color: #6d6d6d; padding: 15px 0 14px; text-transform: uppercas
 .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure { background-repeat: no-repeat !important; background-size: cover !important; background-position: center center !important; background-color: #ffffff !important; margin: 0; min-height: 200px; border-bottom: 3px solid #8e2140; }
 .panels-container .media-panel figure.bg-contain, .leaflet-popup-content .media-panel figure.bg-contain { background-size: contain !important; min-height: 300px; }
 .panels-container .media-panel .media.has-image, .leaflet-popup-content .media-panel .media.has-image { margin-top: 0; border-top-right-radius: 0; border-top-left-radius: 0; }
-.panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 { font-size: 1.3em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
+.panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 { font-size: 1.2em; font-weight: bold; text-transform: uppercase; margin-top: 0; }
 .panels-container .media-panel .media h4 a, .leaflet-popup-content .media-panel .media h4 a { text-decoration: none; }
 .panels-container .media-panel .media .abstract, .leaflet-popup-content .media-panel .media .abstract { font-size: 0.9em; }
 .panels-container .media-panel .media p.link, .leaflet-popup-content .media-panel .media p.link { margin-bottom: 0; }
