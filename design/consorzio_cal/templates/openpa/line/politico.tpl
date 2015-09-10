@@ -14,11 +14,21 @@
     
     <div class="content-main">        
       <ul class="fa-ul">
-        <li><i class="fa-li fa fa-user"></i> {attribute_view_gui attribute=$node.data_map.ruolo_attuale href="no-link"}</li>
-        <li><i class="fa-li fa fa-institution"></i> Rappresentante {attribute_view_gui attribute=$node.data_map.rappresentante href="no-link"}</li>
+{if $node|has_attribute('rappresentante')}
+{foreach $node.data_map.ruolo_attuale.content.relation_list as $relation}
+        <li><i class="fa-li fa fa-user"></i> {fetch(content,object,hash(object_id,$relation.contentobject_id)).name|wash()}</li>
+{/foreach}
+{/if}
+{if $node|has_attribute( 'rappresentante' )}
+        <li><i class="fa-li fa fa-institution"></i> {attribute_view_gui attribute=$node.data_map.rappresentante href="no-link"}</li>
+{/if}
         <li><i class="fa-li fa fa-institution"></i> {attribute_view_gui attribute=$node.data_map.ruolo2 href="no-link"}</li>
-      
-        {def $search_materie = fetch( ezfind, search, hash( class_id, array( 'materia' ), filter, array( concat( 'submeta_referente_politico___id_si:', $node.contentobject_id ) ) ) )}
+{*
+{def $current_object_id = $node.contentobject_id}
+{if $node.contentobject_id|eq(2985)}
+{set $current_object_id = 2606}
+{/if}      
+        {def $search_materie = fetch( ezfind, search, hash( class_id, array( 'materia' ), filter, array( concat( 'submeta_referente_politico___id_si:', $current_object_id ) ) ) )}
         {if $search_materie.SearchCount}      
         <li><i class="fa-li fa fa-tag"></i> <strong>Referente politico per le materie:</strong>
         <ul class="list-unstyled">
@@ -31,7 +41,7 @@
         </ul>
         </li>
         {/if}
-        
+  *}      
       </ul>
     </div>
       

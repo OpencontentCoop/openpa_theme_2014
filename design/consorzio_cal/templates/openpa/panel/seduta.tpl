@@ -8,6 +8,7 @@
     <div class="caption">
       <h4 class="fw_medium color_dark">
           <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">{$node.name|openpa_shorten(60)|wash()}</a>
+		  <span class="label label-default">{$stuff.current_state.current_translation.name|wash()}</span>
       </h4>
   
       <p class="abstract">

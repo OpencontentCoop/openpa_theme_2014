@@ -4,8 +4,8 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th><i class="fa fa-thumb-tack"></i> Organismo</th>
-              <th><i class="fa fa-user"></i> Designato</th>
+              <th style="white-space: nowrap"><i class="fa fa-thumb-tack"></i> Organismo</th>
+              <th style="white-space: nowrap"><i class="fa fa-user"></i> Designato</th>
               <th>Materia</th>
             </tr>
           </thead>
@@ -15,7 +15,7 @@
               <td>
                 <a href="{$designazione.url|ezurl(no)}">{$designazione.name|wash()}</a>
               </td>
-              <td>
+              <td style="white-space: nowrap">
                 {if $designazione|has_attribute('persona_designata')}                
                   {content_view_gui content_object=fetch( content, object, hash( 'object_id', $designazione|attribute('persona_designata').content.relation_list[0].contentobject_id  ) ) view="politico_line"}
                 {/if}
