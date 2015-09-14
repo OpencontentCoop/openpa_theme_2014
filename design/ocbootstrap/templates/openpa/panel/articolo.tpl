@@ -3,18 +3,18 @@
       <figure {if $node|has_attribute('image_full')}class="bg-contain"{/if} style="background: url( {$node|attribute('image').content.imagefull.full_path|ezroot(no)} )"></figure>
   {/if}
   
-  <div class="media{if $node|has_attribute('image')} has-image{/if}">
+  <div class="media{if $node|has_attribute('image')} has-image{/if}"> 
     <div class="caption">
       <h4 class="fw_medium color_dark">
           <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">{$node.name|openpa_shorten(60)|wash()}</a>
       </h4>
   
-      <p class="f_size_medium m_bottom_10 ">{$node.object.published||l10n(date)}</p>
+      <p class="f_size_medium m_bottom_10 ">{if $node|has_attribute('testata')}<strong>{attribute_view_gui attribute=$node|attribute('testata')}</strong>{/if} {$node.object.published||l10n(date)}</p>
       
       <p class="abstract">
-        {$node|abstract()|openpa_shorten(270)}
+        {$node|abstract()|openpa_shorten(270)}        
       </p>
-      
+  
       {if or( count($openpa.content_related.info)|gt(0), $openpa.content_gallery.has_images, $node|has_attribute( 'file' ) )}        
         <ul class="fa-ul panel-story">
           {if $node|has_attribute( 'file' )}
@@ -30,11 +30,7 @@
           {/if}
         </ul>        
       {/if}
-  
-      <p class="link">
-        <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">Leggi</a>
-      </p>
-  
+      
     </div>
   </div>
 </div>

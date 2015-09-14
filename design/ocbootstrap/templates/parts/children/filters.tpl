@@ -1,5 +1,5 @@
 {set_defaults(hash(
-  'page_limit', 10
+  'page_limit', 20
 ))}
 
 {def $root_nodes = array( $node.node_id )
