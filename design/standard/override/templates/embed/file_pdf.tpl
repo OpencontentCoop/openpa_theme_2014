@@ -6,6 +6,8 @@
 			{$object.main_node.name}
 		</a> 
 		{$file.content.filesize|si(byte)}
+    {include uri="design:parts/toolbar/node_edit.tpl" current_node=$object.main_node}
+	  {include uri="design:parts/toolbar/node_trash.tpl" current_node=$object.main_node}
 	</div>
 </div>
   {undef $file}
