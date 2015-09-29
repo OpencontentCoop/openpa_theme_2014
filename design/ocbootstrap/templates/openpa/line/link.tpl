@@ -12,5 +12,7 @@
             <small>{$openpa.content_link.full_link}</small>
         </h3>
         {$node|abstract()}
+        {include uri="design:parts/toolbar/node_edit.tpl" current_node=$node}
+        {include uri="design:parts/toolbar/node_trash.tpl" current_node=$node}
     </div>
 </div>

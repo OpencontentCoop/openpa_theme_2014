@@ -61,7 +61,22 @@
                 {foreach $stuff.odg as $punto}
                 <dl class="dl-horizontal">
                   <dt>{attribute_view_gui attribute=$punto.object.data_map.orario_trattazione}</dt>
-                  <dd>{attribute_view_gui attribute=$punto.object.data_map.oggetto}</dd>
+                  <dd>
+                    {attribute_view_gui attribute=$punto.object.data_map.oggetto}
+                    {foreach $punto.documenti as $allegato}
+                      {if $allegato.object.can_read}
+                      <p class="clearfix">
+                        <strong>{attribute_view_gui attribute=$allegato.object.data_map.tipo}</strong>
+                        <small>{$allegato.object.name|wash()}</small>
+                        <a class="btn btn-success btn-xs"
+                           href={concat("content/download/",$allegato.object|attribute( 'file' ).contentobject_id,"/",$allegato.object|attribute( 'file' ).id,"/file/",$allegato.object|attribute( 'file' ).content.original_filename)|ezurl}
+                           title="Scarica il file {$allegato.object|attribute( 'file' ).content.original_filename|wash( xhtml )}">
+                          <i class="fa fa-download"></i>
+                        </a>
+                      </p>   
+                      {/if}
+                    {/foreach}
+                  </dd>
                 </dl>
                 {/foreach}
               </div>
