@@ -81,17 +81,17 @@
 	  </dd>
   {/if}
 
-  {if and( is_set( $node.data_map.data_iniziopubblicazione ), $node.data_map.data_iniziopubblicazione, $node.data_map.data_iniziopubblicazione.has_content, $node.data_map.data_iniziopubblicazione|gt(0) )}
+  {if and( is_set( $node.data_map.data_iniziopubblicazione ), $node.data_map.data_iniziopubblicazione.has_content, $node.data_map.data_iniziopubblicazione.content.timestamp|gt(0) )}
 	  <dt>{$node.data_map.data_iniziopubblicazione.contentclass_attribute_name}</dt>
 	  <dd>{attribute_view_gui attribute=$node.data_map.data_iniziopubblicazione}</dd>
   {/if}
 
-  {if and( is_set( $node.data_map.data_finepubblicazione ), $node.data_map.data_finepubblicazione, $node.data_map.data_finepubblicazione.has_content, $node.data_map.data_finepubblicazione|gt(0) )}
+  {if and( is_set( $node.data_map.data_finepubblicazione ), $node.data_map.data_finepubblicazione.has_content, $node.data_map.data_finepubblicazione.content.timestamp|gt(0) )}
 	  <dt>{$node.data_map.data_finepubblicazione.contentclass_attribute_name}</dt>
 	  <dd>{attribute_view_gui attribute=$node.data_map.data_finepubblicazione}</dd>
   {/if}
 
-  {if and( is_set( $node.data_map.data_archiviazione ), $node.data_map.data_archiviazione, $node.data_map.data_archiviazione.has_content, $node.data_map.data_archiviazione|gt(0) )}
+  {if and( is_set( $node.data_map.data_archiviazione ), $node.data_map.data_archiviazione.has_content, $node.data_map.data_archiviazione.content.timestamp|gt(0) )}
 	  <dt>{$node.data_map.data_archiviazione.contentclass_attribute_name}</dt>
 	  <dd>{attribute_view_gui attribute=$node.data_map.data_archiviazione}</dd>
   {/if}
