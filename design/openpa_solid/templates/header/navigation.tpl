@@ -2,7 +2,9 @@
     <div class="container">
         <div class="row">
         <div class="navbar-header col-md-4">
+            {if $pagedata.is_login_page|not()}
             <button type="button" data-toggle="collapse" data-target="#main-menu" class="navbar-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+            {/if}
             <a href={"/"|ezurl} title="{ezini('SiteSettings','SiteName')}" class="navbar-brand">
                 {if $pagedata.header.logo.url}
                     <img class="hidden-xs navbar-logo" src={$pagedata.header.logo.url|ezroot()} alt="{ezini('SiteSettings','SiteName')}" />
