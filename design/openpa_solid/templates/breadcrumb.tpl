@@ -1,4 +1,4 @@
-<div class="breadcrumb-container">
+<div class="breadcrumb-container hidden-xs hidden-sm">
     <div class="container">
         <ul class="breadcrumb">
             {foreach $pagedata.default_path_array as $path}
