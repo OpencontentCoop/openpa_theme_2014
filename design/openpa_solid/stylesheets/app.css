@@ -6543,7 +6543,7 @@ mark { background: #337ab7; color: #fff; }
 .clearfix:after, .abstract:after { content: ""; display: block; clear: both; }
 
 /* line 1, ../scss/solid/_pagelayout.scss */
-body { font: 300 14px/21px 'Open Sans', 'sans-serif'; background: #e6e6e6 url("../images/pagelayout/body_bg.png") repeat-x scroll 0 0; overflow-x: hidden; -webkit-backface-visibility: hidden; }
+body { font: 300 14px/21px 'Open Sans', 'Arial', 'Helvetica', 'sans-serif'; background: #e6e6e6 url("../images/pagelayout/body_bg.png") repeat-x scroll 0 0; overflow-x: hidden; -webkit-backface-visibility: hidden; }
 
 /* line 10, ../scss/solid/_pagelayout.scss */
 #header .head-banner { height: 250px; width: 100%; background-position: center; background-size: cover; }

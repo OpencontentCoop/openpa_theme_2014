@@ -3446,7 +3446,7 @@ mark { background: #337ab7; color: #fff; }
 .clearfix:after, .abstract:after { content: ""; display: block; clear: both; }
 
 /* line 1, ../scss/solid/_pagelayout.scss */
-body { font: 300 14px/21px 'Open Sans', 'sans-serif'; background: #e6e6e6 url("../images/pagelayout/body_bg.png") repeat-x scroll 0 0; overflow-x: hidden; -webkit-backface-visibility: hidden; }
+body { font: 300 14px/21px 'Open Sans', 'Arial', 'Helvetica', 'sans-serif'; background: #e6e6e6 url("../images/pagelayout/body_bg.png") repeat-x scroll 0 0; overflow-x: hidden; -webkit-backface-visibility: hidden; }
 
 /* line 10, ../scss/solid/_pagelayout.scss */
 #header .head-banner { height: 250px; width: 100%; background-position: center; background-size: cover; }
@@ -4256,3 +4256,84 @@ body.default-6 #content h3.widget_title { background-color: ""; color: ""; }
 body.default-6 #content h3.widget_title a { color: ""; }
 /* line 98, ../scss/solid/_colors_mixin.scss */
 body.default-6 #content .widget_tabs .tab-content { border-color: ""; }
+/* line 103, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .widget_tabs .nav-tabs li.active a { background-color: ""; color: ""; }
+/* line 110, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .tabs_nav .ui-tabs-active a, body.default-6 #content .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.default-6 #content .nav-tabs .ui-tabs-active a, body.default-6 #content .tabs_nav li:hover a[class*="color"], body.default-6 #content .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.default-6 #content .nav-tabs li:hover a[class*="color"] { background: ""; color: ""; }
+/* line 116, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .events.widget_tabs li.active a { color: ""; }
+/* line 121, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .events .calendar-date .month { background: ""; color: ""; }
+/* line 125, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .events .calendar-date .day { color: ""; border-color: ""; }
+/* line 132, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .panels-container .panel-label, body.default-6 #content .leaflet-popup-content .panel-label { background: ""; }
+/* line 136, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .panels-container .media-panel figure, body.default-6 #content .leaflet-popup-content .media-panel figure { border-bottom-color: ""; }
+/* line 140, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .panels-container .panel-story, body.default-6 #content .leaflet-popup-content .panel-story { color: ""; }
+/* line 142, ../scss/solid/_colors_mixin.scss */
+body.default-6 #content .panels-container .panel-story a, body.default-6 #content .leaflet-popup-content .panel-story a { color: ""; }
+/* line 148, ../scss/solid/_colors_mixin.scss */
+body.default-6 #footer { background: ""; color: ""; }
+/* line 151, ../scss/solid/_colors_mixin.scss */
+body.default-6 #footer .footer-data a { color: ""; }
+/* line 154, ../scss/solid/_colors_mixin.scss */
+body.default-6 #footer #footer-map-container .caret-big { border-top-color: ""; }
+
+/* line 161, ../scss/solid/_colors_mixin.scss */
+#main-menu li.no-main-style a { color: #005463; }
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#main-menu li.no-main-style a span { color: #005463; }
+/* line 167, ../scss/solid/_colors_mixin.scss */
+#main-menu li.no-main-style > a.current { background: #005463; color: #ffffff; }
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#main-menu li.no-main-style > a.current span { color: #ffffff; }
+/* line 161, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-1 a { color: #008c96; }
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-1 a span { color: #008c96; }
+/* line 167, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-1 > a.current { background: #008c96; color: #ffffff; }
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-1 > a.current span { color: #ffffff; }
+/* line 161, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-2 a { color: #00a84e; }
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-2 a span { color: #00a84e; }
+/* line 167, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-2 > a.current { background: #00a84e; color: #ffffff; }
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-2 > a.current span { color: #ffffff; }
+/* line 161, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-3 a { color: #006598; }
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-3 a span { color: #006598; }
+/* line 167, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-3 > a.current { background: #006598; color: #ffffff; }
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-3 > a.current span { color: #ffffff; }
+/* line 161, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-4 a { color: #d34e28; }
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-4 a span { color: #d34e28; }
+/* line 167, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-4 > a.current { background: #d34e28; color: #ffffff; }
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-4 > a.current span { color: #ffffff; }
+/* line 161, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-5 a { color: #5cb85c; }
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-5 a span { color: #5cb85c; }
+/* line 167, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-5 > a.current { background: #5cb85c; color: #ffffff; }
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-5 > a.current span { color: #ffffff; }
+/* line 161, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-6 a { color: ""; }
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-6 a span { color: ""; }
+/* line 167, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-6 > a.current { background: ""; color: ""; }
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#main-menu li.default-6 > a.current span { color: ""; }
