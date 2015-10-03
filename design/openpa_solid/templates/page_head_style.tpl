@@ -2,6 +2,15 @@
     {def $load_css_file_list = true()}
 {/if}
 
+<style>
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    }
+</style>
+
 {if $load_css_file_list}
 {ezcss_load( array(
     'app.css',
