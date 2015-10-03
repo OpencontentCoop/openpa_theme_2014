@@ -64,7 +64,7 @@
         {if $Aree}
           {set $children=fetch('content', 'list',hash('parent_node_id', $Aree,
                                                       'class_filter_type', 'include',
-                                                      'class_filter_array', array('servizio'), 
+                                                      'class_filter_array', array('servizio','area'),
                                                       'sort_by', array('priority', true())  ))}
           {if $children|count()|gt(0)}
               <ul>
