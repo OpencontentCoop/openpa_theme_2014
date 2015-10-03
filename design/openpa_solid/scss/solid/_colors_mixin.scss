@@ -1,0 +1,174 @@
+$openpa-palette: (
+        'no-main-style': (
+                'background-primary': $gray,
+                'text-primary': #ffffff,
+                'content-title': $gray,
+                'background-secondary': $gray-light,
+                'text-secondary': $gray-lighter,
+        )
+) !default;
+
+//$openpa-filter-values: (
+//        'lighten': 1.5%,
+//        'darken': 0
+//) !default;
+
+@function openpa-color(
+  $palette-identifier: 'no-main-style',
+  $palette-variant: 'test'
+) {
+  @if map-has-key($openpa-palette, $palette-identifier) {
+    $palette_map: map-get($openpa-palette, $palette-identifier) !default;
+    @if map-has-key($palette_map, $palette-variant) {
+      $return: map-get($palette_map, $palette-variant);
+      //@if map-has-key($openpa-filter-values, $filter) {
+      //  $filter-value: map-get($openpa-filter-values, $filter);
+      //  $return: $filter( $return, $filter-value)
+      //}
+      //@if $variant {
+      //  $alpha: if(type-of($variant) == 'number', $variant, map-get($openpa-variant, $variant));
+      //  @if $alpha {
+      //    $return: rgba($return, $alpha);
+      //  }
+      //}
+      @return $return;
+    }
+  }
+  @return '';
+}
+
+@mixin openpa-color-by-section( $palette-identifier: 'no-main-style' ) {
+  #header {
+    .navtools {
+      background: openpa-color($palette-identifier, 'background-primary');
+      ul li a {
+        color: openpa-color($palette-identifier, 'text-primary');
+      }
+    }
+  }
+  #content {
+    .content-title h1 {
+      color: openpa-color($palette-identifier, 'content-title');
+    }
+    blockquote {
+      &:before {
+        color: openpa-color($palette-identifier, 'background-primary');
+      }
+    }
+    .owl-controls {
+      .owl-buttons {
+        .owl-next, .owl-prev {
+          background: openpa-color($palette-identifier, 'background-primary');
+          color: openpa-color($palette-identifier, 'text-primary');
+        }
+      }
+    }
+    .carousel-caption {
+      //background: openpa-color( $palette-identifier, 'background-secondary' );
+      color: openpa-color($palette-identifier, 'text-secondary');
+    }
+    .carousel-both-control {
+      .owl-pagination {
+        &.active {
+          background: openpa-color($palette-identifier, 'background-primary') !important;
+        }
+      }
+    }
+    .nav-section .widget {
+      a {
+        color: openpa-color($palette-identifier, 'content-title');
+      }
+      .widget_title {
+        background-color: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary');
+        * {
+          color: openpa-color($palette-identifier, 'text-primary');
+          background-color: openpa-color($palette-identifier, 'background-primary');
+        }
+      }
+    }
+    h3.widget_title {
+      background-color: openpa-color($palette-identifier, 'background-primary');
+      color: openpa-color($palette-identifier, 'text-primary');
+      a {
+        color: openpa-color($palette-identifier, 'text-primary');
+      }
+    }
+    .widget_tabs {
+      .tab-content {
+        border-color: openpa-color($palette-identifier, 'background-primary');
+      }
+      .nav-tabs {
+        li {
+          &.active a {
+            background-color: openpa-color($palette-identifier, 'background-primary');
+            color: openpa-color($palette-identifier, 'text-primary');
+          }
+        }
+      }
+    }
+    .tabs_nav .ui-tabs-active a, .tabs_nav li:hover a[class*="color"] {
+      background: openpa-color($palette-identifier, 'background-secondary');
+      color: openpa-color($palette-identifier, 'text-secondary');
+    }
+    .events {
+      &.widget_tabs li {
+        &.active a {
+          color: openpa-color($palette-identifier, 'background-primary');
+        }
+      }
+      .calendar-date {
+        .month {
+          background: openpa-color($palette-identifier, 'background-primary');
+          color: openpa-color($palette-identifier, 'text-secondary');
+        }
+        .day {
+          color: openpa-color($palette-identifier, 'background-primary');
+          border-color: openpa-color($palette-identifier, 'background-primary');
+        }
+      }
+    }
+    .panels-container, .leaflet-popup-content {
+      .panel-label {
+        background: openpa-color($palette-identifier, 'background-primary');
+      }
+      .media-panel {
+        figure {
+          border-bottom-color: openpa-color($palette-identifier, 'background-primary');
+        }
+      }
+      .panel-story {
+        color: openpa-color($palette-identifier, 'background-primary');
+        a {
+          color: openpa-color($palette-identifier, 'background-primary');
+        }
+      }
+    }
+  }
+  #footer {
+    background: openpa-color($palette-identifier, 'background-primary');
+    color: openpa-color($palette-identifier, 'text-primary');
+    .footer-data a {
+      color: openpa-color($palette-identifier, 'text-primary');
+    }
+    #footer-map-container .caret-big {
+      border-top-color: openpa-color($palette-identifier, 'background-primary');
+    }
+  }
+}
+
+@mixin openpa-menu-color-by-section( $palette-identifier: 'no-main-style' ) {
+  a {
+    color: openpa-color($palette-identifier, 'background-primary');
+    span{
+      color: openpa-color($palette-identifier, 'background-primary');
+    }
+  }
+  > a.current{
+    background: openpa-color($palette-identifier, 'background-primary');
+    color: openpa-color($palette-identifier, 'text-primary');
+    span{
+      color: openpa-color($palette-identifier, 'text-primary');
+    }
+  }
+}

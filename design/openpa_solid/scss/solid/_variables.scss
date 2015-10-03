@@ -1,0 +1,45 @@
+$openpa-palette: (
+        'no-main-style': (
+                'background-primary': rgb(0,84,99),
+                'text-primary': #ffffff,
+                'content-title': rgb(0,84,99),
+                'background-secondary': $gray-light,
+                'text-secondary': $gray-lighter,
+        ),
+        'default-1': (
+                'background-primary': rgb(0,140,150),
+                'text-primary': #ffffff,
+                'content-title': rgb(0,140,150),
+                'background-secondary': rgb(45,187,181),
+                'text-secondary': #fff,
+        ),
+        'default-2': (
+                'background-primary': rgb(0,168,78),
+                'text-primary': #ffffff,
+                'content-title': rgb(0,168,78),
+                'background-secondary': rgb(169,203,56),
+                'text-secondary': #fff,
+        ),
+        'default-3': (
+                'background-primary': rgb(0,101,152),
+                'text-primary': #ffffff,
+                'content-title': rgb(0,101,152),
+                'background-secondary': rgb(105,167,220),
+                'text-secondary': #fff,
+        ),
+        'default-4': (
+                'background-primary': rgb(211,78,40),
+                'text-primary': #ffffff,
+                'content-title': rgb(211,78,40),
+                'background-secondary': rgb(239,139,43),
+                'text-secondary': #fff,
+        ),
+        'default-5': (
+                'background-primary': $brand-success,
+                'text-primary': #ffffff,
+                'content-title': $brand-success,
+                'background-secondary': #201f1e,
+                'text-secondary': #fff,
+        )
+);
+
