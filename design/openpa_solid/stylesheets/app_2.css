@@ -3513,81 +3513,81 @@ body { font: 300 14px/21px 'Open Sans', 'Arial', 'Helvetica', 'sans-serif'; back
 /* line 1, ../scss/solid/_navigation.scss */
 .navbar { background: #fff; margin-bottom: 0; border: none; }
 /* line 8, ../scss/solid/_navigation.scss */
-.navbar .navbar-toggle { border: none; font-size: 2em; padding: 0; }
-/* line 14, ../scss/solid/_navigation.scss */
+.navbar .navbar-toggle { border: none; font-size: 2em; padding: 0; position: relative; z-index: 1000; }
+/* line 16, ../scss/solid/_navigation.scss */
 .navbar .navbar-header { padding: 0; }
-/* line 20, ../scss/solid/_navigation.scss */
+/* line 22, ../scss/solid/_navigation.scss */
 .navbar .navbar-brand { padding-right: 0; }
-/* line 23, ../scss/solid/_navigation.scss */
+/* line 25, ../scss/solid/_navigation.scss */
 .navbar .navbar-brand .navbar-title { color: #000; font-weight: bold; text-transform: uppercase; letter-spacing: -0.9px; }
-/* line 30, ../scss/solid/_navigation.scss */
+/* line 32, ../scss/solid/_navigation.scss */
 .navbar .navbar-collapse { width: 100%; }
-/* line 34, ../scss/solid/_navigation.scss */
+/* line 36, ../scss/solid/_navigation.scss */
 .navbar .navbar-nav > li > a { line-height: 40px; font-weight: bold; text-transform: uppercase; white-space: nowrap; padding-left: 5px; padding-right: 5px; padding-top: 0; padding-bottom: 0; margin: 15px 0; }
-/* line 45, ../scss/solid/_navigation.scss */
+/* line 47, ../scss/solid/_navigation.scss */
 .navbar .navbar-nav > li > a span { font-size: 1.5em; padding-right: 3px; vertical-align: text-bottom; }
-/* line 50, ../scss/solid/_navigation.scss */
+/* line 52, ../scss/solid/_navigation.scss */
 .navbar .navbar-nav > li > a.current { border-radius: 4px; }
 
-@media (min-width: 768px) { /* line 59, ../scss/solid/_navigation.scss */
+@media (min-width: 768px) { /* line 61, ../scss/solid/_navigation.scss */
   .navbar-brand > img.navbar-logo { display: inline-block; height: 40px; } }
-@media (min-width: 992px) { /* line 68, ../scss/solid/_navigation.scss */
+@media (min-width: 992px) { /* line 70, ../scss/solid/_navigation.scss */
   .navbar-brand { display: inline-block; line-height: 40px; }
-  /* line 71, ../scss/solid/_navigation.scss */
+  /* line 73, ../scss/solid/_navigation.scss */
   .navbar-brand > img.navbar-logo { background: #fff none repeat scroll 0 0; border-radius: 100%; display: inline-block; height: 100px; left: -22px; padding: 9px; position: absolute; top: 2px; width: 100px; z-index: 1; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
-  /* line 84, ../scss/solid/_navigation.scss */
+  /* line 86, ../scss/solid/_navigation.scss */
   .navbar-brand .navbar-title { padding-left: 80px; line-height: 1; display: inline-block; z-index: 2; position: relative; }
-  /* line 92, ../scss/solid/_navigation.scss */
+  /* line 94, ../scss/solid/_navigation.scss */
   .navbar-nav { margin: 0 auto; display: table; table-layout: auto; float: none; width: 100%; }
-  /* line 98, ../scss/solid/_navigation.scss */
+  /* line 100, ../scss/solid/_navigation.scss */
   .navbar-nav > li { display: table-cell; float: none; text-align: center; } }
-@media (min-width: 1200px) { /* line 108, ../scss/solid/_navigation.scss */
+@media (min-width: 1200px) { /* line 110, ../scss/solid/_navigation.scss */
   .navbar-brand .navbar-title { padding-left: 80px; }
-  /* line 112, ../scss/solid/_navigation.scss */
+  /* line 114, ../scss/solid/_navigation.scss */
   .menu-container { padding: 0; } }
-@media (max-width: 768px) { /* line 118, ../scss/solid/_navigation.scss */
+@media (max-width: 768px) { /* line 120, ../scss/solid/_navigation.scss */
   .navbar-brand { display: block; line-height: 1; }
-  /* line 121, ../scss/solid/_navigation.scss */
+  /* line 123, ../scss/solid/_navigation.scss */
   .navbar-brand .navbar-title { font-size: 0.9em; line-height: 1; }
-  /* line 126, ../scss/solid/_navigation.scss */
+  /* line 128, ../scss/solid/_navigation.scss */
   .nav li a, .nav-facets .nav-sub li a { margin: 15px 0; display: block; }
-  /* line 130, ../scss/solid/_navigation.scss */
+  /* line 132, ../scss/solid/_navigation.scss */
   .yamm .yamm-content { padding: 0 10px; } }
-/* line 136, ../scss/solid/_navigation.scss */
+/* line 138, ../scss/solid/_navigation.scss */
 .side_menu { margin-top: -7px; }
-/* line 140, ../scss/solid/_navigation.scss */
+/* line 142, ../scss/solid/_navigation.scss */
 .side_menu ul { margin: 0; padding: 0; }
-/* line 146, ../scss/solid/_navigation.scss */
+/* line 148, ../scss/solid/_navigation.scss */
 .side_menu .active > a > span:after { opacity: 1; }
-/* line 149, ../scss/solid/_navigation.scss */
+/* line 151, ../scss/solid/_navigation.scss */
 .side_menu .active > a > span:before, .side_menu a > span:after { opacity: 0; }
-/* line 154, ../scss/solid/_navigation.scss */
+/* line 156, ../scss/solid/_navigation.scss */
 .side_menu > li:last-child > a { border: none; padding-bottom: 0px; }
-/* line 163, ../scss/solid/_navigation.scss */
+/* line 165, ../scss/solid/_navigation.scss */
 .side_menu a { padding: 7px 25px 7px 0; border-bottom: 1px solid #ecf0f1; word-break: normal; }
-/* line 171, ../scss/solid/_navigation.scss */
+/* line 173, ../scss/solid/_navigation.scss */
 .side_menu ul > li > a { padding-left: 10px; }
-/* line 175, ../scss/solid/_navigation.scss */
+/* line 177, ../scss/solid/_navigation.scss */
 .side_menu ul ul > li > a { padding-left: 20px; }
-/* line 179, ../scss/solid/_navigation.scss */
+/* line 181, ../scss/solid/_navigation.scss */
 .side_menu a > span { display: block; width: 23px; height: 23px; line-height: 23px; position: absolute; right: 0; top: 50%; margin-top: -11.5px; }
-/* line 190, ../scss/solid/_navigation.scss */
+/* line 192, ../scss/solid/_navigation.scss */
 .side_menu a > span:before, .side_menu a > span:after { content: ""; width: 9px; height: 9px; background: url("../images/plusminus.png") no-repeat; position: absolute; display: block; top: 50%; left: 50%; margin: -5px 0 0 -4px; -webkit-transition: opacity .4s ease; -moz-transition: opacity .4s ease; -o-transition: opacity .4s ease; transition: opacity .4s ease; }
-/* line 207, ../scss/solid/_navigation.scss */
+/* line 209, ../scss/solid/_navigation.scss */
 .side_menu a > span:after { height: 1px; width: 8px; background-position: 0 -9px; margin: -1px 0 0 -4px; }
-/* line 214, ../scss/solid/_navigation.scss */
+/* line 216, ../scss/solid/_navigation.scss */
 .side_menu li:not(.active) .submenu { display: none; }
-/* line 218, ../scss/solid/_navigation.scss */
+/* line 220, ../scss/solid/_navigation.scss */
 .side_menu li.active > a, .side_menu li.current > a { color: #23527c; }
-/* line 221, ../scss/solid/_navigation.scss */
+/* line 223, ../scss/solid/_navigation.scss */
 .side_menu .menu-handler { background: #eeeeee; color: #555555; z-index: 1; cursor: pointer; }
 
-/* line 231, ../scss/solid/_navigation.scss */
+/* line 233, ../scss/solid/_navigation.scss */
 .nav-section .widget .widget_title, .nav-section .panels-container .media .widget_title, .panels-container .nav-section .media .widget_title, .nav-section .leaflet-popup-content .media .widget_title, .leaflet-popup-content .nav-section .media .widget_title { background-color: #555555; padding: 15px 20px 14px; color: #fff; }
-/* line 235, ../scss/solid/_navigation.scss */
+/* line 237, ../scss/solid/_navigation.scss */
 .nav-section .widget .widget_title *, .nav-section .panels-container .media .widget_title *, .panels-container .nav-section .media .widget_title *, .nav-section .leaflet-popup-content .media .widget_title *, .leaflet-popup-content .nav-section .media .widget_title * { padding: 0; margin: 0; color: #fff; background-color: #555555; text-transform: none; font-size: 1.3em; font-weight: normal; }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 0) { /* line 247, ../scss/solid/_navigation.scss */
+@media only screen and (-webkit-min-device-pixel-ratio: 0) { /* line 249, ../scss/solid/_navigation.scss */
   .side_menu a > span:before, .side_menu a > span:after { margin-left: -5px; } }
 /* line 3, ../scss/solid/_maps.scss */
 .balloon { line-height: 1.35; overflow: hidden; white-space: nowrap; }
