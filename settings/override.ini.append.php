@@ -390,3 +390,10 @@ MatchFile=block/html.tpl
 Subdir=templates
 Match[type]=HTML
 Match[view]=html
+
+[block_eventi_carousel]
+Source=block/view/view.tpl
+MatchFile=block/eventi_carousel.tpl
+Subdir=templates
+Match[type]=Eventi
+Match[view]=eventi_carousel

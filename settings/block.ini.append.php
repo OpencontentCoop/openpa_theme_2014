@@ -93,6 +93,7 @@ Name=Eventi
 ViewName[]
 ViewName[eventi]=Eventi
 ViewName[eventi_manual]=Eventi singoli
+ViewName[eventi_carousel]=Panelli (carousel)
 
 [Iosono]
 Name=Schede Homepage (Io sono, eventi della vita, ecc...)
