@@ -1,6 +1,7 @@
 {def $openpa = object_handler($block)}
 {set_defaults(hash('show_title', true(), 'items_per_row', 2))}
 
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="relative carousel-top-control panels-container {if or( $show_title|not(), $block.name|eq('') )}title-placeholder{/if} {$block.view}">
 
 {if and( $show_title, $block.name|ne('') )}
@@ -22,3 +23,4 @@
          items_per_row=$items_per_row}
 </div>
 {unset_defaults(array('show_title','items_per_row'))}
+{if is_set($block.custom_attributes.color_style)}</div>{/if}

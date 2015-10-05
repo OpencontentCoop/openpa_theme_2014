@@ -141,7 +141,7 @@ $(function(){ldelim}
 {rdelim});
 </script>
 
-
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget {$block.view}">
     <div class="widget_title">
         <h3>{$block.name|wash()}</h3>
@@ -174,3 +174,4 @@ $(function(){ldelim}
 
     </div>
 </div>
+{if is_set($block.custom_attributes.color_style)}</div>{/if}

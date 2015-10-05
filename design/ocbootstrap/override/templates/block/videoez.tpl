@@ -5,6 +5,7 @@
      $flash_var = concat( "moviepath=", $video )}
 
 {if $attribute_file}
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget {$block.view}">
     <div class="widget_title">
         <h3>{node_view_gui content_node=$flash_node view=text_linked text=$block.name}</h3>
@@ -59,7 +60,7 @@
 	</div>
     </div>
 </div>
-
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
 
 {else}
    {editor_warning("L'oggetto inserito non &egrave; compatibile con la vista ({$block.view}) del blocco selezionato")}

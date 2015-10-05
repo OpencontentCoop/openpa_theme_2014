@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* line 49, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_title h3, #content .color.color-default-2 .widget_title h3 a { color: #00a84e; }
+/* line 54, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .owl-controls .owl-buttons .owl-next, #content .color.color-default-2 .owl-controls .owl-buttons .owl-prev { background: #00a84e; color: #ffffff; }
+/* line 60, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .carousel-caption { color: #fff; }
+/* line 62, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .carousel-caption h3 { background: #00a84e; color: #ffffff; }
+/* line 65, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .carousel-caption h3 a { color: #ffffff; }
+/* line 72, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .carousel-both-control .owl-pagination.active { background: #00a84e !important; }
+/* line 78, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_tabs .tab-content { border-color: #00a84e; }
+/* line 83, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_tabs .nav-tabs li.active a { background-color: #00a84e; color: #ffffff; }
+/* line 90, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .tabs_nav .ui-tabs-active a, #content .color.color-default-2 .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs #content .color.color-default-2 .nav-tabs .ui-tabs-active a, #content .color.color-default-2 .tabs_nav li:hover a[class*="color"], #content .color.color-default-2 .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs #content .color.color-default-2 .nav-tabs li:hover a[class*="color"] { background: #a9cb38; color: #fff; }
+/* line 96, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .events.widget_tabs li.active a { color: #00a84e; }
+/* line 101, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .events .calendar-date .month { background: #00a84e; color: #fff; }
+/* line 105, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .events .calendar-date .day { color: #00a84e; border-color: #00a84e; }
+/* line 112, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .panels-container .panel-label, #content .color.color-default-2 .leaflet-popup-content .panel-label { background: #00a84e; color: #ffffff; }
+/* line 117, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .panels-container .media-panel figure, #content .color.color-default-2 .leaflet-popup-content .media-panel figure { border-bottom-color: #00a84e; }
+/* line 121, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .panels-container .panel-story, #content .color.color-default-2 .leaflet-popup-content .panel-story { color: #00a84e; }
+/* line 123, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .panels-container .panel-story a, #content .color.color-default-2 .leaflet-popup-content .panel-story a { color: #00a84e; }
+/* line 42, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 h3.widget_title { background-color: #006598; color: #ffffff; }
+/* line 45, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 h3.widget_title a { color: #ffffff; }
+/* line 49, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .widget_title h3, #content .color.color-default-3 .widget_title h3 a { color: #006598; }
+/* line 54, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .owl-controls .owl-buttons .owl-next, #content .color.color-default-3 .owl-controls .owl-buttons .owl-prev { background: #006598; color: #ffffff; }
+/* line 60, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-caption { color: #fff; }
+/* line 62, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-caption h3 { background: #006598; color: #ffffff; }
+/* line 65, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-caption h3 a { color: #ffffff; }
+/* line 72, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-both-control .owl-pagination.active { background: #006598 !important; }
+/* line 78, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .widget_tabs .tab-content { border-color: #006598; }
+/* line 83, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .widget_tabs .nav-tabs li.active a { background-color: #006598; color: #ffffff; }
+/* line 90, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .tabs_nav .ui-tabs-active a, #content .color.color-default-3 .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs #content .color.color-default-3 .nav-tabs .ui-tabs-active a, #content .color.color-default-3 .tabs_nav li:hover a[class*="color"], #content .color.color-default-3 .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs #content .color.color-default-3 .nav-tabs li:hover a[class*="color"] { background: #69a7dc; color: #fff; }
+/* line 96, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .events.widget_tabs li.active a { color: #006598; }
+/* line 101, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .events .calendar-date .month { background: #006598; color: #fff; }
+/* line 105, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .events .calendar-date .day { color: #006598; border-color: #006598; }
+/* line 112, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .panels-container .panel-label, #content .color.color-default-3 .leaflet-popup-content .panel-label { background: #006598; color: #ffffff; }
+/* line 117, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .panels-container .media-panel figure, #content .color.color-default-3 .leaflet-popup-content .media-panel figure { border-bottom-color: #006598; }
+/* line 121, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .panels-container .panel-story, #content .color.color-default-3 .leaflet-popup-content .panel-story { color: #006598; }
+/* line 123, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .panels-container .panel-story a, #content .color.color-default-3 .leaflet-popup-content .panel-story a { color: #006598; }
+/* line 42, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 h3.widget_title { background-color: #d34e28; color: #ffffff; }
+/* line 45, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 h3.widget_title a { color: #ffffff; }
+/* line 49, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .widget_title h3, #content .color.color-default-4 .widget_title h3 a { color: #d34e28; }
+/* line 54, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .owl-controls .owl-buttons .owl-next, #content .color.color-default-4 .owl-controls .owl-buttons .owl-prev { background: #d34e28; color: #ffffff; }
+/* line 60, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .carousel-caption { color: #fff; }
+/* line 62, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .carousel-caption h3 { background: #d34e28; color: #ffffff; }
+/* line 65, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .carousel-caption h3 a { color: #ffffff; }
+/* line 72, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .carousel-both-control .owl-pagination.active { background: #d34e28 !important; }
+/* line 78, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .widget_tabs .tab-content { border-color: #d34e28; }
+/* line 83, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .widget_tabs .nav-tabs li.active a { background-color: #d34e28; color: #ffffff; }
+/* line 90, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-4 .tabs_nav .ui-tabs-active a, #content .color.color-default-4 .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs #content .color.color-default-4 .nav-tabs .ui-tabs-active a, #content .color.color-default-4 .tabs_nav li:hover a[class*="color"], #content .color.color-default-4 .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs #content .color.color-default-4 .nav-tabs li:hover a[class*="color"] { background: #ef8b2b; color: #fff; }

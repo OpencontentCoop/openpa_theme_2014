@@ -37,6 +37,96 @@ $openpa-palette: (
   @return '';
 }
 
+
+@mixin openpa-block-color-by-section( $palette-identifier: 'no-main-style' ) {
+  h3.widget_title {
+    background-color: openpa-color($palette-identifier, 'background-primary');
+    color: openpa-color($palette-identifier, 'text-primary');
+    a {
+      color: openpa-color($palette-identifier, 'text-primary');
+    }
+  }
+  .widget_title h3, .widget_title h3 a{
+    color: openpa-color($palette-identifier, 'background-primary');
+  }
+  .owl-controls {
+    .owl-buttons {
+      .owl-next, .owl-prev {
+        background: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary');
+      }
+    }
+  }
+  .carousel-caption {
+    color: openpa-color($palette-identifier, 'text-secondary');
+    h3{
+      background: openpa-color( $palette-identifier, 'background-primary' );
+      color: openpa-color($palette-identifier, 'text-primary');
+      a{
+        color: openpa-color($palette-identifier, 'text-primary');
+      }
+    }
+  }
+  .carousel-both-control {
+    .owl-pagination {
+      &.active {
+        background: openpa-color($palette-identifier, 'background-primary') !important;
+      }
+    }
+  }
+  .widget_tabs {
+    .tab-content {
+      border-color: openpa-color($palette-identifier, 'background-primary');
+    }
+    .nav-tabs {
+      li {
+        &.active a {
+          background-color: openpa-color($palette-identifier, 'background-primary');
+          color: openpa-color($palette-identifier, 'text-primary');
+        }
+      }
+    }
+  }
+  .tabs_nav .ui-tabs-active a, .tabs_nav li:hover a[class*="color"] {
+    background: openpa-color($palette-identifier, 'background-secondary');
+    color: openpa-color($palette-identifier, 'text-secondary');
+  }
+  .events {
+    &.widget_tabs li {
+      &.active a {
+        color: openpa-color($palette-identifier, 'background-primary');
+      }
+    }
+    .calendar-date {
+      .month {
+        background: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-secondary');
+      }
+      .day {
+        color: openpa-color($palette-identifier, 'background-primary');
+        border-color: openpa-color($palette-identifier, 'background-primary');
+      }
+    }
+  }
+  .panels-container, .leaflet-popup-content {
+    .panel-label {
+      background: openpa-color($palette-identifier, 'background-primary');
+      color: openpa-color($palette-identifier, 'text-primary');
+    }
+    .media-panel {
+      figure {
+        border-bottom-color: openpa-color($palette-identifier, 'background-primary');
+      }
+    }
+    .panel-story {
+      color: openpa-color($palette-identifier, 'background-primary');
+      a {
+        color: openpa-color($palette-identifier, 'background-primary');
+      }
+    }
+  }
+}
+
 @mixin openpa-color-by-section( $palette-identifier: 'no-main-style' ) {
   #header {
     .navtools {
@@ -55,25 +145,6 @@ $openpa-palette: (
         color: openpa-color($palette-identifier, 'background-primary');
       }
     }
-    .owl-controls {
-      .owl-buttons {
-        .owl-next, .owl-prev {
-          background: openpa-color($palette-identifier, 'background-primary');
-          color: openpa-color($palette-identifier, 'text-primary');
-        }
-      }
-    }
-    .carousel-caption {
-      //background: openpa-color( $palette-identifier, 'background-secondary' );
-      color: openpa-color($palette-identifier, 'text-secondary');
-    }
-    .carousel-both-control {
-      .owl-pagination {
-        &.active {
-          background: openpa-color($palette-identifier, 'background-primary') !important;
-        }
-      }
-    }
     .nav-section .widget {
       a {
         color: openpa-color($palette-identifier, 'content-title');
@@ -87,63 +158,7 @@ $openpa-palette: (
         }
       }
     }
-    h3.widget_title {
-      background-color: openpa-color($palette-identifier, 'background-primary');
-      color: openpa-color($palette-identifier, 'text-primary');
-      a {
-        color: openpa-color($palette-identifier, 'text-primary');
-      }
-    }
-    .widget_tabs {
-      .tab-content {
-        border-color: openpa-color($palette-identifier, 'background-primary');
-      }
-      .nav-tabs {
-        li {
-          &.active a {
-            background-color: openpa-color($palette-identifier, 'background-primary');
-            color: openpa-color($palette-identifier, 'text-primary');
-          }
-        }
-      }
-    }
-    .tabs_nav .ui-tabs-active a, .tabs_nav li:hover a[class*="color"] {
-      background: openpa-color($palette-identifier, 'background-secondary');
-      color: openpa-color($palette-identifier, 'text-secondary');
-    }
-    .events {
-      &.widget_tabs li {
-        &.active a {
-          color: openpa-color($palette-identifier, 'background-primary');
-        }
-      }
-      .calendar-date {
-        .month {
-          background: openpa-color($palette-identifier, 'background-primary');
-          color: openpa-color($palette-identifier, 'text-secondary');
-        }
-        .day {
-          color: openpa-color($palette-identifier, 'background-primary');
-          border-color: openpa-color($palette-identifier, 'background-primary');
-        }
-      }
-    }
-    .panels-container, .leaflet-popup-content {
-      .panel-label {
-        background: openpa-color($palette-identifier, 'background-primary');
-      }
-      .media-panel {
-        figure {
-          border-bottom-color: openpa-color($palette-identifier, 'background-primary');
-        }
-      }
-      .panel-story {
-        color: openpa-color($palette-identifier, 'background-primary');
-        a {
-          color: openpa-color($palette-identifier, 'background-primary');
-        }
-      }
-    }
+    @include openpa-block-color-by-section($palette-identifier);
   }
   #footer {
     background: openpa-color($palette-identifier, 'background-primary');

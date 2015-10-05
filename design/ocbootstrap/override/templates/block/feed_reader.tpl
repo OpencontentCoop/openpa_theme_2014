@@ -7,6 +7,7 @@
      $offset = $block.custom_attributes.offset
      $res = feedreader( $source, $limit, $offset )}
 
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 {if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
 
@@ -32,4 +33,5 @@
     </div>
 </div>
 {/if}
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
 {/cache-block}

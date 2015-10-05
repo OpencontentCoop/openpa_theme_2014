@@ -11,7 +11,7 @@
         {set $sottotitoli = concat("content/download/",$flash_node.data_map.sottotitoli.contentobject_id,"/",$flash_node.data_map.sottotitoli.content.contentobject_attribute_id,"/",$flash_node.data_map.sottotitoli.content.original_filename)|ezurl}
     {/if}
 {/if}
-
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget {$block.view}">
 
         <div class="widget_title">
@@ -68,5 +68,5 @@
 
     </div>
 </div>
-
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
 {undef}

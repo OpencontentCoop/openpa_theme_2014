@@ -4,6 +4,7 @@
 
 {ezscript_require( 'ezjsc::yui3' )}
 
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 {if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
 
@@ -45,3 +46,4 @@
     </div>
 </div>
 {/if}
+{if is_set($block.custom_attributes.color_style)}</div>{/if}

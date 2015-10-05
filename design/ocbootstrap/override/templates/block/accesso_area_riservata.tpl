@@ -3,7 +3,7 @@
 
 {def $area = fetch( 'content', 'node', hash( 'node_id', $block.custom_attributes.parent_node_id ) )
      $current_user = fetch( 'user', 'current_user' )}
-
+    {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
     {if and( $show_title, $block.name|ne('') )}
     <div class="widget {$block.view}">
 
@@ -36,6 +36,7 @@
         </div>
     </div>
     {/if}
+    {if is_set($block.custom_attributes.color_style)}</div>{/if}
 
 {else}
     {editor_warning( "Area riservata non selezionata" )};

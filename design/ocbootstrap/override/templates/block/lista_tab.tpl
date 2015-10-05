@@ -1,6 +1,6 @@
 {def $valid_nodes = $block.valid_nodes}
 {if $valid_nodes|count()|gt(0)}
-
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget widget_tabs {$block.view}">
 
 
@@ -26,5 +26,5 @@
     </div>
 
 </div>
-
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
 {/if}

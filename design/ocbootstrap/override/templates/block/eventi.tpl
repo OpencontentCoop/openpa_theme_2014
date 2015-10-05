@@ -52,6 +52,7 @@
         {rdelim});        
     </script>
 *}
+    {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 
     {if $block.name|ne('')}
     <div class="widget events {$block.view}">
@@ -131,5 +132,6 @@
 
 </div>
 
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
 
 {/if}

@@ -334,5 +334,24 @@
     </div>
 </div>
 {/if}
+
+{def $use_styles = openpaini( 'Stili', 'UsaNeiBlocchi', 'disabled' )|eq('enabled')}
+{if $use_styles}
+    <label>Colore identificativo</label>
+    <input type="radio" id="block-custom_attribute-{$block_id}-{19771205}" class="block-control" name="ContentObjectAttribute_ezpage_block_custom_attribute_{$attribute.id}[{$zone_id}][{$block_id}][color_style]" {if is_set($block.custom_attributes[color_style])|not()}checked="checked"{/if} value="" />
+    <div style="vertical-align: middle; margin-right: 5px; width: 15px; height: 15px; display: inline-block; border: 1px solid #ccc; background: #fff"></div>
+    {def $node_styles = openpaini('Stili', 'Nodo_NomeStile')
+         $styles = array()}
+    {foreach $node_styles as $node_style}
+        {def $style_parts = $node_style|explode(';')}
+        {set $styles = $styles|append( $style_parts[1] )}
+        {undef $style_parts}
+    {/foreach}
+    {foreach $styles as $style}
+        <input type="radio" id="block-custom_attribute-{$block_id}-{19771205}" class="block-control" name="ContentObjectAttribute_ezpage_block_custom_attribute_{$attribute.id}[{$zone_id}][{$block_id}][color_style]" {if and(  is_set($block.custom_attributes[color_style]), $block.custom_attributes[color_style]|eq($style) )}checked="checked"{/if} value="{$style}" />
+        <div class="block-color-select {$style}" style="vertical-align: middle; margin-right: 5px; width: 15px; height: 15px; display: inline-block; border: 1px solid #ccc"><span style="visibility: hidden">{$style}</span></div>
+    {/foreach}
+{/if}
+
 </div>
 </div>

@@ -1,6 +1,7 @@
 {cache-block expiry=7200}
 {def $content=$block.valid_nodes[0].data_map.meteo.content}
 {if $content}
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 {if $block.name}<h2 class="hide block-title">{$block.name|wash()}</h2>{else}<h2 class="hide">Meteo</h2>{/if}
 
 <div class="widget {$block.view}">
@@ -38,5 +39,6 @@
   </div>
 
 </div>
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
 {/if}
 {/cache-block}

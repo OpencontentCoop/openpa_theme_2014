@@ -50,3 +50,21 @@ body.default-6 {
     @include openpa-menu-color-by-section('default-6');
   }
 }
+
+.block-color-select{
+  &.default-1{background: openpa-color('default-1', 'background-primary');}
+  &.default-2{background: openpa-color('default-2', 'background-primary');}
+  &.default-3{background: openpa-color('default-3', 'background-primary');}
+  &.default-4{background: openpa-color('default-4', 'background-primary');}
+  &.default-5{background: openpa-color('default-5', 'background-primary');}
+  &.default-6{background: openpa-color('default-6', 'background-primary');}
+}
+
+#content .color{
+  &.color-default-1{@include openpa-block-color-by-section('default-1');}
+  &.color-default-2{@include openpa-block-color-by-section('default-2');}
+  &.color-default-3{@include openpa-block-color-by-section('default-3');}
+  &.color-default-4{@include openpa-block-color-by-section('default-4');}
+  &.color-default-5{@include openpa-block-color-by-section('default-5');}
+  &.color-default-6{@include openpa-block-color-by-section('default-6');}
+}

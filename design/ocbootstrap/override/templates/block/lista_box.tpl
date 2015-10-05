@@ -1,6 +1,7 @@
 {def $openpa= object_handler($block)}
 {set_defaults(hash('show_title', true()))}
 
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 {if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
     <div class="widget_title">
@@ -17,3 +18,4 @@
   </div>
 </div>
 {/if}
+{if is_set($block.custom_attributes.color_style)}</div>{/if}

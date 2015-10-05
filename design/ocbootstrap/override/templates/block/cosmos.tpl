@@ -1,5 +1,6 @@
 {ezscript_require( array( 'ezjsc::jquery' ) )}
 
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget block-{$block.view}">
   <div class="widget_title">
 	<h3>
@@ -18,6 +19,7 @@
 		</form>
     </div>
 </div>
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
 
 
 <script>

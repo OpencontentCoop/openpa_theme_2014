@@ -1,6 +1,7 @@
 {def $openpa= object_handler($block)}
 {set_defaults(hash('show_title', true()))}
 
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 {if and( $show_title, $block.name|ne('') )}
   <h3 class="widget_title"><a href={$openpa.root_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>    
 {/if}
@@ -18,3 +19,4 @@
         items_per_row=1}
 
 {unset_defaults(array('show_title'))}
+{if is_set($block.custom_attributes.color_style)}</div>{/if}

@@ -7,6 +7,7 @@
     $classi_iosono_figli = openpaini( 'GestioneClassi', 'classi_iosono_figli' )
     $classi_da_escludere = openpaini( 'GestioneClassi', 'classi_da_escludere_dai_blocchi_ezflow' )}
 
+{if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget_tabs {$block.view}">
     <ul class="nav nav-tabs" role="tablist">
         {foreach $valid_nodes as $index => $node}
@@ -64,3 +65,4 @@
         {/foreach}
     </div>
 </div>
+{if is_set($block.custom_attributes.color_style)}</div>{/if}
