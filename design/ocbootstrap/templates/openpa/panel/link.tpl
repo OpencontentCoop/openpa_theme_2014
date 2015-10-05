@@ -14,7 +14,7 @@
             </p>
 
             <p class="link">
-                <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">Leggi</a>
+                <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">Vai</a>
             </p>
 
         </div>
