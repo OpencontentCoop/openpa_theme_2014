@@ -58,7 +58,7 @@
             <div class="col-xs-12 col-sm-6 col-md-3">
                 <form class="navbar-form" action="{"/content/search"|ezurl(no)}" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cerca nel sito" name="search" {if $pagedata.is_edit}disabled="disabled"{/if}>
+                        <input type="text" class="form-control" placeholder="Cerca nel sito" name="SearchText" {if $pagedata.is_edit}disabled="disabled"{/if}>
 
                         <div class="input-group-btn">
                             <button class="btn btn-link" type="submit" name="SearchButton" {if $pagedata.is_edit}disabled="disabled"{/if}><i class="fa fa-search fa-lg"></i></button>
