@@ -34,11 +34,13 @@ $(function() {
     {foreach $calendarData.day_by_day as $calendarDay}
         {if $calendarDay.count|gt(0)}
 
-          <div class="calendar-day-program float-break row events" id="day-{$calendarDay.identifier}">
+          <div class="calendar-day-program float-break row" id="day-{$calendarDay.identifier}">
 
+            <div class="events">
             <div class="calendar-date col-xs-4 col-sm-3 col-md-2"{if $calendarDay.is_today} id="today"{/if}>
               <span class="month">{$calendarDay.start|datetime( 'custom', '%M' )}</span>
               <span class="day">{$calendarDay.start|datetime( 'custom', '%j' )}</span>
+            </div>
             </div>
             
                 <!--<h3 class="widget_title">
@@ -53,7 +55,7 @@ $(function() {
                 <div class="row panels-container">                  
                   {foreach $calendarDay.events as $event}
                     <div class="col-md-{$col-width}">
-                      {node_view_gui view=panel content_node=$event.node image_class=small is_program=true()}
+                      {node_view_gui view=panel content_node=$event.node image_class=small}
                     </div>
                     {delimiter modulo=$modulo}</div><div class="row panels-container">{/delimiter}
                   {/foreach}

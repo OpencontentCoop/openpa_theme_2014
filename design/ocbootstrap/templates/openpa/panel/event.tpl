@@ -16,12 +16,14 @@
       <h4 class="fw_medium color_dark">
           <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">{$node.name|openpa_shorten(60)|wash()}</a>
       </h4>
-      <div class="row">
+      {if is_set($is_program)|not()}
+	  <div class="row">
         <div class="col-xs-4 calendar-date">
           <span class="month">{$from}</span>
           <span class="day">{$to}</span>
         </div>
         <div class="col-xs-8">
+	  {/if}
           {if $node|has_attribute( 'indirizzo' )}
             {attribute_view_gui attribute=$node.data_map.indirizzo}
           {/if}
@@ -34,8 +36,10 @@
           <p class="abstract">
             {$node|abstract()}
           </p>
-        </div>
+      {if is_set($is_program)|not()}
+		</div>
       </div>
+	  {/if}
       <p class="link">
         <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">Leggi</a>
       </p>

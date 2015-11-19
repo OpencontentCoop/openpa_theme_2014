@@ -15,7 +15,7 @@
               <td>
                 <a href="{$materia.url|ezurl(no)}">{$materia.name|wash()}</a>
               </td>
-              <td>
+              <td style="white-space: nowrap">
                 {if $materia|has_attribute( 'referente_politico' )}
                   {foreach $materia|attribute( 'referente_politico' ).content.relation_list as $item}
                   {if $item.in_trash|not()}                      
@@ -24,7 +24,7 @@
                   {/foreach}
                 {/if}
               </td>
-              <td>
+              <td style="white-space: nowrap">
                 {if $materia|has_attribute( 'referente_tecnico' )}
                   {foreach $materia|attribute( 'referente_tecnico' ).content.relation_list as $item}
                   {if $item.in_trash|not()}                      
