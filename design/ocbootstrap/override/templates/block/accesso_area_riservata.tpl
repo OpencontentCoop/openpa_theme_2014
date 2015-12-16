@@ -19,12 +19,15 @@
         
             <p>{$block.custom_attributes.testo}</p>
             
-            <form method="post" action="{"/user/login/"|ezurl(no)}" name="loginform">
-                <label for="id-{$block.id}-login">{"Username"|i18n("design/ezwebin/user/login",'User name')}</label><div class="labelbreak"></div>
-                <input class="halfbox" type="text" size="10" name="Login" id="id-{$block.id}-login" value="" tabindex="1" />
-            
-                <label for="id-{$block.id}-password">{"Password"|i18n("design/ezwebin/user/login")}</label><div class="labelbreak"></div>
-                <input class="halfbox" type="password" size="10" name="Password" id="id-{$block.id}-password" value="" tabindex="2" />
+            <form method="post" action="{"/user/login/"|ezurl(no)}" name="loginform" class="form">
+                <div class="form-group">
+                    <label for="id-{$block.id}-login">{"Username"|i18n("design/ezwebin/user/login",'User name')}</label>
+                    <input class="form-control" type="text" size="10" name="Login" id="id-{$block.id}-login" value="" tabindex="1" />
+                </div>
+                <div class="form-group">
+                    <label for="id-{$block.id}-password">{"Password"|i18n("design/ezwebin/user/login")}</label>
+                    <input class="form-control" type="password" size="10" name="Password" id="id-{$block.id}-password" value="" tabindex="2" />
+                </div>
                 
                 <input class="defaultbutton" type="submit" name="LoginButton" value="{'Login'|i18n('design/ezwebin/user/login','Button')}" tabindex="3" />
                 
