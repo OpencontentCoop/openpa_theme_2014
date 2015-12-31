@@ -36,7 +36,7 @@
       <div class="block">
         <p>{'No newsletters available.'|i18n( 'cjw_newsletter/subscribe' )}</p>
       </div>
-    
+
     {else}
 
       <form class="form-horizontal" role="form" name="subscribe" method="post" action={'/newsletter/subscribe/'|ezurl}>
@@ -174,17 +174,19 @@
                 </div>
             </div>
 
-            <div class="form-group">
+          <div class="checkbox">
+              <label>
+                <input type="checkbox" id="Privacy" /> <p>Dichiaro di essere informato, ai sensi e per gli effetti di cui all’art. 13 del D.Lgs. 196/2003, che i dati personali raccolti saranno trattati, con strumenti cartacei e con strumenti informatici, esclusivamente nell’ambito del procedimento per il quale la presente dichiarazione viene resa e di poter esercitare i diritti di cui all’art. 7 del D.Lgs. 196/2003. *</p>
+              </label>
+          </div>
+
+            <div class="form-group clearfix">
                 <input type="hidden" name="BackUrlInput" value="{cond( ezhttp_hasvariable('BackUrlInput'), ezhttp('BackUrlInput'), 'newsletter/subscribe'|ezurl('no'))}" />
-                <input class="btn btn-primary pull-right" type="submit" name="SubscribeButton" value="{'Subscribe'|i18n( 'cjw_newsletter/subscribe' )}" title="{'Add to subscription.'|i18n( 'cjw_newsletter/subscribe' )}" />
+                <input id="SubscribeButton" class="btn btn-primary btn-lg pull-right" disabled="disabled" type="submit" name="SubscribeButton" value="{'Subscribe'|i18n( 'cjw_newsletter/subscribe' )}" title="{'Add to subscription.'|i18n( 'cjw_newsletter/subscribe' )}" />
                 {*<a href={$node_url|ezurl}><input class="btn btn-danger pull-left" type="submit" name="CancelButton" value="{'Cancel'|i18n( 'cjw_newsletter/subscribe' )}" /></a>*}
             </div>
 
             <div class="block footer">
-                <p>
-                  <strong>{'Data Protection'|i18n( 'cjw_newsletter/subscribe' )}:</strong>
-                  {'Your e-mail address will under no circumstances be passed on to unauthorized third parties.'|i18n( 'cjw_newsletter/subscribe' )}
-                </p>
                 <p>
                   <strong>{'Further Options'|i18n( 'cjw_newsletter/subscribe' )}:</strong>                
                   {def $link = concat('<a href=', '/newsletter/subscribe_infomail'|ezurl() ,'>' ) }
@@ -197,4 +199,16 @@
     
 
 </div>
+
+<script>{literal}
+$(document).ready(function(){
+    $('#Privacy').bind('change', function(e){
+        if( $(e.currentTarget).is(':checked') ){
+            $('#SubscribeButton').removeAttr( 'disabled' );
+        }else{
+            $('#SubscribeButton').attr( 'disabled', 'disabled' );
+        }
+    });
+});
+{/literal}</script>
 
