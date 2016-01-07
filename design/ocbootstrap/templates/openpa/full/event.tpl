@@ -20,7 +20,7 @@
         {include uri='design:openpa/full/parts/section_left.tpl'}
     {/if}
 
-    <div class="content-main{if $show_left|not()} wide{else} full-stack{/if}">
+    <div class="content-main{if $show_left} full-stack{/if}">
 
         {include uri=$openpa.content_main.template}
 
