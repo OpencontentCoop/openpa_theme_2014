@@ -1,4 +1,5 @@
 {if $openpa.content_infocollection.is_information_collector}
+<form action="{"/content/action"|ezurl(no)}" method="post">
 <div class="content-infocollection m_bottom_20">
     {include name=Validation uri='design:content/collectedinfo_validation.tpl'
              class='message-warning'
@@ -23,4 +24,5 @@
         <input type="hidden" name="ViewMode" value="full" />
     </div>
 </div>
+</form>
 {/if}
