@@ -26,7 +26,11 @@ $show_left = and( $openpa.control_menu.show_side_menu, count( $tree_menu.childre
 
         {include uri=$openpa.content_detail.template}
 
-        {def $search_hash = hash( 'limit', 100, 'class_id', array( 'politico' ), 'filter', array( concat( 'submeta_gruppo_politico___id____si:', $node.object.id ) ) )
+        {def $search_hash = hash(  'limit', 100,
+                                   'class_id', array( 'politico' ),
+                                   'filter', array( 'or',
+                                                    concat( 'submeta_gruppo_politico___id____si:', $node.object.id ),
+                                                    concat( 'submeta_gruppo_politico___id_si:', $node.object.id ) ) )
              $search = fetch( ezfind, search, $search_hash )}
 
         {if $search.SearchCount}
