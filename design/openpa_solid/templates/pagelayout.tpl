@@ -31,7 +31,6 @@
 <script type="text/javascript">{literal}//<![CDATA[(function () {var c = document.body.className;c = c.replace(/no-js/, 'js');document.body.className = c;})();//]]>{/literal}</script>
 
 <div id="page">
-
     {include uri='design:page_browser_alert.tpl'}
 
     {if and( $pagedata.website_toolbar, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
@@ -88,8 +87,6 @@
 {/if}
 
 {/cache-block}
-
-
 </div>
 
 {include uri='design:page_footer_script.tpl'}
