@@ -28,9 +28,7 @@ $show_left = and( $openpa.control_menu.show_side_menu, count( $tree_menu.childre
 
         {def $search_hash = hash(  'limit', 100,
                                    'class_id', array( 'politico' ),
-                                   'filter', array( 'or',
-                                                    concat( 'submeta_maggioranza_minoranza___id____si:', $node.object.id ),
-                                                    concat( 'submeta_maggioranza_minoranza___id_si:', $node.object.id ) ) )
+                                   'filter', array( concat( solr_meta_subfield('maggioranza_minoranza','id'),':', $node.object.id ) ) )
              $search = fetch( ezfind, search, $search_hash )}
 
         {if $search.SearchCount}

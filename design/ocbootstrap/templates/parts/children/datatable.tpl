@@ -9,7 +9,7 @@
 	   $_classes = fetch( 'class', 'list', hash( 'class_filter', $classeTypes ) )
 	   $classes = array()
 	   $class_names = array()
-	   $fields = array( 'name_t', 'meta_class_name_ms', 'published_dt', 'main_url_alias_ms' )
+	   $fields = array( 'meta_name_t', 'meta_class_name_ms', 'meta_published_dt', 'meta_main_url_alias_ms' )
 	   $keys = array( 'Titolo', 'Tipo', 'Data' )}
   {foreach $_classes as $class}
 	{set $classes = $classes|append( $class.identifier )}

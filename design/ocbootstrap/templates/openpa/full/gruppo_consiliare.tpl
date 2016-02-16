@@ -28,9 +28,7 @@ $show_left = and( $openpa.control_menu.show_side_menu, count( $tree_menu.childre
 
         {def $search_hash = hash(  'limit', 100,
                                    'class_id', array( 'politico' ),
-                                   'filter', array( 'or',
-                                                    concat( 'submeta_gruppo_politico___id____si:', $node.object.id ),
-                                                    concat( 'submeta_gruppo_politico___id_si:', $node.object.id ) ) )
+                                   'filter', array( concat( solr_meta_subfield('gruppo_politico','id'),':', $node.object.id ) ) )
              $search = fetch( ezfind, search, $search_hash )}
 
         {if $search.SearchCount}
