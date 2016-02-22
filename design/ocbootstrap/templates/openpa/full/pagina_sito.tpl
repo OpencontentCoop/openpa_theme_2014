@@ -34,7 +34,7 @@
         {/if}
 
     </div>
-    
+
     {if $openpa.control_menu.show_extra_menu}
       {include uri='design:openpa/full/parts/section_right.tpl'}
     {/if}

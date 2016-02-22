@@ -1,5 +1,5 @@
 {if is_set( $parameters )|not()}
-  
+
   {def $classeTypes = fetch( 'ezfind', 'search', hash( 'subtree_array', array( $node.node_id ),
 													   'limit', 1,
 													   'filter', array( concat( '-meta_id_si:', $node.contentobject_id ) ),
@@ -13,7 +13,7 @@
 	   $keys = array( 'Titolo', 'Tipo' )}
   {foreach $_classes as $class}
 	{set $classes = $classes|append( $class.identifier )}
-	{set $class_names = $class_names|append( $class.name )}	
+	{set $class_names = $class_names|append( $class.name )}
   {/foreach}
 
   {def $parameters = hash(
@@ -36,6 +36,6 @@
                  fields=$parameters.fields
                  keys=$parameters.keys
                  filters=$parameters.filters
-                 table_id=$parameters.table_id} 
+                 table_id=$parameters.table_id}
     </div>
 </div>

@@ -10,7 +10,7 @@
 		   keys=$parameters.keys
 		   filters=$parameters.filters
 		   table_id=$parameters.table_id}
-		   
+
   {include uri='design:datatable/view.tpl'
 		   subtree=array( $node.object.main_node_id )
 		   classes=array( 'persona', 'societa', 'dipendente' )
@@ -18,7 +18,7 @@
 		   fields=array( 'name', 'meta_class_name_ms', 'attr_email_t', 'main_url_alias' )
 		   keys=array( 'Nome', 'Tipo', 'Email' )
 		   filters=array()
-		   table_id=address-book} 		   
+		   table_id=address-book}
 
 *}
 
@@ -41,9 +41,9 @@
               <th>{$key}</th>
               {/foreach}
             </tr>
-          </thead>          
+          </thead>
           <tfoot>
-            <tr>              
+            <tr>
               {foreach $keys as $key}
               <th>{$key}</th>
               {/foreach}
@@ -57,7 +57,7 @@
 
 {literal}
 <script type="text/javascript">
-$(document).ready(function() {    
+$(document).ready(function() {
     var elem = '#table-{/literal}{$table_id}{literal}';
     var dataSource = {/literal}{concat('datatable/view/', $subtree|implode(','), '/', $classes|implode(','), '/', $fields|implode(','), , '/', $filters|implode(','))|ezurl()}{literal};
     if ($(elem).data("pagination-top-bottom") === true) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
         "bServerSide": true,
         "sAjaxSource": dataSource,
         "sServerMethod": "GET",
-        "oLanguage": {            
+        "oLanguage": {
             "sProcessing": "",
             "sLengthMenu": "_MENU_ elementi per pagina",
             "sZeroRecords": "Oooops! Nessun risultato...",
@@ -88,11 +88,11 @@ $(document).ready(function() {
                 "sLast":     "Ultimo"
             }
         },
-        "aoColumnDefs": [            
-            {                
+        "aoColumnDefs": [
+            {
                 "mRender": function ( data, type, row ) {
                     return '<a href="/'+ row[{/literal}{count($fields)|sub(1)}{literal}] + '">' + data + '</a>';
-                },                
+                },
                 "aTargets": [ 0 ]
             }
             {/literal}{foreach $fields as $key => $field}{if $field|begins_with('subattr')}
@@ -109,7 +109,7 @@ $(document).ready(function() {
     //        {"type": "date-range"},
     //        {/literal}*}{else}{literal}
     //        {"type": "text"},
-    //        {/literal}{/if}{/foreach}{literal}            
+    //        {/literal}{/if}{/foreach}{literal}
     //    ]
     //});
     //dt.buttonFilter({
@@ -123,13 +123,13 @@ $(document).ready(function() {
     //    {foreach $fields as $key => $field}
     //        {ldelim}field:"{$field}", key:{$key}{rdelim}
     //        {delimiter},{/delimiter}
-    //    {/foreach}        
+    //    {/foreach}
     //    ]{literal}
-    //});    
+    //});
     $(elem).closest('.dataTables_wrapper').find('div[id$=_filter] input').css("width", "200px");
-    $(elem).closest('.dataTables_wrapper').find('input, select').addClass("form-control input-sm").attr('placeholder', 'Cerca');    
+    $(elem).closest('.dataTables_wrapper').find('input, select').addClass("form-control input-sm").attr('placeholder', 'Cerca');
 });
 </script>
-{/literal}        
+{/literal}
 
 </div>

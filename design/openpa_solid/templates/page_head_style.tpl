@@ -25,7 +25,7 @@
 
 {if $load_css_file_list}
 {ezcss_load( array(
-    'app.css', 'app_2.css', 'app_3.css',
+    'app.css', 'app_2.css', 'app_3.css', 'custom.css',
     'leaflet/leaflet.0.7.2.css',
     'debug.css',
     'websitetoolbar.css',
@@ -35,7 +35,7 @@
 'all', 'text/css', 'stylesheet' )}
 {else}
 {ezcss_load( array(
-    'app.css', 'app_2.css', 'app_3.css',
+    'app.css', 'app_2.css', 'app_3.css', 'custom.css',
     'leaflet/leaflet.0.7.2.css',
     'debug.css',
     'websitetoolbar.css'

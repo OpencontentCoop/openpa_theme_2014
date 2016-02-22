@@ -35,8 +35,6 @@ ViewName[singolo_banner]=Line (con blocco titolo, sfondo grigio)
 
 [Lista]
 Name=Lista di oggetti (assegnare un contenitore)
-[Lista]
-Name=Lista di oggetti (assegnare un contenitore)
 NumberOfValidItems=1
 NumberOfArchivedItems=0
 CustomAttributes[]=node_id

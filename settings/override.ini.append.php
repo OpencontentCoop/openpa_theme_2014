@@ -117,16 +117,6 @@ Match[class_identifier]=image
 ############################################
 ############################################ BLOCK
 ############################################
-## -- PIER
-
-[block_banner_uri_content]
-Source=block/view/view.tpl
-MatchFile=block/banner_uri.tpl
-Subdir=templates
-Match[type]=Banner
-Match[view]=banner_uri
-
-## -- /PIER
 
 [block_gmapitems_geo_located_content]
 Source=block/view/view.tpl
