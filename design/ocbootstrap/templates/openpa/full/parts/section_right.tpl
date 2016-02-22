@@ -35,7 +35,7 @@
           <ul class="list-unstyled">        
             {foreach $item as $data}
                 <li>
-                    <a href={concat( "content/advancedsearch?filter[]=submeta_", $data.attribute_identifier, "___main_node_id_si", ':', $node.node_id|urlencode, '&filter[]=contentclass_id:', $data.class_id, "&SearchButton=Cerca")|ezurl()} title="Link a {$data.class_name|wash}">{$data.class_name|wash} {if count($item)|gt(1)}<small>{$data.attribute_name}</small>{/if} <span class="badge">{$data.value}</span></a>
+                    <a href="{concat( "content/advancedsearch?filter[]=", solr_field( $data.attribute_identifier, 'string' ), ':"', $node.name|urlencode, '"&filter[]=contentclass_id:', $data.class_id, "&SearchButton=Cerca")|ezurl(no)}" title="Link a {$data.class_name|wash}">{$data.class_name|wash} {if count($item)|gt(1)}<small>{$data.attribute_name}</small>{/if} <span class="badge">{$data.value}</span></a>
                 </li>
             {/foreach}          
           </ul>

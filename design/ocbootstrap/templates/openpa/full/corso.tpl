@@ -34,7 +34,7 @@
 		  'subtree', array( $node.node_id ),
 		  'classes', array( 'edizione' ),
 		  'class_names', array( "Edizione corso di formazione" ),
-		  'fields', array( 'name_t', 'attr_from_time_dt', 'attr_quota_t', 'attr_stato_iscrizioni_t', 'main_url_alias_ms' ),
+		  'fields', array( solr_meta_field('name'), solr_field('from_time','date'), solr_field('quota','text'), solr_field('stato_iscrizioni','text'), solr_meta_field('main_url_alias') ),
 		  'keys', array( "Edizione", "Data", "Quota", "Stato iscrizioni" ),
 		  'filters', array( concat( '-meta_id_si:', $node.contentobject_id ) ),
 		  'table_id', concat( 'childOf-', $node.node_id ),
