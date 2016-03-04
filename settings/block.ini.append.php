@@ -2,6 +2,8 @@
 
 [General]
 AllowedTypes[]=HTML
+AllowedTypes[]=Banner
+AllowedTypes[]=ImmagineDimensioneOriginale
 
 
 [AreaRiservata]
@@ -130,7 +132,28 @@ ViewList[]
 ViewList[]=html
 ViewName[html]=html
 
+[Banner]
+Name=Banner
+NumberOfValidItems=1
+NumberOfArchivedItems=0
+ManualAddingOfItems=enabled
+CustomAttributes[]
+CustomAttributes[]=uri
+CustomAttributeTypes[uri]=Url del link
+ViewList[]
+ViewList[]=banner_uri
+ViewName[]
+ViewName[banner_uri]=Banner
 
-*/
+[ImmagineDimensioneOriginale]
+Name=Singola Immagine a dimensione originale
+NumberOfValidItems=1
+NumberOfArchivedItems=0
+ManualAddingOfItems=enabled
+ViewList[]
+ViewList[]=single_original_image
+ViewName[]
+ViewName[single_original_image]=L'immagine visualizzata sarà in formato orginale
 
-?>
+
+*/?>
