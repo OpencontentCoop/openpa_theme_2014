@@ -13,13 +13,13 @@
 
 {if $openpa.content_attachment.children_count}
   {foreach $openpa.content_attachment.children as $item}    
-    <div class="alert alert-success">
+    <div class="well">
       {if $item|has_attribute( 'file' )}        
-        <a class="btn btn-success pull-right" href={concat("content/download/",$item|attribute( 'file' ).contentobject_id,"/",$item|attribute( 'file' ).id,"/file/",$item|attribute( 'file' ).content.original_filename)|ezurl} title="Scarica il file {$item|attribute( 'file' ).content.original_filename|wash( xhtml )}">
+        <a class="btn btn-info pull-left m_right_20" href={concat("content/download/",$item|attribute( 'file' ).contentobject_id,"/",$item|attribute( 'file' ).id,"/file/",$item|attribute( 'file' ).content.original_filename)|ezurl} title="Scarica il file {$item|attribute( 'file' ).content.original_filename|wash( xhtml )}">
             <i class="fa fa-download fa-2x"></i>
         </a>
       {else}
-        <a class="btn btn-success pull-right" href="{$item.url_alias|ezurl(no)}">LEGGI</a>
+        <a class="btn btn-info pull-right" href="{$item.url_alias|ezurl(no)}">LEGGI</a>
       {/if}	  
       <p class="clearfix">
         <strong>{$item.name|wash()}</strong>		

@@ -38,8 +38,25 @@ $show_left = and( $openpa.control_menu.show_side_menu, count( $tree_menu.childre
                 </div>
                 <div class="col-md-9">
                     <ul class="list-unstyled">
+
+                        {set_defaults(hash('image_class', 'small'))}
+                        
                         {foreach $search.SearchResult as $child }
+
                             <li>{node_view_gui view=text_linked content_node=$child}</li>
+
+                            {if $child|has_attribute( 'ruolo' )}
+                                <div class="politican_rule">
+                                    {$child.data_map.ruolo.content|wash()}
+                                </div>
+                            {/if}
+
+                            {if $child|has_attribute( 'image' )}
+                                <div class="politican_image_line">
+                                    {attribute_view_gui attribute=$child|attribute( 'image' ) href=false() image_class=$image_class css_class="media-object"}
+                                </div>
+                            {/if}
+
                         {/foreach}
                     </ul>
                 </div>

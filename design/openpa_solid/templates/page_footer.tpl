@@ -1,5 +1,18 @@
-<div id="footer">
+    {if and( $ui_context|ne( 'edit' ), $ui_context|ne( 'browse' ) )}    
+      {if and( $current_node_id|ne(2), $pagedata.class_identifier|ne('frontpage'), $pagedata.class_identifier|ne('') ) }
+        <div id="valuation-container">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                {include name=valuation node_id=$current_node_id uri='design:openpa/valuation.tpl'}
+              </div>
+            </div>
+          </div>
+        </div>  
+      {/if}
+    {/if}  
 
+<div id="footer">
     {if and( $ui_context|ne( 'edit' ), $ui_context|ne( 'browse' ), $pagedata.is_login_page|not() )}
         <div class="footer-data container">
             <div class="row">
