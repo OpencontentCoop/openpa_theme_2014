@@ -1,6 +1,6 @@
 <div class="panel panel-info">
     <div class="panel-body">
-        {if $global_layout}
+        {if is_set($global_layout.object)}
             {if or( $global_layout.object.can_edit, $global_layout.object.can_remove )}
 
                 {if $global_layout.parent_node_id|ne( $node.node_id )}
