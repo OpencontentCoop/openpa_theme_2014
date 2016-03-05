@@ -8,20 +8,10 @@
         <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">{$node.name|openpa_shorten(60)|wash()}</a>
       </h4>
 
-        {if $node|has_abstract()}
-            {def $text = $node|abstract()}
+      <div class="abstract">
+        {$node|abstract()|openpa_shorten(270)}
+      </div>
 
-            {if $text|trim()|begins_with( '<')}
-                {$text}
-            {else}
-                <p>{$text}</p>
-            {/if}
-            {undef $text}
-        {/if}
-
-{*      <p class="abstract">
-        {$node|abstract()}
-      </p>*}
       <p class="link">
         <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">Leggi</a>
       </p>

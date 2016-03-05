@@ -11,20 +11,9 @@
 
       <p class="f_size_medium m_bottom_10 ">{$node.object.published||l10n(date)}</p>
 
-        {if $node|has_abstract()}
-            {def $text = $node|abstract()}
-
-            {if $text|trim()|begins_with( '<')}
-                {$text}
-            {else}
-                {$text}
-            {/if}
-            {undef $text}
-        {/if}
-
-{*      <p class="abstract">
+      <div class="abstract">
         {$node|abstract()|openpa_shorten(270)}
-      </p>*}
+      </div>
 
       {if or( count($openpa.content_related.info)|gt(0), $openpa.content_gallery.has_images, $node|has_attribute( 'file' ) )}
         <ul class="fa-ul panel-story">

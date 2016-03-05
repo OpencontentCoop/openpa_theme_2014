@@ -48,3 +48,9 @@
     {/if}
 
 </div>
+
+{if $openpa.content_date.show_date}
+  <div class="row"><div class="col-md-12">
+    <p class="pull-right">{include uri=$openpa.content_date.template}</p>
+  </div></div>
+{/if}

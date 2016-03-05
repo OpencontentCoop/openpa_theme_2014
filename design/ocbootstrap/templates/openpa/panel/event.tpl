@@ -34,20 +34,10 @@
             {attribute_view_gui attribute=$node.data_map.comune}
           {/if}
 
-        {if $node|has_abstract()}
-            {def $text = $node|abstract()}
+      <div class="abstract">
+        {$node|abstract()|openpa_shorten(270)}
+      </div>
 
-            {if $text|trim()|begins_with( '<')}
-                {$text}
-            {else}
-                <p>{$text}</p>
-            {/if}
-            {undef $text}
-        {/if}
-
-{*          <p class="abstract">
-            {$node|abstract()}
-          </p>*}
       {if is_set($is_program)|not()}
 		</div>
       </div>
