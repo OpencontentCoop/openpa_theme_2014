@@ -30,17 +30,11 @@
 	{if $objects_count|lt(100)}
 
 		<div class="oggetti-correlati oggetti-inv-correlati{if $objects|count()|not()} nocontent{/if}">
-			<div class="border-header border-box box-trans-blue box-allegati-header">
-				<div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
-				<div class="border-ml"><div class="border-mr"><div class="border-mc">
-				<div class="border-content">
-					<h2>{$title}</h2>
-				</div>
-				</div></div></div>
-			</div>
-			<div class="border-body border-box box-violet box-allegati-content">
-				<div class="border-ml"><div class="border-mr"><div class="border-mc">
-				<div class="border-content">
+
+			<h2>{$title}</h2>
+			<div class="widget">
+				<div class="widget_content">
+
 		        {foreach $objects as $object}
 				  {if $object.can_read}
 					{if $style|eq('col-even')}{set $style='col-odd'}{else}{set $style='col-even'}{/if}
@@ -74,7 +68,6 @@
 								    {/if}
 							{elseif $classe|eq('struttura')}
                                 {set $my_node=fetch( 'content', 'node', hash( 'node_id', $object.data_map.tipo_struttura.content.relation_list[0].node_id) )}
-								   <img class="image-line"  src={concat('icons/crystal/64x64/mimetypes/',$my_node.name,'.png')|ezimage()} alt="{$my_node.name|wash()}" title="{$my_node.name|wash()}" />
 								   <a href={$object.url_alias|ezurl()}>{$my_node.name|wash()} "{$object.name}"</a>
 							{else}
 								{if is_set($href)}
@@ -82,7 +75,7 @@
 										{$object.name}
 									{/if}
 								{else}
-									{node_view_gui content_node=$object.main_node view='simplified_line'}
+									{node_view_gui content_node=$object.main_node view='line'}
 								{/if}
 							{/if}
 
@@ -91,8 +84,6 @@
 				  {/if}
                 {/foreach}
 				</div>
-				</div></div></div>
-				<div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 			</div>
 		</div>
 

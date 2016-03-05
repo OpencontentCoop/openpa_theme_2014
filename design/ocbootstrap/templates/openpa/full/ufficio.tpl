@@ -23,22 +23,25 @@
     <div class="content-main{if and( $openpa.control_menu.show_extra_menu|not(), $show_left|not() )} wide{elseif and( $show_left, $openpa.control_menu.show_extra_menu )} full-stack{/if}">
 
         {include uri=$openpa.content_main.template}
+        
+        {include struttura=$node uri='design:openpa/full/parts/struttura_responsabile.tpl'}    
+        
+        {include uri=$openpa.content_contacts.template}        
+        
+        {include struttura=$node uri='design:openpa/full/parts/struttura_personale.tpl'}    
 
         {include uri=$openpa.content_detail.template}
-
-        {*OGGETTI INVERSAMENTE CORRELATI - COME MEMBRO DI UN ORGANO POLITICO *}
-        {include name=reverse_related_objects_specific_class_and_attribute
-                node=$node
-                classe='organo_politico'
-                attrib='membri'
-                title="Membro di:"
-                uri='design:parts/reverse_related_objects_specific_class_and_attribute.tpl'}
-
-
-        {include uri=$openpa.content_attachment.template}
-
+        
         {include uri=$openpa.content_infocollection.template}
-
+        
+        <h3><i class="fa fa-sitemap"></i> Posizione nell'organigramma</h3>        
+        <ul class="org-chart">
+          <li>
+            <div class="vcard">{$node.name|wash()}</div>
+            {include node=$node title=false() title=false() icon=false() uri='design:parts/articolazioni_interne.tpl'}
+          </li>
+        </ul>
+        
         {include uri=$openpa.control_children.template}
 
     </div>
@@ -48,3 +51,9 @@
     {/if}
 
 </div>
+
+{if $openpa.content_date.show_date}
+  <div class="row"><div class="col-md-12">
+    <p class="pull-right">{include uri=$openpa.content_date.template}</p>
+  </div></div>
+{/if}

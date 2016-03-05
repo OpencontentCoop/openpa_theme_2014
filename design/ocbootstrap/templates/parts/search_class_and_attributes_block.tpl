@@ -218,13 +218,13 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                     {if $attribute.identifier|eq('data_archiviazione')|not()}
                         <fieldset>
                             <legend>{$attribute.name}:</legend>
-                            <div class="form-group">
-                                <label for="from">Dalla data: <small class="no-js-show"> (GG-MM-AAAA)</small></label>
-                                <input type="text" class="form-control  from_picker" name="from_attributes[{$filter_string}]" title="Dalla data" value="{if is_set($from_attributes[$filter_string])}{$from_attributes[$filter_string]}{/if}" />
+                            <div class="col-xs-6 form-group">
+                                <label for="attr-{$attribute}-from">Dalla data: </label>
+                                <input id="attr-{$attribute}-from" type="text" class="form-control  from_picker" placeholder="GG-MM-AAAA" name="from_attributes[{$filter_string}]" title="Dalla data" value="{if is_set($from_attributes[$filter_string])}{$from_attributes[$filter_string]}{/if}" />
                             </div>
-                            <div class="form-group">
-                                <label for="to">Alla data: <small class="no-js-show"> (GG-MM-AAAA)</small></label>
-                                <input class="form-control to_picker" type="text" name="to_attributes[{$filter_string}]" title="Alla data" value="{if is_set($to_attributes[$filter_string])}{$to_attributes[$filter_string]}{/if}" />
+                            <div class="col-xs-6 form-group">
+                                <label for="attr-{$attribute}-to">Alla data: </label>
+                                <input id="attr-{$attribute}-to" class="form-control to_picker" type="text" placeholder="GG-MM-AAAA" name="to_attributes[{$filter_string}]" title="Alla data" value="{if is_set($to_attributes[$filter_string])}{$to_attributes[$filter_string]}{/if}" />
                             </div>
                         </fieldset>
                     {/if}
@@ -256,13 +256,13 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
 
             <fieldset>
                 <legend>Data di pubblicazione:</legend>
-                <div class="form-group">
-                    <label for="from">Dalla data: <small class="no-js-show"> (GG-MM-AAAA)</small></label>
-                    <input type="text" class="form-control from_picker" name="from" title="Dalla data" value="{if $from}{$from}{/if}" />
+                <div class="col-xs-6  form-group">
+                    <label for="from">Dalla data: </label>
+                    <input type="text" class="form-control from_picker" placeholder="GG-MM-AAAA" name="from" title="Dalla data" value="{if $from}{$from}{/if}" />
                 </div>
-                <div class="form-group">
-                    <label for="to">Alla data: <small class="no-js-show"> (GG-MM-AAAA)</small></label>
-                    <input class="form-control to_picker" type="text" name="to" title="Alla data" value="{if $to}{$to}{/if}" />
+                <div class="col-xs-6  form-group">
+                    <label for="to">Alla data: </label>
+                    <input class="form-control to_picker" placeholder="GG-MM-AAAA" type="text" name="to" title="Alla data" value="{if $to}{$to}{/if}" />
                 </div>
             </fieldset>
 
@@ -279,16 +279,15 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                     {set $subtreearray = array( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) )}
                 {/if}
                 {def $filters_hash = hash( 'query', $query,
-                'class_id', array( $class.id ),
-                'limit', 1,
-                'subtree_array', $subtreearray,
-                'sort_by', hash( 'score', 'desc' ),
-                'facet', $facets,
-                'filter', $filters_parameters
-                )
-                $filters_search = fetch( ezfind, search, $filters_hash )
-                $filters_search_extras = $filters_search['SearchExtras']
-                }
+                                            'class_id', array( $class.id ),
+                                            'limit', 1,
+                                            'subtree_array', $subtreearray,
+                                            'sort_by', hash( 'score', 'desc' ),
+                                            'facet', $facets,
+                                            'filter', $filters_parameters
+                                            )
+                    $filters_search = fetch( ezfind, search, $filters_hash )
+                    $filters_search_extras = $filters_search['SearchExtras']}
 
                 {def $nameList = array()}
 
@@ -304,7 +303,7 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                     {if $filters_search_extras.facet_fields.$key.nameList|count()}
 
                         {set $do = false()}
-                        {foreach $filters_search_extras.facet_fields.$key.nameList as $key2 => $facetName}
+                        {foreach $filters_search_extras.facet_fields[$key].nameList as $key2 => $facetName}
                             {if ne( $key2, '' )}
                                 {set $do = true()}
                             {/if}
@@ -312,6 +311,7 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                         {/foreach}
 
                         {if $do}
+
                             <fieldset>
                                 <legend>{$facet['name']}</legend>
 

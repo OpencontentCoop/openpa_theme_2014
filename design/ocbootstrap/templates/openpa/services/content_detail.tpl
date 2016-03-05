@@ -16,3 +16,5 @@
 {/if}
 
 {include uri=$openpa.content_attachment.template}
+
+{include uri=$openpa.content_gallery.template}

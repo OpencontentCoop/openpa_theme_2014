@@ -60,5 +60,6 @@ IdentificatoriMenu_trasparenza[]=pagina_trasparenza
 
 SideMenuContextRootClasses[]
 SideMenuContextRootClasses[]=trasparenza
+SideMenuContextRootClasses[]=area_tematica
 
 */ ?>
