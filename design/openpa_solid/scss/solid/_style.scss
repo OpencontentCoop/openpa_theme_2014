@@ -14,14 +14,20 @@
     @extend .col-md-12;
   }
   &.full-stack {
-    @extend .col-md-6;
+    @extend .col-md-5;
   }
 }
 
 .content-related{
-  @extend .col-md-3;
+  @extend .col-md-4;
   ul{
     margin-bottom: 0;
+  }
+  h2 {
+    border-top-radius: $border-radius-base;
+    font-size: 1.3em;
+    padding: 10px 15px;
+    margin: 0;
   }
 }
 
@@ -75,10 +81,21 @@ blockquote{
 
 legend{font-size: 1em}
 
-.content-view-children .media {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+
+.content-view-children  {
+  margin: 20px 0; 
+  padding-top:20px;
+ .media {
+    padding: 10px;
+    @include border-radius(5px);
+
+    img {
+      border-radius: $border-radius-base;
+    }
+  }
 }
+
+
 
 .figure{
     @extend .text-center;
@@ -167,14 +184,31 @@ legend{font-size: 1em}
 }
 
 .content-main{
-  font-size: floor(($font-size-base * 1.15));
-  line-height: 1.4;
+  font-size: floor(($font-size-base * 1));
+  line-height: floor(($line-height-base * 1.4));
+
+  h1 {
+    font-size: floor(($font-size-base * 1.8));
+    padding: 10px;
+    @include border-radius(10px);
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: floor(($font-size-base * 1.6));
+    padding: 0.5em;
+
+  }
+  h3 {
+    font-size: floor(($font-size-base * 1.4));
+    &.widget_title {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .abstract {
   @extend .clearfix;
   margin-bottom: $line-height-computed;
-  font-weight: 200;
   .image {
     &.pull-left {
       margin: 0 1em .5em 0;
@@ -251,4 +285,43 @@ legend{font-size: 1em}
 
 div.embed {
   text-align: center;
+}
+
+/* ----------- BOX VALUTATION --------------*/
+
+#valuation-container {
+  margin-top: 20px;
+  background-color: #fff;
+  
+  .well.valuation {
+    border: 0;
+    background: transparent;
+
+    h4 {
+      i {
+        margin-right: 1em;
+        border-radius: 1em;
+        padding: 0.5em;
+
+      }
+    }
+
+    label.control-label {
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    .utilita  {
+      padding-right:0.5em;
+      display: inline;
+    }
+
+    .captcha {
+      p {
+        span {
+          font-size: 0.7em;
+        }
+      }
+    }
+
+  }
 }

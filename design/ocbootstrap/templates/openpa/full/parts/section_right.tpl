@@ -1,6 +1,9 @@
 <div class="content-related">
 
 
+    {* TODO inserire blocco di ricerca nela caso di view filters *}
+    {* {if $openpa.control_children.current_view|eq('filters')}{/if} *}
+    
     {* BLOCCO DI RICERCA
         compare solo nei folder e negli oggetti con padre folder
         qualora il campo 'engine' sia valorizzato la ricerca viene estesa a tutto il database *}
@@ -38,7 +41,7 @@
 
 
     {if $openpa.content_facets.has_data}
-        <h2><i class="fa fa-archive"></i> Riferimenti</h2>
+        <h2><i class="fa fa-archive"></i> Riferibili a {$node.name|wash()}</h2>
         <div class="widget">
             <div class="widget_content">
                 {foreach $openpa.content_facets.items as $item}
@@ -66,11 +69,8 @@
         {/if}
     {/if}
 
-    {if $openpa.content_globalinfo.has_content}
-        {include uri='design:parts/websitetoolbar/openpa_edit_globallayout.tpl' global_layout=$openpa.content_globalinfo.object context_node=$node}
-        {attribute_view_gui attribute=$openpa.content_globalinfo.object.data_map.page}
-    {else}
-        {include uri='design:parts/websitetoolbar/openpa_edit_globallayout.tpl' global_layout=null() context_node=$node}
+    {if $openpa.content_globalinfo.has_content}        
+        {attribute_view_gui attribute=$openpa.content_globalinfo.object.data_map.page}    
     {/if}
 
     {if count($openpa.content_related.info)|gt(0)}
@@ -80,8 +80,7 @@
                 {foreach $openpa.content_related.info as $class_name => $infos}
                     <ul class="list-unstyled fa-ul">
                         {foreach $infos as $info}
-                            <li>
-                                <i class="fa-li fa {$info|fa_class_icon( 'fa-file' )}"></i>
+                            <li>                                
                                 {node_view_gui content_node=$info view=text_linked}
                             </li>
                         {/foreach}
@@ -90,5 +89,12 @@
             </div>
         </div>
     {/if}
+    
+    {*OGGETTI INVERSAMENTE CORRELATI*}
+    {include name = reverse_related_objects 
+             node = $node 
+             title = 'Riferimenti'
+             uri = 'design:parts/reverse_related_objects.tpl'}
+
 
 </div>

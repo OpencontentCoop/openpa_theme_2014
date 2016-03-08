@@ -131,18 +131,20 @@
     $attributi_da_escludere_dalla_ricerca  = openpaini( 'Attributi', 'EscludiDaRicerca', array())
     $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
 
-
-{if and( is_array($subtreearray), count($subtreearray)|eq(1), $subtreearray|contains(ezini( 'NodeSettings', 'RootNode', 'content.ini' )) )}
-    <h2>Cerca</h2>
-{else}
-    {if $folder|ne( false() )}
-        <h2>Cerca in {$folder}</h2>
-    {else}
-        <h2>Cerca</h2>
-    {/if}
-{/if}
-
 <div class="widget">
+  
+  <div class="widget_title">
+    {if and( is_array($subtreearray), count($subtreearray)|eq(1), $subtreearray|contains(ezini( 'NodeSettings', 'RootNode', 'content.ini' )) )}
+        <h3>Cerca</h3>
+    {else}
+        {if $folder|ne( false() )}
+            <h3>Cerca in {$folder}</h3>
+        {else}
+            <h3>Cerca</h3>
+        {/if}
+    {/if}  
+  </div>
+  
     <div class="widget_content">
         <form id="search-form-box" action="{'content/advancedsearch'|ezurl('no')}" method="get">
             <fieldset>
@@ -274,7 +276,7 @@
                             {/case}
 
                             {case in=array('ezobjectrelationlist')}
-                                {set $facets = $facets|append( hash( 'field', solr_meta_subfield($attribute.identifier,'main_node_id'), 'name', $attribute.name, 'limit', 10 ) )}
+                                {set $facets = $facets|append( hash( 'field', solr_field($attribute.identifier,'string'), 'name', $attribute.name, 'limit', 100, 'sort', 'alpha' ) )}
                             {/case}
 
                             {case in=array('ezdate', 'ezdatetime')}
@@ -395,47 +397,39 @@
                         {/foreach}
                         {set $uriSuffix = concat( $uriSuffix, "&Sort=",$Sort,"&Order=",$Order,"&from=",$from,"&to=",$to )}
 
-                        {foreach $facets as $key => $facet}
-                            {if $filters_search_extras.facet_fields.$key.nameList|count()}
+                        {foreach $facets as $key => $facet}                        
+                            {if $filters_search_extras.facet_fields.$key.nameList|count()|gt(1)}
                                 <fieldset>
                                     <legend>{$facet['name']}</legend>
 
                                     {if count($filters_search_extras.facet_fields.$key.nameList)|gt(5)}
-                                        <div class="form-group">
-                                            <select class="form-control" name="filter[]">
-                                                <option value=""> - Seleziona</option>
-                                                {foreach $filters_search_extras.facet_fields.$key.nameList as $key2 => $facetName}
-                                                    {if ne( $key2, '' )}
-                                                        {def $filterName = $filters_search_extras.facet_fields.$key.queryLimit[$key2]|explode(':')
-                                                        $filterValue = getFilterParameter( $filterName[0] )}
-                                                        <option {if $filterValue|contains( $facetName )} selected="selected" {/if}
-                                                                value='{$filters_search_extras.facet_fields.$key.queryLimit[$key2]}'>{if fetch( 'content', 'node', hash( 'node_id', $facetName ))}{fetch( 'content', 'node', hash( 'node_id', $facetName )).name|wash()}{else}{$facetName}{/if}
-                                                            ({$filters_search_extras.facet_fields.$key.countList[$key2]}
-                                                            )
-                                                        </option>
-                                                        {undef $filterName $filterValue}
-                                                    {/if}
-                                                {/foreach}
-                                            </select>
-                                        </div>
-                                    {else}
+                                <div class="form-group">
+                                    <select class="form-control" name="filter[]">
+                                        <option value=""> - Seleziona</option>
                                         {foreach $filters_search_extras.facet_fields.$key.nameList as $key2 => $facetName}
                                             {if ne( $key2, '' )}
                                                 {def $filterName = $filters_search_extras.facet_fields.$key.queryLimit[$key2]|explode(':')
                                                 $filterValue = getFilterParameter( $filterName[0] )}
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input {if $filterValue|contains( $facetName )} checked="checked" {/if}
-                                                                class="inline" type="checkbox" name="filter[]"
-                                                                value='{$filters_search_extras.facet_fields.$key.queryLimit[$key2]}'/> {if fetch( 'content', 'node', hash( 'node_id', $facetName ))}{fetch( 'content', 'node', hash( 'node_id', $facetName )).name|wash()}{else}{$facetName}{/if}
-                                                        ({$filters_search_extras.facet_fields.$key.countList[$key2]}
-                                                        )
-                                                    </label>
-                                                </div>
+                                                <option {if or( $filterValue|contains( $facetName ), $filterValue|contains( concat('"',$facetName,'"' ) ))} selected="selected" {/if} value="{$filters_search_extras.facet_fields.$key.queryLimit[$key2]|addQuoteOnFilter()|wash()}">{$facetName} ({$filters_search_extras.facet_fields.$key.countList[$key2]})</option>
                                                 {undef $filterName $filterValue}
                                             {/if}
                                         {/foreach}
+                                    </select>
+                                </div>
+                            {else}
+                                {foreach $filters_search_extras.facet_fields.$key.nameList as $key2 => $facetName}
+                                    {if ne( $key2, '' )}
+                                        {def $filterName = $filters_search_extras.facet_fields.$key.queryLimit[$key2]|explode(':')
+                                        $filterValue = getFilterParameter( $filterName[0] )}
+                                        <div class="checkbox">
+                                            <label>
+                                                <input {if or( $filterValue|contains( $facetName ), $filterValue|contains( concat('"',$facetName,'"' ) ))} checked="checked" {/if} class="inline" type="checkbox" name="filter[]" value="{$filters_search_extras.facet_fields.$key.queryLimit[$key2]|addQuoteOnFilter()|wash()}" /> {$facetName} ({$filters_search_extras.facet_fields.$key.countList[$key2]})
+                                            </label>
+                                        </div>
+                                        {undef $filterName $filterValue}
                                     {/if}
+                                {/foreach}
+                            {/if}
                                 </fieldset>
                             {else}
                                 {def $filterValue = getFilterParameter( $facet.field )}

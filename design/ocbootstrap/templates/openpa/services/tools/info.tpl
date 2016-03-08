@@ -36,7 +36,7 @@
   {def $sezione = fetch( 'section', 'object', hash( 'section_id', $node.object.section_id ))}
   <dt>Sezione: </dt>
   <dd>
-    {if $node.can_edit}
+    {*if $node.can_edit}
       <form action={concat('content/edit/', $node.contentobject_id)|ezurl()} method="post">
       {def $sections=$node.object.allowed_assign_section_list $currentSectionName='unknown'}
       {foreach $sections as $sectionItem }
@@ -58,9 +58,9 @@
       <input type="hidden" value="{$node.url_alias}" name="RedirectRelativeURI">
       <input type="hidden" value="1" name="ChangeSectionOnly">
       </form>
-    {else}
+    {else*}
       {$sezione.name|wash}
-    {/if}
+    {*/if*}
   </dd>
 
   <dt>Tipo: </dt>
@@ -121,6 +121,59 @@
       {else*}
         {foreach $states as $allowed_assign_state_info}{foreach $allowed_assign_state_info.states as $state}{if $node.object.state_id_array|contains($state.id)}{$allowed_assign_state_info.group.current_translation.name|wash()}/{$state.current_translation.name|wash}{/if}{/foreach}{delimiter}, {/delimiter}{/foreach}
       {*/if*}
+    </dd>
+  {/if}
+  
+  {if $openpa.content_globalinfo.has_content}
+    <dt>Global info</dt>
+    <dd>
+      {if $openpa.content_globalinfo.object.parent_node_id|ne( $node.node_id )}
+              <small>
+                  Ereditato da <a href={$openpa.content_globalinfo.object.parent.url_alias|ezurl()}>{$openpa.content_globalinfo.object.parent.name|wash()}</a>
+              </small>
+          {if fetch( 'content', 'access', hash( 'access', 'create', 'contentclass_id', 'global_layout', 'contentobject', $node ) )}
+              <form method="post" action="{"content/action"|ezurl(no)}" class="form inline" style="display:inline">
+                  <input type="hidden" name="HasMainAssignment" value="1"/>
+                  <input type="hidden" name="ContentObjectID" value="{$node.object.id}"/>
+                  <input type="hidden" name="NodeID" value="{$node.node_id}"/>
+                  <input type="hidden" name="ContentNodeID" value="{$node.node_id}"/>
+                  <input type="hidden" name="ContentLanguageCode" value="ita-IT"/>
+                  <input type="hidden" name="ContentObjectLanguageCode" value="ita-IT"/>
+                  <input type="hidden" value="global_layout" name="ClassIdentifier"/>
+                  <input type="submit" class="btn btn-xs btn-default" value="Crea un box dedicato" name="NewButton"/>
+                  <input type="hidden" name="RedirectIfDiscarded" value="{$node.url_alias}"/>
+                  <input type="hidden" name="RedirectURIAfterPublish" value="{$node.url_alias}"/>
+              </form>
+          {/if}              
+        {/if}
+        <form action="{"/content/action"|ezurl(no)}" method="post" class="form inline" style="display:inline">
+            {if $openpa.content_globalinfo.object.object.can_edit}
+                <input type="submit" name="EditButton" value="Modifica box" class="btn btn-xs btn-default" title="Modifica {$openpa.content_globalinfo.object.name|wash()}"/>
+                <input type="hidden" name="ContentObjectLanguageCode" value="{$openpa.content_globalinfo.object.object.current_language}"/>
+            {/if}
+            {if $openpa.content_globalinfo.object.object.can_remove}
+                <input type="submit" class="btn btn-xs btn-default" name="ActionRemove" value="Elimina box" alt="Elimina {$openpa.content_globalinfo.object.name|wash()}" title="Elimina {$openpa.content_globalinfo.object.name|wash()}"/>
+            {/if}
+            <input type="hidden" name="ContentObjectID" value="{$openpa.content_globalinfo.object.object.id}"/>
+            <input type="hidden" name="NodeID" value="{$openpa.content_globalinfo.object.node_id}"/>
+            <input type="hidden" name="ContentNodeID" value="{$openpa.content_globalinfo.object.node_id}"/>
+            <input type="hidden" name="RedirectIfDiscarded" value="{$node.url_alias}"/>
+            <input type="hidden" name="RedirectURIAfterPublish" value="{$node.url_alias}"/>
+        </form>
+    </dd>    
+  {elseif and( $openpa.content_globalinfo.has_content|not(), $node.can_create)}
+    <dt>Global info</dt>
+    <dd>
+      <form method="post" action="{"content/action"|ezurl(no)}"class="form inline" style="display:inline">
+          <input type="hidden" name="HasMainAssignment" value="1"/>
+          <input type="hidden" name="ContentObjectID" value="{$node.object.id}"/>
+          <input type="hidden" name="NodeID" value="{$node.node_id}"/>
+          <input type="hidden" name="ContentNodeID" value="{$node.node_id}"/>
+          <input type="hidden" name="ContentLanguageCode" value="ita-IT"/>
+          <input type="hidden" name="ContentObjectLanguageCode" value="ita-IT"/>
+          <input type="hidden" value="global_layout" name="ClassIdentifier"/>
+          <input type="submit" class="btn btn-xs btn-default" value="Crea un box dedicato" name="NewButton"/>
+      </form>
     </dd>
   {/if}
 

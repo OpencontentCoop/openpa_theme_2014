@@ -6148,11 +6148,32 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify {
   border-radius: 4px;
 }
 /* line 43, ../scss/_yamm.scss */
+.yamm .yamm-content ul.no_sub_level li {
+  width: 50%;
+  float: left;
+}
+/* line 47, ../scss/_yamm.scss */
+.yamm .yamm-content ul.no_sub_level li:nth-child(2n+1) {
+  clear: both;
+}
+/* line 56, ../scss/_yamm.scss */
 .yamm .dropdown.yamm-fw .dropdown-menu {
   left: 0;
   right: 0;
 }
 
+@media (max-width: 700px) {
+  /* line 70, ../scss/_yamm.scss */
+  .yamm .yamm-content {
+    padding: 20px 30px;
+  }
+  /* line 76, ../scss/_yamm.scss */
+  .yamm .yamm-content ul.no_sub_level li {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
 /* menu color setting */
 /* -----------------------------------
 
@@ -8193,6 +8214,122 @@ h3.widget_title a {
   min-height: 350px;
 }
 
+/* line 105, ../scss/solid/_carousel.scss */
+.content-related .owl-item .item .carousel-image {
+  background-position: center center;
+  min-height: 300px;
+}
+
+/* line 4, ../scss/solid/_accordion.scss */
+.owl-controls .owl-buttons .owl-next, .owl-controls .owl-buttons .owl-prev {
+  margin: 0 0 0 3px;
+  border-radius: 4px;
+  background: #777777;
+  color: #fff;
+}
+/* line 9, ../scss/solid/_accordion.scss */
+.owl-controls .owl-buttons .owl-next:hover, .owl-controls .owl-buttons .owl-prev:hover {
+  background: #555555;
+  color: #fff;
+}
+
+/* line 18, ../scss/solid/_accordion.scss */
+.carousel-top-control.title-placeholder {
+  padding-top: 42px;
+}
+/* line 22, ../scss/solid/_accordion.scss */
+.carousel-top-control .owl-controls .owl-buttons {
+  position: absolute;
+  right: 0;
+  top: -32px;
+}
+/* line 28, ../scss/solid/_accordion.scss */
+.carousel-top-control .caption {
+  padding-right: 10px;
+}
+
+/* line 33, ../scss/solid/_accordion.scss */
+.carousel-caption {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 20px 30px;
+  right: 0;
+  text-align: left;
+  width: 100%;
+}
+/* line 41, ../scss/solid/_accordion.scss */
+.carousel-caption h3 {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  padding: 12px;
+  line-height: 1em;
+  color: #fff;
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+/* line 50, ../scss/solid/_accordion.scss */
+.carousel-caption h3 a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 56, ../scss/solid/_accordion.scss */
+.carousel-caption p {
+  background: #555555;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+/* line 67, ../scss/solid/_accordion.scss */
+.carousel-both-control .carousel-caption {
+  padding-bottom: 30px;
+}
+/* line 70, ../scss/solid/_accordion.scss */
+.carousel-both-control .owl-pagination {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 75, ../scss/solid/_accordion.scss */
+.carousel-both-control .owl-pagination .owl-page span {
+  background: #ccc !important;
+}
+/* line 79, ../scss/solid/_accordion.scss */
+.carousel-both-control .owl-pagination .owl-page.active span {
+  background: #555555;
+}
+
+/* line 87, ../scss/solid/_accordion.scss */
+.owl-theme .owl-controls .owl-page span {
+  opacity: 1;
+}
+
+/* line 89, ../scss/solid/_accordion.scss */
+.panels-container .owl-carousel .owl-item {
+  padding: 5px;
+}
+
+/* line 94, ../scss/solid/_accordion.scss */
+.owl-item .item .carousel-image {
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 99, ../scss/solid/_accordion.scss */
+.owl-item .item img.img-responsive {
+  min-height: 350px;
+}
+
+/* line 105, ../scss/solid/_accordion.scss */
+.content-related .owl-item .item .carousel-image {
+  background-position: center center;
+  min-height: 300px;
+}
+
 /* line 2, ../scss/solid/_organigramma.scss */
 ul.org-chart li,
 ul.org-chart ul li {
@@ -8225,7 +8362,7 @@ ul.org-chart ul li {
 
 /* line 27, ../scss/solid/_organigramma.scss */
 ul.org-chart li div.vcard {
-  padding: 15px;
+  padding: 5px;
   margin: 0;
   min-height: 50px;
   background: #fff;
@@ -8676,15 +8813,15 @@ div.embed {
   font-size: 0.7em;
 }
 
-/* line 147, ../scss/solid/_colors_mixin.scss */
+/* line 173, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #header .navtools {
   background: #005463;
 }
-/* line 149, ../scss/solid/_colors_mixin.scss */
+/* line 175, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #header .navtools ul li a {
   color: #ffffff;
 }
-/* line 154, ../scss/solid/_colors_mixin.scss */
+/* line 180, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content {
   background: #fff;
   -moz-border-radius: 10px;
@@ -8692,7 +8829,57 @@ body.no-main-style #content {
   border-radius: 10px;
   /* TAB widget*/
 }
-/* line 158, ../scss/solid/_colors_mixin.scss */
+/* line 187, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .widget_tabs .tab-content,
+body.no-main-style #content .widget.events .tab-content,
+body.no-main-style #content .panels-container .events.media .tab-content,
+.panels-container body.no-main-style #content .events.media .tab-content,
+body.no-main-style #content .leaflet-popup-content .events.media .tab-content,
+.leaflet-popup-content body.no-main-style #content .events.media .tab-content {
+  border-color: #005463;
+}
+/* line 191, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .widget_tabs h2,
+body.no-main-style #content .widget.events h2,
+body.no-main-style #content .panels-container .events.media h2,
+.panels-container body.no-main-style #content .events.media h2,
+body.no-main-style #content .leaflet-popup-content .events.media h2,
+.leaflet-popup-content body.no-main-style #content .events.media h2 {
+  background: #005463;
+  color: #ffffff;
+}
+/* line 198, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .widget_tabs .nav-tabs li a,
+body.no-main-style #content .widget.events .nav-tabs li a,
+body.no-main-style #content .panels-container .events.media .nav-tabs li a,
+.panels-container body.no-main-style #content .events.media .nav-tabs li a,
+body.no-main-style #content .leaflet-popup-content .events.media .nav-tabs li a,
+.leaflet-popup-content body.no-main-style #content .events.media .nav-tabs li a {
+  background-color: #005463;
+  color: #ffffff;
+  opacity: 0.5;
+}
+/* line 203, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .widget_tabs .nav-tabs li a:hover,
+body.no-main-style #content .widget.events .nav-tabs li a:hover,
+body.no-main-style #content .panels-container .events.media .nav-tabs li a:hover,
+.panels-container body.no-main-style #content .events.media .nav-tabs li a:hover,
+body.no-main-style #content .leaflet-popup-content .events.media .nav-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .events.media .nav-tabs li a:hover {
+  opacity: 1;
+}
+/* line 208, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .widget_tabs .nav-tabs li.active a,
+body.no-main-style #content .widget.events .nav-tabs li.active a,
+body.no-main-style #content .panels-container .events.media .nav-tabs li.active a,
+.panels-container body.no-main-style #content .events.media .nav-tabs li.active a,
+body.no-main-style #content .leaflet-popup-content .events.media .nav-tabs li.active a,
+.leaflet-popup-content body.no-main-style #content .events.media .nav-tabs li.active a {
+  background-color: #005463;
+  color: #ffffff;
+  opacity: 1;
+}
+/* line 218, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full {
   /*a {
    color: openpa-color($palette-identifier, 'text-link');
@@ -8702,12 +8889,12 @@ body.no-main-style #content .content-view-full {
     color: openpa-color($palette-identifier, 'background-primary');
   }*/
 }
-/* line 163, ../scss/solid/_colors_mixin.scss */
+/* line 223, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full h1 {
   background-color: #ffffff;
   color: #005463;
 }
-/* line 168, ../scss/solid/_colors_mixin.scss */
+/* line 228, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full h2 {
   background-color: #005463;
   color: #ffffff;
@@ -8715,25 +8902,29 @@ body.no-main-style #content .content-view-full h2 {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 178, ../scss/solid/_colors_mixin.scss */
+/* line 238, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full .content-title h1 {
   color: #005463;
   background-color: #ffffff;
 }
-/* line 188, ../scss/solid/_colors_mixin.scss */
+/* line 248, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-view-children .media:nth-child(even) {
   background-color: #eeeeee;
 }
-/* line 192, ../scss/solid/_colors_mixin.scss */
+/* line 251, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .content-main .content-view-children .media-panel .media {
+  background-color: transparent;
+}
+/* line 255, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-detail .row:nth-child(even), body.no-main-style #content .content-main .content-detail div.split:nth-child(even) {
   background-color: #eeeeee;
 }
-/* line 197, ../scss/solid/_colors_mixin.scss */
+/* line 260, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .well .btn-info, body.no-main-style #content .content-main .fileupload-content .dropzoneHelp .btn-info, .fileupload-content body.no-main-style #content .content-main .dropzoneHelp .btn-info {
   background-color: #005463;
   border-color: #005463;
 }
-/* line 201, ../scss/solid/_colors_mixin.scss */
+/* line 264, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .well .btn-info:hover, body.no-main-style #content .content-main .fileupload-content .dropzoneHelp .btn-info:hover, .fileupload-content body.no-main-style #content .content-main .dropzoneHelp .btn-info:hover {
   background-color: #eeeeee;
   border-color: #eeeeee;
@@ -8742,20 +8933,20 @@ body.no-main-style #content .content-main .well .btn-info:hover, body.no-main-st
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-/* line 211, ../scss/solid/_colors_mixin.scss */
+/* line 274, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main table thead tr {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 223, ../scss/solid/_colors_mixin.scss */
+/* line 286, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content blockquote:before {
   color: #005463;
 }
-/* line 229, ../scss/solid/_colors_mixin.scss */
+/* line 292, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a, body.no-main-style #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.no-main-style #content .nav-section .media li a {
   color: #333333;
 }
-/* line 234, ../scss/solid/_colors_mixin.scss */
+/* line 297, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current > a, body.no-main-style #content .nav-section .leaflet-popup-content .media li.current > a, .leaflet-popup-content body.no-main-style #content .nav-section .media li.current > a, body.no-main-style #content .nav-section .widget li.current li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current li.current > a, body.no-main-style #content .nav-section .leaflet-popup-content .media li.current li.current > a, .leaflet-popup-content body.no-main-style #content .nav-section .media li.current li.current > a {
   color: #005463;
   background-color: #eeeeee;
@@ -8763,25 +8954,25 @@ body.no-main-style #content .nav-section .widget li.current > a, body.no-main-st
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 240, ../scss/solid/_colors_mixin.scss */
+/* line 303, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a, body.no-main-style #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.no-main-style #content .nav-section .media li a {
   color: #333333;
 }
-/* line 244, ../scss/solid/_colors_mixin.scss */
+/* line 307, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget_title, body.no-main-style #content .nav-section .panels-container .media .widget_title, .panels-container body.no-main-style #content .nav-section .media .widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 247, ../scss/solid/_colors_mixin.scss */
+/* line 310, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 {
   color: #ffffff !important;
 }
-/* line 251, ../scss/solid/_colors_mixin.scss */
+/* line 314, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget_title *, body.no-main-style #content .nav-section .panels-container .media .widget_title *, .panels-container body.no-main-style #content .nav-section .media .widget_title *, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title *, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title * {
   color: #ffffff;
   background-color: #005463;
 }
-/* line 257, ../scss/solid/_colors_mixin.scss */
+/* line 320, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget .row:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .widget .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .widget .row:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media .row:nth-child(odd), body.no-main-style #content .nav-section .widget .leaflet-popup-content .media .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .widget .media .row:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .media .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .media .row:nth-child(odd), body.no-main-style #content .nav-section .widget .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .widget div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media div.split:nth-child(odd), body.no-main-style #content .nav-section .widget .leaflet-popup-content .media div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .media div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .media div.split:nth-child(odd) {
   background-color: #eeeeee;
 }
@@ -8790,72 +8981,33 @@ body.no-main-style #content .nav-section .widget h3.widget_title, body.no-main-s
   background-color: #005463;
   color: #ffffff;
 }
-/* line 45, ../scss/solid/_colors_mixin.scss */
+/* line 46, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget h3.widget_title a, body.no-main-style #content .nav-section .panels-container .media h3.widget_title a, .panels-container body.no-main-style #content .nav-section .media h3.widget_title a, body.no-main-style #content .nav-section .leaflet-popup-content .media h3.widget_title a, .leaflet-popup-content body.no-main-style #content .nav-section .media h3.widget_title a {
   color: #ffffff;
 }
-/* line 49, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3, body.no-main-style #content .nav-section .widget .widget_title h3 a, body.no-main-style #content .nav-section .panels-container .media .widget_title h3 a, .panels-container body.no-main-style #content .nav-section .media .widget_title h3 a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3 a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 a {
-  color: #005463;
-}
-/* line 54, ../scss/solid/_colors_mixin.scss */
+/* line 52, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-next, .panels-container body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-next, .leaflet-popup-content body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .widget .owl-controls .owl-buttons .owl-prev, body.no-main-style #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-prev, .panels-container body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-prev, body.no-main-style #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-prev, .leaflet-popup-content body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-prev {
   background: #005463;
   color: #ffffff;
 }
-/* line 61, ../scss/solid/_colors_mixin.scss */
+/* line 59, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .carousel-caption, body.no-main-style #content .nav-section .panels-container .media .carousel-caption, .panels-container body.no-main-style #content .nav-section .media .carousel-caption, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption {
   color: #eeeeee;
 }
-/* line 63, ../scss/solid/_colors_mixin.scss */
+/* line 61, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .carousel-caption h3, body.no-main-style #content .nav-section .panels-container .media .carousel-caption h3, .panels-container body.no-main-style #content .nav-section .media .carousel-caption h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption h3 {
   background: #005463;
   color: #ffffff;
 }
-/* line 66, ../scss/solid/_colors_mixin.scss */
+/* line 64, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .carousel-caption h3 a, body.no-main-style #content .nav-section .panels-container .media .carousel-caption h3 a, .panels-container body.no-main-style #content .nav-section .media .carousel-caption h3 a, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption h3 a, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption h3 a {
   color: #ffffff;
 }
-/* line 73, ../scss/solid/_colors_mixin.scss */
+/* line 71, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .carousel-both-control .owl-pagination.active, body.no-main-style #content .nav-section .panels-container .media .carousel-both-control .owl-pagination.active, .panels-container body.no-main-style #content .nav-section .media .carousel-both-control .owl-pagination.active, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-both-control .owl-pagination.active, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-both-control .owl-pagination.active {
   background: #005463 !important;
 }
-/* line 79, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_tabs .tab-content, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .tab-content, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .tab-content, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .tab-content {
-  border-color: #005463;
-}
-/* line 86, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a,
-body.no-main-style #content .nav-section .widget .widget_tabs .events-tabs li a,
-body.no-main-style #content .nav-section .panels-container .media .widget_tabs .events-tabs li a,
-.panels-container body.no-main-style #content .nav-section .media .widget_tabs .events-tabs li a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs li a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .events-tabs li a {
-  background-color: #005463;
-  color: #ffffff;
-  opacity: 0.5;
-}
-/* line 91, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li a:hover, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a:hover, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a:hover, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a:hover, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a:hover,
-body.no-main-style #content .nav-section .widget .widget_tabs .events-tabs li a:hover,
-body.no-main-style #content .nav-section .panels-container .media .widget_tabs .events-tabs li a:hover,
-.panels-container body.no-main-style #content .nav-section .media .widget_tabs .events-tabs li a:hover,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs li a:hover,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .events-tabs li a:hover {
-  opacity: 1;
-}
-/* line 96, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li.active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li.active a,
-body.no-main-style #content .nav-section .widget .widget_tabs .events-tabs li.active a,
-body.no-main-style #content .nav-section .panels-container .media .widget_tabs .events-tabs li.active a,
-.panels-container body.no-main-style #content .nav-section .media .widget_tabs .events-tabs li.active a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs li.active a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .events-tabs li.active a {
-  background-color: #005463;
-  color: #ffffff;
-  opacity: 1;
-}
-/* line 105, ../scss/solid/_colors_mixin.scss */
+/* line 77, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .panels-container .media .tabs_nav .ui-tabs-active a, .panels-container body.no-main-style #content .nav-section .media .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .tabs_nav .ui-tabs-active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .widget .nav-tabs .ui-tabs-active a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .panels-container .media .nav-tabs .ui-tabs-active a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs .panels-container body.no-main-style #content .nav-section .media .nav-tabs .ui-tabs-active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .leaflet-popup-content .media .nav-tabs .ui-tabs-active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs .leaflet-popup-content body.no-main-style #content .nav-section .media .nav-tabs .ui-tabs-active a,
 body.no-main-style #content .nav-section .widget .widget_tabs .events-tabs .ui-tabs-active a,
 .widget_tabs body.no-main-style #content .nav-section .widget .events-tabs .ui-tabs-active a,
@@ -8880,82 +9032,257 @@ body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_t
   background: #eeeeee;
   color: #eeeeee;
 }
-/* line 116, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .events .calendar-date .month, body.no-main-style #content .nav-section .panels-container .media .events .calendar-date .month, .panels-container body.no-main-style #content .nav-section .media .events .calendar-date .month, body.no-main-style #content .nav-section .leaflet-popup-content .media .events .calendar-date .month, .leaflet-popup-content body.no-main-style #content .nav-section .media .events .calendar-date .month {
-  background: #005463;
-  color: #eeeeee;
-}
-/* line 120, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .events .calendar-date .day, body.no-main-style #content .nav-section .panels-container .media .events .calendar-date .day, .panels-container body.no-main-style #content .nav-section .media .events .calendar-date .day, body.no-main-style #content .nav-section .leaflet-popup-content .media .events .calendar-date .day, .leaflet-popup-content body.no-main-style #content .nav-section .media .events .calendar-date .day {
-  color: #005463;
+/* line 83, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .tab-content, body.no-main-style #content .nav-section .panels-container .media .widget.events .tab-content, .panels-container body.no-main-style #content .nav-section .media .widget.events .tab-content, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .tab-content, body.no-main-style #content .nav-section .widget .panels-container .events.media .tab-content, .panels-container body.no-main-style #content .nav-section .widget .events.media .tab-content, body.no-main-style #content .nav-section .panels-container .media .events.media .tab-content, .panels-container body.no-main-style #content .nav-section .media .events.media .tab-content, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .tab-content, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .tab-content {
   border-color: #005463;
 }
-/* line 127, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .panels-container .panel-label, body.no-main-style #content .nav-section .panels-container .media .panels-container .panel-label, .panels-container body.no-main-style #content .nav-section .media .panels-container .panel-label, body.no-main-style #content .nav-section .leaflet-popup-content .media .panels-container .panel-label, .leaflet-popup-content body.no-main-style #content .nav-section .media .panels-container .panel-label, body.no-main-style #content .nav-section .widget .leaflet-popup-content .panel-label, body.no-main-style #content .nav-section .panels-container .media .leaflet-popup-content .panel-label, .panels-container body.no-main-style #content .nav-section .media .leaflet-popup-content .panel-label, body.no-main-style #content .nav-section .leaflet-popup-content .media .leaflet-popup-content .panel-label, .leaflet-popup-content body.no-main-style #content .nav-section .media .leaflet-popup-content .panel-label {
+/* line 87, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .widget_title, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title {
+  background: #005463;
+}
+/* line 89, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title h3, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title h3, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title h3, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title h3 {
   background: #005463;
   color: #ffffff;
 }
-/* line 132, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .panels-container .media-panel figure, body.no-main-style #content .nav-section .panels-container .media .panels-container .media-panel figure, .panels-container body.no-main-style #content .nav-section .media .panels-container .media-panel figure, body.no-main-style #content .nav-section .leaflet-popup-content .media .panels-container .media-panel figure, .leaflet-popup-content body.no-main-style #content .nav-section .media .panels-container .media-panel figure, body.no-main-style #content .nav-section .widget .leaflet-popup-content .media-panel figure, body.no-main-style #content .nav-section .panels-container .media .leaflet-popup-content .media-panel figure, .panels-container body.no-main-style #content .nav-section .media .leaflet-popup-content .media-panel figure, body.no-main-style #content .nav-section .leaflet-popup-content .media .leaflet-popup-content .media-panel figure, .leaflet-popup-content body.no-main-style #content .nav-section .media .leaflet-popup-content .media-panel figure {
+/* line 93, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title a .fa, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title a .fa, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title a .fa, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title a .fa, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title a .fa, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title a .fa, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title a .fa {
+  color: #ffffff;
+}
+/* line 100, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .events-tabs li a, body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li a, .panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .events-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .events-tabs li a, body.no-main-style #content .nav-section .widget .panels-container .events.media .events-tabs li a, .panels-container body.no-main-style #content .nav-section .widget .events.media .events-tabs li a, body.no-main-style #content .nav-section .panels-container .media .events.media .events-tabs li a, .panels-container body.no-main-style #content .nav-section .media .events.media .events-tabs li a, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .events-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .events-tabs li a, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .events-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li a {
+  background: #005463;
+  color: #ffffff;
+  opacity: 0.5;
+}
+/* line 106, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .events-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .widget .panels-container .events.media .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .widget .events.media .events-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .events.media .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .events.media .events-tabs li.active a, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .events-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .events-tabs li.active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .events-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li.active a,
+body.no-main-style #content .nav-section .widget .widget.events .events-tabs li a:hover,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li a:hover,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .events-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .events-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .events-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .events-tabs li a:hover,
+body.no-main-style #content .nav-section .panels-container .media .events.media .events-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .media .events.media .events-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .events-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .events-tabs li a:hover,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .events-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li a:hover {
+  opacity: 1;
+}
+/* line 115, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 {
+  background: #005463;
+  color: #ffffff;
+}
+/* line 120, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .panel-label, body.no-main-style #content .nav-section .panels-container .media .panel-label, .panels-container body.no-main-style #content .nav-section .media .panel-label, body.no-main-style #content .nav-section .leaflet-popup-content .media .panel-label, .leaflet-popup-content body.no-main-style #content .nav-section .media .panel-label {
+  background: #005463;
+  color: #ffffff;
+}
+/* line 125, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .media-panel figure, body.no-main-style #content .nav-section .panels-container .media .media-panel figure, .panels-container body.no-main-style #content .nav-section .media .media-panel figure, body.no-main-style #content .nav-section .leaflet-popup-content .media .media-panel figure, .leaflet-popup-content body.no-main-style #content .nav-section .media .media-panel figure {
   border-bottom-color: #005463;
 }
-/* line 136, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .panels-container .panel-story, body.no-main-style #content .nav-section .panels-container .media .panels-container .panel-story, .panels-container body.no-main-style #content .nav-section .media .panels-container .panel-story, body.no-main-style #content .nav-section .leaflet-popup-content .media .panels-container .panel-story, .leaflet-popup-content body.no-main-style #content .nav-section .media .panels-container .panel-story, body.no-main-style #content .nav-section .widget .leaflet-popup-content .panel-story, body.no-main-style #content .nav-section .panels-container .media .leaflet-popup-content .panel-story, .panels-container body.no-main-style #content .nav-section .media .leaflet-popup-content .panel-story, body.no-main-style #content .nav-section .leaflet-popup-content .media .leaflet-popup-content .panel-story, .leaflet-popup-content body.no-main-style #content .nav-section .media .leaflet-popup-content .panel-story {
+/* line 129, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .panel-story, body.no-main-style #content .nav-section .panels-container .media .panel-story, .panels-container body.no-main-style #content .nav-section .media .panel-story, body.no-main-style #content .nav-section .leaflet-popup-content .media .panel-story, .leaflet-popup-content body.no-main-style #content .nav-section .media .panel-story {
   color: #005463;
 }
-/* line 138, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .panels-container .panel-story a, body.no-main-style #content .nav-section .panels-container .media .panels-container .panel-story a, .panels-container body.no-main-style #content .nav-section .media .panels-container .panel-story a, body.no-main-style #content .nav-section .leaflet-popup-content .media .panels-container .panel-story a, .leaflet-popup-content body.no-main-style #content .nav-section .media .panels-container .panel-story a, body.no-main-style #content .nav-section .widget .leaflet-popup-content .panel-story a, body.no-main-style #content .nav-section .panels-container .media .leaflet-popup-content .panel-story a, .panels-container body.no-main-style #content .nav-section .media .leaflet-popup-content .panel-story a, body.no-main-style #content .nav-section .leaflet-popup-content .media .leaflet-popup-content .panel-story a, .leaflet-popup-content body.no-main-style #content .nav-section .media .leaflet-popup-content .panel-story a {
+/* line 131, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .panel-story a, body.no-main-style #content .nav-section .panels-container .media .panel-story a, .panels-container body.no-main-style #content .nav-section .media .panel-story a, body.no-main-style #content .nav-section .leaflet-popup-content .media .panel-story a, .leaflet-popup-content body.no-main-style #content .nav-section .media .panel-story a {
   color: #005463;
 }
-/* line 268, ../scss/solid/_colors_mixin.scss */
+/* line 139, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs .tab-content, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .tab-content, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .tab-content, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .tab-content,
+body.no-main-style #content .nav-section .widget .widget.events .tab-content,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .tab-content,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .tab-content,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .tab-content,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .tab-content,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .tab-content,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .tab-content,
+body.no-main-style #content .nav-section .panels-container .media .events.media .tab-content,
+.panels-container body.no-main-style #content .nav-section .media .events.media .tab-content,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .tab-content,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .tab-content,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .tab-content,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .tab-content {
+  border-color: #005463;
+}
+/* line 143, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs h2, body.no-main-style #content .nav-section .panels-container .media .widget_tabs h2, .panels-container body.no-main-style #content .nav-section .media .widget_tabs h2, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs h2, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs h2,
+body.no-main-style #content .nav-section .widget .widget.events h2,
+body.no-main-style #content .nav-section .panels-container .media .widget.events h2,
+.panels-container body.no-main-style #content .nav-section .media .widget.events h2,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events h2,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events h2,
+body.no-main-style #content .nav-section .widget .panels-container .events.media h2,
+.panels-container body.no-main-style #content .nav-section .widget .events.media h2,
+body.no-main-style #content .nav-section .panels-container .media .events.media h2,
+.panels-container body.no-main-style #content .nav-section .media .events.media h2,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media h2,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media h2,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media h2,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media h2 {
+  background: #005463;
+  color: #ffffff;
+}
+/* line 150, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a,
+body.no-main-style #content .nav-section .widget .widget.events .nav-tabs li a,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .nav-tabs li a,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .nav-tabs li a,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .nav-tabs li a,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a,
+body.no-main-style #content .nav-section .panels-container .media .events.media .nav-tabs li a,
+.panels-container body.no-main-style #content .nav-section .media .events.media .nav-tabs li a,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .nav-tabs li a,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .nav-tabs li a,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .nav-tabs li a {
+  background-color: #005463;
+  color: #ffffff;
+  opacity: 0.5;
+}
+/* line 155, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li a:hover, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a:hover, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a:hover, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a:hover, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .widget.events .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .nav-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .nav-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .nav-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .panels-container .media .events.media .nav-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .media .events.media .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .nav-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .nav-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .nav-tabs li a:hover {
+  opacity: 1;
+}
+/* line 160, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li.active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li.active a,
+body.no-main-style #content .nav-section .widget .widget.events .nav-tabs li.active a,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .nav-tabs li.active a,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .nav-tabs li.active a,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .nav-tabs li.active a,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .nav-tabs li.active a,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .nav-tabs li.active a,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .nav-tabs li.active a,
+body.no-main-style #content .nav-section .panels-container .media .events.media .nav-tabs li.active a,
+.panels-container body.no-main-style #content .nav-section .media .events.media .nav-tabs li.active a,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .nav-tabs li.active a,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .nav-tabs li.active a,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .nav-tabs li.active a,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .nav-tabs li.active a {
+  background-color: #005463;
+  color: #ffffff;
+  opacity: 1;
+}
+/* line 331, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .widget_tabs .tab-content {
   border-color: #005463;
 }
-/* line 276, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content #footer {
+/* line 337, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #footer {
   background: #005463;
   color: #ffffff;
 }
-/* line 279, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content #footer .footer-data a {
+/* line 340, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #footer .footer-data a {
   color: #ffffff;
 }
-/* line 282, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content #footer #footer-map-container .caret-big {
+/* line 343, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #footer #footer-map-container .caret-big {
   border-top-color: #005463;
 }
-/* line 287, ../scss/solid/_colors_mixin.scss */
+/* line 347, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #valuation-container {
   background: #fff;
 }
-/* line 290, ../scss/solid/_colors_mixin.scss */
+/* line 350, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #valuation-container .valuation h4 {
   color: #005463;
 }
-/* line 292, ../scss/solid/_colors_mixin.scss */
+/* line 352, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #valuation-container .valuation h4 i {
   color: #ffffff;
   background-color: #005463;
 }
 
-/* line 147, ../scss/solid/_colors_mixin.scss */
-body.default-1 #header .navtools {
-  background: #007780;
+/* line 173, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #header .navtools {
+  background: #784c5e;
 }
-/* line 149, ../scss/solid/_colors_mixin.scss */
-body.default-1 #header .navtools ul li a {
+/* line 175, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #header .navtools ul li a {
   color: #ffffff;
 }
-/* line 154, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content {
+/* line 180, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content {
   background: #fff;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   /* TAB widget*/
 }
-/* line 158, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-view-full {
+/* line 187, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .widget_tabs .tab-content,
+body.aree-tematiche #content .widget.events .tab-content,
+body.aree-tematiche #content .panels-container .events.media .tab-content,
+.panels-container body.aree-tematiche #content .events.media .tab-content,
+body.aree-tematiche #content .leaflet-popup-content .events.media .tab-content,
+.leaflet-popup-content body.aree-tematiche #content .events.media .tab-content {
+  border-color: #784c5e;
+}
+/* line 191, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .widget_tabs h2,
+body.aree-tematiche #content .widget.events h2,
+body.aree-tematiche #content .panels-container .events.media h2,
+.panels-container body.aree-tematiche #content .events.media h2,
+body.aree-tematiche #content .leaflet-popup-content .events.media h2,
+.leaflet-popup-content body.aree-tematiche #content .events.media h2 {
+  background: #784c5e;
+  color: #ffffff;
+}
+/* line 198, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .widget_tabs .nav-tabs li a,
+body.aree-tematiche #content .widget.events .nav-tabs li a,
+body.aree-tematiche #content .panels-container .events.media .nav-tabs li a,
+.panels-container body.aree-tematiche #content .events.media .nav-tabs li a,
+body.aree-tematiche #content .leaflet-popup-content .events.media .nav-tabs li a,
+.leaflet-popup-content body.aree-tematiche #content .events.media .nav-tabs li a {
+  background-color: #784c5e;
+  color: #ffffff;
+  opacity: 0.5;
+}
+/* line 203, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .widget_tabs .nav-tabs li a:hover,
+body.aree-tematiche #content .widget.events .nav-tabs li a:hover,
+body.aree-tematiche #content .panels-container .events.media .nav-tabs li a:hover,
+.panels-container body.aree-tematiche #content .events.media .nav-tabs li a:hover,
+body.aree-tematiche #content .leaflet-popup-content .events.media .nav-tabs li a:hover,
+.leaflet-popup-content body.aree-tematiche #content .events.media .nav-tabs li a:hover {
+  opacity: 1;
+}
+/* line 208, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .widget_tabs .nav-tabs li.active a,
+body.aree-tematiche #content .widget.events .nav-tabs li.active a,
+body.aree-tematiche #content .panels-container .events.media .nav-tabs li.active a,
+.panels-container body.aree-tematiche #content .events.media .nav-tabs li.active a,
+body.aree-tematiche #content .leaflet-popup-content .events.media .nav-tabs li.active a,
+.leaflet-popup-content body.aree-tematiche #content .events.media .nav-tabs li.active a {
+  background-color: #784c5e;
+  color: #ffffff;
+  opacity: 1;
+}
+/* line 218, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .content-view-full {
   /*a {
    color: openpa-color($palette-identifier, 'text-link');
 }*/
@@ -8964,191 +9291,38 @@ body.default-1 #content .content-view-full {
     color: openpa-color($palette-identifier, 'background-primary');
   }*/
 }
-/* line 163, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-view-full h1 {
-  background-color: #ffffff;
-  color: #007780;
-}
-/* line 168, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-view-full h2 {
-  background-color: #007780;
-  color: #ffffff;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 178, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-view-full .content-title h1 {
-  color: #007780;
-  background-color: #ffffff;
-}
-/* line 188, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-main .content-view-children .media:nth-child(even) {
-  background-color: #eeeeee;
-}
-/* line 192, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-main .content-detail .row:nth-child(even), body.default-1 #content .content-main .content-detail div.split:nth-child(even) {
-  background-color: #eeeeee;
-}
-/* line 197, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-main .well .btn-info, body.default-1 #content .content-main .fileupload-content .dropzoneHelp .btn-info, .fileupload-content body.default-1 #content .content-main .dropzoneHelp .btn-info {
-  background-color: #007780;
-  border-color: #007780;
-}
-/* line 201, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-main .well .btn-info:hover, body.default-1 #content .content-main .fileupload-content .dropzoneHelp .btn-info:hover, .fileupload-content body.default-1 #content .content-main .dropzoneHelp .btn-info:hover {
-  background-color: #eeeeee;
-  border-color: #eeeeee;
-  color: #007780;
-  -webkit-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
-}
-/* line 211, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .content-main table thead tr {
-  background-color: #007780;
-  color: #ffffff;
-}
 /* line 223, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content blockquote:before {
-  color: #007780;
+body.aree-tematiche #content .content-view-full h1 {
+  background-color: #ffffff;
+  color: #784c5e;
 }
-/* line 229, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget li a, body.default-1 #content .nav-section .panels-container .media li a, .panels-container body.default-1 #content .nav-section .media li a, body.default-1 #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.default-1 #content .nav-section .media li a {
-  color: #333333;
-}
-/* line 234, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget li.current > a, body.default-1 #content .nav-section .panels-container .media li.current > a, .panels-container body.default-1 #content .nav-section .media li.current > a, body.default-1 #content .nav-section .leaflet-popup-content .media li.current > a, .leaflet-popup-content body.default-1 #content .nav-section .media li.current > a, body.default-1 #content .nav-section .widget li.current li.current > a, body.default-1 #content .nav-section .panels-container .media li.current li.current > a, .panels-container body.default-1 #content .nav-section .media li.current li.current > a, body.default-1 #content .nav-section .leaflet-popup-content .media li.current li.current > a, .leaflet-popup-content body.default-1 #content .nav-section .media li.current li.current > a {
-  color: #007780;
-  background-color: #eeeeee;
+/* line 228, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .content-view-full h2 {
+  background-color: #784c5e;
+  color: #ffffff;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 240, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget li a, body.default-1 #content .nav-section .panels-container .media li a, .panels-container body.default-1 #content .nav-section .media li a, body.default-1 #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.default-1 #content .nav-section .media li a {
-  color: #333333;
+/* line 238, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .content-view-full .content-title h1 {
+  color: #784c5e;
+  background-color: #ffffff;
 }
-/* line 244, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_title, body.default-1 #content .nav-section .panels-container .media .widget_title, .panels-container body.default-1 #content .nav-section .media .widget_title, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_title, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_title {
-  background-color: #007780;
-  color: #ffffff;
-}
-/* line 247, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_title h3, body.default-1 #content .nav-section .panels-container .media .widget_title h3, .panels-container body.default-1 #content .nav-section .media .widget_title h3, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_title h3 {
-  color: #ffffff !important;
+/* line 248, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .content-main .content-view-children .media:nth-child(even) {
+  background-color: #eeeeee;
 }
 /* line 251, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_title *, body.default-1 #content .nav-section .panels-container .media .widget_title *, .panels-container body.default-1 #content .nav-section .media .widget_title *, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_title *, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_title * {
-  color: #ffffff;
-  background-color: #007780;
+body.aree-tematiche #content .content-main .content-view-children .media-panel .media {
+  background-color: transparent;
 }
-/* line 257, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget .row:nth-child(odd), body.default-1 #content .nav-section .panels-container .media .widget .row:nth-child(odd), .panels-container body.default-1 #content .nav-section .media .widget .row:nth-child(odd), body.default-1 #content .nav-section .leaflet-popup-content .media .widget .row:nth-child(odd), .leaflet-popup-content body.default-1 #content .nav-section .media .widget .row:nth-child(odd), body.default-1 #content .nav-section .widget .panels-container .media .row:nth-child(odd), .panels-container body.default-1 #content .nav-section .widget .media .row:nth-child(odd), body.default-1 #content .nav-section .panels-container .media .media .row:nth-child(odd), .panels-container body.default-1 #content .nav-section .media .media .row:nth-child(odd), body.default-1 #content .nav-section .widget .leaflet-popup-content .media .row:nth-child(odd), .leaflet-popup-content body.default-1 #content .nav-section .widget .media .row:nth-child(odd), body.default-1 #content .nav-section .leaflet-popup-content .media .media .row:nth-child(odd), .leaflet-popup-content body.default-1 #content .nav-section .media .media .row:nth-child(odd), body.default-1 #content .nav-section .widget .widget div.split:nth-child(odd), body.default-1 #content .nav-section .panels-container .media .widget div.split:nth-child(odd), .panels-container body.default-1 #content .nav-section .media .widget div.split:nth-child(odd), body.default-1 #content .nav-section .leaflet-popup-content .media .widget div.split:nth-child(odd), .leaflet-popup-content body.default-1 #content .nav-section .media .widget div.split:nth-child(odd), body.default-1 #content .nav-section .widget .panels-container .media div.split:nth-child(odd), .panels-container body.default-1 #content .nav-section .widget .media div.split:nth-child(odd), body.default-1 #content .nav-section .panels-container .media .media div.split:nth-child(odd), .panels-container body.default-1 #content .nav-section .media .media div.split:nth-child(odd), body.default-1 #content .nav-section .widget .leaflet-popup-content .media div.split:nth-child(odd), .leaflet-popup-content body.default-1 #content .nav-section .widget .media div.split:nth-child(odd), body.default-1 #content .nav-section .leaflet-popup-content .media .media div.split:nth-child(odd), .leaflet-popup-content body.default-1 #content .nav-section .media .media div.split:nth-child(odd) {
+/* line 255, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .content-main .content-detail .row:nth-child(even), body.aree-tematiche #content .content-main .content-detail div.split:nth-child(even) {
   background-color: #eeeeee;
 }
-/* line 42, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget h3.widget_title, body.default-1 #content .nav-section .panels-container .media h3.widget_title, .panels-container body.default-1 #content .nav-section .media h3.widget_title, body.default-1 #content .nav-section .leaflet-popup-content .media h3.widget_title, .leaflet-popup-content body.default-1 #content .nav-section .media h3.widget_title {
-  background-color: #007780;
-  color: #ffffff;
-}
-/* line 45, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget h3.widget_title a, body.default-1 #content .nav-section .panels-container .media h3.widget_title a, .panels-container body.default-1 #content .nav-section .media h3.widget_title a, body.default-1 #content .nav-section .leaflet-popup-content .media h3.widget_title a, .leaflet-popup-content body.default-1 #content .nav-section .media h3.widget_title a {
-  color: #ffffff;
-}
-/* line 49, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_title h3, body.default-1 #content .nav-section .panels-container .media .widget_title h3, .panels-container body.default-1 #content .nav-section .media .widget_title h3, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_title h3, body.default-1 #content .nav-section .widget .widget_title h3 a, body.default-1 #content .nav-section .panels-container .media .widget_title h3 a, .panels-container body.default-1 #content .nav-section .media .widget_title h3 a, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_title h3 a, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_title h3 a {
-  color: #007780;
-}
-/* line 54, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .owl-controls .owl-buttons .owl-next, body.default-1 #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-next, .panels-container body.default-1 #content .nav-section .media .owl-controls .owl-buttons .owl-next, body.default-1 #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-next, .leaflet-popup-content body.default-1 #content .nav-section .media .owl-controls .owl-buttons .owl-next, body.default-1 #content .nav-section .widget .owl-controls .owl-buttons .owl-prev, body.default-1 #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-prev, .panels-container body.default-1 #content .nav-section .media .owl-controls .owl-buttons .owl-prev, body.default-1 #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-prev, .leaflet-popup-content body.default-1 #content .nav-section .media .owl-controls .owl-buttons .owl-prev {
-  background: #007780;
-  color: #ffffff;
-}
-/* line 61, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .carousel-caption, body.default-1 #content .nav-section .panels-container .media .carousel-caption, .panels-container body.default-1 #content .nav-section .media .carousel-caption, body.default-1 #content .nav-section .leaflet-popup-content .media .carousel-caption, .leaflet-popup-content body.default-1 #content .nav-section .media .carousel-caption {
-  color: #fff;
-}
-/* line 63, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .carousel-caption h3, body.default-1 #content .nav-section .panels-container .media .carousel-caption h3, .panels-container body.default-1 #content .nav-section .media .carousel-caption h3, body.default-1 #content .nav-section .leaflet-popup-content .media .carousel-caption h3, .leaflet-popup-content body.default-1 #content .nav-section .media .carousel-caption h3 {
-  background: #007780;
-  color: #ffffff;
-}
-/* line 66, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .carousel-caption h3 a, body.default-1 #content .nav-section .panels-container .media .carousel-caption h3 a, .panels-container body.default-1 #content .nav-section .media .carousel-caption h3 a, body.default-1 #content .nav-section .leaflet-popup-content .media .carousel-caption h3 a, .leaflet-popup-content body.default-1 #content .nav-section .media .carousel-caption h3 a {
-  color: #ffffff;
-}
-/* line 73, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .carousel-both-control .owl-pagination.active, body.default-1 #content .nav-section .panels-container .media .carousel-both-control .owl-pagination.active, .panels-container body.default-1 #content .nav-section .media .carousel-both-control .owl-pagination.active, body.default-1 #content .nav-section .leaflet-popup-content .media .carousel-both-control .owl-pagination.active, .leaflet-popup-content body.default-1 #content .nav-section .media .carousel-both-control .owl-pagination.active {
-  background: #007780 !important;
-}
-/* line 79, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_tabs .tab-content, body.default-1 #content .nav-section .panels-container .media .widget_tabs .tab-content, .panels-container body.default-1 #content .nav-section .media .widget_tabs .tab-content, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .tab-content, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .tab-content {
-  border-color: #007780;
-}
-/* line 86, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_tabs .nav-tabs li a, body.default-1 #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a, .panels-container body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li a, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li a,
-body.default-1 #content .nav-section .widget .widget_tabs .events-tabs li a,
-body.default-1 #content .nav-section .panels-container .media .widget_tabs .events-tabs li a,
-.panels-container body.default-1 #content .nav-section .media .widget_tabs .events-tabs li a,
-body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs li a,
-.leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .events-tabs li a {
-  background-color: #007780;
-  color: #ffffff;
-  opacity: 0.5;
-}
-/* line 91, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_tabs .nav-tabs li a:hover, body.default-1 #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a:hover, .panels-container body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li a:hover, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a:hover, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li a:hover,
-body.default-1 #content .nav-section .widget .widget_tabs .events-tabs li a:hover,
-body.default-1 #content .nav-section .panels-container .media .widget_tabs .events-tabs li a:hover,
-.panels-container body.default-1 #content .nav-section .media .widget_tabs .events-tabs li a:hover,
-body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs li a:hover,
-.leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .events-tabs li a:hover {
-  opacity: 1;
-}
-/* line 96, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .widget_tabs .nav-tabs li.active a, body.default-1 #content .nav-section .panels-container .media .widget_tabs .nav-tabs li.active a, .panels-container body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li.active a, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li.active a, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li.active a,
-body.default-1 #content .nav-section .widget .widget_tabs .events-tabs li.active a,
-body.default-1 #content .nav-section .panels-container .media .widget_tabs .events-tabs li.active a,
-.panels-container body.default-1 #content .nav-section .media .widget_tabs .events-tabs li.active a,
-body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs li.active a,
-.leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .events-tabs li.active a {
-  background-color: #007780;
-  color: #ffffff;
-  opacity: 1;
-}
-/* line 105, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .tabs_nav .ui-tabs-active a, body.default-1 #content .nav-section .panels-container .media .tabs_nav .ui-tabs-active a, .panels-container body.default-1 #content .nav-section .media .tabs_nav .ui-tabs-active a, body.default-1 #content .nav-section .leaflet-popup-content .media .tabs_nav .ui-tabs-active a, .leaflet-popup-content body.default-1 #content .nav-section .media .tabs_nav .ui-tabs-active a, body.default-1 #content .nav-section .widget .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.default-1 #content .nav-section .widget .nav-tabs .ui-tabs-active a, body.default-1 #content .nav-section .panels-container .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.default-1 #content .nav-section .panels-container .media .nav-tabs .ui-tabs-active a, .panels-container body.default-1 #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs .panels-container body.default-1 #content .nav-section .media .nav-tabs .ui-tabs-active a, body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.default-1 #content .nav-section .leaflet-popup-content .media .nav-tabs .ui-tabs-active a, .leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs .leaflet-popup-content body.default-1 #content .nav-section .media .nav-tabs .ui-tabs-active a,
-body.default-1 #content .nav-section .widget .widget_tabs .events-tabs .ui-tabs-active a,
-.widget_tabs body.default-1 #content .nav-section .widget .events-tabs .ui-tabs-active a,
-body.default-1 #content .nav-section .panels-container .media .widget_tabs .events-tabs .ui-tabs-active a,
-.widget_tabs body.default-1 #content .nav-section .panels-container .media .events-tabs .ui-tabs-active a,
-.panels-container body.default-1 #content .nav-section .media .widget_tabs .events-tabs .ui-tabs-active a,
-.widget_tabs .panels-container body.default-1 #content .nav-section .media .events-tabs .ui-tabs-active a,
-body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs .ui-tabs-active a,
-.widget_tabs body.default-1 #content .nav-section .leaflet-popup-content .media .events-tabs .ui-tabs-active a,
-.leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .events-tabs .ui-tabs-active a,
-.widget_tabs .leaflet-popup-content body.default-1 #content .nav-section .media .events-tabs .ui-tabs-active a, body.default-1 #content .nav-section .widget .tabs_nav li:hover a[class*="color"], body.default-1 #content .nav-section .panels-container .media .tabs_nav li:hover a[class*="color"], .panels-container body.default-1 #content .nav-section .media .tabs_nav li:hover a[class*="color"], body.default-1 #content .nav-section .leaflet-popup-content .media .tabs_nav li:hover a[class*="color"], .leaflet-popup-content body.default-1 #content .nav-section .media .tabs_nav li:hover a[class*="color"], body.default-1 #content .nav-section .widget .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.default-1 #content .nav-section .widget .nav-tabs li:hover a[class*="color"], body.default-1 #content .nav-section .panels-container .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.default-1 #content .nav-section .panels-container .media .nav-tabs li:hover a[class*="color"], .panels-container body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs .panels-container body.default-1 #content .nav-section .media .nav-tabs li:hover a[class*="color"], body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.default-1 #content .nav-section .leaflet-popup-content .media .nav-tabs li:hover a[class*="color"], .leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs .leaflet-popup-content body.default-1 #content .nav-section .media .nav-tabs li:hover a[class*="color"],
-body.default-1 #content .nav-section .widget .widget_tabs .events-tabs li:hover a[class*="color"],
-.widget_tabs body.default-1 #content .nav-section .widget .events-tabs li:hover a[class*="color"],
-body.default-1 #content .nav-section .panels-container .media .widget_tabs .events-tabs li:hover a[class*="color"],
-.widget_tabs body.default-1 #content .nav-section .panels-container .media .events-tabs li:hover a[class*="color"],
-.panels-container body.default-1 #content .nav-section .media .widget_tabs .events-tabs li:hover a[class*="color"],
-.widget_tabs .panels-container body.default-1 #content .nav-section .media .events-tabs li:hover a[class*="color"],
-body.default-1 #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs li:hover a[class*="color"],
-.widget_tabs body.default-1 #content .nav-section .leaflet-popup-content .media .events-tabs li:hover a[class*="color"],
-.leaflet-popup-content body.default-1 #content .nav-section .media .widget_tabs .events-tabs li:hover a[class*="color"],
-.widget_tabs .leaflet-popup-content body.default-1 #content .nav-section .media .events-tabs li:hover a[class*="color"] {
-  background: #eeeeee;
-  color: #fff;
-}
-/* line 116, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .events .calendar-date .month, body.default-1 #content .nav-section .panels-container .media .events .calendar-date .month, .panels-container body.default-1 #content .nav-section .media .events .calendar-date .month, body.default-1 #content .nav-section .leaflet-popup-content .media .events .calendar-date .month, .leaflet-popup-content body.default-1 #content .nav-section .media .events .calendar-date .month {
-  background: #007780;
-  color: #fff;
-}
-/* line 120, ../scss/solid/_colors_mixin.scss */
-body.default-1 #content .nav-section .widget .events .calendar-date .day, body.default-1 #content .nav-section .panels-container .media .events .calendar-date .day, .panels-container body.default-1 #content .nav-section .media .events .calendar-date .day, body.default-1 #content .nav-section .leaflet-popup-content .media .events .calendar-date .day, .leaflet-popup-content body.default-1 #content .nav-section .media .events .calendar-date .day {
-  color: #007780;
-  border-color: #007780;
+/* line 260, ../scss/solid/_colors_mixin.scss */
+body.aree-tematiche #content .content-main .well .btn-info, body.aree-tematiche #content .content-main .fileupload-content .dropzoneHelp .btn-info, .fileupload-content body.aree-tematiche #content .content-main .dropzoneHelp .btn-info {
+  background-color: #784c5e;
+  border-color: #784c5e;
 }

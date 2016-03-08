@@ -49,7 +49,9 @@
       padding-right: 3px;
       vertical-align: text-bottom;
     }
-    &.current{
+    &.current,
+    &:hover
+    {
       border-radius: $border-radius-base;
     }
   }
@@ -159,23 +161,23 @@
   }
 
   > li > a, ul.submenu-level-1 > li > a{
-    @extend .f_size_large;
+   // @extend .f_size_large;
   }
 
   a{
     @extend .d_block;
     @extend .relative;
-    padding:7px 25px 7px 0;
+    padding:7px 25px 7px 5px;
     border-bottom:1px solid #ecf0f1;
     word-break:normal;
   }
 
   ul > li > a{
-    padding-left:10px;
+    padding-left:15px;
   }
 
   ul ul > li > a{
-    padding-left:20px;
+    padding-left:25px;
   }
 
   a > span{
@@ -231,7 +233,6 @@
 }
 
 .nav-section .widget .widget_title {
-  background-color: $gray;
   padding: 15px 20px 14px;
   color: #fff;
   * {

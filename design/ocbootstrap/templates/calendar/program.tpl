@@ -27,7 +27,7 @@ $(function() {
         </div>
     </div>    
     
-    <h2 class="widget_title">{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$calendarData.parameters.timestamp|datetime( custom, '%Y' )}</h2>
+    <h1>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$calendarData.parameters.timestamp|datetime( custom, '%Y' )}</h1>
     
     <hr />
     {def $col-width=6 $modulo=2}

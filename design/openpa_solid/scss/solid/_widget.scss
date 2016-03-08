@@ -1,3 +1,4 @@
+.widget_title h3,
 h3.widget_title {
   background-color: $gray;
   color: #ffffff;
@@ -13,6 +14,11 @@ h3.widget_title {
   }
 }
 
+.content-main .widget .widget_title h3,
+.content-main .widget h3.widget_title {
+  font-size: 1.4em;
+}
+
 .widget {
   @extend .shadow;
   @extend .r_corners;
@@ -25,7 +31,7 @@ h3.widget_title {
       padding: 5px 8px;
       text-transform: uppercase;
       font-size: .9em;
-      font-weight: bold;
+      //font-weight: bold;
       margin: 0;
     }
   }
@@ -36,7 +42,7 @@ h3.widget_title {
 }
 
 .widget_content {
-  padding: 23px 20px 25px;
+  padding: 23px 10px 25px;
   background: #fff;
 }
 
@@ -55,7 +61,10 @@ h3.widget_title {
     @extend .r_corners;
     overflow: hidden;
   }
-  .nav-tabs {
+  .nav-tabs,
+  .events-tabs 
+   {
+    margin-bottom: 0;
     border: none !important;
     @extend .tabs_nav;
     @extend .f_xs_none;
@@ -71,6 +80,7 @@ h3.widget_title {
         padding: 5px 8px !important;
         text-transform: uppercase;
         text-decoration: none;
+        font-weight: normal;
       }
       &.active a {
         background: $gray;
@@ -119,7 +129,14 @@ h3.widget_title {
       height: 80px;
     }
   }
+
+  .events-tabs {
+
+  }
+  
+
   .calendar-date {
+
     .month {
       background: $gray;
       font-size: 1em;
@@ -129,6 +146,8 @@ h3.widget_title {
       text-align: center;
       padding: 5px 3px;
       text-transform: uppercase;
+      border-top-left-radius: $border-radius-base;
+      border-top-right-radius: $border-radius-base;
     }
     .day {
       background: #fff;
@@ -140,6 +159,8 @@ h3.widget_title {
       border: 1px solid $gray;
       padding: 8px 3px;
       text-align: center;
+      border-bottom-left-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
     }
   }
   .media {
@@ -194,7 +215,7 @@ h3.widget_title {
     }
     .media {
       &.has-image {
-        margin-top: 0;
+        margin-top: 10px;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
       }
@@ -224,5 +245,19 @@ h3.widget_title {
       font-weight: bold;
     }
 
+  }
+}
+
+
+.content-main .widget.lista_box .widget_content {
+  h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase; 
+    margin-top: 0;
+
+    small {
+      text-transform: none;
+    }
   }
 }

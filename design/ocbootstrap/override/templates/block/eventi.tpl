@@ -55,15 +55,15 @@
     {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 
     {if $block.name|ne('')}
-    <div class="widget events {$block.view}">
+    <div class="widget widget_tabs {$block.view} panels-container">
         <div class="widget_title">
             
-            {if $show_link}
-              <a class="pull-right" href="{$valid_node.url_alias|ezurl(no)}" title="Vai al calendario"><i class="fa fa-calendar f_size_ex_large"></i></a>
-            {/if}
-            
             <h3>
-              {$block.name|wash()}              
+              {if $show_link}
+                <a href="{$valid_node.url_alias|ezurl(no)}" title="Vai al calendario">{$block.name|wash()}</a>
+              {else}
+                {$block.name|wash()}
+              {/if}
             </h3>
         </div>
         <div class="widget_content">
@@ -76,7 +76,7 @@
     {/if}
 
         {if and( $day_events_count|gt(0), $prossimi_count|gt(0) )}
-        <ul class="list-inline events-tabs" role="tablist">
+        <ul class="nav nav-tabs" role="tablist">
             {if $day_events_count|ne(0)}
                 <li class="active eventi-oggi">
                     <a href="#oggi" data-toggle="tab">

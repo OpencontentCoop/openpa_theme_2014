@@ -25,7 +25,7 @@
 	  var markerMap = {};
 	  $.getJSON("{/literal}{concat('/openpa/data/map_markers'|ezurl(no), '?parentNode=',$node.node_id, '&classIdentifiers=', $class_identifiers|implode(',') )}{literal}&contentType=geojson", function(data) {
 		$.each(data.features, function(i,v){
-		  var markerListItem = $("<li data-id='"+v.id+"'><a href='"+v.properties.url+"'><small>"+v.properties.type+"</small> "+v.properties.name+"</a></li>");
+		  var markerListItem = $("<li data-id='"+v.id+"'><a href='"+v.properties.url+"'><small>"+v.properties.className+"</small> "+v.properties.name+"</a></li>");
 		  markerListItem.bind('click',markerListClick);
 		  $('#{/literal}map-{$node.node_id}{literal}').parents('.row').find('.list-markers-text').append(markerListItem);
 		});

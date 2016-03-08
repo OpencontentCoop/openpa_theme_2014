@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <h2 class="widget_title">{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h2>
+    <h1>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h1>
 
     <table summary="Calendario degli eventi" class="table-calendar">
         <thead>

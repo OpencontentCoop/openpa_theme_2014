@@ -44,12 +44,12 @@
         {* Guida al cittadino *}
         {include name = guida_al_cittadino
                  node = $node             
-                 uri = 'design:openpa/full/parts/amminsitrazione_trasparente/guida_al_cittadino.tpl'}
+                 uri = 'design:openpa/full/parts/amministrazione_trasparente/guida_al_cittadino.tpl'}
                  
         {* Guida al redattore *}
         {include name = guida_al_cittadino
                  node = $node             
-                 uri = 'design:openpa/full/parts/amminsitrazione_trasparente/guida_al_redattore.tpl'}
+                 uri = 'design:openpa/full/parts/amministrazione_trasparente/guida_al_redattore.tpl'}
               
     
         {* Nota: una sola nota *}
@@ -61,7 +61,7 @@
         {/if}
 		
 		{if $node.object.remote_id|eq('5a2189cac55adf79ddfee35336e796fa')} {*grafico*}
-		  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/grafico_enti_partecipati.tpl'}
+		  {include uri='design:openpa/full/parts/amministrazione_trasparente/grafico_enti_partecipati.tpl'}
 		{/if}
         
         {* Figli *}
@@ -70,9 +70,11 @@
             {if $conteggio_figli_pagina_trasparenza|gt(0)}                
               {def $figli_pagina_trasparenza = fetch( 'content', 'list', hash( 'parent_node_id', $node.node_id,
                                                                                'sort_by', $node.sort_array,
+                                                                               'offset', $view_parameters.offset,
+                                                                               'limit', openpaini( 'GestioneFigli', 'limite_paginazione', 25 ),
                                                                                'class_filter_type', 'include',
                                                                                'class_filter_array', $classi_trasparenza ) )}                
-              {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children.tpl'
+              {include uri='design:openpa/full/parts/amministrazione_trasparente/children.tpl'
                        nodes=$figli_pagina_trasparenza
                        nodes_count=$conteggio_figli_pagina_trasparenza}
 
@@ -81,13 +83,15 @@
           {if $conteggio_figli|gt(0)}       
                         
             {def $figli = fetch( 'content', 'list', hash( 'parent_node_id', $node.object.main_node_id,
-                                                          'sort_by', $node.sort_array,                                                              
+                                                          'sort_by', $node.sort_array,
+                                                          'offset', $view_parameters.offset,
+                                                          'limit', openpaini( 'GestioneFigli', 'limite_paginazione', 25 ),
                                                           'class_filter_type', 'exclude',
                                                           'class_filter_array', $classi_trasparenza|merge( $classi_note_trasparenza ) ) )}            
             
             {if and( is_set( $node.data_map.fields ), $node.data_map.fields.has_content )}
 				
-              {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children_table_fields.tpl'                                 
+              {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table_fields.tpl'                                 
                    nodes=$figli
                    nodes_count=$conteggio_figli
                    fields=$node.data_map.fields.content}
@@ -100,7 +104,7 @@
                 
                 {* Consulenti e collaboratori *}
                 {case match='b5df51b035ee30375db371af76c3d9fb'} 
-                  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children_table.tpl'                                 
+                  {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl'                                 
                        nodes=$figli
                        nodes_count=$conteggio_figli
                        class='consulenza'}
@@ -108,7 +112,7 @@
                 
                 {* Incarichi amminsitrativi di vertice *}
                 {case match='efc995388bebdd304f19eef17aab7e0d'} 
-                  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children_table.tpl'
+                  {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl'
                        nodes=$figli
                        nodes_count=$conteggio_figli
                        class='dipendente'}
@@ -116,7 +120,7 @@
                 
                 {* Dirigenti *}
                 {case match='9eed77856255692eca75cdb849540c23'} 
-                  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children_table.tpl'
+                  {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl'
                        nodes=$figli
                        nodes_count=$conteggio_figli
                        class='dipendente'}
@@ -124,7 +128,7 @@
                 
                 {* Tassi di assenza *}
                 {case match='c46fafba5730589c0b34a5fada7f3d07'} 
-                  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children_table.tpl'
+                  {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl'
                        nodes=$figli
                        nodes_count=$conteggio_figli
                        class='tasso_assenza'}
@@ -132,7 +136,7 @@
                 
                 {* Incarichi conferiti e autorizzati ai dipendenti *}
                 {case match='b7286a151f027977fa080f78817c895a'} 
-                  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children_table.tpl'
+                  {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl'
                        nodes=$figli
                        nodes_count=$conteggio_figli
                        class='incarico'}
@@ -140,7 +144,7 @@
                 
                 {* Atti di concessione *}
                 {case match='90b631e882ab0f966d03aababf3d9f15'} 
-                  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children_table.tpl'
+                  {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl'
                        nodes=$figli
                        nodes_count=$conteggio_figli
                        class=array( 'sovvenzione_contributo', 'determinazione', 'deliberazione' )}
@@ -148,7 +152,7 @@
                   
                 {* visualizzazione figli default *}
                 {case}
-                  {include uri='design:openpa/full/parts/amminsitrazione_trasparente/children.tpl'
+                  {include uri='design:openpa/full/parts/amministrazione_trasparente/children.tpl'
                        nodes=$figli
                        nodes_count=$conteggio_figli}
                 {/case}

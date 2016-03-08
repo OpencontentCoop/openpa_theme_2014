@@ -38,7 +38,7 @@
                             {if $tree_menu.max_recursion|eq(1)}
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <ul class="sub_menu list-unstyled">
+                                        <ul class="sub_menu list-unstyled no_sub_level">
                                             {foreach $tree_menu.children as $child}
                                             <li>
                                                 {include
@@ -62,7 +62,7 @@
                                                         menu_item=$child
                                                         current=or($tree_menu.item.node_id|eq($current_node_id), $pagedata.path_id_array|contains($tree_menu.item.node_id))}
                                                 </b>
-                                                <ul class="sub_menu list-unstyled">
+                                                <ul class="sub_menu list-unstyled{if $child.has_children|not()} no_sub_level{/if}">
                                                 {if $child.has_children}
                                                     {foreach $child.children as $sub_child max 10}
                                                         <li>{include

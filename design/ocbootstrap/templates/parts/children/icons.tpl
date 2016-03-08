@@ -5,7 +5,9 @@
   'include_classes', array(),
   'type', 'exclude',
   'fetch_type', 'list',
-  'parent_node', $node
+  'parent_node', $node,
+  'col-width', 4,
+  'modulo', 3
 ))}
 
 
@@ -20,23 +22,20 @@
                                                  'offset', $view_parameters.offset,
                                                  'sort_by', $parent_node.sort_array,
                                                  'limit', $page_limit )|merge( $params ) ) }
+{if $openpa.control_menu.show_extra_menu}
+  {set $col-width = 6 $modulo = 2}
+{/if}                                                 
 {if $children_count}
+
   <div class="content-view-children">  
-	{foreach $children as $i => $child }
-	  {if $i|eq(0)}
-		<div class="row clearfix">
-	  {/if}
-	  <div class="col-lg-4 col-md-4 col-sm-4 m_bottom_45 m_xs_bottom_30">		
-		  {node_view_gui content_node=$child view=line_with_icon}      
-	  </div>
-	  {if eq(sum($i,1)|mod(3),0)}
-		</div>
-		<div class="row clearfix">
-	  {/if}
-	  {if $i|eq($page_limit|sub(1))}
-		</div>
-	  {/if}	 
-	{/foreach}
+    <div class="row clearfix"> 
+    {foreach $children as $child }
+      <div class="col-md-{$col-width}">
+        {node_view_gui content_node=$child view=line_with_icon}   
+      </div>
+      {delimiter modulo=$modulo}</div><div class="row clearfix">{/delimiter}
+    {/foreach}
+    </div>
   </div>
 
   {include name=navigator

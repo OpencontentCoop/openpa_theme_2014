@@ -37,6 +37,25 @@
                     </div>            
                 {/if}
                 
+                {if is_set( $data_map.easy )}            
+                    <input type="hidden" value="" name="ContentObjectAttribute_ezselect_selected_array_{$data_map.easy.id}" />                
+                    <label class="control-label">{$data_map.easy.contentclass_attribute_name|wash()}</label>
+                    <div class="utilita-container">
+                        <div class="utilita">
+                            <label for="semplicita1"><input id="semplicita1" type="radio" value="0" name="ContentObjectAttribute_ezselect_selected_array_{$data_map.easy.id}[]" /> per nulla</label>
+                        </div>
+                        <div class="utilita">
+                            <label for="semplicita2"><input id="semplicita2" type="radio" value="1" name="ContentObjectAttribute_ezselect_selected_array_{$data_map.easy.id}[]" /> poco</label>
+                        </div>
+                        <div class="utilita">
+                            <label for="semplicita3"><input id="semplicita3" type="radio" value="2" name="ContentObjectAttribute_ezselect_selected_array_{$data_map.easy.id}[]" /> abbastanza</label>
+                        </div>
+                        <div class="utilita">
+                            <label for="semplicita4"><input id="semplicita4" type="radio" value="3" name="ContentObjectAttribute_ezselect_selected_array_{$data_map.easy.id}[]" /> molto</label>
+                        </div>
+                    </div>            
+                {/if}
+                
                 {if is_set( $data_map.email_aiutaci )}
                 <div class="form-group">
                     <label for="helpemail_aiutaci" class="control-label">{$data_map.email_aiutaci.contentclass_attribute_name|wash()}</label>                
@@ -65,14 +84,13 @@
                         {ezscript_require( array( 'nxc.captcha.js' ) )}
 
                         {def $attribute = $data_map.antispam
-                             $class_content = $attribute.contentclass_attribute.content
-                             $collection_attribute = $collection_attributes[$attribute.id]
+                             $class_content = $attribute.contentclass_attribute.content                             
                              $regenerate = 1}
                         {if ezhttp( 'ActionCollectInformation', 'post', true() )}
                             {set $regenerate = 0}
                         {/if}
 
-                        {if eq( $collection_attribute.data_int, 0 )}
+                        {if eq( $attribute.data_int, 1 )}
                             <label for="nxc-captcha-collection-input-{$attribute.id}" class="control-label">Antispam</label>
                             <div class="captcha">
                                 <div class="col-md-3 col-lg-5">
@@ -83,7 +101,7 @@
                                 </div>
                                 <div class="col-md-9 col-lg-7">
                                     <p>
-                                        <input class="captcha-input form-control" id="nxc-captcha-collection-input-{$attribute.id}" type="text" name="nxc_captcha_{$attribute.id}" value="{$collection_attribute.data_text}" size="{$class_content.length.value}" maxlength="{$class_content.length.value}" />
+                                        <input class="captcha-input form-control" id="nxc-captcha-collection-input-{$attribute.id}" type="text" name="nxc_captcha_{$attribute.id}" value="" size="{$class_content.length.value}" maxlength="{$class_content.length.value}" />
                                         <span>Inserisci il codice di sicurezza che vedi nell'immagine per proteggere il sito dallo spam </span>
                                     </p>
                                 </div>
@@ -91,9 +109,9 @@
                            
                         {else}
                             {*<p>{'Secure code is allready entered'|i18n( 'extension/nxc_captcha' )}</p>*}
-                            <input type="hidden" name="nxc_captcha_{$attribute.id}" value="{$collection_attribute.data_text}" />
+                            <input type="hidden" name="nxc_captcha_{$attribute.id}" value="" />
                         {/if}
-                        {undef $attribute $class_content $collection_attribute $regenerate}
+                        {undef $attribute $class_content $regenerate}
                     {/if}
                 {/if}
 

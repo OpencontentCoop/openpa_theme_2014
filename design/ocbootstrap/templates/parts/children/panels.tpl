@@ -16,6 +16,10 @@
 {def $params = hash( 'class_filter_type', 'include', 'class_filter_array', $include_classes )}
 {/if}
 
+{if $openpa.control_menu.show_extra_menu}
+  {set $col-width = 12 $modulo = 1}
+{/if}
+
 {def $children_count = fetch( openpa, concat( $fetch_type, '_count' ), hash( 'parent_node_id', $parent_node.node_id )|merge( $params ) )
 	 $children = fetch( openpa, $fetch_type, hash( 'parent_node_id', $parent_node.node_id,
 												  'offset', $view_parameters.offset,

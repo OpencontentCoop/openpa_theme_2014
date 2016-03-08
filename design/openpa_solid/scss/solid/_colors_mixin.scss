@@ -1,7 +1,7 @@
 $openpa-palette: (
         'no-main-style': (
                 'background-primary': $gray,
-                'text-primary': red,
+                'text-primary': #ffffff,
                 'content-title': $gray,
                 'background-secondary': $gray-light,
                 'text-secondary': $gray-lighter,
@@ -39,7 +39,8 @@ $openpa-palette: (
 
 
 @mixin openpa-block-color-by-section( $palette-identifier: 'no-main-style' ) {
-  h3.widget_title {
+  h3.widget_title
+   {
     background-color: openpa-color($palette-identifier, 'background-primary');
     color: openpa-color($palette-identifier, 'text-primary');
     a {
@@ -57,6 +58,7 @@ $openpa-palette: (
       }
     }
   }
+
   .carousel-caption {
     color: openpa-color($palette-identifier, 'text-secondary');
     h3{
@@ -74,15 +76,35 @@ $openpa-palette: (
       }
     }
   }
-  .widget_tabs {
+  .widget_tabs,
+  .widget.events
+   {
     .tab-content {
       border-color: openpa-color($palette-identifier, 'background-primary');
     }
-    .nav-tabs {
+
+    h2 {
+       background: openpa-color($palette-identifier, 'background-primary');
+       color: openpa-color($palette-identifier, 'text-primary');
+    }
+    .nav-tabs
+     {
       li {
+        a {
+          background-color: openpa-color($palette-identifier, 'background-primary');
+          color: openpa-color($palette-identifier, 'text-primary');
+          opacity: 0.5;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
         &.active a {
           background-color: openpa-color($palette-identifier, 'background-primary');
           color: openpa-color($palette-identifier, 'text-primary');
+          opacity: 1;
+
         }
       }
     }
@@ -91,23 +113,40 @@ $openpa-palette: (
     background: openpa-color($palette-identifier, 'background-secondary');
     color: openpa-color($palette-identifier, 'text-secondary');
   }
-  .events {
-    &.widget_tabs li {
-      &.active a {
-        color: openpa-color($palette-identifier, 'background-primary');
-      }
-    }
-    .calendar-date {
-      .month {
-        background: openpa-color($palette-identifier, 'background-primary');
-        color: openpa-color($palette-identifier, 'text-secondary');
-      }
-      .day {
-        color: openpa-color($palette-identifier, 'background-primary');
+
+  .widget.events {
+    .tab-content {
         border-color: openpa-color($palette-identifier, 'background-primary');
-      }
     }
+
+    .widget_title {
+      background: openpa-color($palette-identifier, 'background-primary');
+      h3 {
+        background: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary');
+      }
+      a .fa {
+        color: openpa-color($palette-identifier, 'text-primary'); 
+      }
+
+    }
+
+    .events-tabs {
+      li  {
+        a {
+        background: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary');
+        opacity: 0.5;
+        }
+
+        &.active a,
+        a:hover {
+          opacity: 1;
+        }
+      }
+    } 
   }
+
   .panels-container, .leaflet-popup-content {
     .panel-label {
       background: openpa-color($palette-identifier, 'background-primary');
@@ -137,29 +176,130 @@ $openpa-palette: (
     }
   }
   #content {
-    .content-title h1 {
-      color: openpa-color($palette-identifier, 'content-title');
+    background: openpa-color($palette-identifier, 'background-page');
+    @include border-radius(10px);
+
+    .content-view-full {
+        /*a {
+         color: openpa-color($palette-identifier, 'text-link');
+      }*/
+
+      h1 {
+        background-color: openpa-color($palette-identifier, 'text-primary');
+        color: openpa-color($palette-identifier, 'background-primary'); 
+      }
+
+      h2 {
+        background-color: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary'); 
+        @include border-radius($border-radius-base);
+      }
+
+      /*.btn-success {
+        background-color: openpa-color($palette-identifier, 'text-primary'); 
+        color: openpa-color($palette-identifier, 'background-primary');
+      }*/
+      .content-title h1 {
+        color: openpa-color($palette-identifier, 'content-title');
+        background-color: openpa-color($palette-identifier, 'text-primary');
+      }
+
+      .widget_title h3, .widget_title h3 a{
+        background-color: openpa-color($palette-identifier, 'background-primary');
+      }
     }
+
+
+   .content-main {
+      .content-view-children {
+        .media:nth-child(even) {
+            background-color:  openpa-color($palette-identifier, 'background-secondary');
+        }
+      }
+      .content-detail .row:nth-child(even) {
+            background-color:  openpa-color($palette-identifier, 'background-secondary');
+      }
+
+      .well {
+        .btn-info {
+          background-color:  openpa-color($palette-identifier, 'background-primary');
+          border-color:   openpa-color($palette-identifier, 'background-primary');
+
+          &:hover {
+            background-color:$gray-lighter;
+            border-color: $gray-lighter;
+            color: openpa-color($palette-identifier, 'background-primary');
+            @include transition(background-color 0.1s linear);
+          }
+        }
+      }
+
+      table {
+        thead tr {
+          background-color:  openpa-color($palette-identifier, 'background-primary');
+          color:  openpa-color($palette-identifier, 'text-primary');
+        }
+      }
+
+
+
+
+    }
+
     blockquote {
       &:before {
         color: openpa-color($palette-identifier, 'background-primary');
       }
     }
-    .nav-section .widget {
-      a {
-        color: openpa-color($palette-identifier, 'content-title');
+   .nav-section .widget {
+      li {
+         a {
+            color: openpa-color($palette-identifier, 'text-link-menu');
+         }
+         &.current,
+         &.current li.current {
+            > a {
+               color: openpa-color($palette-identifier, 'background-primary');
+               background-color: openpa-color($palette-identifier, 'background-secondary');
+               @include border-radius($border-radius-base);
+            }
+         }
+         a {
+           color: openpa-color($palette-identifier, 'text-link-menu');
+         }
       }
       .widget_title {
-        background-color: openpa-color($palette-identifier, 'background-primary');
-        color: openpa-color($palette-identifier, 'text-primary');
-        * {
-          color: openpa-color($palette-identifier, 'text-primary');
-          background-color: openpa-color($palette-identifier, 'background-primary');
-        }
+            background-color: openpa-color($palette-identifier, 'background-primary');
+            color: openpa-color($palette-identifier, 'text-primary');
+            h3 {
+               color: openpa-color($palette-identifier, 'text-primary')!important;
+            }
+
+            * {
+               color: openpa-color($palette-identifier, 'text-primary');
+               background-color: openpa-color($palette-identifier, 'background-primary');
+            }
+         }
+      .widget {
+         .row:nth-child(odd) {
+            background-color:  openpa-color($palette-identifier, 'background-secondary');
+         }
       }
-    }
-    @include openpa-block-color-by-section($palette-identifier);
-  }
+
+      @include openpa-block-color-by-section($palette-identifier);
+   }
+
+   /* TAB widget*/
+
+   .widget_tabs {
+      .tab-content {
+         border-color: openpa-color($palette-identifier, 'background-primary');
+      }
+   }
+
+
+
+
   #footer {
     background: openpa-color($palette-identifier, 'background-primary');
     color: openpa-color($palette-identifier, 'text-primary');
@@ -171,12 +311,35 @@ $openpa-palette: (
     }
   }
 }
+  #valuation-container { 
+    background: openpa-color($palette-identifier, 'background-page');
 
+    .valuation h4 {
+      color: openpa-color($palette-identifier, 'content-title');
+      i {
+        color: openpa-color($palette-identifier, 'text-primary');
+        background-color:  openpa-color($palette-identifier, 'content-title');
+      }
+
+    }
+  }
+
+}
+
+/* menu color setting */
 @mixin openpa-menu-color-by-section( $palette-identifier: 'no-main-style' ) {
   a {
-    color: openpa-color($palette-identifier, 'background-primary');
+    color: openpa-color($palette-identifier, 'text-link-menu');
     span{
       color: openpa-color($palette-identifier, 'background-primary');
+    }
+    &:hover{
+      background-color:  openpa-color($palette-identifier, 'background-primary');
+      color: openpa-color($palette-identifier, 'text-primary');
+      span {
+        color: openpa-color($palette-identifier, 'text-primary');
+      }
+      
     }
   }
   > a.current{
@@ -186,4 +349,7 @@ $openpa-palette: (
       color: openpa-color($palette-identifier, 'text-primary');
     }
   }
+  
 }
+
+

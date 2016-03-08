@@ -4,7 +4,7 @@
     and( is_set( $block.custom_attributes), $block.custom_attributes|count() ), 
     and( eq( ezini( $block.type, 'ManualAddingOfItems', 'block.ini' ), 'disabled' ), ezini_hasvariable( $block.type, 'FetchClass', 'block.ini' )|not ) )}
     <div id="address-{$block.zone_id}-{$block.id}">
-    {block_view_gui block=$block}
+    {block_view_gui block=$block items_per_row=1}
     </div>
 {else}
     {skip}

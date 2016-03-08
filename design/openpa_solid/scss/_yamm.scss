@@ -29,6 +29,27 @@
   // Content with padding
   .yamm-content {
     padding: 20px 30px;
+    a {
+      display: block;
+      padding:2px 5px;
+      &:hover {
+        text-decoration: none;
+        border-radius: $border-radius-base;
+      }
+    }
+
+    // in caso di no sublevel 
+    ul.no_sub_level {
+      li {
+        width: 50%;
+        float: left; 
+
+        &:nth-child(2n+1) { 
+          clear: both;
+        }
+      }
+
+    }
   }
 
   // Fullwidth menu
@@ -37,3 +58,29 @@
   }
 
 }
+
+
+@media (max-width: 700px) { 
+
+  .yamm {
+
+  
+
+    // Content with padding
+    .yamm-content {
+      padding: 20px 30px;
+   
+
+      // in caso di no sublevel 
+      ul.no_sub_level {
+        li {
+          width: 100%;
+          float: none;
+          margin-bottom: 0;
+        }
+
+      }
+    }
+
+  }
+ }

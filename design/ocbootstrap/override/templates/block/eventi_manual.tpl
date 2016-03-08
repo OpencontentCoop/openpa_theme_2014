@@ -2,10 +2,9 @@
 $show_link = true()}
 
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
-    <div class="widget events {$block.view}">
+    <div class="widget {$block.view} panels-container">
         {if $block.name|ne('')}
             <div class="widget_title">
-
                 {if $show_link}
                     <a class="pull-right" href="{$valid_nodes[0].parent.url_alias|ezurl(no)}"
                        title="Vai al calendario"><i class="fa fa-calendar f_size_ex_large"></i></a>

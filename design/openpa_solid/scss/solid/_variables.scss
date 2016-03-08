@@ -1,45 +1,76 @@
+
 $openpa-palette: (
+
+        'aree-tematiche': (
+                'background-primary': rgb(120,76,94), // viola
+                'text-primary': #ffffff,
+                'content-title': rgb(120,76,94),
+                'background-secondary': $gray-lighter,
+                'text-secondary': $gray-lighter,
+                'background-page': #fff, 
+                'text-link': rgb(120,76,94),
+                'text-link-menu':  $gray-dark,
+        ),
         'no-main-style': (
                 'background-primary': rgb(0,84,99),
                 'text-primary': #ffffff,
                 'content-title': rgb(0,84,99),
-                'background-secondary': $gray-light,
+                'background-secondary': $gray-lighter,
                 'text-secondary': $gray-lighter,
+                'background-page': #fff, 
+                'text-link': rgb(0,84,99),
+                'text-link-menu':  $gray-dark,
         ),
         'default-1': (
-                'background-primary': rgb(0,140,150),
+                'background-primary': rgb(184,67,35), //rosso
                 'text-primary': #ffffff,
-                'content-title': rgb(0,140,150),
-                'background-secondary': rgb(45,187,181),
+                'content-title': rgb(184,67,35),
+                'background-secondary': $gray-lighter,
                 'text-secondary': #fff,
+                'background-page': #fff,
+                'text-link': rgb(184,67,35),
+                'text-link-menu':  $gray-dark,
+
         ),
         'default-2': (
-                'background-primary': rgb(0,168,78),
+                'background-primary': rgb(0,128,60), //verde
                 'text-primary': #ffffff,
-                'content-title': rgb(0,168,78),
-                'background-secondary': rgb(169,203,56),
+                'content-title': rgb(0,128,60),
+                'background-secondary': $gray-lighter,
                 'text-secondary': #fff,
+                'background-page': #fff,
+                'text-link': rgb(0,128,60),
+                'text-link-menu':  $gray-dark,
         ),
         'default-3': (
                 'background-primary': rgb(0,101,152),
                 'text-primary': #ffffff,
                 'content-title': rgb(0,101,152),
-                'background-secondary': rgb(105,167,220),
+                'background-secondary': $gray-lighter,
                 'text-secondary': #fff,
+                'background-page': #fff,
+                'text-link': rgb(0,101,152),
+                'text-link-menu':  $gray-dark,
         ),
         'default-4': (
-                'background-primary': rgb(211,78,40),
+                'background-primary': rgb(0,119,128), //blu
                 'text-primary': #ffffff,
-                'content-title': rgb(211,78,40),
-                'background-secondary': rgb(239,139,43),
+                'content-title': rgb(0,119,128),
+                'background-secondary': $gray-lighter,
                 'text-secondary': #fff,
+                'background-page': #fff,
+                'text-link': rgb(0,119,128),
+                'text-link-menu':  $gray-dark,
         ),
         'default-5': (
                 'background-primary': $brand-success,
                 'text-primary': #ffffff,
                 'content-title': $brand-success,
-                'background-secondary': #201f1e,
+                'background-secondary': $gray-lighter,
                 'text-secondary': #fff,
+                'background-page': #fff,
+                'text-link': $brand-success,
+                'text-link-menu':  $gray-dark,
         )
 );
 

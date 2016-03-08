@@ -3,7 +3,7 @@
 <script>{literal}
 $(document).ready(function(){
     var show = {/literal}{$show_editor}{literal};
-    var $editorTools = $("#editor_tools");
+    var $editorTools = $(".editor_tools");
     if ( $editorTools.length > 0 ){
         if ( show == 0 ) $editorTools.hide();
         $("#ezwt-help").removeClass('hide').find( 'a').on( 'click', function(e){

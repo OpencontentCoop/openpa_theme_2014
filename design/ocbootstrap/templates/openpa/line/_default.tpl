@@ -13,16 +13,17 @@
 
         {if $openpa.content_line.has_content}
           <dl>
-            {foreach $openpa.content_line.attributes as $openpa_attribute}              
+            {foreach $openpa.content_line.attributes as $openpa_attribute}
               <dd>
                 {if $openpa_attribute.line.show_label}
                   <strong>{$openpa_attribute.label}</strong>
-                {/if}                
+                {/if}
+
                 {attribute_view_gui attribute=$openpa_attribute.contentobject_attribute href=cond($openpa_attribute.line.show_link|not, 'no-link', '')}
               </dd>
             {/foreach}
           </dl>
-            
+
         {/if}
 
     </div>
