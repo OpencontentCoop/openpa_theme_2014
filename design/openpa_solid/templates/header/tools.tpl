@@ -18,7 +18,9 @@
 
                     {if is_set( $pagedata.contacts.telefono )}
                         <li>
-                            <a href="tel:{$pagedata.contacts.telefono}">
+{*                            <a href="tel:{$pagedata.contacts.telefono}">*}
+                            {def $tel = strReplace($pagedata.contacts.telefono,array(" ",""))}
+                            <a href="tel:{$tel}">
                                 <i class="fa fa-phone-square fa-2x"></i>
                                 <span class="hidden-xs hidden-sm">{$pagedata.contacts.telefono}</span>
                             </a>

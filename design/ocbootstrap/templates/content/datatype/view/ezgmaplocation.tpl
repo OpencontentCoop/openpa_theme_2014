@@ -1,6 +1,6 @@
 {if and( $attribute.content.latitude, $attribute.content.longitude )}
 {run-once}
-<link rel="stylesheet" href="{'stylesheets/leaflet.0.7.2.css'|ezdesign(no)}" />
+<link rel="stylesheet" href="{'stylesheets/leaflet.0.7.2.css'|ezdesign(no)}" property='stylesheet' />
 <script src="{'javascript/leaflet.0.7.2.js'|ezdesign(no)}"></script>
 <script src="{'javascript/Leaflet.MakiMarkers.js'|ezdesign(no)}"></script>
 {/run-once}

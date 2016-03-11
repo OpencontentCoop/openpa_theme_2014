@@ -13,9 +13,11 @@
     {/foreach}
   {/if}
   {if is_set( $pagedata.contacts.telefono )}
-    <li><a href="tel:{$pagedata.contacts.telefono}"><i class="fa fa-phone-square"></i> {$pagedata.contacts.telefono}</a></li>
+    {def $tel = strReplace($pagedata.contacts.telefono,array(" ",""))}
+    {*<a href="tel:{$pagedata.contacts.telefono}">*}
+    <li><a href="tel:{$tel}"><i class="fa fa-phone-square"></i> {$pagedata.contacts.telefono}</a></li>
   {/if}
-  
+
   {if is_set( $pagedata.contacts.email )}
     <li><a href="mailto:{$pagedata.contacts.email}"><i class="fa fa-envelope-o"></i> {$pagedata.contacts.email}</a></li>
   {/if}

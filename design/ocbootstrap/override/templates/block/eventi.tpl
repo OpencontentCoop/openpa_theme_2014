@@ -39,25 +39,25 @@
 {*
     {ezscript_require( array( 'ezjsc::jquery', 'plugins/owl-carousel/owl.carousel.min.js', "plugins/blueimp/jquery.blueimp-gallery.min.js" ) )}
     {ezcss_require( array( 'plugins/owl-carousel/owl.carousel.css', 'plugins/owl-carousel/owl.theme.css', "plugins/blueimp/blueimp-gallery.css" ) )}
-    
+
     <script>
         $(document).ready(function() {ldelim}
             $("#first-event-carousel, #second-event-carousel").owlCarousel({ldelim}
-                items : 1,                
+                items : 1,
                 autoPlay: false,
                 navigation: true,
                 pagination: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']
             {rdelim});
-        {rdelim});        
+        {rdelim});
     </script>
 *}
     {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 
     {if $block.name|ne('')}
-    <div class="widget widget_tabs {$block.view} panels-container">
+    <div class="widget_tabs {$block.view} panels-container">
         <div class="widget_title">
-            
+
             <h3>
               {if $show_link}
                 <a href="{$valid_node.url_alias|ezurl(no)}" title="Vai al calendario">{$block.name|wash()}</a>
@@ -66,7 +66,7 @@
               {/if}
             </h3>
         </div>
-        <div class="widget_content">
+        <div class="widget">
 
 
     {else}
@@ -99,9 +99,9 @@
 
             {if $day_events_count|ne(0)}
                 <div class="tab-pane active" id="oggi">
-                  <div class="event-carousel" id="first-event-carousel">
+                  <div class="event-carousel" {*id="first-event-carousel"*}>
                     <div class="events">
-                      {foreach $day_events as $i => $child max 10}                    
+                      {foreach $day_events as $i => $child max 10}
                         {include uri="design:calendar/block_list_item.tpl" item=$child}
                         {delimiter modulo=4}</div><div class="events">{/delimiter}
                       {/foreach}
@@ -112,16 +112,16 @@
 
             {if $prossimi_count|gt(0)}
             <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide event-carousel">
-              <div class="event-carousel" id="second-event-carousel">
+              <div class="event-carousel" {*id="second-event-carousel"*}>
                 <div class="events">
-                  {foreach $prossimi as $i => $child max 10}                  
+                  {foreach $prossimi as $i => $child max 10}
                     {include uri="design:calendar/block_list_item.tpl" item=$child}
                     {delimiter modulo=4}</div><div class="events">{/delimiter}
                   {/foreach}
                 </div>
               </div>
             </div>
-        {/if}
+            {/if}
 
 
         </div>

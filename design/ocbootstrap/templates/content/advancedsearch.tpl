@@ -79,21 +79,21 @@
             {/if}
         {/if}
     {/foreach}
-    
-    
-    {def $allow_class = true()}    
+
+
+    {def $allow_class = true()}
     {foreach $class_group_not_available as $class_id_group}
-        {if $class.ingroup_id_list|contains($class_id_group)}        
+        {if $class.ingroup_id_list|contains($class_id_group)}
             {set $allow_class = false()}
         {/if}
-    {/foreach}    
-    
+    {/foreach}
+
     {if and( $allow_class, $available_classes|contains($class.id)|not(), $classes_not_available|contains($class.id)|not() )}
         {set $available_classes = $available_classes|append( $class.id )}
         {set $available_classes_names = $available_classes_names|append( $class.identifier )}
     {/if}
     {undef $allow_class}
-    
+
 {/foreach}
 
 {debug-log var=$not_available_facets_names msg='faccette non visualizzate' }
@@ -115,7 +115,7 @@
 {* nome del bottone *}
 {set $SearchButton = 'Cerca'}
 
-{* ordinamento predefiniti in caso di ricerca nulla 
+{* ordinamento predefiniti in caso di ricerca nulla
 {if $search_text|eq('')}
 	{set $Sort = 'published'
 		 $Order = 'desc'}
@@ -216,11 +216,11 @@
 <div class="col-md-{if $ClassFilter|count()|eq(1)}8{else}9{/if}">
 
 {if $ClassFilter|count()|eq(0)}
-    
+
     {foreach $available_classes as $class_id}
         {set $filterParameters = setFilterParameter( 'meta_contentclass_id_si', $class_id )}
     {/foreach}
-    
+
     {debug-log var=$available_classes_names msg='classi incluse nella query' }
 
 {* se si parte dal motore di ricerca globale e si filtra per una sola classe *}
@@ -228,7 +228,7 @@
 	{set $contentClass=fetch( 'content', 'class', hash( 'class_id', $ClassFilter[0] ) )}
 
     {def $OriginalNode = fetch( content, node, hash( node_id, $OriginalNodeID ) ) }
-    
+
     <h2>
         Cerca
         {if $orig_position}
@@ -240,13 +240,13 @@
     </h2>
 
     {set-block variable=$block_embed_searchbox}
-    {include name       = searchbox 
+    {include name       = searchbox
             node            = $OriginalNode
             subfilter_arr   = $SubTreeArray
             search_text     = $search_text
             class_filters   = $ClassFilter
             search_included = 1
-            uri             = 'design:parts/search_class_and_attributes_block.tpl' } 
+            uri             = 'design:parts/search_class_and_attributes_block.tpl' }
     {/set-block}
 
 {/if}
@@ -287,9 +287,9 @@
          $search_result     = $search['SearchResult']
          $stop_word_array   = $search['StopWordArray']
          $search_data       = $search}
-    
+
     {def $search_extras=$search['SearchExtras']}
-    
+
     {if is_set( $search_extras.facet_fields.0.field )}
     	{def $facetField = $search_extras.facet_fields.0.field}
     {else}
@@ -305,32 +305,32 @@
     {def $subtree_node = false()
          $sub_tree_name = false()
          $cerca_in_area_tematica = false()}
-    
-        {if $orig_position}		
+
+        {if $orig_position}
             {set $sub_tree_name=$orig_position.name|wash}
             {if $orig_position.class_identifier|eq('area_tematica')}
                 {set $cerca_in_area_tematica = true() }
             {/if}
         {/if}
-    
+
         <h2>
             Cerca
-            {if and( $sub_tree_name, $cerca_in_area_tematica|not )} 
+            {if and( $sub_tree_name, $cerca_in_area_tematica|not )}
                 solo in "{$sub_tree_name}"
-            {elseif and( $sub_tree_name, $cerca_in_area_tematica )} 
+            {elseif and( $sub_tree_name, $cerca_in_area_tematica )}
                 nell area tematica "{$sub_tree_name}"
             {else}
                 in tutto il sito
             {/if}
         </h2>
-        
+
         <fieldset>
             <legend class="sr-only">{"Search"|i18n("design/ezwebin/content/search")} {if $sub_tree_name} solo in "{$sub_tree_name}"{else} in tutto il sito{/if}</legend>
-    
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="input-group">
-                        <input placeholder="Ricerca libera" class="form-control input-lg" type="text" name="SearchText" id="Search" value="{$search_text|wash}" />                            
+                        <input placeholder="Ricerca libera" class="form-control input-lg" type="text" name="SearchText" id="Search" value="{$search_text|wash}" />
                         <span class="input-group-btn">
                             <button type="submit" name="SearchButton" class="btn-primary btn btn-lg" title="{'Search'|i18n('design/ezwebin/content/search')}">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -342,14 +342,14 @@
                     </button>
                 </div>
             </div>
-            
+
 			{if is_area_tematica()}
                 <input type="hidden" value="{is_area_tematica().node_id}" name="SubTreeArray[]" />
             {/if}
-			
+
             <div class="row collapse" id="AdvancedSearchPanel">
             <div class="well well-sm clearfix">
-                
+
                 <div class="col-xs-3">
                     <div class="form-group">
                         <label for="Sort">Ordina per</label>
@@ -365,13 +365,13 @@
                 <div class="col-xs-3">
                     <div class="form-group">
                         <label for="Order">Ordinamento</label>
-                        <select class="form-control" {if $Order}class="marked"{/if} name="Order" id="Order">										
+                        <select class="form-control" {if $Order}class="marked"{/if} name="Order" id="Order">
                             <option {if $Order|eq('desc')} class="marked" selected="selected"{/if} value="desc">Discendente</option>
                             <option {if $Order|eq('asc')} class="marked" selected="selected"{/if} value="asc">Ascendente</option>
                         </select>
                     </div>
                 </div>
-    
+
                 <div class="col-xs-3">
                     <div class="form-group">
                         <label for="anno_s">Anno</label>
@@ -387,18 +387,18 @@
                     <label>Condizioni logiche</label>
                     <label>
                         <input type="radio" id="radio_and" name="cond" title="AND" value="AND" {if $cond|eq('AND')}checked="checked"{/if} /> AND
-                    </label>               
+                    </label>
                     <label>
                         <input type="radio" id="radio_and" name="cond" title="OR" value="OR" {if $cond|eq('OR')}checked="checked"{/if} /> OR
                     </label>
-                </div>                        
+                </div>
             </div>
             </div>
-    
+
     {set-block variable=$block_search_filter}
     {if and( $SearchButton, $search_count, is_set($search_extras.facet_fields.0.nameList) )}
     {set $filterParameter = getFilterParameter( 'contentclass_id' )}
-    
+
         <div class="widget_title">
             <h3>
             {if $filterParameter|count()|gt(0)}
@@ -410,43 +410,43 @@
             {/if}
           </h3>
         </div>
-        
+
         <div class="widget_content">
-        
+
         {def $faccette=$search_extras.facet_fields.0.nameList}
         {set $faccette=$faccette|asort()}
-        {foreach $faccette as $facetID => $name}							
+        {foreach $faccette as $facetID => $name}
             {if $not_available_facets|contains($facetID)|not()}
             <div class="checkbox">
                 <label>
                     <input value="{$search_extras.facet_fields.0.queryLimit[$facetID]|wash}" title="{$name|wash}" name="filter[]" type="checkbox" {$stai_filtrando_per} /> {$name|wash} ({$search_extras.facet_fields.0.countList[$facetID]})
                </label>
             </div>
-               
+
             {/if}
         {/foreach}
-        
+
         <div class="form-group clearfix">
             <input class="btn btn-primary pull-right" name="SearchButton" type="submit" value="{'Search'|i18n('design/ezwebin/content/search')}" />
         </div>
-      
-      </div>    
-    
+
+      </div>
+
     {/if}
     {/set-block}
         </fieldset>
 {/if}
 
-        
+
     {* FORSE CERCAVI... *}
-    
+
     {if $search_extras.spellcheck_collation}
         {def $spell_url=concat('content/advancedsearch/',$search_text|count_chars()|gt(0)|choose('',concat('?SearchText=',$search_extras.spellcheck_collation|urlencode)))|ezurl}
         <p><small>
             Forse intendevi cercare per <a href='{$spell_url}'><strong>{$search_extras.spellcheck_collation}</strong></a> ?
         </small></p>
     {/if}
-    
+
     {* PAROLE ESCLUSE *}
     {if $stop_word_array}
         <p><small>
@@ -465,7 +465,7 @@
             <div class="warning">
                 {if $search_text|ne('')}
                     <strong>{'No results were found when searching for "%1".'|i18n("design/ezwebin/content/search",,array($search_text|wash))}</strong>
-                    {if $search_extras.hasError}{$search_extras.error|wash}{/if}				
+                    {if $search_extras.hasError}{$search_extras.error|wash}{/if}
                     <p>{'Search tips'|i18n('design/ezwebin/content/search')}</p>
                     <ul>
                         <li>{'Check spelling of keywords.'|i18n('design/ezwebin/content/search')}</li>
@@ -496,7 +496,7 @@
 
     {if $search_result|count()}
     <div class="table-responsive">
-    <table class="table table-compressed table-striped advanced_search" cellspacing="0" cellpadding="0" border="0">
+    <table class="table table-compressed table-striped advanced_search"{* cellspacing="0" cellpadding="0" border="0"*}>
         <thead>
             <tr>
             <th>Risultato della ricerca</th>
@@ -516,20 +516,20 @@
                  item_count=$search_count
                  view_parameters=$view_parameters
                  item_limit=$page_limit}
-            {/if}		 
+            {/if}
             </td>
         </tr>
         </tbody>
     </table>
     </div>
     {/if} {* chiudi SearchButton*}
-                            
-    </div>
+
+    </div>{* <-- QUESTO DIV  chiude il primo col-md- 8 oppure 9*}
 
     {if $search_result|count()}
     <div class="col-md-{if $ClassFilter|count()|eq(1)}4{else}3{/if}">
         {if $ClassFilter|count()|ne(1)}
-        <div class="widget">            
+        <div class="widget">
         {/if}
                 {def $link_istruzioni_ricerca = fetch('content','node',hash('node_id', openpaini('LinkSpeciali', 'NodoIstruzioniRicerca', 0) ))}
                 {if $link_istruzioni_ricerca}
@@ -537,20 +537,20 @@
                     {$link_istruzioni_ricerca.name|wash()}
                 </a>
                 {/if}
-            
+
                 {$block_embed_searchbox}
-                
+
                 {if is_set($block_search_filter)}
                     {$block_search_filter}
                 {/if}
-        {if $ClassFilter|count()|ne(1)}            
+        {if $ClassFilter|count()|ne(1)}
         </div>
         {/if}
     </div>
     {/if}
-    
-</div>
-</form>	
+
+{*</div> <-- questo è in PIU*}
+</form>
 </div>
 
 
@@ -586,14 +586,14 @@ $(function() {
 	$.fn.ezfToggleBlock = function(options) {
 		return $(this).each(function() {
 			/*
-			var name = $(this).attr('id');			
+			var name = $(this).attr('id');
 			$('#'+name+'Panel').css('display', ezfGetCookie( name ));
 			if (ezfGetCookie( name ) == 'none') {
 				$(this).removeClass('open');
 			}
 			*/
 			$(this).bind('click', function () {
-				name = $(this).attr('id');	
+				name = $(this).attr('id');
 				$('#'+name+'Panel').slideToggle("slow", function() {
 					$('#'+name).toggleClass('open');
 					var id = $(this).prev().attr('id');
@@ -603,7 +603,7 @@ $(function() {
 		});
 	};
 	$(".eztoggle").ezfToggleBlock();
-	
+
 	$(".ezjs_toggleCheckboxes").bind('click', function () {
 		$(".filter-container input").each( function() {
 			if ($(this).is(':checked'))
@@ -613,7 +613,7 @@ $(function() {
 		});
 		return false;
 	});
-	
+
 	function jtoggleCheckboxes( formname, checkboxname ){
 		with( formname ){
 			for( var i = 0, l = elements.length; i < l; i++ ){

@@ -131,20 +131,19 @@
     $attributi_da_escludere_dalla_ricerca  = openpaini( 'Attributi', 'EscludiDaRicerca', array())
     $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
 
-<div class="widget">
-  
-  <div class="widget_title">
+
+
+
+<div class="widget search_box">
     {if and( is_array($subtreearray), count($subtreearray)|eq(1), $subtreearray|contains(ezini( 'NodeSettings', 'RootNode', 'content.ini' )) )}
-        <h3>Cerca</h3>
+    <h2>Cerca</h2>
     {else}
         {if $folder|ne( false() )}
-            <h3>Cerca in {$folder}</h3>
+            <h2>Cerca in {$folder}</h2>
         {else}
-            <h3>Cerca</h3>
+            <h2>Cerca</h2>
         {/if}
-    {/if}  
-  </div>
-  
+    {/if}
     <div class="widget_content">
         <form id="search-form-box" action="{'content/advancedsearch'|ezurl('no')}" method="get">
             <fieldset>
@@ -158,9 +157,7 @@
                 {/if}
 
                 <div class="form-group">
-                    <input placeholder="Ricerca libera" class="form-control" type="text" name="SearchText"
-                           value="{$search_text}"/>
-                    </label>
+                    <input placeholder="Ricerca libera" class="form-control" type="text" name="SearchText" value="{$search_text}"/>
                 </div>
 
 
@@ -257,7 +254,7 @@
                     {def $facets = array()}
                     {set $sorters = array()}
 
-                    {foreach $class.data_map as $attribute}
+                    {foreach $class.data_map as $__position => $attribute}
                         {if and($attribute.is_searchable, $attribute.identifier|ne('errors'), $attributi_da_escludere_dalla_ricerca|contains($attribute.identifier)|not())}
 
                             {switch match=$attribute.data_type_string}
@@ -276,7 +273,7 @@
                             {/case}
 
                             {case in=array('ezobjectrelationlist')}
-                                {set $facets = $facets|append( hash( 'field', solr_field($attribute.identifier,'string'), 'name', $attribute.name, 'limit', 100, 'sort', 'alpha' ) )}
+                                {set $facets = $facets|append( hash( 'field', solr_meta_subfield($attribute.identifier,'main_node_id'), 'name', $attribute.name, 'limit', 10 ) )}
                             {/case}
 
                             {case in=array('ezdate', 'ezdatetime')}
@@ -286,16 +283,16 @@
                                     <fieldset>
                                         <legend>{$attribute.name}:</legend>
                                         <div class="col-xs-6 form-group">
-                                            <label for="attr-{$attribute.id}">Dalla data:
+                                            <label for="attr-{$attribute.id}_1">Dalla data:
                                                 <input type="text" class="from_picker form-control" placeholder="GG-MM-AAAA"
-                                                       id="attr-{$attribute.id}"
+                                                       id="attr-{$attribute.id}_1"
                                                        name="from_attributes[{$filter_string}]" title="Dalla data"
                                                        value="{if is_set($from_attributes[$filter_string])}{$from_attributes[$filter_string]}{/if}"/></label>
                                         </div>
                                         <div class="col-xs-6 form-group">
-                                            <label for="attr-{$attribute.id}">Alla data:
+                                            <label for="attr-{$attribute.id}_2">Alla data:
                                                 <input class="to_picker form-control" type="text" placeholder="GG-MM-AAAA"
-                                                       id="attr-{$attribute.id}"
+                                                       id="attr-{$attribute.id}_2"
                                                        name="to_attributes[{$filter_string}]" title="Alla data"
                                                        value="{if is_set($to_attributes[$filter_string])}{$to_attributes[$filter_string]}{/if}"/></label>
                                         </div>
@@ -338,14 +335,12 @@
                     <fieldset>
                         <legend>Data di pubblicazione:</legend>
                         <div class="col-xs-6  form-group">
-                            <label for="from">Dalla data:
-                                <input type="text" class="from_picker form-control" name="from" title="Dalla data" placeholder="GG-MM-AAAA"
-                                       value="{if $from}{$from}{/if}"/></label>
+                            <label for="from_{$__position}">Dalla data:</label>
+                            <input id="from_{$__position}" type="text" class="from_picker form-control" name="from" title="Dalla data" placeholder="GG-MM-AAAA" value="{if $from}{$from}{/if}"/>
                         </div>
                         <div class="col-xs-6  form-group">
-                            <label for="to">Alla data:
-                                <input class="to_picker form-control" type="text" name="to" title="Alla data" placeholder="GG-MM-AAAA"
-                                       value="{if $to}{$to}{/if}"/></label>
+                            <label for="to_{$__position}">Alla data:</label>
+                            <input id="to_{$__position}" class="to_picker form-control" type="text" name="to" title="Alla data" placeholder="GG-MM-AAAA" value="{if $to}{$to}{/if}"/>
                         </div>
                     </fieldset>
 
@@ -397,39 +392,47 @@
                         {/foreach}
                         {set $uriSuffix = concat( $uriSuffix, "&Sort=",$Sort,"&Order=",$Order,"&from=",$from,"&to=",$to )}
 
-                        {foreach $facets as $key => $facet}                        
-                            {if $filters_search_extras.facet_fields.$key.nameList|count()|gt(1)}
+                        {foreach $facets as $key => $facet}
+                            {if $filters_search_extras.facet_fields.$key.nameList|count()}
                                 <fieldset>
                                     <legend>{$facet['name']}</legend>
 
                                     {if count($filters_search_extras.facet_fields.$key.nameList)|gt(5)}
-                                <div class="form-group">
-                                    <select class="form-control" name="filter[]">
-                                        <option value=""> - Seleziona</option>
+                                        <div class="form-group">
+                                            <select class="form-control" name="filter[]">
+                                                <option value=""> - Seleziona</option>
+                                                {foreach $filters_search_extras.facet_fields.$key.nameList as $key2 => $facetName}
+                                                    {if ne( $key2, '' )}
+                                                        {def $filterName = $filters_search_extras.facet_fields.$key.queryLimit[$key2]|explode(':')
+                                                        $filterValue = getFilterParameter( $filterName[0] )}
+                                                        <option {if $filterValue|contains( $facetName )} selected="selected" {/if}
+                                                                value='{$filters_search_extras.facet_fields.$key.queryLimit[$key2]}'>{if fetch( 'content', 'node', hash( 'node_id', $facetName ))}{fetch( 'content', 'node', hash( 'node_id', $facetName )).name|wash()}{else}{$facetName}{/if}
+                                                            ({$filters_search_extras.facet_fields.$key.countList[$key2]}
+                                                            )
+                                                        </option>
+                                                        {undef $filterName $filterValue}
+                                                    {/if}
+                                                {/foreach}
+                                            </select>
+                                        </div>
+                                    {else}
                                         {foreach $filters_search_extras.facet_fields.$key.nameList as $key2 => $facetName}
                                             {if ne( $key2, '' )}
                                                 {def $filterName = $filters_search_extras.facet_fields.$key.queryLimit[$key2]|explode(':')
                                                 $filterValue = getFilterParameter( $filterName[0] )}
-                                                <option {if or( $filterValue|contains( $facetName ), $filterValue|contains( concat('"',$facetName,'"' ) ))} selected="selected" {/if} value="{$filters_search_extras.facet_fields.$key.queryLimit[$key2]|addQuoteOnFilter()|wash()}">{$facetName} ({$filters_search_extras.facet_fields.$key.countList[$key2]})</option>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input {if $filterValue|contains( $facetName )} checked="checked" {/if}
+                                                                class="inline" type="checkbox" name="filter[]"
+                                                                value='{$filters_search_extras.facet_fields.$key.queryLimit[$key2]}'/> {if fetch( 'content', 'node', hash( 'node_id', $facetName ))}{fetch( 'content', 'node', hash( 'node_id', $facetName )).name|wash()}{else}{$facetName}{/if}
+                                                        ({$filters_search_extras.facet_fields.$key.countList[$key2]}
+                                                        )
+                                                    </label>
+                                                </div>
                                                 {undef $filterName $filterValue}
                                             {/if}
                                         {/foreach}
-                                    </select>
-                                </div>
-                            {else}
-                                {foreach $filters_search_extras.facet_fields.$key.nameList as $key2 => $facetName}
-                                    {if ne( $key2, '' )}
-                                        {def $filterName = $filters_search_extras.facet_fields.$key.queryLimit[$key2]|explode(':')
-                                        $filterValue = getFilterParameter( $filterName[0] )}
-                                        <div class="checkbox">
-                                            <label>
-                                                <input {if or( $filterValue|contains( $facetName ), $filterValue|contains( concat('"',$facetName,'"' ) ))} checked="checked" {/if} class="inline" type="checkbox" name="filter[]" value="{$filters_search_extras.facet_fields.$key.queryLimit[$key2]|addQuoteOnFilter()|wash()}" /> {$facetName} ({$filters_search_extras.facet_fields.$key.countList[$key2]})
-                                            </label>
-                                        </div>
-                                        {undef $filterName $filterValue}
                                     {/if}
-                                {/foreach}
-                            {/if}
                                 </fieldset>
                             {else}
                                 {def $filterValue = getFilterParameter( $facet.field )}
@@ -455,7 +458,7 @@
 
                 {/if}
 
-                <p><input id="search-button-button" class="defaultbutton btn btn-info pull-right" type="submit" name="SearchButton" value="Cerca"/></p>
+                <p><input id="search-button-button" class="defaultbutton btn btn-primary pull-right" type="submit" name="SearchButton" value="Cerca"/></p>
             </fieldset>
         </form>
     </div>

@@ -15,19 +15,21 @@
   <div class="col-md-9">
 	<div id="map-{$node.node_id}" style="height: {$height}px; width: 100%"></div>
 
-	<script>
+	<script>	
+	{run-once}
 	{literal}
+	var loadMap = function(mapId,geoJson){
 	  //var tiles = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18,attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
 	  var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {maxZoom: 18,attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
-	  var map = L.map('{/literal}map-{$node.node_id}{literal}').addLayer(tiles);
+	  var map = L.map(mapId).addLayer(tiles);
 	  map.scrollWheelZoom.disable();
 	  var markers = L.markerClusterGroup();
 	  var markerMap = {};
-	  $.getJSON("{/literal}{concat('/openpa/data/map_markers'|ezurl(no), '?parentNode=',$node.node_id, '&classIdentifiers=', $class_identifiers|implode(',') )}{literal}&contentType=geojson", function(data) {
+	  $.getJSON(geoJson, function(data) {
 		$.each(data.features, function(i,v){
 		  var markerListItem = $("<li data-id='"+v.id+"'><a href='"+v.properties.url+"'><small>"+v.properties.className+"</small> "+v.properties.name+"</a></li>");
 		  markerListItem.bind('click',markerListClick);
-		  $('#{/literal}map-{$node.node_id}{literal}').parents('.row').find('.list-markers-text').append(markerListItem);
+		  $('#'+mapId).parents('.row').find('.list-markers-text').append(markerListItem);
 		});
 		var geoJsonLayer = L.geoJson(data, { pointToLayer: function (feature, latlng) {
 		  var customIcon = L.MakiMarkers.icon({icon: "star", color: "#f00", size: "l"});
@@ -53,7 +55,10 @@
 		markers.zoomToShowLayer(m, function() { m.fire('click');});
 		e.preventDefault();
 	  }
+	};
 	{/literal}
+	{/run-once}
+	loadMap('map-{$node.node_id}', "{concat('/openpa/data/map_markers'|ezurl(no), '?parentNode=',$node.node_id, '&classIdentifiers=', $class_identifiers|implode(',') )}&contentType=geojson");	
 	</script>
   </div>
   <div class="col-md-3">

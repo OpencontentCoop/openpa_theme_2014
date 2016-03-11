@@ -180,7 +180,7 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
 
         <div class="form-group">
             <label for="Order">Ordinamento</label>
-            <select class="form-control" {if $Order}class="marked"{/if} name="Order" id="Order">
+            <select class="form-control {if $Order}marked{/if}"  name="Order" id="Order">
                 <option {if $Order|eq('desc')} class="marked" selected="selected"{/if} value="desc">Discendente</option>
                 <option {if $Order|eq('asc')} class="marked" selected="selected"{/if} value="asc">Ascendente</option>
             </select>
@@ -192,7 +192,7 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
 
         {def $facets = array()}
         <div class="well well-sm clearfix collapse in" id="AdvancedSearchPanel">
-            {foreach $class.data_map as $attribute}
+            {foreach $class.data_map as $__position => $attribute}
                 {if and($attribute.is_searchable, $attribute.identifier|ne('errors'), $attributi_da_escludere_dalla_ricerca|contains($attribute.identifier)|not())}
                     {switch match=$attribute.data_type_string}
 
@@ -219,12 +219,12 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                         <fieldset>
                             <legend>{$attribute.name}:</legend>
                             <div class="col-xs-6 form-group">
-                                <label for="attr-{$attribute}-from">Dalla data: </label>
-                                <input id="attr-{$attribute}-from" type="text" class="form-control  from_picker" placeholder="GG-MM-AAAA" name="from_attributes[{$filter_string}]" title="Dalla data" value="{if is_set($from_attributes[$filter_string])}{$from_attributes[$filter_string]}{/if}" />
+                                <label for="attr-{$attribute}-from_{$__position}">Dalla data: </label>
+                                <input id="attr-{$attribute}-from_{$__position}" type="text" class="form-control  from_picker" placeholder="GG-MM-AAAA" name="from_attributes[{$filter_string}]" title="Dalla data" value="{if is_set($from_attributes[$filter_string])}{$from_attributes[$filter_string]}{/if}" />
                             </div>
                             <div class="col-xs-6 form-group">
-                                <label for="attr-{$attribute}-to">Alla data: </label>
-                                <input id="attr-{$attribute}-to" class="form-control to_picker" type="text" placeholder="GG-MM-AAAA" name="to_attributes[{$filter_string}]" title="Alla data" value="{if is_set($to_attributes[$filter_string])}{$to_attributes[$filter_string]}{/if}" />
+                                <label for="attr-{$attribute}-to_{$__position}">Alla data: </label>
+                                <input id="attr-{$attribute}-to_{$__position}" class="form-control to_picker" type="text" placeholder="GG-MM-AAAA" name="to_attributes[{$filter_string}]" title="Alla data" value="{if is_set($to_attributes[$filter_string])}{$to_attributes[$filter_string]}{/if}" />
                             </div>
                         </fieldset>
                     {/if}
@@ -233,8 +233,8 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                     {case in=array('ezinteger')}
                     {if $attribute.identifier|eq('annoxxx')}
                         <div class="form-group">
-                            <label for="{$attribute.identifier}">{$attribute.name}</label>
-                            <select class="form-control" id="{$attribute.identifier}" name="anno_s[]">
+                            <label for="{$attribute.identifier}_{$__position}">{$attribute.name}</label>
+                            <select class="form-control" id="{$attribute.identifier}_{$__position}" name="anno_s[]">
                                 <option value="">Qualsiasi anno</option>
                                 {foreach $anni as $anno}
                                     <option {if $anno|eq($anno_s[0])} class="marked" selected="selected"{/if} value="{$anno}">{$anno}</option>
@@ -244,8 +244,8 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                     {else}
                         {set $filterParameter = getFilterParameter( solr_field( $attribute.identifier, 'sint' ) )}
                         <div class="form-group">
-                            <label for="{$attribute.identifier}">{$attribute.name}</label>
-                            <input class="form-control" id="{$attribute.identifier}" size="5" type="text" name="filter[{solr_field( $attribute.identifier, 'sint' )}]" value="{if is_set($filterParameter[0])}{$filterParameter[0]}{/if}" />
+                            <label for="{$attribute.identifier}_{$__position}">{$attribute.name}</label>
+                            <input class="form-control" id="{$attribute.identifier}_{$__position}" size="5" type="text" name="filter[{solr_field( $attribute.identifier, 'sint' )}]" value="{if is_set($filterParameter[0])}{$filterParameter[0]}{/if}" />
                         </div>
                     {/if}
                     {set $sorters = $sorters|append( hash( 'name', $attribute.name, 'value', solr_field( $attribute.identifier, 'sint' ) ) )}
@@ -258,11 +258,11 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                 <legend>Data di pubblicazione:</legend>
                 <div class="col-xs-6  form-group">
                     <label for="from">Dalla data: </label>
-                    <input type="text" class="form-control from_picker" placeholder="GG-MM-AAAA" name="from" title="Dalla data" value="{if $from}{$from}{/if}" />
+                    <input type="text" class="form-control from_picker" placeholder="GG-MM-AAAA" id="from" name="from" title="Dalla data" value="{if $from}{$from}{/if}" />
                 </div>
                 <div class="col-xs-6  form-group">
                     <label for="to">Alla data: </label>
-                    <input class="form-control to_picker" placeholder="GG-MM-AAAA" type="text" name="to" title="Alla data" value="{if $to}{$to}{/if}" />
+                    <input class="form-control to_picker" placeholder="GG-MM-AAAA" type="text" id="to" name="to" title="Alla data" value="{if $to}{$to}{/if}" />
                 </div>
             </fieldset>
 
@@ -339,7 +339,8 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
                                 <legend>{$facet['name']}</legend>
                                 <div class="checkbox">
                                     <label>
-                                        <input checked="checked" class="inline" type="checkbox" name="filter[]" value='{concat( $facet.field, ':', $filterValue[0] )}' /> {$filterValue[0]}
+                                        {def $__VALUE = base64Encode(concat( $facet.field, ':', $filterValue[0] ))}
+                                        <input checked="checked" class="inline" type="checkbox" name="filter[]" value='{$__VALUE}' /> {$filterValue[0]}
                                     </label>
                                 </div>
                             </fieldset>

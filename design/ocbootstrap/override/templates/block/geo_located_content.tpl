@@ -13,12 +13,12 @@
 
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 {if and( $show_title, $block.name|ne('') )}
-<div class="widget {$block.view}">
+<div class="{$block.view}">
 
     <div class="widget_title">
         <h3>{$block.name|wash()}</h3>
     </div>
-    <div class="widget_content">
+    <div class="widget_content widget">
 {/if}
 
     {include uri='design:parts/children/map.tpl' map_type="google" view='line' node=hash( node_id, $root) class_identifiers=$block.custom_attributes.class|explode(',')}

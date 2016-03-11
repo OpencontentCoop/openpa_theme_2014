@@ -65,7 +65,10 @@
                     {foreach $objects as $object}
                     {if $done|contains( $object.id )|not()}                                
                         {if and( $object.can_read, openpaini( 'GestioneClassi', 'escludi_da_riferimenti', array( 'prenotazione_sala' ) )|contains( $object.class_identifier)|not() )}
-                            <li>{node_view_gui content_node=$object.main_node view=text_linked text=concat($object.main_node.parent.name, ' - ', $object.main_node.name)|wash()}</li>
+                            <li>
+							  <strong>{$object.content_class.name|wash()}:</strong>
+							  {node_view_gui content_node=$object.main_node view=text_linked text=concat($object.main_node.parent.name, ' - ', $object.main_node.name)|wash()}
+							</li>
                         {/if}
                         {set $done = $done|append( $object.id )}
                     {/if}

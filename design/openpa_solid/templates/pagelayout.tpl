@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--[if lt IE 9 ]>
 <html xmlns="http://www.w3.org/1999/xhtml" class="unsupported-ie ie"
       lang="{$site.http_equiv.Content-language|wash}"><![endif]-->

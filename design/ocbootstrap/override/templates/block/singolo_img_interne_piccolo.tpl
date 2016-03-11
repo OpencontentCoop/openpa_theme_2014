@@ -4,10 +4,10 @@
 
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 {if and( $show_title, $block.name|ne('') )}
-<div class="widget {$block.view}">
-  <div class="widget_title">
+<div class="widget_title">
     <h3><a href={$valid_node.url_alias|ezurl()}>{$block.name|wash()}</a></h3>
   </div>
+<div class="widget {$block.view}">
 {/if}
 
   <div class="{if and( $show_title, $block.name|ne('') )}widget_content {/if}">	

@@ -13,7 +13,7 @@
     {/if}
 {/foreach}
 {if and( $group_has_content, $node.can_create )}
-<div class="widget" style="font-size: .85em">         
+<div class="widget box_evidence" style="font-size: .85em">         
     <div class="widget_title">
       <h3>Guida per il redattore</h3>
     </div>

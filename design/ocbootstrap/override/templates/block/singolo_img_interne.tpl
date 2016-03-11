@@ -1,10 +1,10 @@
 {def $valid_node = $block.valid_nodes[0]}
 
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
-<div class="widget {$block.view}">
-    <div class="widget_title">
+	<div class="widget_title">
         <h3>{node_view_gui content_node=$valid_node view=text_linked text=cond(ne($block.name,''),$block.name,false())}</h3>
     </div>
+<div class="widget {$block.view}">
 
     <div class="widget_content">
     {if and( is_set($valid_node.data_map.image), $valid_node.data_map.image.has_content )}

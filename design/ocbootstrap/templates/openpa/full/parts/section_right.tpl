@@ -48,7 +48,7 @@
                     <ul class="list-unstyled">
                         {foreach $item as $data}
                             <li>
-                                <a href="{concat( "content/advancedsearch?filter[]=", solr_field( $data.attribute_identifier, 'string' ), ':"', $node.name|urlencode, '"&filter[]=contentclass_id:', $data.class_id, "&SearchButton=Cerca")|ezurl(no)}"
+                                <a href="{concat( "content/advancedsearch?", concat("filter[]=", solr_field( $data.attribute_identifier, 'string' ), ':"', $node.name|urlencode, '"&filter[]=contentclass_id:', $data.class_id, "&SearchButton=Cerca")|urlencode() )|ezurl(no)}"
                                    title="Link a {$data.class_name|wash}">{$data.class_name|wash} {if count($item)|gt(1)}
                                         <small>{$data.attribute_name}</small>{/if} <span
                                             class="badge">{$data.value}</span></a>
@@ -78,10 +78,11 @@
         <div class="widget">
             <div class="widget_content">
                 {foreach $openpa.content_related.info as $class_name => $infos}
-                    <ul class="list-unstyled fa-ul">
+                    <ul class="list-unstyled">
                         {foreach $infos as $info}
                             <li>                                
-                                {node_view_gui content_node=$info view=text_linked}
+                                <strong>{$info.content_class.name|wash()}:</strong>
+								{node_view_gui content_node=$info view=text_linked}
                             </li>
                         {/foreach}
                     </ul>

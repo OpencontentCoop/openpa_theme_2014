@@ -4,34 +4,36 @@
 	   $identifiers = $fieldsParts[1]|explode( ',' )}
   {if $class}
   
-  <table class="table table-striped" cellspacing="0" class="list" summary="Elenco di oggetti di tipo {$class.name|wash()}">
-	  <thead>
-		  <tr>
-			  {foreach $identifiers as $identifier}
-				{if is_set( $class.data_map[$identifier] )}
-				  <th>{$class.data_map[$identifier].name|wash()}</th>
-				{/if}
-			  {/foreach}
-		  </tr>
-	  </thead>
-	  <tbody>
-		  {foreach $nodes as $item}
-		  {if $item.class_identifier|eq( $class.identifier )}
-		  <tr>
-			  {foreach $identifiers as $i => $identifier}
-				{if is_set( $item.data_map[$identifier] )}
-				  <td>
-					{if $i|eq(0)}<a href={$item.url_alias|ezurl()}>{/if}
-					{attribute_view_gui attribute=$item.data_map[$identifier]}
-					{if $i|eq(0)}</a>{/if}
-				  </td>
-				{/if}
-			  {/foreach}
-		  </tr>
-		  {/if}
-		  {/foreach}            
-	  </tbody>
-  </table>
+  <div class="table-responsive">
+	  <table class="table table-striped" cellspacing="0" class="list" summary="Elenco di oggetti di tipo {$class.name|wash()}">
+		  <thead>
+			  <tr>
+				  {foreach $identifiers as $identifier}
+					{if is_set( $class.data_map[$identifier] )}
+					  <th>{$class.data_map[$identifier].name|wash()}</th>
+					{/if}
+				  {/foreach}
+			  </tr>
+		  </thead>
+		  <tbody>
+			  {foreach $nodes as $item}
+			  {if $item.class_identifier|eq( $class.identifier )}
+			  <tr>
+				  {foreach $identifiers as $i => $identifier}
+					{if is_set( $item.data_map[$identifier] )}
+					  <td>
+						{if $i|eq(0)}<a href={$item.url_alias|ezurl()}>{/if}
+						{attribute_view_gui attribute=$item.data_map[$identifier]}
+						{if $i|eq(0)}</a>{/if}
+					  </td>
+					{/if}
+				  {/foreach}
+			  </tr>
+			  {/if}
+			  {/foreach}            
+		  </tbody>
+	  </table>
+	</div>
   
   {include name=navigator
          uri='design:navigator/google.tpl'

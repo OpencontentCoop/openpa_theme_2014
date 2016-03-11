@@ -1,10 +1,9 @@
 {def $valid_nodes = $block.valid_nodes
     $children = array()
     $subchildren = array()
-    $children_count = 0
-    $item_per_column = 0
-    $classi_iosono_padre = openpaini( 'GestioneClassi', 'classi_iosono_padre' )
-    $classi_iosono_figli = openpaini( 'GestioneClassi', 'classi_iosono_figli' )
+    $children_count = 0    
+	$col-width = 4
+	$modulo = 3    
     $classi_da_escludere = openpaini( 'GestioneClassi', 'classi_da_escludere_dai_blocchi_ezflow' )}
 
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
@@ -28,13 +27,9 @@
                                                                     'limit', 20 ) )
                 $subchildren = array()
                 $children_count = $children|count()}
-
-                {foreach $children as $index => $child}
-
-                    {if $i|eq(0)}
-                        <div class="row">
-                    {/if}
-
+				<div class="row">
+                {foreach $children as $i => $child}
+                  <div class="col-md-{$col-width}">
                     <h4><a title="Informazioni su {$child.name|wash}" href={$child.object.main_node.url_alias|ezurl()}>{$child.name|wash()}</a></h4>
                     {set $subchildren=fetch( 'content', 'list', hash( 'parent_node_id', $child.node_id,
                                                                         'class_filter_type', 'exclude',
@@ -42,25 +37,16 @@
                                                                         'sort_by', $node.sort_array,
                                                                         'limit', 10 ) )}
                     {if $subchildren|count()|gt(0)}
-                        {foreach $subchildren as $subchild}<a title="Informazioni su {$subchild.name|wash}" href={$subchild.object.main_node.url_alias|ezurl()}>{$subchild.name|wash()}</a>{delimiter}, {/delimiter}{/foreach}
+                      {foreach $subchildren as $subchild}<a title="Informazioni su {$subchild.name|wash}" href={$subchild.object.main_node.url_alias|ezurl()}>{$subchild.name|wash()}</a>{delimiter}, {/delimiter}{/foreach}
                     {else}
-                        {if $child.data_map.abstract.has_content}
-                            {attribute_view_gui attribute=$child.data_map.abstract}
-                        {else}
-                            In fase di completamento
-                        {/if}
+					  {if $child.data_map.has_abstract()}
+						{$child|abstract()}                        
+					  {/if}
                     {/if}
-
-
-                {if eq(sum($i,1)|mod($items_per_row),0)}
-                    </div>
-                    <div class="row">
-                {/if}
-                {if $i|eq(count($items)|sub(1))}
-                    </div>
-                {/if}
-
+				  </div>
+                {delimiter modulo=$modulo}</div><div class="row">{/delimiter}
                 {/foreach}
+				</div>
             </div>
         {/foreach}
     </div>

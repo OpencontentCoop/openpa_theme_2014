@@ -47,9 +47,6 @@ $openpa-palette: (
       color: openpa-color($palette-identifier, 'text-primary');
     }
   }
-  .widget_title h3, .widget_title h3 a{
-    color: openpa-color($palette-identifier, 'background-primary');
-  }
   .owl-controls {
     .owl-buttons {
       .owl-next, .owl-prev {
@@ -76,6 +73,66 @@ $openpa-palette: (
       }
     }
   }
+
+  .tabs_nav .ui-tabs-active a, .tabs_nav li:hover a[class*="color"] {
+    background: openpa-color($palette-identifier, 'background-secondary');
+    color: openpa-color($palette-identifier, 'text-secondary');
+  }
+
+  .widget.events {
+    .tab-content {
+        border-color: openpa-color($palette-identifier, 'background-primary');
+    }
+
+    .widget_title {
+      background: openpa-color($palette-identifier, 'background-primary');
+      h3 {
+        background: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary');
+      }
+      a .fa {
+        color: openpa-color($palette-identifier, 'text-primary'); 
+      }
+    }
+
+    .events-tabs {
+      li  {
+        a {
+        background: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary');
+        opacity: 0.5;
+        }
+
+        &.active a,
+        a:hover {
+          opacity: 1;
+        }
+      }
+    } 
+  }
+
+
+    .widget_title h3 {
+      background: openpa-color($palette-identifier, 'background-primary');
+      color: openpa-color($palette-identifier, 'text-primary');
+    }
+
+    .panel-label {
+      background: openpa-color($palette-identifier, 'background-primary');
+      color: openpa-color($palette-identifier, 'text-primary');
+    }
+    .media-panel {
+      figure {
+        border-bottom-color: openpa-color($palette-identifier, 'background-primary');
+      }
+    }
+    .panel-story {
+      color: openpa-color($palette-identifier, 'background-primary');
+      a {
+        color: openpa-color($palette-identifier, 'background-primary');
+      }
+    }
+  
   .widget_tabs,
   .widget.events
    {
@@ -109,61 +166,6 @@ $openpa-palette: (
       }
     }
   }
-  .tabs_nav .ui-tabs-active a, .tabs_nav li:hover a[class*="color"] {
-    background: openpa-color($palette-identifier, 'background-secondary');
-    color: openpa-color($palette-identifier, 'text-secondary');
-  }
-
-  .widget.events {
-    .tab-content {
-        border-color: openpa-color($palette-identifier, 'background-primary');
-    }
-
-    .widget_title {
-      background: openpa-color($palette-identifier, 'background-primary');
-      h3 {
-        background: openpa-color($palette-identifier, 'background-primary');
-        color: openpa-color($palette-identifier, 'text-primary');
-      }
-      a .fa {
-        color: openpa-color($palette-identifier, 'text-primary'); 
-      }
-
-    }
-
-    .events-tabs {
-      li  {
-        a {
-        background: openpa-color($palette-identifier, 'background-primary');
-        color: openpa-color($palette-identifier, 'text-primary');
-        opacity: 0.5;
-        }
-
-        &.active a,
-        a:hover {
-          opacity: 1;
-        }
-      }
-    } 
-  }
-
-  .panels-container, .leaflet-popup-content {
-    .panel-label {
-      background: openpa-color($palette-identifier, 'background-primary');
-      color: openpa-color($palette-identifier, 'text-primary');
-    }
-    .media-panel {
-      figure {
-        border-bottom-color: openpa-color($palette-identifier, 'background-primary');
-      }
-    }
-    .panel-story {
-      color: openpa-color($palette-identifier, 'background-primary');
-      a {
-        color: openpa-color($palette-identifier, 'background-primary');
-      }
-    }
-  }
 }
 
 @mixin openpa-color-by-section( $palette-identifier: 'no-main-style' ) {
@@ -178,6 +180,40 @@ $openpa-palette: (
   #content {
     background: openpa-color($palette-identifier, 'background-page');
     @include border-radius(10px);
+
+  .widget_tabs,
+  .widget.events
+   {
+    .tab-content {
+      border-color: openpa-color($palette-identifier, 'background-primary');
+    }
+
+    h2 {
+       background: openpa-color($palette-identifier, 'background-primary');
+       color: openpa-color($palette-identifier, 'text-primary');
+    }
+    .nav-tabs
+     {
+      li {
+        a {
+          background-color: openpa-color($palette-identifier, 'background-primary');
+          color: openpa-color($palette-identifier, 'text-primary');
+          opacity: 0.5;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.active a {
+          background-color: openpa-color($palette-identifier, 'background-primary');
+          color: openpa-color($palette-identifier, 'text-primary');
+          opacity: 1;
+
+        }
+      }
+    }
+  }
 
     .content-view-full {
         /*a {
@@ -204,9 +240,6 @@ $openpa-palette: (
         background-color: openpa-color($palette-identifier, 'text-primary');
       }
 
-      .widget_title h3, .widget_title h3 a{
-        background-color: openpa-color($palette-identifier, 'background-primary');
-      }
     }
 
 
@@ -214,6 +247,9 @@ $openpa-palette: (
       .content-view-children {
         .media:nth-child(even) {
             background-color:  openpa-color($palette-identifier, 'background-secondary');
+        }
+        .media-panel .media {
+          background-color: transparent;
         }
       }
       .content-detail .row:nth-child(even) {
@@ -296,9 +332,7 @@ $openpa-palette: (
          border-color: openpa-color($palette-identifier, 'background-primary');
       }
    }
-
-
-
+}
 
   #footer {
     background: openpa-color($palette-identifier, 'background-primary');
@@ -310,7 +344,6 @@ $openpa-palette: (
       border-top-color: openpa-color($palette-identifier, 'background-primary');
     }
   }
-}
   #valuation-container { 
     background: openpa-color($palette-identifier, 'background-page');
 

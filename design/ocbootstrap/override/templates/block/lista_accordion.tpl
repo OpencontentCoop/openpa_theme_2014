@@ -5,16 +5,16 @@
 <div class="{$block.view}">
     {if and( $show_title, $block.name|ne('') )}
       <div  class="widget_title">
-        <h3>{$block.name|wash()} TEST</h3>
+        <h3>{$block.name|wash()}</h3>
       </div>
-    {/if}    
+    {/if}
 
-    <div class="panel-group" id="item-{$block.id}-accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel-group widget" id="item-{$block.id}-accordion" role="tablist" aria-multiselectable="true">
       {foreach $openpa.content as $index => $item}
       <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="item-{$block.id}-{$item.node_id}-heading">            
-          <h4 class="panel-title">
-            <a role="button" data-toggle="collapse" data-parent="#item-{$block.id}-accordion" href="#item-{$block.id}-{$item.node_id}-collapse" aria-expanded="true" aria-controls="item-{$block.id}-{$item.node_id}">
+        <div class="panel-heading" role="tab" id="item-{$block.id}-{$item.node_id}-heading">
+          <h4 class="panel-title" id="item-{$block.id}-{$item.node_id}">
+            <a role="button" data-toggle="collapse" data-parent="#item-{$block.id}-accordion" href="#item-{$block.id}-{$item.node_id}-collapse" aria-expanded="true" aria-controls="item-{$block.id}-{$item.node_id}" ><i class="fa fa-chevron-circle-right"></i>
               {$item.name|wash()}
             </a>
           </h4>
@@ -28,8 +28,8 @@
           </div>
         </div>
       </div>
-      {/foreach}        
-    </div>      
+      {/foreach}
+    </div>
 
 </div>
 {if is_set($block.custom_attributes.color_style)}</div>{/if}

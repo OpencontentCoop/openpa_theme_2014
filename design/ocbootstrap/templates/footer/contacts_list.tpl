@@ -1,16 +1,23 @@
 <ul class="list-unstyled vertical_list">
   {if is_set($pagedata.contacts.telefono)}
-    <li><a href="tel:{$pagedata.contacts.telefono}">
-        <i class="fa fa-phone-square"></i>
-        {$pagedata.contacts.telefono}
-      </a>
+    <li>
+        {def $tel = strReplace($pagedata.contacts.telefono,array(" ",""))}
+{*        <a href="tel:{$pagedata.contacts.telefono}">*}
+        <a href="tel:{$tel}">
+            <i class="fa fa-phone-square"></i>
+            {$pagedata.contacts.telefono}
+        </a>
     </li>
   {/if}
   {if is_set($pagedata.contacts.fax)}
-    <li><a href="tel:{$pagedata.contacts.fax}">
+    <li>
+      {def $fax = strReplace($pagedata.contacts.fax,array(" ",""))}
+{*      <a href="tel:{$pagedata.contacts.fax}">*}
+      <a href="tel:{$fax}">
         <i class="fa fa-fax"></i>
         {$pagedata.contacts.fax}
-      </a></li>
+      </a>
+    </li>
   {/if}
   {if is_set($pagedata.contacts.email)}
     <li><a href="mailto:{$pagedata.contacts.email}">

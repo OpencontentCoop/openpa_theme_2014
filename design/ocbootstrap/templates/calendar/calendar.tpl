@@ -44,8 +44,8 @@
     </div>
 
     <h1>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h1>
-
-    <table summary="Calendario degli eventi" class="table-calendar">
+    <figure>
+    <table class="table-calendar">
         <thead>
         <tr>
             <th>{"Mon"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
@@ -90,7 +90,7 @@
                 {if is_set( $calendarData.day_by_day[$day_id] )}
                     {if $calendarData.day_by_day[$day_id].count|gt(0)}
                         <ul>
-                            {foreach $calendarData.day_by_day[$day_id].events as $event max 4}                                
+                            {foreach $calendarData.day_by_day[$day_id].events as $event max 4}
                                 {include uri="design:calendar/list_item.tpl" item=$event}
                             {/foreach}
 
@@ -132,6 +132,10 @@
 
         </tbody>
     </table>
+    <figcaption>
+		Calendario degli eventi
+	</figcaption>
+	</figure>
 </form>
 
 {literal}

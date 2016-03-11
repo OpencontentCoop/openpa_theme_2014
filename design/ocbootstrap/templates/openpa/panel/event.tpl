@@ -24,7 +24,10 @@
         </div>
         <div class="col-xs-8">
 	  {/if}
-          {if $node|has_attribute( 'indirizzo' )}
+          
+
+      <div class="abstract">
+        {if $node|has_attribute( 'indirizzo' )}
             {attribute_view_gui attribute=$node.data_map.indirizzo}
           {/if}
           {if $node|has_attribute( 'luogo_svolgimento' )}
@@ -33,8 +36,6 @@
           {if $node|has_attribute( 'comune' )}
             {attribute_view_gui attribute=$node.data_map.comune}
           {/if}
-
-      <div class="abstract">
         {$node|abstract()|openpa_shorten(270)}
       </div>
 

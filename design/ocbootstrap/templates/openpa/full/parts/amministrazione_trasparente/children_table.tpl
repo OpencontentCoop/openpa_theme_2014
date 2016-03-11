@@ -10,22 +10,26 @@
     {if $class|is_array()}
         
         {* tabella generica di oggetti di classi di vario tipo *}
-        <table cellspacing="0" class="table table-striped" summary="Elenco di {$node.name|wash()}">
-            <thead>
-                <tr>
-                    <th>Link al dettaglio</th>
-                    <th>Data di pubblicazione</th>
-                </tr>
-            </thead>
-            <tbody>
-                {foreach $nodes as $item}
-                <tr>
-                    <td><a href={$item.url_alias|ezurl()} title="Vai al dettaglio di {$item.name|wash()}">{$item.name|wash()}</a></td>
-                    <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br /><small>Ultima modifica: <strong>{$item.object.modified|l10n(date)}</small>{/if}</td>
-                </tr>
-                {/foreach}            
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <caption>Elenco di {$node.name|wash()}</caption>
+                <thead>
+                    <tr>
+                        <th>Link al dettaglio</th>
+                        <th>Data di pubblicazione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {foreach $nodes as $item}
+                    <tr>
+                        <td><a href={$item.url_alias|ezurl()} title="Vai al dettaglio di {$item.name|wash()}">{$item.name|wash()}</a></td>
+                        <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br />
+                            <span class="f_size_small">Ultima modifica: <strong>{$item.object.modified|l10n(date)}</strong>{/if}</span></td>
+                    </tr>
+                    {/foreach}            
+                </tbody>
+            </table>
+        </div>
     
     {elseif $class|is_string()}
     
@@ -34,7 +38,9 @@
             
             {* dipendente *}
             {case match='dipendente'}
-                <table cellspacing="0" class="table table-striped" summary="Elenco di {$node.name|wash()}">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <caption>Elenco di {$node.name|wash()}</caption>
                     <thead>
                         <tr>
                             <th>Nominativo</th>
@@ -54,16 +60,20 @@
                                 {/foreach}
                                 {undef $roles}
                             </td>
-                            <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br /><small>Ultima modifica: <strong>{$item.object.modified|l10n(date)}</small>{/if}</td>                           
+                            <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br />
+                                <span class="f_size_small ">Ultima modifica: <strong>{$item.object.modified|l10n(date)}</strong></span>{/if}</td>                           
                         </tr>
                         {/foreach}            
                     </tbody>
-                </table>             
+                </table>    
+            </div>         
             {/case}
             
             {* generica mostra gli attributi principali *}
             {case}
-                <table cellspacing="0" class="table table-striped" summary="Elenco di {$node.name|wash()}">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <caption>Elenco di {$node.name|wash()}</caption>
                     <thead>
                         <tr>
                             <th>Link al dettaglio</th>
@@ -74,11 +84,13 @@
                         {foreach $nodes as $item}
                         <tr>
                             <td><a href={$item.url_alias|ezurl()} title="Vai al dettaglio di {$item.name|wash()}">{$item.name|wash()}</a></td>
-                            <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br /><small>Ultima modifica: <strong>{$item.object.modified|l10n(date)}</small>{/if}</td>
+                            <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br />
+                                <span class="f_size_small ">Ultima modifica: <strong>{$item.object.modified|l10n(date)}</strong></span>{/if}</td>
                         </tr>
                         {/foreach}            
                     </tbody>
-                </table>        
+                </table> 
+            </div>       
             {/case}
             
         {/switch}

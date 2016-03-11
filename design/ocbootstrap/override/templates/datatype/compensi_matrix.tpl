@@ -1,6 +1,7 @@
 {def $notes = hash()}
 {let matrix=$attribute.content}
 <p><strong>{$attribute.contentclass_attribute_name}</strong></p>
+<div class="table-responsive">
 <table class="table table-striped table-condensed" cellspacing="0">
 <tr>
 {section var=ColumnNames loop=$matrix.columns.sequential}
@@ -20,6 +21,7 @@
 </tr>
 {/section}
 </table>
+</div>
 {/let}
 {if count( $notes )|gt(0)}
 <p>
