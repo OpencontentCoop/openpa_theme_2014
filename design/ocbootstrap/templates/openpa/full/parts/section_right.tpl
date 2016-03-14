@@ -47,8 +47,8 @@
                 {foreach $openpa.content_facets.items as $item}
                     <ul class="list-unstyled">
                         {foreach $item as $data}
-                            <li>
-                                <a href="{concat( "content/advancedsearch?", concat("filter[]=", solr_field( $data.attribute_identifier, 'string' ), ':"', $node.name|urlencode, '"&filter[]=contentclass_id:', $data.class_id, "&SearchButton=Cerca")|urlencode() )|ezurl(no)}"
+                            <li>                                
+                                <a href="{concat( "content/advancedsearch?Data[",$data.attribute_identifier,"][]=", $node.contentobject_id|urlencode, '&ClassArray[]=', $data.class_id)|ezurl(no)}"
                                    title="Link a {$data.class_name|wash}">{$data.class_name|wash} {if count($item)|gt(1)}
                                         <small>{$data.attribute_name}</small>{/if} <span
                                             class="badge">{$data.value}</span></a>

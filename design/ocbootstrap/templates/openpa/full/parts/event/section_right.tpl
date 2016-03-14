@@ -120,20 +120,23 @@
   {/if}
   
   {if $openpa.content_facets.has_data}
-    <h2><i class="fa fa-archive"></i> Riferimenti</h2>    
-    <div class="widget">
-      <div class="widget_content">
-        {foreach $openpa.content_facets.items as $item}
-          <ul class="list-unstyled">        
-            {foreach $item as $data}
-                <li>
-                    <a href="{concat( "content/advancedsearch?filter[]=", solr_meta_subfield($data.attribute_identifier,'main_node_id'), ':', $node.node_id|urlencode, '&filter[]=contentclass_id:', $data.class_id, "&SearchButton=Cerca")|ezurl(no)}" title="Link a {$data.class_name|wash}">{$data.class_name|wash} {if count($item)|gt(1)}<small>{$data.attribute_name}</small>{/if} <span class="badge">{$data.value}</span></a>
-                </li>
-            {/foreach}          
-          </ul>
-        {/foreach}
-      </div>
-    </div>
+    <h2><i class="fa fa-archive"></i> Riferibili a {$node.name|wash()}</h2>
+        <div class="widget">
+            <div class="widget_content">
+                {foreach $openpa.content_facets.items as $item}
+                    <ul class="list-unstyled">
+                        {foreach $item as $data}
+                            <li>                                
+                                <a href="{concat( "content/advancedsearch?Data[",$data.attribute_identifier,"][]=", $node.contentobject_id|urlencode, '&ClassArray[]=', $data.class_id)|ezurl(no)}"
+                                   title="Link a {$data.class_name|wash}">{$data.class_name|wash} {if count($item)|gt(1)}
+                                        <small>{$data.attribute_name}</small>{/if} <span
+                                            class="badge">{$data.value}</span></a>
+                            </li>
+                        {/foreach}
+                    </ul>
+                {/foreach}
+            </div>
+        </div>
   {/if}
   
   {if count($openpa.content_related.info)|gt(0)}

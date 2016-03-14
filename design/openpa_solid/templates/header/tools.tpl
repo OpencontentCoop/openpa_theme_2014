@@ -62,16 +62,13 @@
                     <div class="input-group">
                         <label class="hide" for="cerca">cerca</label>
                         {if is_area_tematica()}
-						  <input type="hidden" value="{is_area_tematica().node_id}" name="SubTreeArray[]" />
-						  <input type="text" id="cerca" class="form-control" placeholder="Cerca in {is_area_tematica().name|wash()}" name="SearchText" {if $pagedata.is_edit}disabled="disabled"{/if}>
-						{else}
-						  <input type="text" id="cerca" class="form-control" placeholder="Cerca nel sito" name="SearchText" {if $pagedata.is_edit}disabled="disabled"{/if}>
-						{/if}						
-
+                          <input type="hidden" value="{is_area_tematica().node_id}" name="SubTreeArray[]" />
+                          <input type="text" id="cerca" class="form-control" placeholder="Cerca in {is_area_tematica().name|wash()}" name="SearchText" {if $pagedata.is_edit}disabled="disabled"{/if}>
+                        {else}
+                          <input type="text" id="cerca" class="form-control" placeholder="Cerca nel sito" name="SearchText" {if $pagedata.is_edit}disabled="disabled"{/if}>
+                        {/if}						
                         <div class="input-group-btn">
-                            <button class="btn btn-link" type="submit" value="cerca" name="SearchButton" {if $pagedata.is_edit}disabled="disabled"{/if}><i class="fa fa-search fa-lg"></i><span class="hide">Pulsante ricerca</span></button>
-
-                            <input id="facet_field" name="facet_field" value="class" type="hidden" />
+                            <button class="btn btn-link" type="submit" value="cerca" name="SearchButton" {if $pagedata.is_edit}disabled="disabled"{/if}><i class="fa fa-search fa-lg"></i><span class="hide">Pulsante ricerca</span></button>                          
                             {if eq( $ui_context, 'browse' )}
                                 <input name="Mode" type="hidden" value="browse" />
                             {/if}                            
