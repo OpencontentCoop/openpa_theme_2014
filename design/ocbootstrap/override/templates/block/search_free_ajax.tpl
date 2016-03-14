@@ -1,8 +1,8 @@
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
+<div class="widget_title">
+    <h3>{$block.name}</h3>
+</div>
 <div class="widget {$block.view}">
-    <div class="widget_title">
-        <h3>{$block.name}</h3>
-    </div>
     <div class="widget_content">
 <form id="search-form-{$block.id}" action="{'ezajax/search'|ezurl('no')}" method="post">
     <input id="search-string-{$block.id}" type="text" name="SearchStr" class="form-control" value="" />

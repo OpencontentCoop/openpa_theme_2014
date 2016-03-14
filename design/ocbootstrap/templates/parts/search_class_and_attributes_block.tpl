@@ -154,13 +154,13 @@ $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array() )}
         {/foreach}
     {/if}
 
-    <button type="button" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#OrderSearchPanel">
+    <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#OrderSearchPanel">
         Ordinamento dei risultati
-    </button>
+    </a>
 
-    <button type="button" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#AdvancedSearchPanel">
+    <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#AdvancedSearchPanel">
         Ricerca avanzata
-    </button>
+    </a>
 
     <div class="well well-sm clearfix collapse" id="OrderSearchPanel">
         <div class="form-group">

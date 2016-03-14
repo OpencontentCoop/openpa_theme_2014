@@ -1,4 +1,153 @@
 @charset "UTF-8";
+/* line 89, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget.events .widget_title h3, #content .color.color-default-2 .panels-container .events.media .widget_title h3, .panels-container #content .color.color-default-2 .events.media .widget_title h3,
+#content .color.color-default-2 .leaflet-popup-content .events.media .widget_title h3,
+.leaflet-popup-content #content .color.color-default-2 .events.media .widget_title h3 {
+  background: #00803c;
+  color: #ffffff;
+}
+/* line 93, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget.events .widget_title a .fa, #content .color.color-default-2 .panels-container .events.media .widget_title a .fa, .panels-container #content .color.color-default-2 .events.media .widget_title a .fa,
+#content .color.color-default-2 .leaflet-popup-content .events.media .widget_title a .fa,
+.leaflet-popup-content #content .color.color-default-2 .events.media .widget_title a .fa {
+  color: #ffffff;
+}
+/* line 100, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget.events .events-tabs li a, #content .color.color-default-2 .panels-container .events.media .events-tabs li a, .panels-container #content .color.color-default-2 .events.media .events-tabs li a,
+#content .color.color-default-2 .leaflet-popup-content .events.media .events-tabs li a,
+.leaflet-popup-content #content .color.color-default-2 .events.media .events-tabs li a {
+  background: #00803c;
+  color: #ffffff;
+  opacity: 0.5;
+}
+/* line 106, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget.events .events-tabs li.active a, #content .color.color-default-2 .panels-container .events.media .events-tabs li.active a, .panels-container #content .color.color-default-2 .events.media .events-tabs li.active a,
+#content .color.color-default-2 .leaflet-popup-content .events.media .events-tabs li.active a,
+.leaflet-popup-content #content .color.color-default-2 .events.media .events-tabs li.active a,
+#content .color.color-default-2 .widget.events .events-tabs li a:hover,
+#content .color.color-default-2 .panels-container .events.media .events-tabs li a:hover,
+.panels-container #content .color.color-default-2 .events.media .events-tabs li a:hover,
+#content .color.color-default-2 .leaflet-popup-content .events.media .events-tabs li a:hover,
+.leaflet-popup-content #content .color.color-default-2 .events.media .events-tabs li a:hover {
+  opacity: 1;
+}
+/* line 115, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .events .calendar-date .month {
+  background-color: #00803c;
+  color: #ffffff;
+}
+/* line 119, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .events .calendar-date .day {
+  border-color: #00803c;
+}
+/* line 124, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i,
+#content .color.color-default-2 .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i {
+  color: #00803c;
+}
+/* line 130, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_title h3 {
+  background: #00803c;
+  color: #ffffff;
+}
+/* line 135, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .panel-label {
+  background: #00803c;
+  color: #ffffff;
+}
+/* line 140, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .media-panel figure {
+  border-bottom-color: #00803c;
+}
+/* line 144, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .panel-story {
+  color: #00803c;
+}
+/* line 146, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .panel-story a {
+  color: #00803c;
+}
+/* line 154, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_tabs .tab-content,
+#content .color.color-default-2 .widget.events .tab-content,
+#content .color.color-default-2 .panels-container .events.media .tab-content,
+.panels-container #content .color.color-default-2 .events.media .tab-content,
+#content .color.color-default-2 .leaflet-popup-content .events.media .tab-content,
+.leaflet-popup-content #content .color.color-default-2 .events.media .tab-content {
+  border-color: #00803c;
+}
+/* line 158, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_tabs h2,
+#content .color.color-default-2 .widget.events h2,
+#content .color.color-default-2 .panels-container .events.media h2,
+.panels-container #content .color.color-default-2 .events.media h2,
+#content .color.color-default-2 .leaflet-popup-content .events.media h2,
+.leaflet-popup-content #content .color.color-default-2 .events.media h2 {
+  background: #00803c;
+  color: #ffffff;
+}
+/* line 165, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_tabs .nav-tabs li a,
+#content .color.color-default-2 .widget.events .nav-tabs li a,
+#content .color.color-default-2 .panels-container .events.media .nav-tabs li a,
+.panels-container #content .color.color-default-2 .events.media .nav-tabs li a,
+#content .color.color-default-2 .leaflet-popup-content .events.media .nav-tabs li a,
+.leaflet-popup-content #content .color.color-default-2 .events.media .nav-tabs li a {
+  background-color: #00803c;
+  color: #ffffff;
+  opacity: 0.5;
+}
+/* line 170, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_tabs .nav-tabs li a:hover,
+#content .color.color-default-2 .widget.events .nav-tabs li a:hover,
+#content .color.color-default-2 .panels-container .events.media .nav-tabs li a:hover,
+.panels-container #content .color.color-default-2 .events.media .nav-tabs li a:hover,
+#content .color.color-default-2 .leaflet-popup-content .events.media .nav-tabs li a:hover,
+.leaflet-popup-content #content .color.color-default-2 .events.media .nav-tabs li a:hover {
+  opacity: 1;
+}
+/* line 175, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-2 .widget_tabs .nav-tabs li.active a,
+#content .color.color-default-2 .widget.events .nav-tabs li.active a,
+#content .color.color-default-2 .panels-container .events.media .nav-tabs li.active a,
+.panels-container #content .color.color-default-2 .events.media .nav-tabs li.active a,
+#content .color.color-default-2 .leaflet-popup-content .events.media .nav-tabs li.active a,
+.leaflet-popup-content #content .color.color-default-2 .events.media .nav-tabs li.active a {
+  background-color: #00803c;
+  color: #ffffff;
+  opacity: 1;
+}
+/* line 42, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 h3.widget_title {
+  background-color: #006598;
+  color: #ffffff;
+}
+/* line 46, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 h3.widget_title a {
+  color: #ffffff;
+}
+/* line 52, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .owl-controls .owl-buttons .owl-next, #content .color.color-default-3 .owl-controls .owl-buttons .owl-prev {
+  background: #006598;
+  color: #ffffff;
+}
+/* line 59, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-caption {
+  color: #fff;
+}
+/* line 61, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-caption h3 {
+  background: #006598;
+  color: #ffffff;
+}
+/* line 64, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-caption h3 a {
+  color: #ffffff;
+}
+/* line 71, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-3 .carousel-both-control .owl-pagination.active {
+  background: #006598 !important;
+}
 /* line 77, ../scss/solid/_colors_mixin.scss */
 #content .color.color-default-3 .tabs_nav .ui-tabs-active a, #content .color.color-default-3 .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs #content .color.color-default-3 .nav-tabs .ui-tabs-active a,
 #content .color.color-default-3 .widget_tabs .events-tabs .ui-tabs-active a,
@@ -616,4 +765,15 @@
 .leaflet-popup-content #content .color.color-default-6 .events.media h2 {
   background: "";
   color: "";
+}
+/* line 165, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget_tabs .nav-tabs li a,
+#content .color.color-default-6 .widget.events .nav-tabs li a,
+#content .color.color-default-6 .panels-container .events.media .nav-tabs li a,
+.panels-container #content .color.color-default-6 .events.media .nav-tabs li a,
+#content .color.color-default-6 .leaflet-popup-content .events.media .nav-tabs li a,
+.leaflet-popup-content #content .color.color-default-6 .events.media .nav-tabs li a {
+  background-color: "";
+  color: "";
+  opacity: 0.5;
 }

@@ -14,7 +14,7 @@
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="item-{$block.id}-{$item.node_id}-heading">
           <h4 class="panel-title" id="item-{$block.id}-{$item.node_id}">
-            <a role="button" data-toggle="collapse" data-parent="#item-{$block.id}-accordion" href="#item-{$block.id}-{$item.node_id}-collapse" aria-expanded="true" aria-controls="item-{$block.id}-{$item.node_id}"><i class="fa fa-chevron-circle-right"></i>
+            <a role="button" data-toggle="collapse" data-parent="#item-{$block.id}-accordion" href="#item-{$block.id}-{$item.node_id}-collapse" aria-expanded="true" aria-controls="item-{$block.id}-{$item.node_id}"><i class="fa fa-square"></i>
               {$item.name|wash()}
             </a>
           </h4>

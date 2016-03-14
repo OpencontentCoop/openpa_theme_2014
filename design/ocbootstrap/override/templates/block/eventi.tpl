@@ -66,7 +66,7 @@
               {/if}
             </h3>
         </div>
-        <div class="widget">
+        <div>
 
 
     {else}
@@ -94,7 +94,7 @@
         </ul>
         {/if}
 
-        <div class="tab-content">
+        <div class="tab-content widget">
 
 
             {if $day_events_count|ne(0)}

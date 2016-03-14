@@ -4,7 +4,8 @@
 {set_defaults(hash(
   'height', 600,
   'map_type', 'osm',
-  'class_identifiers', array()
+  'class_identifiers', array(),
+  'items_per_row', 2
 ))}
 
 {set $height = $height|fix_dimension()}
@@ -12,13 +13,13 @@
 {if $markers|count()*}
 
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-{if $items_per_row|eq(1)}12{else}9{/if}">
 	<div id="map-{$node.node_id}" style="height: {$height}px; width: 100%"></div>
 
 	<script>	
 	{run-once}
 	{literal}
-	var loadMap = function(mapId,geoJson){
+	var loadMap = function(mapId,markersId,geoJson){
 	  //var tiles = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18,attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
 	  var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {maxZoom: 18,attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
 	  var map = L.map(mapId).addLayer(tiles);
@@ -29,7 +30,7 @@
 		$.each(data.features, function(i,v){
 		  var markerListItem = $("<li data-id='"+v.id+"'><a href='"+v.properties.url+"'><small>"+v.properties.className+"</small> "+v.properties.name+"</a></li>");
 		  markerListItem.bind('click',markerListClick);
-		  $('#'+mapId).parents('.row').find('.list-markers-text').append(markerListItem);
+		  $('#'+markersId).append(markerListItem);
 		});
 		var geoJsonLayer = L.geoJson(data, { pointToLayer: function (feature, latlng) {
 		  var customIcon = L.MakiMarkers.icon({icon: "star", color: "#f00", size: "l"});
@@ -58,11 +59,11 @@
 	};
 	{/literal}
 	{/run-once}
-	loadMap('map-{$node.node_id}', "{concat('/openpa/data/map_markers'|ezurl(no), '?parentNode=',$node.node_id, '&classIdentifiers=', $class_identifiers|implode(',') )}&contentType=geojson");	
+	loadMap('map-{$node.node_id}', 'markers-{$node.node_id}', "{concat('/openpa/data/map_markers'|ezurl(no), '?parentNode=',$node.node_id, '&classIdentifiers=', $class_identifiers|implode(',') )}&contentType=geojson");	
 	</script>
   </div>
-  <div class="col-md-3">
-	<ul class="list-markers-text list-unstyled" style="height: {$height}px;overflow-y: auto"></ul>
+  <div class="col-md-{if $items_per_row|eq(1)}12{else}3{/if}">
+	<ul id="markers-{$node.node_id}" class="list-markers-text list-unstyled" style="height: {$height}px;overflow-y: auto"></ul>
   </div>
 
 </div>

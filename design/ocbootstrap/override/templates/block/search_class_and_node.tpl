@@ -66,10 +66,11 @@ $(function() {
      $anni = openpaini( 'MotoreDiRicerca', 'RicercaAvanzataSelezionaAnni', array())
 }
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
+<div class="widget_title">
+    <h3>Cerca in {$folder}</h3>
+</div>
 <div class="widget {$block.view}">
-    <div class="widget_title">
-        <h3>Cerca in {$folder}</h3>
-    </div>
+
     <div class="widget_content">
 
 <form id="search-form-box" action="{'content/search'|ezurl('no')}" method="get">

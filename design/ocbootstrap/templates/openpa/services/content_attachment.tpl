@@ -16,7 +16,7 @@
     <div class="well">
       {if $item|has_attribute( 'file' )}        
         <a class="btn btn-info pull-left m_right_20" href={concat("content/download/",$item|attribute( 'file' ).contentobject_id,"/",$item|attribute( 'file' ).id,"/file/",$item|attribute( 'file' ).content.original_filename)|ezurl} title="Scarica il file {$item|attribute( 'file' ).content.original_filename|wash( xhtml )}">
-            <i class="fa fa-download fa-2x"></i>
+            <i class="fa fa-download fa-2x"></i><span class="hide">download</span>
         </a>
       {else}
         <a class="btn btn-info pull-right" href="{$item.url_alias|ezurl(no)}">LEGGI</a>

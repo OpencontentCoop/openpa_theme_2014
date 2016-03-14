@@ -25,6 +25,7 @@
 
 {if $children_count}
   <div class="content-view-children">  
+    <h2>Approfondisci</h2>
 	{foreach $children as $child }
 	  {node_view_gui view=$view content_node=$child image_class=$image_class}
 	  {delimiter}{$delimiter}{/delimiter}

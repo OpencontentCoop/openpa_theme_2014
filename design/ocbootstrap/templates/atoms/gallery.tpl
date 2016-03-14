@@ -3,7 +3,7 @@
 {ezcss_require( array( "plugins/blueimp/blueimp-gallery.css" ) )}
 
 {set_defaults( hash(  
-  'thumbnail_class', 'squaremini',
+  'thumbnail_class', 'squarethumb',
   'wide_class', 'imagefullwide',
   'items', array(),
   'fluid', false(),

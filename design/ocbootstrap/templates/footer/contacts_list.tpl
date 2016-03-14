@@ -22,13 +22,13 @@
   {if is_set($pagedata.contacts.email)}
     <li><a href="mailto:{$pagedata.contacts.email}">
         <i class="fa fa-envelope-o"></i>
-        <small>{$pagedata.contacts.email}</small>
+        {$pagedata.contacts.email}
       </a></li>
   {/if}
   {if is_set($pagedata.contacts.pec)}
     <li><a href="mailto:{$pagedata.contacts.pec}">
         <i class="fa fa-envelope"></i>
-        <small>{$pagedata.contacts.pec}</small>
+        {$pagedata.contacts.pec}
       </a></li>
   {/if}
   {if is_set($pagedata.contacts.indirizzo)}

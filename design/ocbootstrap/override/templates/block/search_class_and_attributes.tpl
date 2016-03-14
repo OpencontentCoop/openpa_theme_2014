@@ -51,17 +51,18 @@ $(function() {
 {/literal}
 </script>
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
-
+<div class="widget_title">
+    <h3>{$block.name|wash()}</h3>
+</div>
 <div class="widget {$block.view} search_box">
-<h2>{$block.name|wash()}</h2>
 <div class="widget_content">
     <form action="{'content/search'|ezurl('no')}" method="get">
-
+        <label class="hide" for="search-string">ricerca libera</label>
         <input placeholder="Ricerca libera" class="form-control" id="search-string" type="text" name="SearchText" value="" />
 
-        <button type="button" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#AdvancedPanel">
+        <a class="btn btn-link btn-sm" data-toggle="collapse" data-target="#AdvancedPanel">
             Ricerca avanzata
-        </button>
+        </a>
 
         {if is_set( $class_filter[0] )}
         <div id="AdvancedPanel" class="collapse">

@@ -15,7 +15,7 @@
     {if $virtualFolder}
         {include name=searchbox
                 node=cond(is_set($parentOpenpa), $node.parent, $node )
-                folder=cond(is_set($parentOpenpa), $parentOpenpa.name, $openpa.name )
+                subtree=$virtualFolder.subtree
                 class_filters=$virtualFolder.classes
                 uri='design:parts/search_class_and_attributes.tpl' }
     {/if}

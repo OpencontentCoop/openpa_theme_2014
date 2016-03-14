@@ -337,7 +337,7 @@
                             </button>
                         </span>
                     </div>
-                    <button type="button" class="btn btn-link btn-xs" data-toggle="collapse" data-target="#AdvancedSearchPanel">
+                    <button type="button" class="btn btn-link btn-xs" value="ricerca avanzata" data-toggle="collapse" data-target="#AdvancedSearchPanel">
                         Ricerca avanzata
                     </button>
                 </div>

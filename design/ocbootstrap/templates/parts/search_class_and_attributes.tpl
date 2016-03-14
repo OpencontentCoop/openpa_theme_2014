@@ -1,3 +1,21 @@
+{*if count($class_filters)|gt(0)}
+<div class="widget search_box">    
+	{if $node|ne( false() )}
+		<h2>Cerca in {$node.name|wash()}</h2>
+	{else}
+		<h2>Cerca</h2>
+	{/if}
+  
+	{def $class = fetch( 'content', 'class', hash( 'class_id', $class_filters[0] ) )}		
+    <div class="widget_content">
+      {include name = searchform
+			   uri = 'design:parts/class_search_form.tpl'
+			   class = $class			   			   
+			   subtree = $subtree
+			   exclude_attributes = openpaini( 'Attributi', 'EscludiDaRicerca', array() )}
+    </div>
+</div>
+{/if*}
 {*
 	BLOCCO di ricerca
 
@@ -192,15 +210,15 @@
                     {/foreach}
                 {/if}
 
-                <button type="button" class="btn btn-link btn-sm" data-toggle="collapse"
+                <a href="#" class="btn btn-link btn-sm" data-toggle="collapse"
                         data-target="#OrderSearchPanel">
                     Ordinamento
-                </button>
+                </a>
 
-                <button type="button" class="btn btn-link btn-sm" data-toggle="collapse"
+                <a href="#" class="btn btn-link btn-sm" data-toggle="collapse"
                         data-target="#AdvancedSearchPanel">
                     Avanzata
-                </button>
+                </a>
 
                 <div class="well well-sm clearfix collapse" id="OrderSearchPanel">
                     <div class="form-group">

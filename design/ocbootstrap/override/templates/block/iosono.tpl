@@ -17,7 +17,7 @@
             </li>
         {/foreach}
     </ul>
-    <div class="tab-content">
+    <div class="tab-content widget">
         {foreach $valid_nodes as $index => $node}
             <div class="tab-pane{if $index|eq(0)} active{/if}" id="{$node.name|slugize()}">
                 {set $children = fetch( 'content', 'list', hash( 'parent_node_id', $node.node_id,
