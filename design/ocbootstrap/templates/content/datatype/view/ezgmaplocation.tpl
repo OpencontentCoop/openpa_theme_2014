@@ -1,10 +1,8 @@
 {if and( $attribute.content.latitude, $attribute.content.longitude )}
-{run-once}
-<link rel="stylesheet" href="{'stylesheets/leaflet.0.7.2.css'|ezdesign(no)}" property='stylesheet' />
-<script src="{'javascript/leaflet.0.7.2.js'|ezdesign(no)}"></script>
-<script src="{'javascript/Leaflet.MakiMarkers.js'|ezdesign(no)}"></script>
-{/run-once}
 
+{ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js', 'Leaflet.MakiMarkers.js', 'leaflet.markercluster.js') )}
+{ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css', 'MarkerCluster.css', 'MarkerCluster.Default.css' ) )}
+  
 <div id="map-{$attribute.id}" style="width: 100%; height: 200px;"></div>
 <p class="goto">
   <a class="btn btn-xs btn-success pull-right" target="_blank" href="https://www.google.com/maps/dir//'{$attribute.content.latitude},{$attribute.content.longitude}'/@{$attribute.content.latitude},{$attribute.content.longitude},15z?hl=it">Come arrivare <i class="fa fa-external-link"></i></a>
