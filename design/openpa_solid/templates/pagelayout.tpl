@@ -68,7 +68,7 @@
 
 {/cache-block}
 
-{cache-block keys=array( $current_user.contentobject_id )}
+{cache-block keys=array( $access_type.name, $current_user.contentobject_id )}
 
 {if is_unset($pagedata)}{def $pagedata = openpapagedata()}{/if}
 {if and( $pagedata.is_login_page|not(), $pagedata.show_path, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
