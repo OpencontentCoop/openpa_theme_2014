@@ -9,7 +9,7 @@
      $width='100%'
 	 $height='180px'
      $sottotitoli = false()
-     $image_class = 'videoplaylist'
+     $image_class = 'small'
 }
 
 <script type="text/javascript">
@@ -28,7 +28,7 @@ $(function(){ldelim}
          $attribute = $flash_node.data_map.ezflowmedia
          $sottotitoli = false()
          $image_content = false()
-         $image = 'icons/logo-player.png'|ezimage(no)
+         $image = 'play.png'|ezimage(no)
          $url = false()}
     
     {if $flash_node.data_map.cover.has_content}	
@@ -56,7 +56,7 @@ $(function(){ldelim}
     {/if}
     
     {if $image|eq('')}
-    {set $image = 'icons/logo-player.png'|ezimage(no)}
+    {set $image = 'play.png'|ezimage(no)}
     {/if}
 
     {if is_set( $flash_node.data_map.sottotitoli )}
@@ -139,7 +139,7 @@ $(function(){ldelim}
 
     <div class="square-box-gray video-description float-break no-js-hide"> 
         <a class="player" id="player-{$block.id}" style="display:block;width:{$width};height:{$height};"> 	
-            <img class='default' src={'icons/logo-player.png'|ezimage()} />
+            <img class='default' src={'play.png'|ezimage()} />
         </a>
         <ul class="clips clips-{$block.id} list-unstyled"> 
         {literal} 

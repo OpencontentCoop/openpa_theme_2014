@@ -14,11 +14,11 @@
      $facetAttributeIdentifier = array()
      $facetQuery = array()}
 {foreach $class.data_map as $attribute}  
-	{if and($attribute.is_searchable, $exclude_attributes|contains($attribute.identifier)|not())}
+	{if and($attribute.is_searchable, $exclude_attributes|contains($attribute.identifier)|not(), $exclude_attributes|contains(concat($class.identifier,'/',$attribute.identifier))|not())}
 	  {set $attributes = $attributes|append($attribute)}
 	  {if $attribute.data_type_string|eq('ezobjectrelationlist')}
       {set $facetAttributeIdentifier = $facetAttributeIdentifier|append($attribute.identifier)}
-      {set $facetQuery = $facetQuery|append(concat($attribute.identifier,'.id|count|1000'))}
+      {set $facetQuery = $facetQuery|append(concat($attribute.identifier,'.id|count|100'))}
 	  {/if}	  
 	{/if}
 {/foreach}

@@ -3,80 +3,71 @@
   'delimiter', '',
   'exclude_classes', openpaini( 'ExcludedClassesAsChild', 'FromFolder', array( 'image', 'infobox', 'global_layout' ) ),
   'include_classes', array(),
-  'type', 'exclude',
-  'fetch_type', 'list',
-  'parent_node', $node,  
+  'type', 'exclude'
 ))}
 
 {if $type|eq( 'exclude' )}
-{def $params = hash( 'class_filter_type', 'exclude', 'class_filter_array', $exclude_classes )}
+  {def $params = hash( 'class_filter_type', 'exclude', 'class_filter_array', $exclude_classes )}
 {else}
-{def $params = hash( 'class_filter_type', 'include', 'class_filter_array', $include_classes )}
+  {def $params = hash( 'class_filter_type', 'include', 'class_filter_array', $include_classes )}
 {/if}
 
-{def $children_count = fetch( openpa, concat( $fetch_type, '_count' ), hash( 'parent_node_id', $parent_node.node_id )|merge( $params ) )
-   $children = fetch( openpa, $fetch_type, hash( 'parent_node_id', $parent_node.node_id,                                                  
-                                                  'sort_by', $parent_node.sort_array )|merge( $params ) ) }
+{def $children_count = fetch( openpa, 'list_count', hash( 'parent_node_id', $node.node_id )|merge( $params ) )
+     $children = fetch( openpa, 'list', hash( 'parent_node_id', $node.node_id,'sort_by', $node.sort_array )|merge( $params ) ) }
 
-
-{if $children_count}
 {ezcss_require( array( 'fuelux.css' ) )}
-  <div class="content-view-children fuelux panel">    
-    <ul class="tree tree-folder-select" role="tree" id="tree-{$parent_node.node_id}"  style="border:none">
-      <li class="tree-branch tree-open" data-template="treebranch" role="treeitem" aria-expanded="true" id="item-{$node.contentobject_id}">
-        {foreach $children as $child }
-          {node_view_gui view=tree recursion=0 content_node=$child}	  
-        {/foreach}
-      </li>
-    </ul>    
-  </div>
-{/if}
-{*
-<div class="fuelux">
-<ul class="tree tree-folder-select" role="tree" id="myTree">
-  <li class="tree-branch hide" data-template="treebranch" role="treeitem" aria-expanded="false">
-    <div class="tree-branch-header">      
-      <button class="tree-branch-name">
-        <span class="glyphicon icon-folder glyphicon-folder-close"></span>
-        <span class="tree-label"></span>
-      </button>
-    </div>
-    <ul class="tree-branch-children" role="group"></ul>
-    <div class="tree-loader" role="alert">Loading...</div>
-  </li>
-  <li class="tree-item hide" data-template="treeitem" role="treeitem">
-    <button class="tree-item-name">
-      <span class="glyphicon icon-item fueluxicon-bullet"></span>
-      <span class="tree-label"></span>
-    </button>
-  </li>
-</ul>
+<div class="content-view-children fuelux panel">    
+  <ul class="tree tree-folder-select" role="tree" style="border:none">    
+      {foreach $children as $child }
+        {def $child_children_count = $child.children_count}
+        <li class="tree-branch" data-template="treebranch" role="treeitem" aria-expanded="true" data-nodeid="{$child.node_id}">          
+          <i class="fa fa-{if $children_count|eq(0)}file{else}folder{/if}"></i> 
+          {node_view_gui view=text_linked content_node=$child}
+        </li>  
+        {undef $child_children_count}
+      {/foreach} 
+  </ul>    
 </div>
 
-{ezscript_require( array( 'fuelux.js' ) )}
-{ezcss_require( array( 'fuelux.css' ) )}
-<script>
+{ezscript_require(array('ezjsc::jquery','ezjsc::jqueryio'))}
 {literal}
-  $('#myTree').tree({
-    dataSource: function (options, callback) {
-      console.log(options);
-      callback({
-        data: [
-          {
-            name: 'Ascending and Descending',
-            type: 'folder',
-            dataAttributes: {
-              id: 'folder1'
-            }
-          }            
-        ]
-      });
-    },
-    multiSelect: true,
-    cacheItems: true,
-    folderSelect: false,
+<script>
+  $(document).ready(function(){
+    $(document).on('click','.tree-branch a',function(e){                  
+      var container = $(this).parent();      
+      var icon = container.find('i');      
+      if (icon.hasClass('fa-folder')) {
+        var children = container.find('ul.tree-branch-children');        
+        icon.toggleClass('fa-folder-open');
+        children.toggle();        
+        if (children.length == 0){            
+          var tree = $('<ul role="group" class="tree-branch-children"></ul>');
+          icon.addClass('fa-spinner').addClass('fa-spin');
+          $.get('/openpa/data/tree?parent='+container.data('nodeid'), function(response){
+            $.each(response, function(){
+              var item = $('<li class="tree-branch" data-template="treebranch" role="treeitem" aria-expanded="true" data-nodeid="'+this.main_node_id+'" />');
+              if (parseInt( this.children_count ) > 0) {
+                item.append('<i class="fa fa-folder" />');
+              }else{
+                item.append('<i class="fa fa-file" />');
+              }
+              
+              if (this.data_map.file) {
+                var filenameParts = this.data_map.file.content.split('|');
+                var filename = filenameParts[1];
+                item.append('<a title="Scarica il file" href="/content/download/'+this.contentobject_id+'/'+this.data_map.file.id+'/file/'+filename+'"><span title="'+filename+'"> '+this.name+' <i class="fa fa-download"></i></span></a>');
+              }else{
+                item.append('<a href="/'+this.url_alias+'"> '+this.name+'</a>');
+              }
+              tree.append(item);
+              icon.removeClass('fa-spinner').removeClass('fa-spin');
+            });
+            container.append(tree);
+          });
+        }
+        e.preventDefault();
+      }
+    });
   });
-{/literal}  
 </script>
-
-*}
+{/literal}

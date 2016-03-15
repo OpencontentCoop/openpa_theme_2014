@@ -6149,25 +6149,26 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify {
 }
 /* line 43, ../scss/_yamm.scss */
 .yamm .yamm-content ul.no_sub_level li {
+  margin-bottom: 3px;
   width: 50%;
   float: left;
 }
-/* line 47, ../scss/_yamm.scss */
+/* line 48, ../scss/_yamm.scss */
 .yamm .yamm-content ul.no_sub_level li:nth-child(2n+1) {
   clear: both;
 }
-/* line 56, ../scss/_yamm.scss */
+/* line 57, ../scss/_yamm.scss */
 .yamm .dropdown.yamm-fw .dropdown-menu {
   left: 0;
   right: 0;
 }
 
 @media (max-width: 700px) {
-  /* line 70, ../scss/_yamm.scss */
+  /* line 71, ../scss/_yamm.scss */
   .yamm .yamm-content {
     padding: 20px 30px;
   }
-  /* line 76, ../scss/_yamm.scss */
+  /* line 77, ../scss/_yamm.scss */
   .yamm .yamm-content ul.no_sub_level li {
     width: 100%;
     float: none;
@@ -6915,27 +6916,15 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify {
 
 /* line 127, ../scss/solid/_base.scss */
 .r_corners, .side_menu .menu-handler, .widget_title h3,
-h3.widget_title, .content-main .widget, .content-main .panels-container .media, .panels-container .content-main .media,
-.content-main .leaflet-popup-content .media,
-.leaflet-popup-content .content-main .media,
-.content-related .widget,
-.content-related .panels-container .media,
-.panels-container .content-related .media,
-.content-related .leaflet-popup-content .media,
-.leaflet-popup-content .content-related .media, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a,
-.widget_tabs .events-tabs li a, .panels-container .panel-label,
-.leaflet-popup-content .panel-label, .panels-container .media-panel figure,
-.leaflet-popup-content .media-panel figure, .gallery.gallery-strip img, .main_image, .embed_image {
+h3.widget_title, .widget, .panels-container .media, .leaflet-popup-content .media, .widget_tabs .tab-content, .widget_tabs .nav-tabs li a,
+.widget_tabs .events-tabs li a, .panels-container .panel-label, .leaflet-popup-content .panel-label, .main_image, .embed_image {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 
 /* line 133, ../scss/solid/_base.scss */
-.r_corners_top, .nav-section .widget .widget_title, .nav-section .panels-container .media .widget_title, .panels-container .nav-section .media .widget_title,
-.nav-section .leaflet-popup-content .media .widget_title,
-.leaflet-popup-content .nav-section .media .widget_title, .panels-container .media-panel figure,
-.leaflet-popup-content .media-panel figure {
+.r_corners_top, .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
@@ -6969,14 +6958,7 @@ h3.widget_title, .content-main .widget, .content-main .panels-container .media, 
 }
 
 /* line 160, ../scss/solid/_base.scss */
-.wrapper, .content-main .widget, .content-main .panels-container .media, .panels-container .content-main .media,
-.content-main .leaflet-popup-content .media,
-.leaflet-popup-content .content-main .media,
-.content-related .widget,
-.content-related .panels-container .media,
-.panels-container .content-related .media,
-.content-related .leaflet-popup-content .media,
-.leaflet-popup-content .content-related .media, .main_image, .embed_image {
+.wrapper, .widget, .panels-container .media, .leaflet-popup-content .media, .main_image, .embed_image {
   overflow: hidden;
 }
 
@@ -7165,14 +7147,7 @@ h3.widget_title, .content-main .widget, .content-main .panels-container .media, 
 }
 
 /* line 312, ../scss/solid/_base.scss */
-.m_bottom_30, .content-main .widget, .content-main .panels-container .media, .panels-container .content-main .media,
-.content-main .leaflet-popup-content .media,
-.leaflet-popup-content .content-main .media,
-.content-related .widget,
-.content-related .panels-container .media,
-.panels-container .content-related .media,
-.content-related .leaflet-popup-content .media,
-.leaflet-popup-content .content-related .media {
+.m_bottom_30, .widget, .panels-container .media, .leaflet-popup-content .media {
   margin-bottom: 30px;
 }
 
@@ -7279,15 +7254,7 @@ h3.widget_title, .content-main .widget, .content-main .panels-container .media, 
 }
 
 /* line 401, ../scss/solid/_base.scss */
-.shadow, .content-main .widget, .content-main .panels-container .media, .panels-container .content-main .media,
-.content-main .leaflet-popup-content .media,
-.leaflet-popup-content .content-main .media,
-.content-related .widget,
-.content-related .panels-container .media,
-.panels-container .content-related .media,
-.content-related .leaflet-popup-content .media,
-.leaflet-popup-content .content-related .media, .panels-container .media-panel figure,
-.leaflet-popup-content .media-panel figure, .main_image, .embed_image {
+.shadow, .widget, .panels-container .media, .leaflet-popup-content .media, .widget_tabs .tab-content, .panels-container .media-panel figure, .leaflet-popup-content .media-panel figure, .main_image, .embed_image {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -7354,15 +7321,18 @@ mark {
 ::-webkit-scrollbar {
   width: 10px;
   color: #777777;
+  -webkit-appearance: none;
 }
 
-/* line 460, ../scss/solid/_base.scss */
+/* line 461, ../scss/solid/_base.scss */
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  background-color: #eeeeee;
 }
 
-/* line 465, ../scss/solid/_base.scss */
+/* line 468, ../scss/solid/_base.scss */
 .clearfix:after, .abstract:after {
   content: "";
   display: block;
@@ -7426,7 +7396,7 @@ body {
 #header .breadcrumb-container ul a {
   color: #286090;
 }
-/* line 55, ../scss/solid/_pagelayout.scss */
+/* line 56, ../scss/solid/_pagelayout.scss */
 #header .breadcrumb {
   margin-bottom: 0;
 }
@@ -7476,16 +7446,16 @@ body {
 #footer .footer-data .contacts a:hover, #footer .footer-data .links a:hover {
   text-decoration: underline;
 }
-/* line 97, ../scss/solid/_pagelayout.scss */
+/* line 98, ../scss/solid/_pagelayout.scss */
 #footer .footer-data .links a {
   padding: 5px 0;
 }
-/* line 106, ../scss/solid/_pagelayout.scss */
+/* line 107, ../scss/solid/_pagelayout.scss */
 #footer #footer-map-container {
   background: #fff;
   position: relative;
 }
-/* line 109, ../scss/solid/_pagelayout.scss */
+/* line 110, ../scss/solid/_pagelayout.scss */
 #footer #footer-map-container .caret-big {
   border-top-color: #555555;
   border-width: 60px;
@@ -7498,28 +7468,28 @@ body {
   z-index: 10;
 }
 
-/* line 123, ../scss/solid/_pagelayout.scss */
+/* line 124, ../scss/solid/_pagelayout.scss */
 #credits {
   background: #333333;
   padding: 5px 0;
   font-size: 13px;
 }
-/* line 127, ../scss/solid/_pagelayout.scss */
+/* line 128, ../scss/solid/_pagelayout.scss */
 #credits p, #credits a, #credits ul {
   color: #fff;
   margin: 0;
 }
-/* line 131, ../scss/solid/_pagelayout.scss */
+/* line 132, ../scss/solid/_pagelayout.scss */
 #credits .access {
   text-align: right;
 }
 
-/* line 137, ../scss/solid/_pagelayout.scss */
+/* line 138, ../scss/solid/_pagelayout.scss */
 .blueimp-gallery {
   display: none;
 }
 
-/* line 141, ../scss/solid/_pagelayout.scss */
+/* line 142, ../scss/solid/_pagelayout.scss */
 #go_to_top {
   width: 40px;
   height: 40px;
@@ -7533,11 +7503,11 @@ body {
   border-width: 0;
   border-radius: 4px;
 }
-/* line 153, ../scss/solid/_pagelayout.scss */
+/* line 154, ../scss/solid/_pagelayout.scss */
 #go_to_top:hover {
   background: #777777;
 }
-/* line 156, ../scss/solid/_pagelayout.scss */
+/* line 157, ../scss/solid/_pagelayout.scss */
 #go_to_top.animate_horizontal_finished {
   opacity: .5;
 }
@@ -7586,8 +7556,8 @@ body {
   padding-top: 0;
   padding-bottom: 0;
   margin: 15px 4px;
-  border-bottom: 4px solid red;
   border-radius: 4px;
+  border-bottom: 4px solid red;
 }
 /* line 49, ../scss/solid/_navigation.scss */
 .navbar .navbar-nav > li > a span {
@@ -7671,63 +7641,54 @@ body {
   }
 
   /* line 127, ../scss/solid/_navigation.scss */
-  .navbar .navbar-nav > li > a {
-    margin: 5px 0;
-  }
-
-  /* line 132, ../scss/solid/_navigation.scss */
   .nav li a, .nav-facets .nav-sub li a {
-    margin: 0;
+    margin: 15px 0;
     display: block;
   }
-  /* line 137, ../scss/solid/_navigation.scss */
-  .nav li b, .nav-facets .nav-sub li b {
-    text-transform: uppercase;
-  }
 
-  /* line 141, ../scss/solid/_navigation.scss */
+  /* line 131, ../scss/solid/_navigation.scss */
   .yamm .yamm-content {
     padding: 0 10px;
   }
 }
-/* line 147, ../scss/solid/_navigation.scss */
+/* line 137, ../scss/solid/_navigation.scss */
 .side_menu {
   margin-top: -7px;
 }
-/* line 151, ../scss/solid/_navigation.scss */
+/* line 141, ../scss/solid/_navigation.scss */
 .side_menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 157, ../scss/solid/_navigation.scss */
+/* line 147, ../scss/solid/_navigation.scss */
 .side_menu .active > a > span:after {
   opacity: 1;
 }
-/* line 160, ../scss/solid/_navigation.scss */
+/* line 150, ../scss/solid/_navigation.scss */
 .side_menu .active > a > span:before,
 .side_menu a > span:after {
   opacity: 0;
 }
-/* line 165, ../scss/solid/_navigation.scss */
+/* line 155, ../scss/solid/_navigation.scss */
 .side_menu > li:last-child > a {
   border: none;
   padding-bottom: 0px;
 }
-/* line 174, ../scss/solid/_navigation.scss */
+/* line 164, ../scss/solid/_navigation.scss */
 .side_menu a {
   padding: 7px 25px 7px 5px;
   border-bottom: 1px solid #ecf0f1;
   word-break: normal;
 }
-/* line 182, ../scss/solid/_navigation.scss */
+/* line 172, ../scss/solid/_navigation.scss */
 .side_menu ul > li > a {
   padding-left: 15px;
 }
-/* line 186, ../scss/solid/_navigation.scss */
+/* line 176, ../scss/solid/_navigation.scss */
 .side_menu ul ul > li > a {
   padding-left: 25px;
 }
-/* line 190, ../scss/solid/_navigation.scss */
+/* line 180, ../scss/solid/_navigation.scss */
 .side_menu a > span {
   display: block;
   width: 23px;
@@ -7738,7 +7699,7 @@ body {
   top: 50%;
   margin-top: -11.5px;
 }
-/* line 201, ../scss/solid/_navigation.scss */
+/* line 191, ../scss/solid/_navigation.scss */
 .side_menu a > span:before,
 .side_menu a > span:after {
   content: "";
@@ -7755,22 +7716,22 @@ body {
   -o-transition: opacity .4s ease;
   transition: opacity .4s ease;
 }
-/* line 218, ../scss/solid/_navigation.scss */
+/* line 208, ../scss/solid/_navigation.scss */
 .side_menu a > span:after {
   height: 1px;
   width: 8px;
   background-position: 0 -9px;
   margin: -1px 0 0 -4px;
 }
-/* line 225, ../scss/solid/_navigation.scss */
+/* line 215, ../scss/solid/_navigation.scss */
 .side_menu li:not(.active) .submenu {
   display: none;
 }
-/* line 229, ../scss/solid/_navigation.scss */
+/* line 219, ../scss/solid/_navigation.scss */
 .side_menu li.active > a, .side_menu li.current > a {
   color: #23527c;
 }
-/* line 232, ../scss/solid/_navigation.scss */
+/* line 222, ../scss/solid/_navigation.scss */
 .side_menu .menu-handler {
   background: #eeeeee;
   color: #555555;
@@ -7778,17 +7739,13 @@ body {
   cursor: pointer;
 }
 
-/* line 242, ../scss/solid/_navigation.scss */
-.nav-section .widget .widget_title, .nav-section .panels-container .media .widget_title, .panels-container .nav-section .media .widget_title,
-.nav-section .leaflet-popup-content .media .widget_title,
-.leaflet-popup-content .nav-section .media .widget_title {
+/* line 232, ../scss/solid/_navigation.scss */
+.nav-section .widget .widget_title, .nav-section .panels-container .media .widget_title, .panels-container .nav-section .media .widget_title, .nav-section .leaflet-popup-content .media .widget_title, .leaflet-popup-content .nav-section .media .widget_title {
   padding: 15px 20px 14px;
   color: #fff;
 }
-/* line 246, ../scss/solid/_navigation.scss */
-.nav-section .widget .widget_title *, .nav-section .panels-container .media .widget_title *, .panels-container .nav-section .media .widget_title *,
-.nav-section .leaflet-popup-content .media .widget_title *,
-.leaflet-popup-content .nav-section .media .widget_title * {
+/* line 235, ../scss/solid/_navigation.scss */
+.nav-section .widget .widget_title *, .nav-section .panels-container .media .widget_title *, .panels-container .nav-section .media .widget_title *, .nav-section .leaflet-popup-content .media .widget_title *, .leaflet-popup-content .nav-section .media .widget_title * {
   padding: 0;
   margin: 0;
   color: #fff;
@@ -7799,7 +7756,7 @@ body {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 258, ../scss/solid/_navigation.scss */
+  /* line 247, ../scss/solid/_navigation.scss */
   .side_menu a > span:before,
   .side_menu a > span:after {
     margin-left: -5px;
@@ -7838,8 +7795,21 @@ ul.list-markers-text li a small {
   font-weight: normal;
   display: block;
 }
+/* line 37, ../scss/solid/_maps.scss */
+ul.list-markers-text.list-markers-text-full li {
+  display: inline;
+}
+/* line 39, ../scss/solid/_maps.scss */
+ul.list-markers-text.list-markers-text-full li a {
+  display: inline;
+  padding-right: 10px;
+}
+/* line 42, ../scss/solid/_maps.scss */
+ul.list-markers-text.list-markers-text-full li a small {
+  display: inline;
+}
 
-/* line 41, ../scss/solid/_maps.scss */
+/* line 54, ../scss/solid/_maps.scss */
 .leaflet-popup-content .media-panel figure {
   min-width: 200px;
 }
@@ -7915,7 +7885,7 @@ h3.widget_title {
   color: #ffffff;
   padding: 5px 8px;
   text-transform: uppercase;
-  margin: 10px 0 10px 0;
+  margin: 0 0 10px;
   font-size: .9em;
   display: inline-block;
 }
@@ -7927,9 +7897,7 @@ h3.widget_title a {
 }
 
 /* line 17, ../scss/solid/_widget.scss */
-.content-main .widget .widget_title h3, .content-main .panels-container .media .widget_title h3, .panels-container .content-main .media .widget_title h3,
-.content-main .leaflet-popup-content .media .widget_title h3,
-.leaflet-popup-content .content-main .media .widget_title h3,
+.content-main .widget .widget_title h3, .content-main .panels-container .media .widget_title h3, .panels-container .content-main .media .widget_title h3, .content-main .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content .content-main .media .widget_title h3,
 .content-main .widget h3.widget_title,
 .content-main .panels-container .media h3.widget_title,
 .panels-container .content-main .media h3.widget_title,
@@ -7938,126 +7906,52 @@ h3.widget_title a {
   font-size: 1.4em;
 }
 
-/* line 25, ../scss/solid/_widget.scss */
-.content-main .widget, .content-main .panels-container .media, .panels-container .content-main .media,
-.content-main .leaflet-popup-content .media,
-.leaflet-popup-content .content-main .media,
-.content-related .widget,
-.content-related .panels-container .media,
-.panels-container .content-related .media,
-.content-related .leaflet-popup-content .media,
-.leaflet-popup-content .content-related .media {
-  font-size: 15px;
-  line-height: 21px;
-}
-/* line 33, ../scss/solid/_widget.scss */
-.content-main .widget a, .content-main .panels-container .media a, .panels-container .content-main .media a,
-.content-main .leaflet-popup-content .media a,
-.leaflet-popup-content .content-main .media a,
-.content-related .widget a,
-.content-related .panels-container .media a,
-.panels-container .content-related .media a,
-.content-related .leaflet-popup-content .media a,
-.leaflet-popup-content .content-related .media a {
-  text-decoration: none;
-}
-/* line 35, ../scss/solid/_widget.scss */
-.content-main .widget a:hover, .content-main .panels-container .media a:hover, .panels-container .content-main .media a:hover,
-.content-main .leaflet-popup-content .media a:hover,
-.leaflet-popup-content .content-main .media a:hover,
-.content-related .widget a:hover,
-.content-related .panels-container .media a:hover,
-.panels-container .content-related .media a:hover,
-.content-related .leaflet-popup-content .media a:hover,
-.leaflet-popup-content .content-related .media a:hover {
-  text-decoration: underline;
-}
-/* line 40, ../scss/solid/_widget.scss */
-.content-main .widget .widget_title, .content-main .panels-container .media .widget_title, .panels-container .content-main .media .widget_title,
-.content-main .leaflet-popup-content .media .widget_title,
-.leaflet-popup-content .content-main .media .widget_title,
-.content-related .widget .widget_title,
-.content-related .panels-container .media .widget_title,
-.panels-container .content-related .media .widget_title,
-.content-related .leaflet-popup-content .media .widget_title,
-.leaflet-popup-content .content-related .media .widget_title {
+/* line 27, ../scss/solid/_widget.scss */
+.widget .widget_title, .panels-container .media .widget_title, .leaflet-popup-content .media .widget_title {
   background: #fff;
   padding: 10px;
 }
-/* line 43, ../scss/solid/_widget.scss */
-.content-main .widget .widget_title h3, .content-main .panels-container .media .widget_title h3, .panels-container .content-main .media .widget_title h3,
-.content-main .leaflet-popup-content .media .widget_title h3,
-.leaflet-popup-content .content-main .media .widget_title h3,
-.content-related .widget .widget_title h3,
-.content-related .panels-container .media .widget_title h3,
-.panels-container .content-related .media .widget_title h3,
-.content-related .leaflet-popup-content .media .widget_title h3,
-.leaflet-popup-content .content-related .media .widget_title h3 {
+/* line 30, ../scss/solid/_widget.scss */
+.widget .widget_title h3, .panels-container .media .widget_title h3, .leaflet-popup-content .media .widget_title h3 {
   padding: 5px 8px;
   text-transform: uppercase;
+  font-size: .9em;
   margin: 0;
 }
-/* line 51, ../scss/solid/_widget.scss */
-.content-main .widget h4 a:hover, .content-main .panels-container .media h4 a:hover, .panels-container .content-main .media h4 a:hover,
-.content-main .leaflet-popup-content .media h4 a:hover,
-.leaflet-popup-content .content-main .media h4 a:hover,
-.content-related .widget h4 a:hover,
-.content-related .panels-container .media h4 a:hover,
-.panels-container .content-related .media h4 a:hover,
-.content-related .leaflet-popup-content .media h4 a:hover,
-.leaflet-popup-content .content-related .media h4 a:hover {
-  text-decoration: none;
-}
-/* line 56, ../scss/solid/_widget.scss */
-.content-main .singolo_box_piccolo .widget_content,
-.content-related .singolo_box_piccolo .widget_content {
-  padding: 5px;
-}
-/* line 59, ../scss/solid/_widget.scss */
-.content-main .singolo_box_piccolo .media-body,
-.content-related .singolo_box_piccolo .media-body {
-  display: inline;
-}
 
-/* line 67, ../scss/solid/_widget.scss */
-.widget figcaption[class*="relative"], .panels-container .media figcaption[class*="relative"],
-.leaflet-popup-content .media figcaption[class*="relative"] {
+/* line 40, ../scss/solid/_widget.scss */
+.widget figcaption[class*="relative"], .panels-container .media figcaption[class*="relative"], .leaflet-popup-content .media figcaption[class*="relative"] {
   padding-right: 85px;
 }
 
-/* line 71, ../scss/solid/_widget.scss */
+/* line 44, ../scss/solid/_widget.scss */
 .widget_content {
   padding: 23px 10px 25px;
   background: #fff;
 }
 
-/* line 80, ../scss/solid/_widget.scss */
-.widget_single .carousel-image {
-  background-position: center;
-}
-
-/* line 85, ../scss/solid/_widget.scss */
+/* line 53, ../scss/solid/_widget.scss */
 .widget_tabs {
   overflow: visible !important;
 }
-/* line 89, ../scss/solid/_widget.scss */
+/* line 57, ../scss/solid/_widget.scss */
 .widget_tabs .tab-content {
   border-top: 3px solid #555555;
   overflow: hidden;
 }
-/* line 95, ../scss/solid/_widget.scss */
+/* line 64, ../scss/solid/_widget.scss */
 .widget_tabs .nav-tabs,
 .widget_tabs .events-tabs {
   margin-bottom: 0;
   border: none !important;
   font-size: .9em !important;
 }
-/* line 103, ../scss/solid/_widget.scss */
+/* line 72, ../scss/solid/_widget.scss */
 .widget_tabs .nav-tabs li,
 .widget_tabs .events-tabs li {
   margin-bottom: 0 !important;
 }
-/* line 105, ../scss/solid/_widget.scss */
+/* line 74, ../scss/solid/_widget.scss */
 .widget_tabs .nav-tabs li a,
 .widget_tabs .events-tabs li a {
   border: none !important;
@@ -8068,38 +7962,27 @@ h3.widget_title a {
   text-decoration: none;
   font-weight: normal;
 }
-/* line 116, ../scss/solid/_widget.scss */
+/* line 85, ../scss/solid/_widget.scss */
 .widget_tabs .nav-tabs li.active a,
 .widget_tabs .events-tabs li.active a {
   background: #555555;
   color: #fff;
   border: none !important;
 }
-/* line 125, ../scss/solid/_widget.scss */
-.widget_tabs.iosono h4 {
-  font-size: 1.3em;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-/* line 130, ../scss/solid/_widget.scss */
-.widget_tabs.iosono a {
-  text-decoration: none;
-}
 
-/* line 137, ../scss/solid/_widget.scss */
-.well h3, .fileupload-content .dropzoneHelp h3 {
-  margin-top: 10px;
-}
-
-/* line 145, ../scss/solid/_widget.scss */
+/* line 96, ../scss/solid/_widget.scss */
 .events.widget_tabs li a {
-  color: #777777;
+  /*text-transform: uppercase;
+  font-size: .9em;
+  font-weight: bold;
+  text-decoration: none;
+  color: $gray-light;*/
 }
-/* line 148, ../scss/solid/_widget.scss */
+/* line 103, ../scss/solid/_widget.scss */
 .events.widget_tabs li.active a {
   color: #555555;
 }
-/* line 153, ../scss/solid/_widget.scss */
+/* line 108, ../scss/solid/_widget.scss */
 .events .widget_content ul.events-tabs {
   margin-top: -23px;
   text-transform: uppercase;
@@ -8107,27 +7990,27 @@ h3.widget_title a {
   margin-bottom: 20px;
   border: none;
 }
-/* line 159, ../scss/solid/_widget.scss */
+/* line 114, ../scss/solid/_widget.scss */
 .events .widget_content ul.events-tabs li {
   padding: 0;
 }
-/* line 161, ../scss/solid/_widget.scss */
+/* line 116, ../scss/solid/_widget.scss */
 .events .widget_content ul.events-tabs li a {
   background: #eeeeee;
   color: #555555;
   padding: 5px 8px;
   text-decoration: none;
 }
-/* line 167, ../scss/solid/_widget.scss */
+/* line 122, ../scss/solid/_widget.scss */
 .events .widget_content ul.events-tabs li.active a {
   background: #555555;
   color: #fff;
 }
-/* line 173, ../scss/solid/_widget.scss */
+/* line 128, ../scss/solid/_widget.scss */
 .events .widget_content .media {
   height: 80px;
 }
-/* line 185, ../scss/solid/_widget.scss */
+/* line 140, ../scss/solid/_widget.scss */
 .events .calendar-date .month {
   background: #555555;
   font-size: 1em;
@@ -8140,7 +8023,7 @@ h3.widget_title a {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 197, ../scss/solid/_widget.scss */
+/* line 152, ../scss/solid/_widget.scss */
 .events .calendar-date .day {
   background: #fff;
   color: #555555;
@@ -8154,42 +8037,38 @@ h3.widget_title a {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-/* line 211, ../scss/solid/_widget.scss */
+/* line 166, ../scss/solid/_widget.scss */
 .events .media {
   margin-bottom: 15px;
 }
-/* line 214, ../scss/solid/_widget.scss */
+/* line 169, ../scss/solid/_widget.scss */
 .events .owl-controls {
   margin-top: 0;
 }
-/* line 217, ../scss/solid/_widget.scss */
+/* line 172, ../scss/solid/_widget.scss */
 .events .event-item {
   margin-bottom: 10px;
 }
 
-/* line 224, ../scss/solid/_widget.scss */
-.panels-container .media,
-.leaflet-popup-content .media {
+/* line 178, ../scss/solid/_widget.scss */
+.panels-container .media, .leaflet-popup-content .media {
   padding: 10px;
   background: #fff;
 }
-/* line 228, ../scss/solid/_widget.scss */
-.panels-container .media .main_image,
-.leaflet-popup-content .media .main_image {
+/* line 182, ../scss/solid/_widget.scss */
+.panels-container .media .main_image, .leaflet-popup-content .media .main_image {
   float: none;
   margin: 0 0 10px;
   box-shadow: 0 0 #fff;
   border: none;
   border-radius: 0;
 }
-/* line 235, ../scss/solid/_widget.scss */
-.panels-container .media .caption,
-.leaflet-popup-content .media .caption {
+/* line 189, ../scss/solid/_widget.scss */
+.panels-container .media .caption, .leaflet-popup-content .media .caption {
   padding: 10px;
 }
-/* line 239, ../scss/solid/_widget.scss */
-.panels-container .panel-label,
-.leaflet-popup-content .panel-label {
+/* line 193, ../scss/solid/_widget.scss */
+.panels-container .panel-label, .leaflet-popup-content .panel-label {
   background: #555555;
   left: 20px;
   padding: 5px 8px;
@@ -8199,9 +8078,8 @@ h3.widget_title a {
   color: #fff;
   font-size: .9em;
 }
-/* line 251, ../scss/solid/_widget.scss */
-.panels-container .media-panel figure,
-.leaflet-popup-content .media-panel figure {
+/* line 205, ../scss/solid/_widget.scss */
+.panels-container .media-panel figure, .leaflet-popup-content .media-panel figure {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center center !important;
@@ -8210,119 +8088,84 @@ h3.widget_title a {
   min-height: 200px;
   border-bottom: 3px solid #555555;
 }
-/* line 264, ../scss/solid/_widget.scss */
-.panels-container .media-panel .media.has-image,
-.leaflet-popup-content .media-panel .media.has-image {
-  margin-top: 0;
+/* line 217, ../scss/solid/_widget.scss */
+.panels-container .media-panel .media.has-image, .leaflet-popup-content .media-panel .media.has-image {
+  margin-top: 10px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-/* line 269, ../scss/solid/_widget.scss */
-.panels-container .media-panel .media h4,
-.leaflet-popup-content .media-panel .media h4 {
+/* line 222, ../scss/solid/_widget.scss */
+.panels-container .media-panel .media h4, .leaflet-popup-content .media-panel .media h4 {
   font-size: 1.3em;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 0;
 }
-/* line 274, ../scss/solid/_widget.scss */
-.panels-container .media-panel .media h4 a,
-.leaflet-popup-content .media-panel .media h4 a {
+/* line 227, ../scss/solid/_widget.scss */
+.panels-container .media-panel .media h4 a, .leaflet-popup-content .media-panel .media h4 a {
   text-decoration: none;
 }
-/* line 278, ../scss/solid/_widget.scss */
-.panels-container .media-panel .media p.link,
-.leaflet-popup-content .media-panel .media p.link {
+/* line 232, ../scss/solid/_widget.scss */
+.panels-container .media-panel .media p.link, .leaflet-popup-content .media-panel .media p.link {
   margin-bottom: 0;
 }
-/* line 283, ../scss/solid/_widget.scss */
-.panels-container .panel-story,
-.leaflet-popup-content .panel-story {
+/* line 237, ../scss/solid/_widget.scss */
+.panels-container .panel-story, .leaflet-popup-content .panel-story {
   font-size: .8em;
   color: #555555;
 }
-/* line 286, ../scss/solid/_widget.scss */
-.panels-container .panel-story a,
-.leaflet-popup-content .panel-story a {
+/* line 240, ../scss/solid/_widget.scss */
+.panels-container .panel-story a, .leaflet-popup-content .panel-story a {
   color: #555555;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* line 298, ../scss/solid/_widget.scss */
-.gallery.gallery-strip img {
-  margin: 4px;
-}
-
-/* line 306, ../scss/solid/_widget.scss */
-.content-main .widget.lista_box .widget_content h3, .content-main .panels-container .lista_box.media .widget_content h3, .panels-container .content-main .lista_box.media .widget_content h3,
-.content-main .leaflet-popup-content .lista_box.media .widget_content h3,
-.leaflet-popup-content .content-main .lista_box.media .widget_content h3 {
+/* line 251, ../scss/solid/_widget.scss */
+.content-main .widget.lista_box .widget_content h3, .content-main .panels-container .lista_box.media .widget_content h3, .panels-container .content-main .lista_box.media .widget_content h3, .content-main .leaflet-popup-content .lista_box.media .widget_content h3, .leaflet-popup-content .content-main .lista_box.media .widget_content h3 {
   font-size: 1.3em;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 0;
 }
-/* line 312, ../scss/solid/_widget.scss */
-.content-main .widget.lista_box .widget_content h3 small, .content-main .panels-container .lista_box.media .widget_content h3 small, .panels-container .content-main .lista_box.media .widget_content h3 small,
-.content-main .leaflet-popup-content .lista_box.media .widget_content h3 small,
-.leaflet-popup-content .content-main .lista_box.media .widget_content h3 small {
+/* line 257, ../scss/solid/_widget.scss */
+.content-main .widget.lista_box .widget_content h3 small, .content-main .panels-container .lista_box.media .widget_content h3 small, .panels-container .content-main .lista_box.media .widget_content h3 small, .content-main .leaflet-popup-content .lista_box.media .widget_content h3 small, .leaflet-popup-content .content-main .lista_box.media .widget_content h3 small {
   text-transform: none;
-}
-
-/* line 319, ../scss/solid/_widget.scss */
-.singolo_box .media.has-image .caption {
-  margin-top: 10px;
-}
-
-/* line 323, ../scss/solid/_widget.scss */
-.geo_located_content .widget, .geo_located_content .panels-container .media, .panels-container .geo_located_content .media,
-.geo_located_content .leaflet-popup-content .media,
-.leaflet-popup-content .geo_located_content .media {
-  margin: 0;
-  padding: 0;
-}
-/* line 327, ../scss/solid/_widget.scss */
-.geo_located_content .widget ul, .geo_located_content .panels-container .media ul, .panels-container .geo_located_content .media ul,
-.geo_located_content .leaflet-popup-content .media ul,
-.leaflet-popup-content .geo_located_content .media ul {
-  margin: 0;
-  padding: 0;
 }
 
 /* line 4, ../scss/solid/_carousel.scss */
 .owl-controls .owl-buttons div {
   padding: 1px 10px !important;
 }
-/* line 7, ../scss/solid/_carousel.scss */
+/* line 8, ../scss/solid/_carousel.scss */
 .owl-controls .owl-buttons .owl-next, .owl-controls .owl-buttons .owl-prev {
   margin: 0 0 0 3px;
   border-radius: 4px;
   background: #777777;
   color: #fff;
 }
-/* line 12, ../scss/solid/_carousel.scss */
+/* line 13, ../scss/solid/_carousel.scss */
 .owl-controls .owl-buttons .owl-next:hover, .owl-controls .owl-buttons .owl-prev:hover {
   background: #555555;
   color: #fff;
 }
 
-/* line 21, ../scss/solid/_carousel.scss */
+/* line 22, ../scss/solid/_carousel.scss */
 .carousel-top-control.title-placeholder {
   padding-top: 42px;
 }
-/* line 25, ../scss/solid/_carousel.scss */
+/* line 26, ../scss/solid/_carousel.scss */
 .carousel-top-control .owl-controls .owl-buttons {
   position: absolute;
   right: 0;
   top: -32px;
 }
-/* line 31, ../scss/solid/_carousel.scss */
+/* line 32, ../scss/solid/_carousel.scss */
 .carousel-top-control .caption {
   padding-right: 10px;
 }
 
-/* line 36, ../scss/solid/_carousel.scss */
+/* line 37, ../scss/solid/_carousel.scss */
 .carousel-caption {
   bottom: 0;
   left: 0;
@@ -8332,7 +8175,7 @@ h3.widget_title a {
   text-align: left;
   width: 100%;
 }
-/* line 44, ../scss/solid/_carousel.scss */
+/* line 45, ../scss/solid/_carousel.scss */
 .carousel-caption h3 {
   background-color: rgba(0, 0, 0, 0.7);
   display: inline-block;
@@ -8342,13 +8185,13 @@ h3.widget_title a {
   margin-bottom: 0;
   border-radius: 4px;
 }
-/* line 53, ../scss/solid/_carousel.scss */
+/* line 54, ../scss/solid/_carousel.scss */
 .carousel-caption h3 a {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 59, ../scss/solid/_carousel.scss */
+/* line 60, ../scss/solid/_carousel.scss */
 .carousel-caption p {
   background: #555555;
   color: #fff;
@@ -8358,21 +8201,21 @@ h3.widget_title a {
   border-radius: 4px;
 }
 
-/* line 70, ../scss/solid/_carousel.scss */
+/* line 71, ../scss/solid/_carousel.scss */
 .carousel-both-control .carousel-caption {
   padding-bottom: 30px;
 }
-/* line 73, ../scss/solid/_carousel.scss */
+/* line 74, ../scss/solid/_carousel.scss */
 .carousel-both-control .owl-pagination {
   bottom: 0;
   position: absolute;
   width: 100%;
 }
-/* line 78, ../scss/solid/_carousel.scss */
+/* line 79, ../scss/solid/_carousel.scss */
 .carousel-both-control .owl-pagination .owl-page span {
   background: #ccc !important;
 }
-/* line 82, ../scss/solid/_carousel.scss */
+/* line 83, ../scss/solid/_carousel.scss */
 .carousel-both-control .owl-pagination .owl-page.active span {
   background: #555555;
 }
@@ -8382,71 +8225,64 @@ h3.widget_title a {
   padding: 0 10px;
 }
 
-/* line 94, ../scss/solid/_carousel.scss */
+/* line 95, ../scss/solid/_carousel.scss */
 .owl-theme .owl-controls .owl-page span {
   opacity: 1;
 }
 
-/* line 96, ../scss/solid/_carousel.scss */
+/* line 97, ../scss/solid/_carousel.scss */
 .panels-container .owl-carousel .owl-item {
   padding: 5px;
 }
 
-/* line 101, ../scss/solid/_carousel.scss */
+/* line 102, ../scss/solid/_carousel.scss */
 .owl-item .item .carousel-image {
   min-height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 106, ../scss/solid/_carousel.scss */
+/* line 107, ../scss/solid/_carousel.scss */
 .owl-item .item img.img-responsive {
   min-height: 350px;
 }
 
-/* line 112, ../scss/solid/_carousel.scss */
+/* line 113, ../scss/solid/_carousel.scss */
 .content-related .owl-item .item .carousel-image {
   background-position: center center;
   min-height: 300px;
 }
 
-/* line 5, ../scss/solid/_accordion.scss */
-.lista_accordion .panel-group .panel + .panel,
+/* line 4, ../scss/solid/_accordion.scss */
 .lista_accordion_manual .panel-group .panel + .panel {
   margin-top: 2px;
 }
-/* line 9, ../scss/solid/_accordion.scss */
-.lista_accordion .panel-group .panel-default,
+/* line 8, ../scss/solid/_accordion.scss */
 .lista_accordion_manual .panel-group .panel-default {
   border: 0;
   border-radius: 0;
   box-shadow: none;
 }
-/* line 14, ../scss/solid/_accordion.scss */
-.lista_accordion .panel-group .panel-default .panel-heading,
+/* line 13, ../scss/solid/_accordion.scss */
 .lista_accordion_manual .panel-group .panel-default .panel-heading {
   background: #eeeeee;
   padding: 8px 10px;
   border: 1px solid #dedede;
 }
-/* line 18, ../scss/solid/_accordion.scss */
-.lista_accordion .panel-group .panel-default .panel-heading:hover,
+/* line 17, ../scss/solid/_accordion.scss */
 .lista_accordion_manual .panel-group .panel-default .panel-heading:hover {
   background: #dedede;
 }
-/* line 22, ../scss/solid/_accordion.scss */
-.lista_accordion .panel-group .panel-default .panel-heading .panel-title a,
+/* line 21, ../scss/solid/_accordion.scss */
 .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a {
   text-decoration: none;
   font-size: 15px;
   display: block;
 }
-/* line 26, ../scss/solid/_accordion.scss */
-.lista_accordion .panel-group .panel-default .panel-heading .panel-title a:hover,
+/* line 25, ../scss/solid/_accordion.scss */
 .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a:hover {
   color: #555555;
 }
-/* line 30, ../scss/solid/_accordion.scss */
-.lista_accordion .panel-group .panel-default .panel-heading .panel-title a i,
+/* line 29, ../scss/solid/_accordion.scss */
 .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i {
   font-size: 13px;
   color: #777777;
@@ -8665,33 +8501,33 @@ ul.list-unstyled li, #footer .footer-data .notes ul li {
   padding: 3px 0;
 }
 
-/* line 47, ../scss/solid/_style.scss */
+/* line 49, ../scss/solid/_style.scss */
 .infographic_item i[class^="fa "] {
   font-size: 60px;
 }
 
-/* line 51, ../scss/solid/_style.scss */
+/* line 53, ../scss/solid/_style.scss */
 .infographic_item {
   padding: 20px;
   min-height: 130px;
 }
-/* line 54, ../scss/solid/_style.scss */
+/* line 56, ../scss/solid/_style.scss */
 .infographic_item dl {
   margin-bottom: 0;
 }
-/* line 56, ../scss/solid/_style.scss */
+/* line 58, ../scss/solid/_style.scss */
 .infographic_item dl dt {
   font-size: 2.4em;
   line-height: 1em;
   margin-bottom: 3px;
 }
-/* line 61, ../scss/solid/_style.scss */
+/* line 63, ../scss/solid/_style.scss */
 .infographic_item dl dd {
   font-size: 1.3em;
   line-height: 1em;
 }
 
-/* line 68, ../scss/solid/_style.scss */
+/* line 70, ../scss/solid/_style.scss */
 blockquote {
   border: none;
   font-style: italic;
@@ -8699,7 +8535,7 @@ blockquote {
   line-height: 1.55em;
   padding: 20px 10px 15px 50px;
 }
-/* line 74, ../scss/solid/_style.scss */
+/* line 76, ../scss/solid/_style.scss */
 blockquote:before {
   content: '"';
   position: absolute;
@@ -8710,7 +8546,7 @@ blockquote:before {
   top: 26px;
   color: #555555;
 }
-/* line 84, ../scss/solid/_style.scss */
+/* line 86, ../scss/solid/_style.scss */
 blockquote:after {
   content: "";
   width: 17px;
@@ -8721,18 +8557,18 @@ blockquote:after {
   bottom: -10px;
 }
 
-/* line 95, ../scss/solid/_style.scss */
+/* line 97, ../scss/solid/_style.scss */
 legend {
   font-size: 1em;
 }
 
-/* line 98, ../scss/solid/_style.scss */
+/* line 100, ../scss/solid/_style.scss */
 .content-view-children,
 .oggetti-correlati {
   margin: 20px 0;
   padding-top: 20px;
 }
-/* line 103, ../scss/solid/_style.scss */
+/* line 104, ../scss/solid/_style.scss */
 .content-view-children .media,
 .oggetti-correlati .media {
   padding: 10px;
@@ -8740,18 +8576,18 @@ legend {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 107, ../scss/solid/_style.scss */
+/* line 108, ../scss/solid/_style.scss */
 .content-view-children .media img,
 .oggetti-correlati .media img {
   border-radius: 4px;
 }
 
-/* line 115, ../scss/solid/_style.scss */
+/* line 116, ../scss/solid/_style.scss */
 .figure {
   margin: 1em 0;
 }
 
-/* line 124, ../scss/solid/_style.scss */
+/* line 125, ../scss/solid/_style.scss */
 .video-container {
   height: 0;
   overflow: hidden;
@@ -8760,7 +8596,7 @@ legend {
   position: relative;
 }
 
-/* line 131, ../scss/solid/_style.scss */
+/* line 132, ../scss/solid/_style.scss */
 .video-container iframe,
 .video-container object,
 .video-container embed {
@@ -8771,12 +8607,12 @@ legend {
   width: 100%;
 }
 
-/* line 141, ../scss/solid/_style.scss */
+/* line 142, ../scss/solid/_style.scss */
 .dashboard .panel {
   position: relative;
   padding-top: 40px;
 }
-/* line 144, ../scss/solid/_style.scss */
+/* line 145, ../scss/solid/_style.scss */
 .dashboard .panel h2 {
   background: #555555;
   color: #fff;
@@ -8789,21 +8625,21 @@ legend {
   border-bottom-right-radius: 4px;
 }
 
-/* line 157, ../scss/solid/_style.scss */
+/* line 158, ../scss/solid/_style.scss */
 .media-body {
   overflow: visible;
 }
 
-/* line 160, ../scss/solid/_style.scss */
+/* line 161, ../scss/solid/_style.scss */
 .media dt {
   margin-top: 20px;
 }
 
-/* line 167, ../scss/solid/_style.scss */
+/* line 168, ../scss/solid/_style.scss */
 .class-dipendente dl {
   margin-bottom: 10px;
 }
-/* line 169, ../scss/solid/_style.scss */
+/* line 170, ../scss/solid/_style.scss */
 .class-dipendente dl dt {
   float: left;
   margin-right: 10px;
@@ -8812,21 +8648,21 @@ legend {
 /* =nav-facets
 -------------------------------------------------
 */
-/* line 181, ../scss/solid/_style.scss */
+/* line 184, ../scss/solid/_style.scss */
 .nav-facets h2 {
   font-size: 15px;
 }
 
 @media only screen and (max-width: 640px) {
-  /* line 190, ../scss/solid/_style.scss */
+  /* line 193, ../scss/solid/_style.scss */
   .nav-facets {
     position: relative;
   }
-  /* line 192, ../scss/solid/_style.scss */
+  /* line 195, ../scss/solid/_style.scss */
   .nav-facets .facet-list {
     display: inline-block;
   }
-  /* line 196, ../scss/solid/_style.scss */
+  /* line 199, ../scss/solid/_style.scss */
   .nav-facets .facet-list .nav-sub {
     background-color: #eeeeee;
     position: absolute;
@@ -8840,12 +8676,12 @@ legend {
     z-index: 1000;
   }
 }
-/* line 213, ../scss/solid/_style.scss */
+/* line 218, ../scss/solid/_style.scss */
 .content-main {
   font-size: 15px;
   line-height: 2;
 }
-/* line 217, ../scss/solid/_style.scss */
+/* line 222, ../scss/solid/_style.scss */
 .content-main h1 {
   font-size: 24px;
   padding: 10px;
@@ -8854,102 +8690,102 @@ legend {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-/* line 223, ../scss/solid/_style.scss */
+/* line 228, ../scss/solid/_style.scss */
 .content-main h2 {
   font-size: 21px;
   padding: 0.5em;
 }
-/* line 228, ../scss/solid/_style.scss */
+/* line 233, ../scss/solid/_style.scss */
 .content-main h3 {
   font-size: 18px;
 }
-/* line 230, ../scss/solid/_style.scss */
+/* line 235, ../scss/solid/_style.scss */
 .content-main h3.widget_title {
   margin-bottom: 0;
 }
 
-/* line 236, ../scss/solid/_style.scss */
+/* line 241, ../scss/solid/_style.scss */
 .abstract {
   margin-bottom: 10px;
 }
-/* line 240, ../scss/solid/_style.scss */
+/* line 245, ../scss/solid/_style.scss */
 .abstract .image.pull-left, .abstract .image.object-left {
   margin: 0 1em .5em 0;
 }
-/* line 244, ../scss/solid/_style.scss */
+/* line 249, ../scss/solid/_style.scss */
 .abstract ul {
   list-style: outside disc;
   margin-left: 1em;
   padding: 0;
 }
-/* line 249, ../scss/solid/_style.scss */
+/* line 254, ../scss/solid/_style.scss */
 .abstract ul li {
   position: relative;
   left: 1em;
   padding-right: 1em;
 }
 
-/* line 256, ../scss/solid/_style.scss */
+/* line 261, ../scss/solid/_style.scss */
 .photoframe, .main_image, .embed_image {
   border: 10px solid #fff;
   z-index: 1;
   background: #fff;
 }
 
-/* line 262, ../scss/solid/_style.scss */
+/* line 267, ../scss/solid/_style.scss */
 .main_image {
   margin-right: 20px;
   margin-top: 0;
 }
 
-/* line 276, ../scss/solid/_style.scss */
+/* line 281, ../scss/solid/_style.scss */
 .embed_image {
   margin-top: 0;
   display: inline-block;
 }
 
-/* line 297, ../scss/solid/_style.scss */
+/* line 302, ../scss/solid/_style.scss */
 .content-title h1 {
   color: #555555;
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 301, ../scss/solid/_style.scss */
+/* line 306, ../scss/solid/_style.scss */
 .content-title h1 small {
   font-weight: unset;
   font-size: 50%;
   text-transform: none;
 }
 
-/* line 309, ../scss/solid/_style.scss */
+/* line 314, ../scss/solid/_style.scss */
 .content-detail > .row, .content-detail > div.split {
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: normal;
 }
 
-/* line 315, ../scss/solid/_style.scss */
+/* line 320, ../scss/solid/_style.scss */
 div.embed {
   text-align: center;
 }
 
 /* ----------- BOX SEARCH --------------*/
-/* line 326, ../scss/solid/_style.scss */
+/* line 332, ../scss/solid/_style.scss */
 .search_box .widget_content .btn-link {
   background-color: #eeeeee;
   margin: 10px 10px 10px 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
-/* line 331, ../scss/solid/_style.scss */
+/* line 337, ../scss/solid/_style.scss */
 .search_box .widget_content .btn-link:hover {
   background-color: #d4d4d4;
 }
-/* line 335, ../scss/solid/_style.scss */
+/* line 341, ../scss/solid/_style.scss */
 .search_box .widget_content .form-group {
   margin-bottom: 5px;
 }
 
-/* line 341, ../scss/solid/_style.scss */
+/* line 347, ../scss/solid/_style.scss */
 #OrderSearchPanel.well, .fileupload-content #OrderSearchPanel.dropzoneHelp,
 #AdvancedSearchPanel.well,
 .fileupload-content #AdvancedSearchPanel.dropzoneHelp {
@@ -8957,46 +8793,46 @@ div.embed {
 }
 
 /* ----------- BOX VALUTATION --------------*/
-/* line 348, ../scss/solid/_style.scss */
+/* line 355, ../scss/solid/_style.scss */
 #valuation-container {
   margin-top: 20px;
   background-color: #fff;
 }
-/* line 352, ../scss/solid/_style.scss */
+/* line 359, ../scss/solid/_style.scss */
 #valuation-container .well.valuation, #valuation-container .fileupload-content .valuation.dropzoneHelp, .fileupload-content #valuation-container .valuation.dropzoneHelp {
   border: 0;
   background: transparent;
 }
-/* line 357, ../scss/solid/_style.scss */
+/* line 364, ../scss/solid/_style.scss */
 #valuation-container .well.valuation h4 i, #valuation-container .fileupload-content .valuation.dropzoneHelp h4 i, .fileupload-content #valuation-container .valuation.dropzoneHelp h4 i {
   margin-right: 1em;
   border-radius: 1em;
   padding: 0.5em;
 }
-/* line 365, ../scss/solid/_style.scss */
+/* line 372, ../scss/solid/_style.scss */
 #valuation-container .well.valuation label.control-label, #valuation-container .fileupload-content .valuation.dropzoneHelp label.control-label, .fileupload-content #valuation-container .valuation.dropzoneHelp label.control-label {
   margin: 15px 0 5px;
   font-weight: bold;
 }
-/* line 369, ../scss/solid/_style.scss */
+/* line 376, ../scss/solid/_style.scss */
 #valuation-container .well.valuation .utilita, #valuation-container .fileupload-content .valuation.dropzoneHelp .utilita, .fileupload-content #valuation-container .valuation.dropzoneHelp .utilita {
   padding-right: 0.5em;
   display: inline;
 }
-/* line 376, ../scss/solid/_style.scss */
+/* line 383, ../scss/solid/_style.scss */
 #valuation-container .well.valuation .captcha p span, #valuation-container .fileupload-content .valuation.dropzoneHelp .captcha p span, .fileupload-content #valuation-container .valuation.dropzoneHelp .captcha p span {
   font-size: 0.7em;
 }
 
 /* ----------- EVENTI --------------*/
-/* line 391, ../scss/solid/_style.scss */
+/* line 397, ../scss/solid/_style.scss */
 .frontpage .col-md-12 .widget_tabs.eventi .tab-content .event-item, .frontpage .content-title .widget_tabs.eventi .tab-content .event-item, .frontpage .content-main.wide .widget_tabs.eventi .tab-content .event-item,
 .frontpage .col-md-8 .widget_tabs.eventi .tab-content .event-item {
   max-width: 400px;
 }
 
 /* ----------- MESSAGGI DI WARNING --------------*/
-/* line 404, ../scss/solid/_style.scss */
+/* line 410, ../scss/solid/_style.scss */
 .message-warning h2 {
   background-color: transparent !important;
   border-radius: 0 !important;
@@ -9004,45 +8840,39 @@ div.embed {
 }
 
 /* ----------- MAPPE --------------*/
-/* line 415, ../scss/solid/_style.scss */
+/* line 421, ../scss/solid/_style.scss */
 .geo_located_content ul li {
   padding: 5px 0;
 }
-/* line 417, ../scss/solid/_style.scss */
+/* line 423, ../scss/solid/_style.scss */
 .geo_located_content ul li a {
   padding: 0;
   line-height: normal;
 }
 
 /* ----------- BOX EVIDENCE amministrazione trasparente --------------*/
-/* line 428, ../scss/solid/_style.scss */
+/* line 434, ../scss/solid/_style.scss */
 .box_evidence {
   border: 1px solid #eeeeee;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 432, ../scss/solid/_style.scss */
+/* line 438, ../scss/solid/_style.scss */
 .box_evidence .widget_content {
   padding: 0 10px;
   line-height: normal;
 }
-/* line 436, ../scss/solid/_style.scss */
+/* line 442, ../scss/solid/_style.scss */
 .box_evidence .widget_content .row:nth-child(odd), .box_evidence .widget_content div.split:nth-child(odd) {
   background-color: #eeeeee;
 }
-/* line 439, ../scss/solid/_style.scss */
+/* line 445, ../scss/solid/_style.scss */
 .box_evidence .widget_content .row:nth-child(odd) .table-striped > tbody > tr:nth-of-type(2n+1), .box_evidence .widget_content div.split:nth-child(odd) .table-striped > tbody > tr:nth-of-type(2n+1) {
   background-color: transparent;
   border: 0;
   padding: 4px 0;
 }
 
-/* line 453, ../scss/solid/_style.scss */
-.class-link .media-body .media-heading small {
-  display: block;
-  margin: 10px 0 0 0;
-}
-
-/* line 462, ../scss/solid/_style.scss */
+/* line 456, ../scss/solid/_style.scss */
 a .fa-external-link,
 a .fa-download {
   margin: 0 10px;
@@ -9051,36 +8881,46 @@ a .fa-download {
   color: #555555;
   padding: 5px;
 }
-/* line 471, ../scss/solid/_style.scss */
+/* line 465, ../scss/solid/_style.scss */
 a .fa-external-link:hover,
 a .fa-download:hover {
   background-color: #777777;
   color: #fff;
 }
 
-/* line 188, ../scss/solid/_colors_mixin.scss */
+/* ----------- TREE FOLDER SELECT--------------*/
+/* line 475, ../scss/solid/_style.scss */
+.tree-folder-select i {
+  color: #777777;
+}
+
+/* line 186, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #header .navtools {
   background: #005463;
 }
-/* line 190, ../scss/solid/_colors_mixin.scss */
+/* line 188, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #header .navtools ul li a {
   color: #ffffff;
 }
-/* line 195, ../scss/solid/_colors_mixin.scss */
+/* line 193, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content {
   background: #fff;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  /* .content-main,
+   .content-related {
+     .widget_title {
+       h3 {
+         
+        background: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary');
+       }
+     }
+   }*/
   /* TAB widget*/
 }
-/* line 202, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .content-main .widget_title h3,
-body.no-main-style #content .content-related .widget_title h3 {
-  background: #005463;
-  color: #ffffff;
-}
-/* line 213, ../scss/solid/_colors_mixin.scss */
+/* line 211, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .widget_tabs .tab-content,
 body.no-main-style #content .widget.events .tab-content,
 body.no-main-style #content .panels-container .events.media .tab-content,
@@ -9089,7 +8929,7 @@ body.no-main-style #content .leaflet-popup-content .events.media .tab-content,
 .leaflet-popup-content body.no-main-style #content .events.media .tab-content {
   border-color: #005463;
 }
-/* line 217, ../scss/solid/_colors_mixin.scss */
+/* line 215, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .widget_tabs h2,
 body.no-main-style #content .widget.events h2,
 body.no-main-style #content .panels-container .events.media h2,
@@ -9099,7 +8939,7 @@ body.no-main-style #content .leaflet-popup-content .events.media h2,
   background: #005463;
   color: #ffffff;
 }
-/* line 224, ../scss/solid/_colors_mixin.scss */
+/* line 222, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .widget_tabs .nav-tabs li a,
 body.no-main-style #content .widget.events .nav-tabs li a,
 body.no-main-style #content .panels-container .events.media .nav-tabs li a,
@@ -9110,7 +8950,7 @@ body.no-main-style #content .leaflet-popup-content .events.media .nav-tabs li a,
   color: #ffffff;
   opacity: 0.5;
 }
-/* line 229, ../scss/solid/_colors_mixin.scss */
+/* line 227, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .widget_tabs .nav-tabs li a:hover,
 body.no-main-style #content .widget.events .nav-tabs li a:hover,
 body.no-main-style #content .panels-container .events.media .nav-tabs li a:hover,
@@ -9119,7 +8959,7 @@ body.no-main-style #content .leaflet-popup-content .events.media .nav-tabs li a:
 .leaflet-popup-content body.no-main-style #content .events.media .nav-tabs li a:hover {
   opacity: 1;
 }
-/* line 234, ../scss/solid/_colors_mixin.scss */
+/* line 232, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .widget_tabs .nav-tabs li.active a,
 body.no-main-style #content .widget.events .nav-tabs li.active a,
 body.no-main-style #content .panels-container .events.media .nav-tabs li.active a,
@@ -9130,7 +8970,7 @@ body.no-main-style #content .leaflet-popup-content .events.media .nav-tabs li.ac
   color: #ffffff;
   opacity: 1;
 }
-/* line 244, ../scss/solid/_colors_mixin.scss */
+/* line 242, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full {
   /*a {
    color: openpa-color($palette-identifier, 'text-link');
@@ -9140,12 +8980,12 @@ body.no-main-style #content .content-view-full {
     color: openpa-color($palette-identifier, 'background-primary');
   }*/
 }
-/* line 249, ../scss/solid/_colors_mixin.scss */
+/* line 247, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full h1 {
   background-color: #ffffff;
   color: #005463;
 }
-/* line 254, ../scss/solid/_colors_mixin.scss */
+/* line 252, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full h2 {
   background-color: #005463;
   color: #ffffff;
@@ -9153,30 +8993,30 @@ body.no-main-style #content .content-view-full h2 {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 264, ../scss/solid/_colors_mixin.scss */
+/* line 262, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full .content-title h1 {
   color: #005463;
   background-color: #ffffff;
 }
-/* line 274, ../scss/solid/_colors_mixin.scss */
+/* line 272, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-view-children .media:nth-child(even) {
   background-color: #eeeeee;
 }
-/* line 277, ../scss/solid/_colors_mixin.scss */
+/* line 275, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-view-children .media-panel .media {
   background-color: transparent;
 }
-/* line 281, ../scss/solid/_colors_mixin.scss */
+/* line 279, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-detail .row:nth-child(even), body.no-main-style #content .content-main .content-detail div.split:nth-child(even),
 body.no-main-style #content .content-main .oggetti-correlati .col-notitle:nth-child(even) .col-content .col-content-design .media {
   background-color: #eeeeee;
 }
-/* line 289, ../scss/solid/_colors_mixin.scss */
+/* line 287, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .well .btn-info, body.no-main-style #content .content-main .fileupload-content .dropzoneHelp .btn-info, .fileupload-content body.no-main-style #content .content-main .dropzoneHelp .btn-info {
   background-color: #005463;
   border-color: #005463;
 }
-/* line 293, ../scss/solid/_colors_mixin.scss */
+/* line 291, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .well .btn-info:hover, body.no-main-style #content .content-main .fileupload-content .dropzoneHelp .btn-info:hover, .fileupload-content body.no-main-style #content .content-main .dropzoneHelp .btn-info:hover {
   background-color: #eeeeee;
   border-color: #eeeeee;
@@ -9185,149 +9025,111 @@ body.no-main-style #content .content-main .well .btn-info:hover, body.no-main-st
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-/* line 303, ../scss/solid/_colors_mixin.scss */
+/* line 301, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main table thead tr {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 309, ../scss/solid/_colors_mixin.scss */
+/* line 307, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools .btn-primary, body.no-main-style #content .content-main .calendar-tools .defaultbutton {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 313, ../scss/solid/_colors_mixin.scss */
+/* line 311, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools td h3 .label-primary {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 319, ../scss/solid/_colors_mixin.scss */
+/* line 317, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools .events .calendar-date .month {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 323, ../scss/solid/_colors_mixin.scss */
+/* line 321, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools .events .calendar-date .day {
   border-color: #005463;
 }
-/* line 336, ../scss/solid/_colors_mixin.scss */
+/* line 334, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content blockquote:before {
   color: #005463;
 }
-/* line 342, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media li a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media li a {
+/* line 340, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a, body.no-main-style #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.no-main-style #content .nav-section .media li a {
   color: #333333;
 }
-/* line 347, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current > a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media li.current > a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media li.current > a, body.no-main-style #content .nav-section .widget li.current li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current li.current > a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media li.current li.current > a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media li.current li.current > a {
+/* line 345, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current > a, body.no-main-style #content .nav-section .leaflet-popup-content .media li.current > a, .leaflet-popup-content body.no-main-style #content .nav-section .media li.current > a, body.no-main-style #content .nav-section .widget li.current li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current li.current > a, body.no-main-style #content .nav-section .leaflet-popup-content .media li.current li.current > a, .leaflet-popup-content body.no-main-style #content .nav-section .media li.current li.current > a {
   color: #005463;
   background-color: #eeeeee;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 353, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media li a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media li a {
+/* line 351, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a, body.no-main-style #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.no-main-style #content .nav-section .media li a {
   color: #333333;
 }
-/* line 357, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_title, body.no-main-style #content .nav-section .panels-container .media .widget_title, .panels-container body.no-main-style #content .nav-section .media .widget_title,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title {
+/* line 355, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_title, body.no-main-style #content .nav-section .panels-container .media .widget_title, .panels-container body.no-main-style #content .nav-section .media .widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 360, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget_title h3,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 {
+/* line 358, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 {
   color: #ffffff !important;
 }
-/* line 364, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget_title *, body.no-main-style #content .nav-section .panels-container .media .widget_title *, .panels-container body.no-main-style #content .nav-section .media .widget_title *,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title *,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title * {
+/* line 362, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_title *, body.no-main-style #content .nav-section .panels-container .media .widget_title *, .panels-container body.no-main-style #content .nav-section .media .widget_title *, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title *, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title * {
   color: #ffffff;
   background-color: #005463;
 }
-/* line 370, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget .row:nth-child(odd),
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget .row:nth-child(odd),
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget .row:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media .row:nth-child(odd),
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .media .row:nth-child(odd),
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .media .row:nth-child(odd),
-body.no-main-style #content .nav-section .leaflet-popup-content .media .media .row:nth-child(odd),
-.leaflet-popup-content body.no-main-style #content .nav-section .media .media .row:nth-child(odd), body.no-main-style #content .nav-section .widget .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd),
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget div.split:nth-child(odd),
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media div.split:nth-child(odd),
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .media div.split:nth-child(odd),
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd),
-body.no-main-style #content .nav-section .leaflet-popup-content .media .media div.split:nth-child(odd),
-.leaflet-popup-content body.no-main-style #content .nav-section .media .media div.split:nth-child(odd) {
+/* line 368, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget .row:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .widget .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .widget .row:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media .row:nth-child(odd), body.no-main-style #content .nav-section .widget .leaflet-popup-content .media .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .widget .media .row:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .media .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .media .row:nth-child(odd), body.no-main-style #content .nav-section .widget .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .widget div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media div.split:nth-child(odd), body.no-main-style #content .nav-section .widget .leaflet-popup-content .media div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .media div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .media div.split:nth-child(odd) {
   background-color: #eeeeee;
 }
 /* line 42, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget h3.widget_title, body.no-main-style #content .nav-section .panels-container .media h3.widget_title, .panels-container body.no-main-style #content .nav-section .media h3.widget_title,
-body.no-main-style #content .nav-section .leaflet-popup-content .media h3.widget_title,
-.leaflet-popup-content body.no-main-style #content .nav-section .media h3.widget_title {
-  background-color: #005463;
-  color: #ffffff;
-}
-/* line 46, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget h3.widget_title a, body.no-main-style #content .nav-section .panels-container .media h3.widget_title a, .panels-container body.no-main-style #content .nav-section .media h3.widget_title a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media h3.widget_title a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media h3.widget_title a {
-  color: #ffffff;
-}
-/* line 52, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-next, .panels-container body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-next,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-next,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .widget .owl-controls .owl-buttons .owl-prev, body.no-main-style #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-prev, .panels-container body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-prev,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-prev,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-prev {
+body.no-main-style #content .nav-section .widget h3.widget_title, body.no-main-style #content .nav-section .panels-container .media h3.widget_title, .panels-container body.no-main-style #content .nav-section .media h3.widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media h3.widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media h3.widget_title,
+body.no-main-style #content .nav-section .widget .widget_title h3,
+body.no-main-style #content .nav-section .panels-container .media .widget_title h3,
+.panels-container body.no-main-style #content .nav-section .media .widget_title h3,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 {
   background: #005463;
   color: #ffffff;
 }
-/* line 59, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .carousel-caption, body.no-main-style #content .nav-section .panels-container .media .carousel-caption, .panels-container body.no-main-style #content .nav-section .media .carousel-caption,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption {
+/* line 47, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget h3.widget_title a, body.no-main-style #content .nav-section .panels-container .media h3.widget_title a, .panels-container body.no-main-style #content .nav-section .media h3.widget_title a, body.no-main-style #content .nav-section .leaflet-popup-content .media h3.widget_title a, .leaflet-popup-content body.no-main-style #content .nav-section .media h3.widget_title a,
+body.no-main-style #content .nav-section .widget .widget_title h3 a,
+body.no-main-style #content .nav-section .panels-container .media .widget_title h3 a,
+.panels-container body.no-main-style #content .nav-section .media .widget_title h3 a,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3 a,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 a {
+  color: #ffffff;
+}
+/* line 53, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-next, .panels-container body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-next, .leaflet-popup-content body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-next, body.no-main-style #content .nav-section .widget .owl-controls .owl-buttons .owl-prev, body.no-main-style #content .nav-section .panels-container .media .owl-controls .owl-buttons .owl-prev, .panels-container body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-prev, body.no-main-style #content .nav-section .leaflet-popup-content .media .owl-controls .owl-buttons .owl-prev, .leaflet-popup-content body.no-main-style #content .nav-section .media .owl-controls .owl-buttons .owl-prev {
+  background: #005463;
+  color: #ffffff;
+}
+/* line 60, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .carousel-caption, body.no-main-style #content .nav-section .panels-container .media .carousel-caption, .panels-container body.no-main-style #content .nav-section .media .carousel-caption, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption {
   color: #eeeeee;
 }
-/* line 61, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .carousel-caption h3, body.no-main-style #content .nav-section .panels-container .media .carousel-caption h3, .panels-container body.no-main-style #content .nav-section .media .carousel-caption h3,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption h3,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption h3 {
+/* line 62, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .carousel-caption h3, body.no-main-style #content .nav-section .panels-container .media .carousel-caption h3, .panels-container body.no-main-style #content .nav-section .media .carousel-caption h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption h3 {
   background: #005463;
   color: #ffffff;
 }
-/* line 64, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .carousel-caption h3 a, body.no-main-style #content .nav-section .panels-container .media .carousel-caption h3 a, .panels-container body.no-main-style #content .nav-section .media .carousel-caption h3 a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption h3 a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption h3 a {
+/* line 65, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .carousel-caption h3 a, body.no-main-style #content .nav-section .panels-container .media .carousel-caption h3 a, .panels-container body.no-main-style #content .nav-section .media .carousel-caption h3 a, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-caption h3 a, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-caption h3 a {
   color: #ffffff;
 }
-/* line 71, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .carousel-both-control .owl-pagination.active, body.no-main-style #content .nav-section .panels-container .media .carousel-both-control .owl-pagination.active, .panels-container body.no-main-style #content .nav-section .media .carousel-both-control .owl-pagination.active,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-both-control .owl-pagination.active,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-both-control .owl-pagination.active {
+/* line 72, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .carousel-both-control .owl-pagination.active, body.no-main-style #content .nav-section .panels-container .media .carousel-both-control .owl-pagination.active, .panels-container body.no-main-style #content .nav-section .media .carousel-both-control .owl-pagination.active, body.no-main-style #content .nav-section .leaflet-popup-content .media .carousel-both-control .owl-pagination.active, .leaflet-popup-content body.no-main-style #content .nav-section .media .carousel-both-control .owl-pagination.active {
   background: #005463 !important;
 }
-/* line 77, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .panels-container .media .tabs_nav .ui-tabs-active a, .panels-container body.no-main-style #content .nav-section .media .tabs_nav .ui-tabs-active a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .tabs_nav .ui-tabs-active a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .widget .nav-tabs .ui-tabs-active a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .panels-container .media .nav-tabs .ui-tabs-active a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs .panels-container body.no-main-style #content .nav-section .media .nav-tabs .ui-tabs-active a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs .ui-tabs-active a,
-.widget_tabs body.no-main-style #content .nav-section .leaflet-popup-content .media .nav-tabs .ui-tabs-active a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a,
-.widget_tabs .leaflet-popup-content body.no-main-style #content .nav-section .media .nav-tabs .ui-tabs-active a,
+/* line 78, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .panels-container .media .tabs_nav .ui-tabs-active a, .panels-container body.no-main-style #content .nav-section .media .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .tabs_nav .ui-tabs-active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .tabs_nav .ui-tabs-active a, body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .widget .nav-tabs .ui-tabs-active a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .panels-container .media .nav-tabs .ui-tabs-active a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs .panels-container body.no-main-style #content .nav-section .media .nav-tabs .ui-tabs-active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs body.no-main-style #content .nav-section .leaflet-popup-content .media .nav-tabs .ui-tabs-active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs .ui-tabs-active a, .widget_tabs .leaflet-popup-content body.no-main-style #content .nav-section .media .nav-tabs .ui-tabs-active a,
 body.no-main-style #content .nav-section .widget .widget_tabs .events-tabs .ui-tabs-active a,
 .widget_tabs body.no-main-style #content .nav-section .widget .events-tabs .ui-tabs-active a,
 body.no-main-style #content .nav-section .panels-container .media .widget_tabs .events-tabs .ui-tabs-active a,
@@ -9337,13 +9139,7 @@ body.no-main-style #content .nav-section .panels-container .media .widget_tabs .
 body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .events-tabs .ui-tabs-active a,
 .widget_tabs body.no-main-style #content .nav-section .leaflet-popup-content .media .events-tabs .ui-tabs-active a,
 .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .events-tabs .ui-tabs-active a,
-.widget_tabs .leaflet-popup-content body.no-main-style #content .nav-section .media .events-tabs .ui-tabs-active a, body.no-main-style #content .nav-section .widget .tabs_nav li:hover a[class*="color"], body.no-main-style #content .nav-section .panels-container .media .tabs_nav li:hover a[class*="color"], .panels-container body.no-main-style #content .nav-section .media .tabs_nav li:hover a[class*="color"],
-body.no-main-style #content .nav-section .leaflet-popup-content .media .tabs_nav li:hover a[class*="color"],
-.leaflet-popup-content body.no-main-style #content .nav-section .media .tabs_nav li:hover a[class*="color"], body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.no-main-style #content .nav-section .widget .nav-tabs li:hover a[class*="color"], body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.no-main-style #content .nav-section .panels-container .media .nav-tabs li:hover a[class*="color"], .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs .panels-container body.no-main-style #content .nav-section .media .nav-tabs li:hover a[class*="color"],
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li:hover a[class*="color"],
-.widget_tabs body.no-main-style #content .nav-section .leaflet-popup-content .media .nav-tabs li:hover a[class*="color"],
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li:hover a[class*="color"],
-.widget_tabs .leaflet-popup-content body.no-main-style #content .nav-section .media .nav-tabs li:hover a[class*="color"],
+.widget_tabs .leaflet-popup-content body.no-main-style #content .nav-section .media .events-tabs .ui-tabs-active a, body.no-main-style #content .nav-section .widget .tabs_nav li:hover a[class*="color"], body.no-main-style #content .nav-section .panels-container .media .tabs_nav li:hover a[class*="color"], .panels-container body.no-main-style #content .nav-section .media .tabs_nav li:hover a[class*="color"], body.no-main-style #content .nav-section .leaflet-popup-content .media .tabs_nav li:hover a[class*="color"], .leaflet-popup-content body.no-main-style #content .nav-section .media .tabs_nav li:hover a[class*="color"], body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.no-main-style #content .nav-section .widget .nav-tabs li:hover a[class*="color"], body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.no-main-style #content .nav-section .panels-container .media .nav-tabs li:hover a[class*="color"], .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs .panels-container body.no-main-style #content .nav-section .media .nav-tabs li:hover a[class*="color"], body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs body.no-main-style #content .nav-section .leaflet-popup-content .media .nav-tabs li:hover a[class*="color"], .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li:hover a[class*="color"], .widget_tabs .leaflet-popup-content body.no-main-style #content .nav-section .media .nav-tabs li:hover a[class*="color"],
 body.no-main-style #content .nav-section .widget .widget_tabs .events-tabs li:hover a[class*="color"],
 .widget_tabs body.no-main-style #content .nav-section .widget .events-tabs li:hover a[class*="color"],
 body.no-main-style #content .nav-section .panels-container .media .widget_tabs .events-tabs li:hover a[class*="color"],
@@ -9357,67 +9153,31 @@ body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_t
   background: #eeeeee;
   color: #eeeeee;
 }
-/* line 83, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget.events .tab-content, body.no-main-style #content .nav-section .panels-container .media .widget.events .tab-content, .panels-container body.no-main-style #content .nav-section .media .widget.events .tab-content,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .tab-content,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .tab-content, body.no-main-style #content .nav-section .widget .panels-container .events.media .tab-content, .panels-container body.no-main-style #content .nav-section .widget .events.media .tab-content, body.no-main-style #content .nav-section .panels-container .media .events.media .tab-content, .panels-container body.no-main-style #content .nav-section .media .events.media .tab-content,
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .tab-content,
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .tab-content,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .tab-content,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .tab-content {
+/* line 84, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .tab-content, body.no-main-style #content .nav-section .panels-container .media .widget.events .tab-content, .panels-container body.no-main-style #content .nav-section .media .widget.events .tab-content, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .tab-content, body.no-main-style #content .nav-section .widget .panels-container .events.media .tab-content, .panels-container body.no-main-style #content .nav-section .widget .events.media .tab-content, body.no-main-style #content .nav-section .panels-container .media .events.media .tab-content, .panels-container body.no-main-style #content .nav-section .media .events.media .tab-content, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .tab-content, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .tab-content {
   border-color: #005463;
 }
-/* line 87, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget.events .widget_title, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title,
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title,
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title {
+/* line 88, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .widget_title, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title {
   background: #005463;
 }
-/* line 89, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget.events .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title h3,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title h3,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title h3, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title h3, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title h3,
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title h3,
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title h3,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title h3,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title h3 {
+/* line 90, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title h3, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title h3, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title h3, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title h3 {
   background: #005463;
   color: #ffffff;
 }
-/* line 93, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title a .fa,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title a .fa,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title a .fa, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title a .fa,
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title a .fa,
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title a .fa,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title a .fa,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title a .fa {
+/* line 94, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .panels-container .media .widget.events .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .media .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .widget_title a .fa, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .widget_title a .fa, body.no-main-style #content .nav-section .widget .panels-container .events.media .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .widget .events.media .widget_title a .fa, body.no-main-style #content .nav-section .panels-container .media .events.media .widget_title a .fa, .panels-container body.no-main-style #content .nav-section .media .events.media .widget_title a .fa, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .widget_title a .fa, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .widget_title a .fa, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .widget_title a .fa, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .widget_title a .fa {
   color: #ffffff;
 }
-/* line 100, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget.events .events-tabs li a, body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li a, .panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .events-tabs li a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .events-tabs li a, body.no-main-style #content .nav-section .widget .panels-container .events.media .events-tabs li a, .panels-container body.no-main-style #content .nav-section .widget .events.media .events-tabs li a, body.no-main-style #content .nav-section .panels-container .media .events.media .events-tabs li a, .panels-container body.no-main-style #content .nav-section .media .events.media .events-tabs li a,
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .events-tabs li a,
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .events-tabs li a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .events-tabs li a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li a {
+/* line 101, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .events-tabs li a, body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li a, .panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .events-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .events-tabs li a, body.no-main-style #content .nav-section .widget .panels-container .events.media .events-tabs li a, .panels-container body.no-main-style #content .nav-section .widget .events.media .events-tabs li a, body.no-main-style #content .nav-section .panels-container .media .events.media .events-tabs li a, .panels-container body.no-main-style #content .nav-section .media .events.media .events-tabs li a, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .events-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .events-tabs li a, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .events-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li a {
   background: #005463;
   color: #ffffff;
   opacity: 0.5;
 }
-/* line 106, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li.active a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .events-tabs li.active a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .widget .panels-container .events.media .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .widget .events.media .events-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .events.media .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .events.media .events-tabs li.active a,
-body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .events-tabs li.active a,
-.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .events-tabs li.active a,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .events-tabs li.active a,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li.active a,
+/* line 107, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .events-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .events-tabs li.active a, body.no-main-style #content .nav-section .widget .panels-container .events.media .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .widget .events.media .events-tabs li.active a, body.no-main-style #content .nav-section .panels-container .media .events.media .events-tabs li.active a, .panels-container body.no-main-style #content .nav-section .media .events.media .events-tabs li.active a, body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .events-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .events-tabs li.active a, body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .events-tabs li.active a, .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li.active a,
 body.no-main-style #content .nav-section .widget .widget.events .events-tabs li a:hover,
 body.no-main-style #content .nav-section .panels-container .media .widget.events .events-tabs li a:hover,
 .panels-container body.no-main-style #content .nav-section .media .widget.events .events-tabs li a:hover,
@@ -9433,16 +9193,109 @@ body.no-main-style #content .nav-section .leaflet-popup-content .media .events.m
 .leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .events-tabs li a:hover {
   opacity: 1;
 }
-/* line 115, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .events .calendar-date .month, body.no-main-style #content .nav-section .panels-container .media .events .calendar-date .month, .panels-container body.no-main-style #content .nav-section .media .events .calendar-date .month,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events .calendar-date .month,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events .calendar-date .month {
+/* line 116, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .events .calendar-date .month, body.no-main-style #content .nav-section .panels-container .media .events .calendar-date .month, .panels-container body.no-main-style #content .nav-section .media .events .calendar-date .month, body.no-main-style #content .nav-section .leaflet-popup-content .media .events .calendar-date .month, .leaflet-popup-content body.no-main-style #content .nav-section .media .events .calendar-date .month {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 119, ../scss/solid/_colors_mixin.scss */
-body.no-main-style #content .nav-section .widget .events .calendar-date .day, body.no-main-style #content .nav-section .panels-container .media .events .calendar-date .day, .panels-container body.no-main-style #content .nav-section .media .events .calendar-date .day,
-body.no-main-style #content .nav-section .leaflet-popup-content .media .events .calendar-date .day,
-.leaflet-popup-content body.no-main-style #content .nav-section .media .events .calendar-date .day {
+/* line 120, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .events .calendar-date .day, body.no-main-style #content .nav-section .panels-container .media .events .calendar-date .day, .panels-container body.no-main-style #content .nav-section .media .events .calendar-date .day, body.no-main-style #content .nav-section .leaflet-popup-content .media .events .calendar-date .day, .leaflet-popup-content body.no-main-style #content .nav-section .media .events .calendar-date .day {
   border-color: #005463;
+}
+/* line 125, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i, body.no-main-style #content .nav-section .panels-container .media .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i, .panels-container body.no-main-style #content .nav-section .media .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i, body.no-main-style #content .nav-section .leaflet-popup-content .media .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i, .leaflet-popup-content body.no-main-style #content .nav-section .media .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i,
+body.no-main-style #content .nav-section .widget .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i,
+body.no-main-style #content .nav-section .panels-container .media .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i,
+.panels-container body.no-main-style #content .nav-section .media .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i {
+  color: #005463;
+}
+/* line 133, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .panel-label, body.no-main-style #content .nav-section .panels-container .media .panel-label, .panels-container body.no-main-style #content .nav-section .media .panel-label, body.no-main-style #content .nav-section .leaflet-popup-content .media .panel-label, .leaflet-popup-content body.no-main-style #content .nav-section .media .panel-label {
+  background: #005463;
+  color: #ffffff;
+}
+/* line 138, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .media-panel figure, body.no-main-style #content .nav-section .panels-container .media .media-panel figure, .panels-container body.no-main-style #content .nav-section .media .media-panel figure, body.no-main-style #content .nav-section .leaflet-popup-content .media .media-panel figure, .leaflet-popup-content body.no-main-style #content .nav-section .media .media-panel figure {
+  border-bottom-color: #005463;
+}
+/* line 142, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .panel-story, body.no-main-style #content .nav-section .panels-container .media .panel-story, .panels-container body.no-main-style #content .nav-section .media .panel-story, body.no-main-style #content .nav-section .leaflet-popup-content .media .panel-story, .leaflet-popup-content body.no-main-style #content .nav-section .media .panel-story {
+  color: #005463;
+}
+/* line 144, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .panel-story a, body.no-main-style #content .nav-section .panels-container .media .panel-story a, .panels-container body.no-main-style #content .nav-section .media .panel-story a, body.no-main-style #content .nav-section .leaflet-popup-content .media .panel-story a, .leaflet-popup-content body.no-main-style #content .nav-section .media .panel-story a {
+  color: #005463;
+}
+/* line 152, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs .tab-content, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .tab-content, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .tab-content, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .tab-content, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .tab-content,
+body.no-main-style #content .nav-section .widget .widget.events .tab-content,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .tab-content,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .tab-content,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .tab-content,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .tab-content,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .tab-content,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .tab-content,
+body.no-main-style #content .nav-section .panels-container .media .events.media .tab-content,
+.panels-container body.no-main-style #content .nav-section .media .events.media .tab-content,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .tab-content,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .tab-content,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .tab-content,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .tab-content {
+  border-color: #005463;
+}
+/* line 156, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs h2, body.no-main-style #content .nav-section .panels-container .media .widget_tabs h2, .panels-container body.no-main-style #content .nav-section .media .widget_tabs h2, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs h2, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs h2,
+body.no-main-style #content .nav-section .widget .widget.events h2,
+body.no-main-style #content .nav-section .panels-container .media .widget.events h2,
+.panels-container body.no-main-style #content .nav-section .media .widget.events h2,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events h2,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events h2,
+body.no-main-style #content .nav-section .widget .panels-container .events.media h2,
+.panels-container body.no-main-style #content .nav-section .widget .events.media h2,
+body.no-main-style #content .nav-section .panels-container .media .events.media h2,
+.panels-container body.no-main-style #content .nav-section .media .events.media h2,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media h2,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media h2,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media h2,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media h2 {
+  background: #005463;
+  color: #ffffff;
+}
+/* line 163, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li a, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a,
+body.no-main-style #content .nav-section .widget .widget.events .nav-tabs li a,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .nav-tabs li a,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .nav-tabs li a,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .nav-tabs li a,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a,
+body.no-main-style #content .nav-section .panels-container .media .events.media .nav-tabs li a,
+.panels-container body.no-main-style #content .nav-section .media .events.media .nav-tabs li a,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .nav-tabs li a,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .nav-tabs li a,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .nav-tabs li a {
+  background-color: #005463;
+  color: #ffffff;
+  opacity: 0.5;
+}
+/* line 168, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .nav-section .widget .widget_tabs .nav-tabs li a:hover, body.no-main-style #content .nav-section .panels-container .media .widget_tabs .nav-tabs li a:hover, .panels-container body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a:hover, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_tabs .nav-tabs li a:hover, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_tabs .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .widget.events .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .panels-container .media .widget.events .nav-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .widget.events .nav-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .widget.events .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .panels-container .events.media .nav-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .panels-container .media .events.media .nav-tabs li a:hover,
+.panels-container body.no-main-style #content .nav-section .media .events.media .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .widget .leaflet-popup-content .events.media .nav-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .widget .events.media .nav-tabs li a:hover,
+body.no-main-style #content .nav-section .leaflet-popup-content .media .events.media .nav-tabs li a:hover,
+.leaflet-popup-content body.no-main-style #content .nav-section .media .events.media .nav-tabs li a:hover {
+  opacity: 1;
 }

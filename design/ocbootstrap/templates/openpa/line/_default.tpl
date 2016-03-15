@@ -12,18 +12,16 @@
         </h3>
 
         {if $openpa.content_line.has_content}
-          <dl>
-            {foreach $openpa.content_line.attributes as $openpa_attribute}
-              <dt>
-              {if $openpa_attribute.line.show_label}
-                 <strong>{$openpa_attribute.label}</strong>
-              {/if}
-              </dt>
-              <dd>
+          <ul class="list-unstyled">
+            {foreach $openpa.content_line.attributes as $openpa_attribute}              
+              <li>
+                {if $openpa_attribute.line.show_label}
+                 <strong>{$openpa_attribute.label}:</strong>
+                {/if}              
                 {attribute_view_gui attribute=$openpa_attribute.contentobject_attribute href=cond($openpa_attribute.line.show_link|not, 'no-link', '')}
-              </dd>
+              </li>
             {/foreach}
-          </dl>
+          </ul>
 
         {/if}
 

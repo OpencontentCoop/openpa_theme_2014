@@ -6,12 +6,9 @@
     {include uri=$openpa.content_tools.template}
 {/if}
 
-{if $openpa.control_menu.side_menu.root_node}
 {def $tree_menu = tree_menu( hash( 'root_node_id', $openpa.control_menu.side_menu.root_node.node_id, 'user_hash', $openpa.control_menu.side_menu.user_hash, 'scope', 'side_menu' ))
      $show_left = and( $openpa.control_menu.show_side_menu, count( $tree_menu.children )|gt(0) )}
-{else}
-  {def $show_left = false()}
-{/if}
+
 
 <div class="content-view-full class-{$node.class_identifier} row">
 
@@ -28,11 +25,32 @@
         {include uri=$openpa.content_main.template}
 
         {include uri=$openpa.content_detail.template}
+      
+        <div class="content-view-children">        
+        {if $node.name|downcase()|contains('sindaco')}
+          {foreach $node|attribute( 'membri' ).content.relation_list as $relation_item}
+            {if is_set($relation_item.node_id)}
+              {node_view_gui view=line content_node=fetch(content,node,hash(node_id,$relation_item.node_id)) image_class='small'}
+            {/if}
+          {/foreach}
+        {else}
+          {def $attributi_politici = array( 'presidente', 'vicepresidente', 'membri', 'segretario')}        
+          {foreach $attributi_politici as $identifier}
+            {if $node|has_attribute( $identifier )}
+              <h2>{$node|attribute( $identifier ).contentclass_attribute.name|wash()}</h2>
+              {foreach $node|attribute( $identifier ).content.relation_list as $relation_item}
+                {if is_set($relation_item.node_id)}
+                  {node_view_gui view=line content_node=fetch(content,node,hash(node_id,$relation_item.node_id)) image_class='small'}
+                {/if}
+              {/foreach}
+            {/if}
+          {/foreach}
+        {/if}
+        </div>
 
         {include uri=$openpa.content_infocollection.template}
-
-        {include uri=$openpa.control_children.template}
-
+        
+        {*include uri=$openpa.control_children.template*}
     </div>
 
     {if $openpa.control_menu.show_extra_menu}

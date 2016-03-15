@@ -2,7 +2,7 @@
 
   <dt>Ultima modifica di:</dt>
   <dd>
-	{if $node.creator.main_node}
+	{if is_set($node.creator.main_node)}
 	<a href={$node.creator.main_node.url_alias|ezurl}>{$node.creator.name}</a> il {$node.object.modified|l10n(shortdatetime)}
 	{else}
 	?

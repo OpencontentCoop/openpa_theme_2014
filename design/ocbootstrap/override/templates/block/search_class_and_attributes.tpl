@@ -24,7 +24,7 @@
            class = $class			   			   
            subtree = $subtreearray
            open_advanced = false()
-           exclude_attributes = openpaini( 'Attributi', 'EscludiDaRicerca', array() )}
+           exclude_attributes = openpaini( 'GestioneAttributi', 'attributi_da_escludere_dalla_ricerca', array() )}
       </form>
     </div>  
   </div>

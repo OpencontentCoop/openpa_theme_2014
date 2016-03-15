@@ -5,14 +5,14 @@
   'height', 600,
   'map_type', 'osm',
   'class_identifiers', array(),
-  'items_per_row', 2
+  'items_per_row', 1
 ))}
 
 {set $height = $height|fix_dimension()}
 {*def $markers = fetch( 'ocbtools', 'map_markers', hash( 'parent_node_id', $node.node_id, class_identifiers, $class_identifiers ) )}
 {if $markers|count()*}
 
-<div class="row">
+<div class="row"> 
   <div class="col-md-{if $items_per_row|eq(1)}12{else}9{/if}">
 	<div id="map-{$node.node_id}" style="height: {$height}px; width: 100%"></div>
 
@@ -63,7 +63,7 @@
 	</script>
   </div>
   <div class="col-md-{if $items_per_row|eq(1)}12{else}3{/if}">
-	<ul id="markers-{$node.node_id}" class="list-markers-text list-unstyled" style="height: {$height}px;overflow-y: auto"></ul>
+    <ul id="markers-{$node.node_id}" class="list-markers-text list-unstyled {if $items_per_row|eq(1)}list-markers-text-full{/if}" style="height: {$height}px;overflow-y: auto"></ul>
   </div>
 
 </div>

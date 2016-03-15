@@ -223,7 +223,7 @@
              class = $Class			   			   
              subtree = $Subtree
              open_advanced = true()
-             exclude_attributes = openpaini( 'Attributi', 'EscludiDaRicerca', array() )}
+             exclude_attributes = openpaini( 'GestioneAttributi', 'attributi_da_escludere_dalla_ricerca', array() )}
         </div>
       
       {else}
