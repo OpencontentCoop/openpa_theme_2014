@@ -1,6 +1,10 @@
 
 .owl-controls {
   .owl-buttons {
+    div {
+      padding: 1px 10px!important;
+    }
+
     .owl-next, .owl-prev {
       margin: 0 0 0 3px;
       border-radius: $border-radius-base;
@@ -83,6 +87,10 @@
     }
   }
 }
+.widget_content.carousel-both-control {
+  padding: 0 10px;
+}
+
 
 .owl-theme .owl-controls .owl-page span { opacity: 1 };
 

@@ -399,11 +399,11 @@
 }
 
 .shadow {
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
-  -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .10);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .10);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, .10);
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, .10);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .10);
 }
 
 .no-shadow {
@@ -455,11 +455,14 @@ mark {
 ::-webkit-scrollbar {
   width: 10px;
   color: $gray-light;
+  -webkit-appearance: none;
 }
 
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  border:1px solid #d7d7d7;
+  background-color: $gray-lighter;
 }
 
 .clearfix:after {

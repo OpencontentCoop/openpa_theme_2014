@@ -7567,19 +7567,19 @@ body {
 }
 
 @media (min-width: 768px) {
-  /* line 60, ../scss/solid/_navigation.scss */
+  /* line 59, ../scss/solid/_navigation.scss */
   .navbar-brand > img.navbar-logo {
     display: inline-block;
     height: 40px;
   }
 }
 @media (min-width: 992px) {
-  /* line 69, ../scss/solid/_navigation.scss */
+  /* line 68, ../scss/solid/_navigation.scss */
   .navbar-brand {
     display: inline-block;
     line-height: 40px;
   }
-  /* line 72, ../scss/solid/_navigation.scss */
+  /* line 71, ../scss/solid/_navigation.scss */
   .navbar-brand > img.navbar-logo {
     background: #fff none repeat scroll 0 0;
     border-radius: 100%;
@@ -7593,7 +7593,7 @@ body {
     z-index: 1;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
-  /* line 85, ../scss/solid/_navigation.scss */
+  /* line 84, ../scss/solid/_navigation.scss */
   .navbar-brand .navbar-title {
     padding-left: 80px;
     line-height: 1;
@@ -7602,7 +7602,7 @@ body {
     position: relative;
   }
 
-  /* line 93, ../scss/solid/_navigation.scss */
+  /* line 92, ../scss/solid/_navigation.scss */
   .navbar-nav {
     margin: 0 auto;
     display: table;
@@ -7610,7 +7610,7 @@ body {
     float: none;
     width: 100%;
   }
-  /* line 99, ../scss/solid/_navigation.scss */
+  /* line 98, ../scss/solid/_navigation.scss */
   .navbar-nav > li {
     display: table-cell;
     float: none;
@@ -7618,77 +7618,87 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  /* line 109, ../scss/solid/_navigation.scss */
+  /* line 108, ../scss/solid/_navigation.scss */
   .navbar-brand .navbar-title {
     padding-left: 80px;
   }
 
-  /* line 113, ../scss/solid/_navigation.scss */
+  /* line 112, ../scss/solid/_navigation.scss */
   .menu-container {
     padding: 0;
   }
 }
 @media (max-width: 768px) {
-  /* line 119, ../scss/solid/_navigation.scss */
+  /* line 118, ../scss/solid/_navigation.scss */
   .navbar-brand {
     display: block;
     line-height: 1;
   }
-  /* line 122, ../scss/solid/_navigation.scss */
+  /* line 121, ../scss/solid/_navigation.scss */
   .navbar-brand .navbar-title {
     font-size: 0.9em;
     line-height: 1;
   }
 
-  /* line 127, ../scss/solid/_navigation.scss */
+  /* line 126, ../scss/solid/_navigation.scss */
   .nav li a, .nav-facets .nav-sub li a {
     margin: 15px 0;
     display: block;
   }
 
-  /* line 131, ../scss/solid/_navigation.scss */
+  /* line 130, ../scss/solid/_navigation.scss */
   .yamm .yamm-content {
     padding: 0 10px;
   }
+
+  /* line 137, ../scss/solid/_navigation.scss */
+  .navbar .navbar-nav li a {
+    border-bottom: none;
+    margin: 5px 4px;
+  }
+  /* line 141, ../scss/solid/_navigation.scss */
+  .navbar .navbar-nav li .nav-sub li a {
+    margin: 5px 0;
+  }
 }
-/* line 137, ../scss/solid/_navigation.scss */
+/* line 150, ../scss/solid/_navigation.scss */
 .side_menu {
   margin-top: -7px;
 }
-/* line 141, ../scss/solid/_navigation.scss */
+/* line 154, ../scss/solid/_navigation.scss */
 .side_menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 147, ../scss/solid/_navigation.scss */
+/* line 160, ../scss/solid/_navigation.scss */
 .side_menu .active > a > span:after {
   opacity: 1;
 }
-/* line 150, ../scss/solid/_navigation.scss */
+/* line 163, ../scss/solid/_navigation.scss */
 .side_menu .active > a > span:before,
 .side_menu a > span:after {
   opacity: 0;
 }
-/* line 155, ../scss/solid/_navigation.scss */
+/* line 168, ../scss/solid/_navigation.scss */
 .side_menu > li:last-child > a {
   border: none;
   padding-bottom: 0px;
 }
-/* line 164, ../scss/solid/_navigation.scss */
+/* line 177, ../scss/solid/_navigation.scss */
 .side_menu a {
   padding: 7px 25px 7px 5px;
   border-bottom: 1px solid #ecf0f1;
   word-break: normal;
 }
-/* line 172, ../scss/solid/_navigation.scss */
+/* line 185, ../scss/solid/_navigation.scss */
 .side_menu ul > li > a {
   padding-left: 15px;
 }
-/* line 176, ../scss/solid/_navigation.scss */
+/* line 189, ../scss/solid/_navigation.scss */
 .side_menu ul ul > li > a {
   padding-left: 25px;
 }
-/* line 180, ../scss/solid/_navigation.scss */
+/* line 193, ../scss/solid/_navigation.scss */
 .side_menu a > span {
   display: block;
   width: 23px;
@@ -7699,7 +7709,7 @@ body {
   top: 50%;
   margin-top: -11.5px;
 }
-/* line 191, ../scss/solid/_navigation.scss */
+/* line 204, ../scss/solid/_navigation.scss */
 .side_menu a > span:before,
 .side_menu a > span:after {
   content: "";
@@ -7716,22 +7726,22 @@ body {
   -o-transition: opacity .4s ease;
   transition: opacity .4s ease;
 }
-/* line 208, ../scss/solid/_navigation.scss */
+/* line 221, ../scss/solid/_navigation.scss */
 .side_menu a > span:after {
   height: 1px;
   width: 8px;
   background-position: 0 -9px;
   margin: -1px 0 0 -4px;
 }
-/* line 215, ../scss/solid/_navigation.scss */
+/* line 228, ../scss/solid/_navigation.scss */
 .side_menu li:not(.active) .submenu {
   display: none;
 }
-/* line 219, ../scss/solid/_navigation.scss */
+/* line 232, ../scss/solid/_navigation.scss */
 .side_menu li.active > a, .side_menu li.current > a {
   color: #23527c;
 }
-/* line 222, ../scss/solid/_navigation.scss */
+/* line 235, ../scss/solid/_navigation.scss */
 .side_menu .menu-handler {
   background: #eeeeee;
   color: #555555;
@@ -7739,12 +7749,12 @@ body {
   cursor: pointer;
 }
 
-/* line 232, ../scss/solid/_navigation.scss */
+/* line 245, ../scss/solid/_navigation.scss */
 .nav-section .widget .widget_title, .nav-section .panels-container .media .widget_title, .panels-container .nav-section .media .widget_title, .nav-section .leaflet-popup-content .media .widget_title, .leaflet-popup-content .nav-section .media .widget_title {
   padding: 15px 20px 14px;
   color: #fff;
 }
-/* line 235, ../scss/solid/_navigation.scss */
+/* line 248, ../scss/solid/_navigation.scss */
 .nav-section .widget .widget_title *, .nav-section .panels-container .media .widget_title *, .panels-container .nav-section .media .widget_title *, .nav-section .leaflet-popup-content .media .widget_title *, .leaflet-popup-content .nav-section .media .widget_title * {
   padding: 0;
   margin: 0;
@@ -7756,7 +7766,7 @@ body {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 247, ../scss/solid/_navigation.scss */
+  /* line 260, ../scss/solid/_navigation.scss */
   .side_menu a > span:before,
   .side_menu a > span:after {
     margin-left: -5px;
@@ -8698,94 +8708,102 @@ legend {
 /* line 233, ../scss/solid/_style.scss */
 .content-main h3 {
   font-size: 18px;
+  padding: 5px 8px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
-/* line 235, ../scss/solid/_style.scss */
+/* line 237, ../scss/solid/_style.scss */
 .content-main h3.widget_title {
   margin-bottom: 0;
 }
+/* line 240, ../scss/solid/_style.scss */
+.content-main h3.media-heading {
+  padding: 0;
+}
 
-/* line 241, ../scss/solid/_style.scss */
+/* line 246, ../scss/solid/_style.scss */
 .abstract {
   margin-bottom: 10px;
 }
-/* line 245, ../scss/solid/_style.scss */
+/* line 250, ../scss/solid/_style.scss */
 .abstract .image.pull-left, .abstract .image.object-left {
   margin: 0 1em .5em 0;
 }
-/* line 249, ../scss/solid/_style.scss */
+/* line 254, ../scss/solid/_style.scss */
 .abstract ul {
   list-style: outside disc;
   margin-left: 1em;
   padding: 0;
 }
-/* line 254, ../scss/solid/_style.scss */
+/* line 259, ../scss/solid/_style.scss */
 .abstract ul li {
   position: relative;
   left: 1em;
   padding-right: 1em;
 }
 
-/* line 261, ../scss/solid/_style.scss */
+/* line 266, ../scss/solid/_style.scss */
 .photoframe, .main_image, .embed_image {
   border: 10px solid #fff;
   z-index: 1;
   background: #fff;
 }
 
-/* line 267, ../scss/solid/_style.scss */
+/* line 272, ../scss/solid/_style.scss */
 .main_image {
   margin-right: 20px;
   margin-top: 0;
 }
 
-/* line 281, ../scss/solid/_style.scss */
+/* line 286, ../scss/solid/_style.scss */
 .embed_image {
   margin-top: 0;
   display: inline-block;
 }
 
-/* line 302, ../scss/solid/_style.scss */
+/* line 307, ../scss/solid/_style.scss */
 .content-title h1 {
   color: #555555;
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 306, ../scss/solid/_style.scss */
+/* line 311, ../scss/solid/_style.scss */
 .content-title h1 small {
   font-weight: unset;
   font-size: 50%;
   text-transform: none;
 }
 
-/* line 314, ../scss/solid/_style.scss */
+/* line 319, ../scss/solid/_style.scss */
 .content-detail > .row, .content-detail > div.split {
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: normal;
 }
 
-/* line 320, ../scss/solid/_style.scss */
+/* line 325, ../scss/solid/_style.scss */
 div.embed {
   text-align: center;
 }
 
 /* ----------- BOX SEARCH --------------*/
-/* line 332, ../scss/solid/_style.scss */
+/* line 337, ../scss/solid/_style.scss */
 .search_box .widget_content .btn-link {
   background-color: #eeeeee;
   margin: 10px 10px 10px 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
-/* line 337, ../scss/solid/_style.scss */
+/* line 342, ../scss/solid/_style.scss */
 .search_box .widget_content .btn-link:hover {
   background-color: #d4d4d4;
 }
-/* line 341, ../scss/solid/_style.scss */
+/* line 346, ../scss/solid/_style.scss */
 .search_box .widget_content .form-group {
   margin-bottom: 5px;
 }
 
-/* line 347, ../scss/solid/_style.scss */
+/* line 352, ../scss/solid/_style.scss */
 #OrderSearchPanel.well, .fileupload-content #OrderSearchPanel.dropzoneHelp,
 #AdvancedSearchPanel.well,
 .fileupload-content #AdvancedSearchPanel.dropzoneHelp {
@@ -8793,46 +8811,46 @@ div.embed {
 }
 
 /* ----------- BOX VALUTATION --------------*/
-/* line 355, ../scss/solid/_style.scss */
+/* line 360, ../scss/solid/_style.scss */
 #valuation-container {
   margin-top: 20px;
   background-color: #fff;
 }
-/* line 359, ../scss/solid/_style.scss */
+/* line 364, ../scss/solid/_style.scss */
 #valuation-container .well.valuation, #valuation-container .fileupload-content .valuation.dropzoneHelp, .fileupload-content #valuation-container .valuation.dropzoneHelp {
   border: 0;
   background: transparent;
 }
-/* line 364, ../scss/solid/_style.scss */
+/* line 369, ../scss/solid/_style.scss */
 #valuation-container .well.valuation h4 i, #valuation-container .fileupload-content .valuation.dropzoneHelp h4 i, .fileupload-content #valuation-container .valuation.dropzoneHelp h4 i {
   margin-right: 1em;
   border-radius: 1em;
   padding: 0.5em;
 }
-/* line 372, ../scss/solid/_style.scss */
+/* line 377, ../scss/solid/_style.scss */
 #valuation-container .well.valuation label.control-label, #valuation-container .fileupload-content .valuation.dropzoneHelp label.control-label, .fileupload-content #valuation-container .valuation.dropzoneHelp label.control-label {
   margin: 15px 0 5px;
   font-weight: bold;
 }
-/* line 376, ../scss/solid/_style.scss */
+/* line 381, ../scss/solid/_style.scss */
 #valuation-container .well.valuation .utilita, #valuation-container .fileupload-content .valuation.dropzoneHelp .utilita, .fileupload-content #valuation-container .valuation.dropzoneHelp .utilita {
   padding-right: 0.5em;
   display: inline;
 }
-/* line 383, ../scss/solid/_style.scss */
+/* line 388, ../scss/solid/_style.scss */
 #valuation-container .well.valuation .captcha p span, #valuation-container .fileupload-content .valuation.dropzoneHelp .captcha p span, .fileupload-content #valuation-container .valuation.dropzoneHelp .captcha p span {
   font-size: 0.7em;
 }
 
 /* ----------- EVENTI --------------*/
-/* line 397, ../scss/solid/_style.scss */
+/* line 402, ../scss/solid/_style.scss */
 .frontpage .col-md-12 .widget_tabs.eventi .tab-content .event-item, .frontpage .content-title .widget_tabs.eventi .tab-content .event-item, .frontpage .content-main.wide .widget_tabs.eventi .tab-content .event-item,
 .frontpage .col-md-8 .widget_tabs.eventi .tab-content .event-item {
   max-width: 400px;
 }
 
 /* ----------- MESSAGGI DI WARNING --------------*/
-/* line 410, ../scss/solid/_style.scss */
+/* line 415, ../scss/solid/_style.scss */
 .message-warning h2 {
   background-color: transparent !important;
   border-radius: 0 !important;
@@ -8840,39 +8858,39 @@ div.embed {
 }
 
 /* ----------- MAPPE --------------*/
-/* line 421, ../scss/solid/_style.scss */
+/* line 426, ../scss/solid/_style.scss */
 .geo_located_content ul li {
   padding: 5px 0;
 }
-/* line 423, ../scss/solid/_style.scss */
+/* line 428, ../scss/solid/_style.scss */
 .geo_located_content ul li a {
   padding: 0;
   line-height: normal;
 }
 
 /* ----------- BOX EVIDENCE amministrazione trasparente --------------*/
-/* line 434, ../scss/solid/_style.scss */
+/* line 439, ../scss/solid/_style.scss */
 .box_evidence {
   border: 1px solid #eeeeee;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 438, ../scss/solid/_style.scss */
+/* line 443, ../scss/solid/_style.scss */
 .box_evidence .widget_content {
   padding: 0 10px;
   line-height: normal;
 }
-/* line 442, ../scss/solid/_style.scss */
+/* line 447, ../scss/solid/_style.scss */
 .box_evidence .widget_content .row:nth-child(odd), .box_evidence .widget_content div.split:nth-child(odd) {
   background-color: #eeeeee;
 }
-/* line 445, ../scss/solid/_style.scss */
+/* line 450, ../scss/solid/_style.scss */
 .box_evidence .widget_content .row:nth-child(odd) .table-striped > tbody > tr:nth-of-type(2n+1), .box_evidence .widget_content div.split:nth-child(odd) .table-striped > tbody > tr:nth-of-type(2n+1) {
   background-color: transparent;
   border: 0;
   padding: 4px 0;
 }
 
-/* line 456, ../scss/solid/_style.scss */
+/* line 461, ../scss/solid/_style.scss */
 a .fa-external-link,
 a .fa-download {
   margin: 0 10px;
@@ -8881,7 +8899,7 @@ a .fa-download {
   color: #555555;
   padding: 5px;
 }
-/* line 465, ../scss/solid/_style.scss */
+/* line 470, ../scss/solid/_style.scss */
 a .fa-external-link:hover,
 a .fa-download:hover {
   background-color: #777777;
@@ -8889,7 +8907,7 @@ a .fa-download:hover {
 }
 
 /* ----------- TREE FOLDER SELECT--------------*/
-/* line 475, ../scss/solid/_style.scss */
+/* line 480, ../scss/solid/_style.scss */
 .tree-folder-select i {
   color: #777777;
 }
@@ -8993,30 +9011,40 @@ body.no-main-style #content .content-view-full h2 {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
+/* line 258, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .content-view-full h3 {
+  background-color: #005463;
+  color: #ffffff;
+}
 /* line 262, ../scss/solid/_colors_mixin.scss */
+body.no-main-style #content .content-view-full h3.media-heading, body.no-main-style #content .content-view-full h3.day {
+  background-color: transparent;
+  color: #005463;
+}
+/* line 273, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-view-full .content-title h1 {
   color: #005463;
   background-color: #ffffff;
 }
-/* line 272, ../scss/solid/_colors_mixin.scss */
+/* line 283, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-view-children .media:nth-child(even) {
   background-color: #eeeeee;
 }
-/* line 275, ../scss/solid/_colors_mixin.scss */
+/* line 286, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-view-children .media-panel .media {
   background-color: transparent;
 }
-/* line 279, ../scss/solid/_colors_mixin.scss */
+/* line 290, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .content-detail .row:nth-child(even), body.no-main-style #content .content-main .content-detail div.split:nth-child(even),
 body.no-main-style #content .content-main .oggetti-correlati .col-notitle:nth-child(even) .col-content .col-content-design .media {
   background-color: #eeeeee;
 }
-/* line 287, ../scss/solid/_colors_mixin.scss */
+/* line 298, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .well .btn-info, body.no-main-style #content .content-main .fileupload-content .dropzoneHelp .btn-info, .fileupload-content body.no-main-style #content .content-main .dropzoneHelp .btn-info {
   background-color: #005463;
   border-color: #005463;
 }
-/* line 291, ../scss/solid/_colors_mixin.scss */
+/* line 302, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .well .btn-info:hover, body.no-main-style #content .content-main .fileupload-content .dropzoneHelp .btn-info:hover, .fileupload-content body.no-main-style #content .content-main .dropzoneHelp .btn-info:hover {
   background-color: #eeeeee;
   border-color: #eeeeee;
@@ -9025,39 +9053,39 @@ body.no-main-style #content .content-main .well .btn-info:hover, body.no-main-st
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-/* line 301, ../scss/solid/_colors_mixin.scss */
+/* line 312, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main table thead tr {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 307, ../scss/solid/_colors_mixin.scss */
+/* line 318, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools .btn-primary, body.no-main-style #content .content-main .calendar-tools .defaultbutton {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 311, ../scss/solid/_colors_mixin.scss */
+/* line 322, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools td h3 .label-primary {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 317, ../scss/solid/_colors_mixin.scss */
+/* line 328, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools .events .calendar-date .month {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 321, ../scss/solid/_colors_mixin.scss */
+/* line 332, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .content-main .calendar-tools .events .calendar-date .day {
   border-color: #005463;
 }
-/* line 334, ../scss/solid/_colors_mixin.scss */
+/* line 345, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content blockquote:before {
   color: #005463;
 }
-/* line 340, ../scss/solid/_colors_mixin.scss */
+/* line 351, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a, body.no-main-style #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.no-main-style #content .nav-section .media li a {
   color: #333333;
 }
-/* line 345, ../scss/solid/_colors_mixin.scss */
+/* line 356, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current > a, body.no-main-style #content .nav-section .leaflet-popup-content .media li.current > a, .leaflet-popup-content body.no-main-style #content .nav-section .media li.current > a, body.no-main-style #content .nav-section .widget li.current li.current > a, body.no-main-style #content .nav-section .panels-container .media li.current li.current > a, .panels-container body.no-main-style #content .nav-section .media li.current li.current > a, body.no-main-style #content .nav-section .leaflet-popup-content .media li.current li.current > a, .leaflet-popup-content body.no-main-style #content .nav-section .media li.current li.current > a {
   color: #005463;
   background-color: #eeeeee;
@@ -9065,25 +9093,25 @@ body.no-main-style #content .nav-section .widget li.current > a, body.no-main-st
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 351, ../scss/solid/_colors_mixin.scss */
+/* line 362, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget li a, body.no-main-style #content .nav-section .panels-container .media li a, .panels-container body.no-main-style #content .nav-section .media li a, body.no-main-style #content .nav-section .leaflet-popup-content .media li a, .leaflet-popup-content body.no-main-style #content .nav-section .media li a {
   color: #333333;
 }
-/* line 355, ../scss/solid/_colors_mixin.scss */
+/* line 366, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget_title, body.no-main-style #content .nav-section .panels-container .media .widget_title, .panels-container body.no-main-style #content .nav-section .media .widget_title, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title {
   background-color: #005463;
   color: #ffffff;
 }
-/* line 358, ../scss/solid/_colors_mixin.scss */
+/* line 369, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget_title h3, body.no-main-style #content .nav-section .panels-container .media .widget_title h3, .panels-container body.no-main-style #content .nav-section .media .widget_title h3, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title h3, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title h3 {
   color: #ffffff !important;
 }
-/* line 362, ../scss/solid/_colors_mixin.scss */
+/* line 372, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget_title *, body.no-main-style #content .nav-section .panels-container .media .widget_title *, .panels-container body.no-main-style #content .nav-section .media .widget_title *, body.no-main-style #content .nav-section .leaflet-popup-content .media .widget_title *, .leaflet-popup-content body.no-main-style #content .nav-section .media .widget_title * {
   color: #ffffff;
   background-color: #005463;
 }
-/* line 368, ../scss/solid/_colors_mixin.scss */
+/* line 378, ../scss/solid/_colors_mixin.scss */
 body.no-main-style #content .nav-section .widget .widget .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget .row:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .widget .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .widget .row:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media .row:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media .row:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media .row:nth-child(odd), body.no-main-style #content .nav-section .widget .leaflet-popup-content .media .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .widget .media .row:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .media .row:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .media .row:nth-child(odd), body.no-main-style #content .nav-section .widget .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .widget div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .widget div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .widget div.split:nth-child(odd), body.no-main-style #content .nav-section .widget .panels-container .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd), body.no-main-style #content .nav-section .panels-container .media .media div.split:nth-child(odd), .panels-container body.no-main-style #content .nav-section .media .media div.split:nth-child(odd), body.no-main-style #content .nav-section .widget .leaflet-popup-content .media div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .widget .media div.split:nth-child(odd), body.no-main-style #content .nav-section .leaflet-popup-content .media .media div.split:nth-child(odd), .leaflet-popup-content body.no-main-style #content .nav-section .media .media div.split:nth-child(odd) {
   background-color: #eeeeee;
 }

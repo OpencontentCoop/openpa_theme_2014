@@ -1,6 +1,6 @@
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget_title">
-    <h3>{$block.name}</h3>
+    <h2>{$block.name}</h2>
 </div>
 <div class="widget {$block.view}">
     <div class="widget_content">

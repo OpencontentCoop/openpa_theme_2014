@@ -67,7 +67,7 @@ $(function() {
 }
 {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
 <div class="widget_title">
-    <h3>Cerca in {$folder}</h3>
+    <h2>Cerca in {$folder}</h2>
 </div>
 <div class="widget {$block.view}">
 

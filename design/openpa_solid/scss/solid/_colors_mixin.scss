@@ -39,9 +39,10 @@ $openpa-palette: (
 
 
 @mixin openpa-block-color-by-section( $palette-identifier: 'no-main-style' ) {
-  h3.widget_title
+  h3.widget_title,
+  .widget_title h3
    {
-    background-color: openpa-color($palette-identifier, 'background-primary');
+    background: openpa-color($palette-identifier, 'background-primary');
     color: openpa-color($palette-identifier, 'text-primary');
     a {
       color: openpa-color($palette-identifier, 'text-primary');
@@ -111,27 +112,39 @@ $openpa-palette: (
     } 
   }
 
-
-    .widget_title h3 {
-      background: openpa-color($palette-identifier, 'background-primary');
-      color: openpa-color($palette-identifier, 'text-primary');
+  .events .calendar-date {
+    .month {
+       background-color:  openpa-color($palette-identifier, 'background-primary');
+      color:  openpa-color($palette-identifier, 'text-primary');
+    }
+    .day {
+      border-color:  openpa-color($palette-identifier, 'background-primary');
     }
 
-    .panel-label {
-      background: openpa-color($palette-identifier, 'background-primary');
-      color: openpa-color($palette-identifier, 'text-primary');
+  }
+  .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i,
+  .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i 
+   {
+    color:  openpa-color($palette-identifier, 'background-primary');
+  }
+
+  
+
+  .panel-label {
+    background: openpa-color($palette-identifier, 'background-primary');
+    color: openpa-color($palette-identifier, 'text-primary');
+  }
+  .media-panel {
+    figure {
+      border-bottom-color: openpa-color($palette-identifier, 'background-primary');
     }
-    .media-panel {
-      figure {
-        border-bottom-color: openpa-color($palette-identifier, 'background-primary');
-      }
-    }
-    .panel-story {
+  }
+  .panel-story {
+    color: openpa-color($palette-identifier, 'background-primary');
+    a {
       color: openpa-color($palette-identifier, 'background-primary');
-      a {
-        color: openpa-color($palette-identifier, 'background-primary');
-      }
     }
+  }
   
   .widget_tabs,
   .widget.events
@@ -181,39 +194,50 @@ $openpa-palette: (
     background: openpa-color($palette-identifier, 'background-page');
     @include border-radius(10px);
 
-  .widget_tabs,
-  .widget.events
-   {
-    .tab-content {
-      border-color: openpa-color($palette-identifier, 'background-primary');
-    }
-
-    h2 {
-       background: openpa-color($palette-identifier, 'background-primary');
-       color: openpa-color($palette-identifier, 'text-primary');
-    }
-    .nav-tabs
-     {
-      li {
-        a {
-          background-color: openpa-color($palette-identifier, 'background-primary');
-          color: openpa-color($palette-identifier, 'text-primary');
-          opacity: 0.5;
-
-          &:hover {
-            opacity: 1;
-          }
+   /* .content-main,
+    .content-related {
+      .widget_title {
+        h3 {
+          
+         background: openpa-color($palette-identifier, 'background-primary');
+         color: openpa-color($palette-identifier, 'text-primary');
         }
+      }
+    }*/
 
-        &.active a {
-          background-color: openpa-color($palette-identifier, 'background-primary');
-          color: openpa-color($palette-identifier, 'text-primary');
-          opacity: 1;
+    .widget_tabs,
+    .widget.events
+     {
+      .tab-content {
+        border-color: openpa-color($palette-identifier, 'background-primary');
+      }
 
+      h2 {
+         background: openpa-color($palette-identifier, 'background-primary');
+         color: openpa-color($palette-identifier, 'text-primary');
+      }
+      .nav-tabs
+       {
+        li {
+          a {
+            background-color: openpa-color($palette-identifier, 'background-primary');
+            color: openpa-color($palette-identifier, 'text-primary');
+            opacity: 0.5;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          &.active a {
+            background-color: openpa-color($palette-identifier, 'background-primary');
+            color: openpa-color($palette-identifier, 'text-primary');
+            opacity: 1;
+
+          }
         }
       }
     }
-  }
 
     .content-view-full {
         /*a {
@@ -229,6 +253,17 @@ $openpa-palette: (
         background-color: openpa-color($palette-identifier, 'background-primary');
         color: openpa-color($palette-identifier, 'text-primary'); 
         @include border-radius($border-radius-base);
+      }
+
+      h3 {
+        background-color: openpa-color($palette-identifier, 'background-primary');
+        color: openpa-color($palette-identifier, 'text-primary'); 
+
+        &.media-heading,
+        &.day {
+          background-color: transparent;
+          color:  openpa-color($palette-identifier, 'background-primary');
+        }
       }
 
       /*.btn-success {
@@ -252,9 +287,12 @@ $openpa-palette: (
           background-color: transparent;
         }
       }
-      .content-detail .row:nth-child(even) {
+      .content-detail .row:nth-child(even),
+      .oggetti-correlati .col-notitle:nth-child(even) .col-content .col-content-design .media
+       {
             background-color:  openpa-color($palette-identifier, 'background-secondary');
       }
+
 
       .well {
         .btn-info {
@@ -274,6 +312,27 @@ $openpa-palette: (
         thead tr {
           background-color:  openpa-color($palette-identifier, 'background-primary');
           color:  openpa-color($palette-identifier, 'text-primary');
+        }
+      }
+      .calendar-tools {
+        .btn-primary {
+          background-color:  openpa-color($palette-identifier, 'background-primary');
+          color:  openpa-color($palette-identifier, 'text-primary');
+        }
+        td h3 .label-primary {
+          background-color:  openpa-color($palette-identifier, 'background-primary');
+          color:  openpa-color($palette-identifier, 'text-primary');
+        }
+
+        .events .calendar-date {
+          .month {
+             background-color:  openpa-color($palette-identifier, 'background-primary');
+            color:  openpa-color($palette-identifier, 'text-primary');
+          }
+          .day {
+            border-color:  openpa-color($palette-identifier, 'background-primary');
+          }
+
         }
       }
 
@@ -310,7 +369,6 @@ $openpa-palette: (
             h3 {
                color: openpa-color($palette-identifier, 'text-primary')!important;
             }
-
             * {
                color: openpa-color($palette-identifier, 'text-primary');
                background-color: openpa-color($palette-identifier, 'background-primary');
@@ -363,7 +421,8 @@ $openpa-palette: (
 @mixin openpa-menu-color-by-section( $palette-identifier: 'no-main-style' ) {
   a {
     color: openpa-color($palette-identifier, 'text-link-menu');
-    span{
+    border-bottom-color:   openpa-color($palette-identifier, 'background-primary');
+    bot{
       color: openpa-color($palette-identifier, 'background-primary');
     }
     &:hover{
@@ -382,7 +441,6 @@ $openpa-palette: (
       color: openpa-color($palette-identifier, 'text-primary');
     }
   }
-  
 }
 
 

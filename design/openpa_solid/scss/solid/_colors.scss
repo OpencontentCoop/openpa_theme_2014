@@ -72,7 +72,7 @@ body.default-6 {
 
 #content .color{
   &.color-default-1{@include openpa-block-color-by-section('default-1');}
-  &.colo-aree-tematiche{@include openpa-block-color-by-section('aree-tematiche');}
+  &.color-aree-tematiche{@include openpa-block-color-by-section('aree-tematiche');}
   &.color-default-2{@include openpa-block-color-by-section('default-2');}
   &.color-default-3{@include openpa-block-color-by-section('default-3');}
   &.color-default-4{@include openpa-block-color-by-section('default-4');}

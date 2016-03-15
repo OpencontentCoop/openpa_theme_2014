@@ -13,7 +13,7 @@
   {if is_set($block.custom_attributes.color_style)}<div class="color color-{$block.custom_attributes.color_style}">{/if}
   {if $block.name|ne('')}
   <div class="widget_title">
-      <h3>{$block.name|wash()}</h3>
+      <h2>{$block.name|wash()}</h2>
   </div>
   {/if}
   <div class="widget {$block.view} search_box">  

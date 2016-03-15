@@ -39,23 +39,19 @@
     //letter-spacing: 0.5px;
     text-transform: uppercase;
     white-space: nowrap;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
     padding-top: 0;
     padding-bottom: 0;
-    margin: 15px 0;
+    margin: 15px 4px;
+    border-radius: $border-radius-base;
+    border-bottom: 4px solid red;
     span {
       font-size: 1.5em;
       padding-right: 3px;
       vertical-align: text-bottom;
     }
-    &.current,
-    &:hover
-    {
-      border-radius: $border-radius-base;
-    }
   }
-
 }
 
 @media (min-width: $screen-sm-min) {
@@ -133,6 +129,20 @@
   }
   .yamm .yamm-content{
     padding: 0 10px;
+  }
+
+  .navbar {
+    .navbar-nav {
+      li {
+        a {
+          border-bottom: none;
+          margin: 5px 4px;
+        }
+        .nav-sub li a {
+          margin: 5px 0;
+        }
+      }
+    }
   }
 }
 

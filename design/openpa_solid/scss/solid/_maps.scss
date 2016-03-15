@@ -32,6 +32,19 @@ ul.list-markers-text {
       display: block;
     }
   }
+
+  &.list-markers-text-full {
+    li {
+      display: inline;
+      a{
+        display: inline;
+        padding-right: 10px;
+        small {
+          display: inline;
+        }
+      }
+    }
+  }
 }
 
 .leaflet-popup-content {

@@ -14,12 +14,12 @@
     @extend .col-md-12;
   }
   &.full-stack {
-    @extend .col-md-5;
+    @extend .col-md-6;
   }
 }
 
 .content-related{
-  @extend .col-md-4;
+  @extend .col-md-3;
   ul{
     margin-bottom: 0;
   }
@@ -30,6 +30,21 @@
     margin: 0;
   }
 }
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul.list-unstyled {
+  li {
+    padding: 3px 0;
+  }
+}
+
+
 
 .infographic_item i[class^="fa "]{
   font-size:60px;
@@ -82,7 +97,8 @@ blockquote{
 legend{font-size: 1em}
 
 
-.content-view-children  {
+.content-view-children,
+.oggetti-correlati  {
   margin: 20px 0; 
   padding-top:20px;
  .media {
@@ -141,6 +157,25 @@ legend{font-size: 1em}
 
 .media-body{overflow: visible}
 
+.media {
+  dt {
+    margin-top: 20px;
+  }
+}
+
+
+.class-dipendente  {
+  dl {
+    margin-bottom: 10px;
+    dt {
+      float: left;
+      margin-right: 10px; 
+    }
+  }
+}
+
+
+
 /* =nav-facets
 -------------------------------------------------
 */
@@ -179,36 +214,38 @@ legend{font-size: 1em}
 }
 
 
-.content-main a{
-  text-decoration: underline;
-}
 
 .content-main{
   font-size: floor(($font-size-base * 1));
   line-height: floor(($line-height-base * 1.4));
 
   h1 {
-    font-size: floor(($font-size-base * 1.8));
+    font-size: floor(($font-size-base * 1.6));
     padding: 10px;
     @include border-radius(10px);
     margin-bottom: 20px;
   }
   h2 {
-    font-size: floor(($font-size-base * 1.6));
+    font-size: floor(($font-size-base * 1.4));
     padding: 0.5em;
 
   }
   h3 {
-    font-size: floor(($font-size-base * 1.4));
+    font-size: floor(($font-size-base * 1.2));
+    padding: 5px 8px;
+    @include border-radius(4px);
     &.widget_title {
       margin-bottom: 0;
+    }
+    &.media-heading {
+      padding:0;
     }
   }
 }
 
 .abstract {
   @extend .clearfix;
-  margin-bottom: $line-height-computed;
+  margin-bottom: 10px;
   .image {
     &.pull-left {
       margin: 0 1em .5em 0;
@@ -217,6 +254,7 @@ legend{font-size: 1em}
   ul {
     list-style: outside disc;
     margin-left: 1em;
+    padding:0;
   }
   ul li {
     position: relative;
@@ -281,11 +319,41 @@ legend{font-size: 1em}
 .content-detail > .row {
   margin-top: 10px;
   margin-bottom: 10px;
+  line-height: normal;
 }
 
 div.embed {
   text-align: center;
 }
+
+/* ----------- BOX SEARCH --------------*/
+
+
+.search_box {
+ // border:1px solid $gray-lighter;
+
+  .widget_content {
+
+    .btn-link{
+     background-color: $gray-lighter;
+     margin: 10px 10px 10px 0;
+     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+
+     &:hover {
+      background-color: #d4d4d4;
+     }
+    }
+    .form-group {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+#OrderSearchPanel.well,
+#AdvancedSearchPanel.well {
+      background-color: $gray-lighter;
+}
+
 
 /* ----------- BOX VALUTATION --------------*/
 
@@ -325,3 +393,92 @@ div.embed {
 
   }
 }
+/* ----------- EVENTI --------------*/
+
+.frontpage .col-md-12,
+.frontpage .col-md-8 {
+  .widget_tabs.eventi {
+    .tab-content {
+      .event-item {
+        max-width: 400px;
+      
+      }
+    }
+  }
+}
+
+
+
+/* ----------- MESSAGGI DI WARNING --------------*/
+
+.message-warning {
+  h2 {
+    background-color: transparent!important;
+    border-radius:0!important;
+    color: #8a6d3b!important;
+  }
+}
+
+/* ----------- MAPPE --------------*/
+
+.geo_located_content {
+  ul {
+    li {
+      padding: 5px 0;
+      a {
+        padding:0;
+        line-height: normal;
+      }
+    }
+  }
+
+}
+
+/* ----------- BOX EVIDENCE amministrazione trasparente --------------*/
+
+.box_evidence {
+  border: 1px solid $gray-lighter;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+
+  .widget_content {
+    padding: 0 10px;
+    line-height: normal;
+
+    .row:nth-child(odd) {
+      background-color:$gray-lighter;
+
+      .table-striped > tbody > tr:nth-of-type(2n+1) {
+        background-color: transparent;
+        border: 0;
+        padding: 4px 0;
+      }
+
+    }
+  }
+}
+
+
+a .fa-external-link,
+a .fa-download
+ {
+  margin: 0 10px; 
+  background-color: $gray-lighter;
+  border-radius: 4px;
+  color: $gray;
+  padding: 5px;
+
+  &:hover {
+    background-color:$gray-light;
+    color: #fff;
+  }
+}
+
+
+
+/* ----------- TREE FOLDER SELECT--------------*/
+.tree-folder-select {
+  i {
+    color: $gray-light;
+  }
+}
+

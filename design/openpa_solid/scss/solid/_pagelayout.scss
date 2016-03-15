@@ -46,11 +46,18 @@ body {
     background-color: $breadcrumb-bg;
     ul {
       margin: 0;
+      a {
+        color: darken($link-color, 10%);
+      }
+
     }
     font-size: $font-size-small;
   }
   .breadcrumb{
     margin-bottom: 0;
+    .active{
+      color: $text-color;
+    }
   }
 }
 
@@ -82,6 +89,10 @@ body {
         padding: 8px 0;
         position: relative;
         text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+
       }
     }
     .links a {
