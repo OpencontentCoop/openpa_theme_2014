@@ -68,10 +68,6 @@
 
 {/cache-block}
 
-{cache-block keys=array( $access_type.name, $current_user.contentobject_id )}
-
-{if is_unset($pagedata)}{def $pagedata = openpapagedata()}{/if}
-{if and( $pagedata.is_login_page|not(), $pagedata.show_path, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
     <div id="credits">
         <div class="container">
             <div class="row">
@@ -84,9 +80,7 @@
             </div>
         </div>
     </div>
-{/if}
 
-{/cache-block}
 </div>
 
 {include uri='design:page_footer_script.tpl'}
