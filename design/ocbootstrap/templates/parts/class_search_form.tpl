@@ -29,7 +29,7 @@
   {if is_array($subtree)}
     {set $subtreeQuery = concat( ' subtree [', $subtree|implode(','), '] ')}
   {/if}  
-  {def $searchForFacets = search_query( concat( 'classes ', $class.identifier, ' facets [', $facetQuery|implode(','), ']', $subtreeQuery, 'limit 1' ) )}  
+  {def $searchForFacets = search_query( concat( 'classes [', $class.identifier, '] facets [', $facetQuery|implode(','), ']', $subtreeQuery, 'limit 1' ) )}  
   {if is_set($searchForFacets['SearchExtras'].facet_fields)}
     {foreach $facetAttributeIdentifier as $key => $identifier}
       {if $searchForFacets['SearchExtras'].facet_fields[$key].count|gt(0)}

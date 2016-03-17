@@ -52,7 +52,7 @@
                 item.append('<i class="fa fa-file" />');
               }
               
-              if (this.data_map.file) {
+              if (this.data_map.file && this.data_map.file.content != '') {
                 var filenameParts = this.data_map.file.content.split('|');
                 var filename = filenameParts[1];
                 item.append('<a title="Scarica il file" href="/content/download/'+this.contentobject_id+'/'+this.data_map.file.id+'/file/'+filename+'"><span title="'+filename+'"> '+this.name+' <i class="fa fa-download"></i></span></a>');

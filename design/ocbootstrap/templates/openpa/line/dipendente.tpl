@@ -11,18 +11,18 @@
             <a href="{$openpa.content_link.full_link}">{$node.name|wash()}</a>
         </h3>
        
-      {if $openpa.content_line.has_content}
-            {foreach $openpa.content_line.attributes as $openpa_attribute}
-             <dl>
+        {if $openpa.content_line.has_content}
+          <ul class="list-unstyled">
+            {foreach $openpa.content_line.attributes as $openpa_attribute}              
+              <li>
                 {if $openpa_attribute.line.show_label}
-                    <dt>{$openpa_attribute.label}</dt>
-                {/if}
-                <dd>
-                    {attribute_view_gui attribute=$openpa_attribute.contentobject_attribute href=cond($openpa_attribute.line.show_link|not, 'no-link', '')}
-                </dd>
-            </dl>
+                 <strong>{$openpa_attribute.label}:</strong>
+                {/if}              
+                {attribute_view_gui attribute=$openpa_attribute.contentobject_attribute href=cond($openpa_attribute.line.show_link|not, 'no-link', '')}
+              </li>
             {/foreach}
-        {/if} 
+          </ul>
+        {/if}
         
       {if $openpa.content_ruoli_comune.ruoli.dipendente}
         <ul class="list-unstyled color_dark">

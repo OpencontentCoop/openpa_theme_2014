@@ -164,7 +164,7 @@
   {elseif and( $openpa.content_globalinfo.has_content|not(), $node.can_create)}
     <dt>Global info</dt>
     <dd>
-      <form method="post" action="{"content/action"|ezurl(no)}"class="form inline" style="display:inline">
+      <form method="post" action="{"content/action"|ezurl(no)}" class="form inline" style="display:inline">
           <input type="hidden" name="HasMainAssignment" value="1"/>
           <input type="hidden" name="ContentObjectID" value="{$node.object.id}"/>
           <input type="hidden" name="NodeID" value="{$node.node_id}"/>
@@ -176,6 +176,27 @@
       </form>
     </dd>
   {/if}
+  
+  {* NEWSLETTER *}
+    {if ezmodule('newsletter','subscribe')}
+		{def $newsletter_edition_hash = newsletter_edition_hash()}
+		{if and( $node|can_add_to_newsletter(), $newsletter_edition_hash|count()|gt(0) )}
+      <dt>Newsletter</dt>
+      <dd>
+        <form action={concat("/openpa/addlocationto/",$node.contentobject_id)|ezurl} method="post" class="form-inline" style="display:inline">
+			  
+          <label for="add_to_newsletter" >Aggiungi alla prossima newsletter:</legend>
+          <select name="SelectedNodeIDArray[]" id="add_to_newsletter" class="form-control">
+          {foreach $newsletter_edition_hash as $edition_id => $edition_name}
+              <option value="{$edition_id}">{$edition_name|wash()}</option>
+          {/foreach}
+          </select>
+          <input class="btn btn-xs btn-default" type="submit" name="AddLocation" value="Aggiungi" />			  
+        </form>            
+        {/if}
+      </dd>  
+		{undef $newsletter_edition_hash}
+    {/if}
 
 </dl>
 

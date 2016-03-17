@@ -19,7 +19,7 @@
             $('#footer-map-container').show();
             var latLng = new L.latLng(result[0].center.lat, result[0].center.lng);
             var customIcon = L.MakiMarkers.icon({icon: "star", color: "#000", size: "l"});
-            var marker = new L.marker(latLng, {icon: customIcon, draggable: true});
+            var marker = new L.marker(latLng, {icon: customIcon});
             marker.addTo(footerMap);
             footerMarkers.addLayer(marker);
             footerMap.setView(latLng, 16 );
