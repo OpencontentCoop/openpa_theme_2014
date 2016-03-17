@@ -24,8 +24,6 @@
 
         {include uri=$openpa.content_main.template}
 
-        {include uri=$openpa.content_detail.template}
-
         {if fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id,
                                                   'class_filter_type', 'include',
                                                   'class_filter_array', array( 'image', 'video' ) ) )}

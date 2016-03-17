@@ -1,6 +1,20 @@
 {ezcss_require( array( 'plugins/table-calendar.css' ) )}
-{def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $node,
-'params', $view_parameters|merge( hash( 'interval', 'P1M', 'view', 'calendar' ) ) ) )}
+{ezscript_require(array( 'ezjsc::jquery' ) )}
+<script type="text/javascript">
+{literal}
+$(function() {	        
+    $(".calendar_picker").datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "dd-mm-yy",
+      numberOfMonths: 1
+    });
+});
+{/literal}
+</script>
+
+{def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $node, 'params', $view_parameters|merge( hash( 'interval', 'P1M', 'view', 'calendar' ) ) ) )}
 
 
 {def $curr_ts = currentdate()
@@ -29,7 +43,7 @@
 "Saturday"|i18n("ocbootstrap/calendar"),
 )}
 
-<form class="calendar-tools" method='GET' action={concat('openpa/calendar/', $node.node_id)|ezurl}>
+<form class="calendar-tools form-inline" method='GET' action={concat('openpa/calendar/', $node.node_id)|ezurl}>
     <input type='hidden' name="UrlAlias" value="{$node.url_alias}" />
     <input type='hidden' name="View" value="calendar" />
     <input type="hidden" name="SearchDate" value="{$calendarData.parameters.picker_date}" />
@@ -44,6 +58,38 @@
     </div>
 
     <h1>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h1>
+    
+    <div class="well well-sm calendar-tools">            
+      <label class="hide" for="calendar_query">Cerca nel testo</label>
+      <input id="calendar_query"  class="query form-control" placeholder="Cerca nel testo" type="text" name="Query" value="{$calendarData.parameters.query|wash()}" />
+      
+      <label class="hide" for="calendar_picker">Seleziona data</label>
+      <input id="calendar_picker" class="calendar_picker form-control" placeholder="gg-mm-yyyy" type="text" name="SearchDate" title="Seleziona data" value="{$calendarData.parameters.picker_date|wash()}" />
+      
+      {foreach $calendarData.search_facets as $facetFieldName => $facets}
+          {if count($facets)|gt(0)}
+          <label class="hide" for="calendar_facet">Cerca {$facetFieldName}</label>
+          <select name="{$facetFieldName}" class="form-control" id="calendar_facet">
+              <option value="">{$facetFieldName}</option>
+              {foreach $facets as $styleAndName}                
+                  <option value="{$styleAndName.value|wash()}"{if $calendarData.parameters[$facetFieldName]|eq($styleAndName.value)} selected="selected"{/if}>{if $styleAndName.indent}&nbsp;&nbsp;&nbsp;{/if}{$styleAndName.name|wash()}</option>
+              {/foreach}            
+          </select>
+          {/if}
+      {/foreach}
+      
+      {if and( count($calendarData.search_facets)|eq(0), is_set( $view_parameters.Manifestazione ) )}
+          <label class="hide" for="calendar_facet">Cerca Manifestazione</label>
+          <select name="Manifestazione" class="form-control" id="calendar_facet">
+              <option value="">Manifestazione</option>
+              <option value="{$view_parameters.Manifestazione|wash()}" selected="selected">{$view_parameters.Manifestazione|wash()}</option>              
+          </select>
+      {/if}
+      
+      <button class="defaultbutton" type="submit" name="SearchButton" title="Cerca"><i class="fa fa-search"></i></button>
+      <button class="button" type="submit" name="TodayButton" title="Azzera la ricerca"><i class="fa fa-close"></i></button>
+    </div>
+    
     <figure>
     <table class="table-calendar">
         <thead>

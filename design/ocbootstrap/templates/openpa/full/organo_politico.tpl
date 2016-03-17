@@ -24,8 +24,26 @@
 
         {include uri=$openpa.content_main.template}
 
-        {include uri=$openpa.content_detail.template}
-      
+        {if $openpa.content_detail.has_content}
+          <div class="content-detail">
+          {foreach $openpa.content_detail.attributes as $openpa_attribute}
+              <div class="row">
+                  {if and( $openpa_attribute.full.show_label, $openpa_attribute.full.collapse_label|not() )}
+                      <div class="col-md-3">
+                          <strong>{$openpa_attribute.label}</strong>
+                      </div>
+                  {/if}
+                  <div class="col-md-{if and( $openpa_attribute.full.show_label, $openpa_attribute.full.collapse_label|not() )}9{else}12{/if}">
+                      {if and( $openpa_attribute.full.show_label, $openpa_attribute.full.collapse_label )}
+                      <strong>{$openpa_attribute.label}</strong>
+                      {/if}
+                      {attribute_view_gui attribute=$openpa_attribute.contentobject_attribute href=cond($openpa_attribute.full.show_link|not, 'no-link', '')}
+                  </div>
+              </div>
+          {/foreach}
+          </div>
+        {/if}
+
         <div class="content-view-children">        
         {if $node.name|downcase()|contains('sindaco')}
           {foreach $node|attribute( 'membri' ).content.relation_list as $relation_item}
@@ -47,6 +65,11 @@
           {/foreach}
         {/if}
         </div>
+        
+        {if or( $openpa.content_attachment.has_content, $openpa.content_attachment.children_count )}
+          <h2>Allegati</h2>
+          {include uri=$openpa.content_attachment.template}
+        {/if}
 
         {include uri=$openpa.content_infocollection.template}
         
