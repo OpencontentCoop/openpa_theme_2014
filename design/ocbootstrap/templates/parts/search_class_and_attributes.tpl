@@ -13,7 +13,7 @@
          uri = 'design:parts/class_search_form.tpl'
          class = $class			   			   
          subtree = $subtree
-         open_advanced = true()
+         open_advanced = cond( is_set($open_advanced), $open_advanced, true() )
          exclude_attributes = openpaini( 'GestioneAttributi', 'attributi_da_escludere_dalla_ricerca', array() )}
     </form>
   </div>

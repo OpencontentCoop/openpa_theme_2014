@@ -13,14 +13,14 @@
 
 <div class="state-navigation m_bottom_20">
   <a class="button{if $current_state|eq('in_pubblicazione')} defaultbutton{/if}" href="{$node.url_alias|ezurl(no)}">In pubblicazione</a>
-  {if fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id, 'attribute_filter', $archvio_attribute_filter ))|gt(0)}
+  {if fetch( 'content', 'list_count', hash( 'parent_node_id', $node.object.main_node_id, 'attribute_filter', $archvio_attribute_filter ))|gt(0)}
 	<a class="button{if $current_state|eq('archivio')} defaultbutton{/if}" href="{concat( $node.url_alias, '/(stato)/archivio')|ezurl(no)}">Archivio</a>
   {/if}
 </div>
 
 {def $page_limit = openpaini( 'GestioneFigli', 'limite_paginazione', 25 )
-     $children_count = fetch( openpa, 'list_count', hash( 'parent_node_id', $node.node_id, 'attribute_filter', $attribute_filter ) )
-     $children = fetch( openpa, 'list', hash( 'parent_node_id', $node.node_id,
+     $children_count = fetch( 'content', 'list_count', hash( 'parent_node_id', $node.object.main_node_id, 'attribute_filter', $attribute_filter ) )
+     $children = fetch( 'content', 'list', hash( 'parent_node_id', $node.object.main_node_id,
                                               'attribute_filter', $attribute_filter,
                                               'offset', $view_parameters.offset,
                                               'sort_by', $node.sort_array,

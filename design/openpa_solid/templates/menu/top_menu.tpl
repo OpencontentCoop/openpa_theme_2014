@@ -53,8 +53,13 @@
                                 </div>
                             {else}
                                 <div class="row">
+                                    {def $col = 3 $modulo = 4 $children_count = count($tree_menu.children)}
+                                    {if $children_count|eq(3)} {set $col = 4 $modulo = 3}
+                                    {elseif $children_count|eq(2)} {set $col = 6 $modulo = 2}
+                                    {elseif $children_count|eq(1)} {set $col = 12 $modulo = 1}
+                                    {/if}
                                     {foreach $tree_menu.children as $child}
-                                        <div class="col-xs-12 col-sm-3">
+                                        <div class="col-xs-12 col-sm-{$col}">
                                                 <b>{include
                                                         recursion=2
                                                         name="top_sub_menu"
@@ -76,8 +81,9 @@
                                                 {/if}
                                             </ul>
                                         </div>
-                                        {delimiter modulo=4}</div><div class="row">{/delimiter}
+                                        {delimiter modulo=$modulo}</div><div class="row">{/delimiter}
                                     {/foreach}
+                                    {undef $col $modulo $children_count}
                                 </div>
                             {/if}
                         </div>

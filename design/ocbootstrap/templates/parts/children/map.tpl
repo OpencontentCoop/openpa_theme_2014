@@ -1,4 +1,9 @@
-{ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js', 'Leaflet.MakiMarkers.js', 'leaflet.markercluster.js') )}
+{ezscript_require( array(
+  'leaflet/leaflet.0.7.2.js',
+  'ezjsc::jquery',
+  'leaflet/leaflet.markercluster.js',
+  'leaflet/Leaflet.MakiMarkers.js',
+) )}
 {ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css', 'MarkerCluster.css', 'MarkerCluster.Default.css' ) )}
 
 {set_defaults(hash(
@@ -63,7 +68,7 @@
 	</script>
   </div>
   <div class="col-md-{if $items_per_row|eq(1)}12{else}3{/if}">
-    <ul id="markers-{$node.node_id}" class="list-markers-text list-unstyled {if $items_per_row|eq(1)}list-markers-text-full{/if}" style="height: {$height}px;overflow-y: auto"></ul>
+    <ul id="markers-{$node.node_id}" class="list-markers-text list-unstyled {if $items_per_row|eq(1)}list-markers-text-full{/if}"{if $items_per_row|gt(1)} style="height: {$height}px;overflow-y: auto"{/if}></ul>
   </div>
 
 </div>

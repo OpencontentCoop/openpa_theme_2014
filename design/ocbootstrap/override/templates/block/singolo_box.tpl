@@ -8,4 +8,5 @@
 {node_view_gui content_node=$valid_node view=panel image_class=large}
 </div>
 {if is_set($block.custom_attributes.color_style)}</div>{/if}
+{undef $valid_node}
 {/if}

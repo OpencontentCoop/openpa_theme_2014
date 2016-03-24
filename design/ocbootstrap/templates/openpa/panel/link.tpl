@@ -9,7 +9,7 @@
                 <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">{$node.name|openpa_shorten(60)|wash()}</a>
             </h4>
       <div class="abstract">
-        {$node|abstract()|openpa_shorten(270)}
+        {$node|abstract()}
       </div>
 
 

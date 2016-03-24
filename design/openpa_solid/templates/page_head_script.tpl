@@ -20,7 +20,10 @@ var UiContext = {/literal}"{$ui_context}"{literal}, UriPrefix = {/literal}{'/'|e
   'bootstrap/scrollspy.js',
   'bootstrap/transition.js',
   'waypoints.min.js',
-  'plugins/leaflet/leaflet.js', 'Leaflet.MakiMarkers.js', 'leaflet.markercluster.js', 'leaflet/Control.Geocoder.js',
+  'leaflet/leaflet.0.7.2.js',  
+  'leaflet/leaflet.markercluster.js',
+  'leaflet/Leaflet.MakiMarkers.js',
+  'leaflet/Control.Geocoder.js',  
   'openpa_solid.js'
 ))}
 

@@ -17,6 +17,7 @@
                 node=cond(is_set($parentOpenpa), $node.parent, $node )
                 subtree=$virtualFolder.subtree
                 class_filters=$virtualFolder.classes
+                open_advanced = cond(is_set($parentOpenpa), false(), true() )
                 uri='design:parts/search_class_and_attributes.tpl' }
     {/if}
 

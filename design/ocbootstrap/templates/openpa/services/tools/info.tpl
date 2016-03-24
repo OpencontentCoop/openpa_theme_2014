@@ -73,6 +73,11 @@
 		  ({foreach $openpa.content_virtual.folder.subtree as $node_id}<a href="{concat( 'content/view/full/', $node_id)|ezurl(no)}">{$node_id}</a>{delimiter}, {/delimiter}{/foreach})
 	  </dd>
   {/if}
+  
+  {if and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
+    <dt>Albo telematico:</dt>
+    <dd>Pagina configurata come contenitore di documenti Albo telematico <small>(vengono visualizzati i contenuti figli della collocazione principale)</small></dd>
+  {/if}
 
   {if $openpa.content_virtual.calendar}
 	  <dt>Calendario virtuale:</dt>
