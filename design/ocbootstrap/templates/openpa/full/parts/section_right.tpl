@@ -8,7 +8,7 @@
         compare solo nei folder e negli oggetti con padre folder
         qualora il campo 'engine' sia valorizzato la ricerca viene estesa a tutto il database *}
     {def $virtualFolder = $openpa.content_virtual.folder}
-    {if $virtualFolder|not()}
+    {if and( $virtualFolder|not(), $node.parent )}
         {def $parentOpenpa = object_handler( $node.parent )}
         {set $virtualFolder = $parentOpenpa.content_virtual.folder}
     {/if}
