@@ -6,7 +6,7 @@
       $to = $node.data_map.from_time.content.timestamp|datetime( 'custom', '%j' )}
 {/if}
 
-<div class="media-panel events">
+<div class="media-panel events {$node|access_style}">
   {if $node|has_attribute('image')}
       <figure {if $node|has_attribute('image_full')}class="bg-contain"{/if} style="background: url( {$node|attribute('image').content.imagefull.full_path|ezroot(no)} )"></figure>
   {/if}

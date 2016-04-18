@@ -1,4 +1,4 @@
-<div class="media-panel">
+<div class="media-panel {$node|access_style}">
   {if $node|has_attribute('image')}
     <figure {if $node|has_attribute('image_full')}class="bg-contain"{/if} style="background: url( {$node|attribute('image').content.imagefull.full_path|ezroot(no)} )"></figure>
   {/if}

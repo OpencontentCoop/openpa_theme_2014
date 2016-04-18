@@ -13,7 +13,7 @@
 
     <div class="content-title">
 
-      <h1>{$node.name|wash()}</h1>
+      <h1>{$node.data_map.name.content|wash()}</h1>
 
     </div>
 
