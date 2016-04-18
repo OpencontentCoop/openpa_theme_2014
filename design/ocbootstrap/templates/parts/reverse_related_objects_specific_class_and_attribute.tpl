@@ -18,11 +18,14 @@
 
 {debug-log var=concat($classe,"/",$attrib) msg='classe/attributo' }
 
-{def $stringa_ricerca = concat($classe,"/",$attrib)
+{*def $stringa_ricerca = concat($classe,"/",$attrib)
      $objects = fetch( 'content', 'reverse_related_objects', hash( 'object_id',$node.object.id, 'attribute_identifier', $stringa_ricerca, 'sort_by',  $sortby ) )
      $objects_count = $objects|count()
-     $my_node = ""}
-
+     $my_node = ""*}
+{def $search_reverse_related = fetch('ezfind','search', hash('limit',100,'filter',array(concat($classe,"/",$attrib,"/id:",$node.object.id))))
+	 $objects = $search_reverse_related.SearchResult
+	 $objects_count = $search_reverse_related.SearchCount
+	 $my_node = ""}
 
 {def $style='col-odd'}
 {if $objects_count|gt(0)}
@@ -75,7 +78,7 @@
 										{$object.name}
 									{/if}
 								{else}
-									{node_view_gui content_node=$object.main_node view='line'}
+									{node_view_gui content_node=$object view='line'}
 								{/if}
 							{/if}
 
