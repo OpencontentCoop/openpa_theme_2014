@@ -13,6 +13,7 @@ $show_left = and( $openpa.control_menu.show_side_menu, count( $tree_menu.childre
 <div class="content-view-full class-{$node.class_identifier} row">
 
     <div class="content-title">
+        {include uri='design:openpa/full/parts/node_languages.tpl'}
         <h1>{$node.name|wash()}</h1>
     </div>
 

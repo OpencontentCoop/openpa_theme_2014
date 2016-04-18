@@ -16,6 +16,7 @@
 <div class="content-view-full class-{$node.class_identifier} row">
 
     <div class="content-title">
+        {include uri='design:openpa/full/parts/node_languages.tpl'}
         <h1>{$node.name|wash()}</h1>
     </div>
 

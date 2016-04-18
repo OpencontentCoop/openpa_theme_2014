@@ -12,11 +12,8 @@
 <div class="content-view-full class-{$node.class_identifier} row">
 
     <div class="content-title">
-
-        <h1>
-            {$node.name|wash()}
-        </h1>
-
+        {include uri='design:openpa/full/parts/node_languages.tpl'}
+        <h1>{$node.name|wash()}</h1>
     </div>
 
     {if $show_left}
