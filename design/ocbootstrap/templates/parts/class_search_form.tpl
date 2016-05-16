@@ -41,7 +41,7 @@
 
 <fieldset>
 <div class="form-group">
-  <input placeholder="Ricerca libera" class="form-control" type="text" name="SearchText" value="{cond(is_set($SearchText),$SearchText)}"/>
+  <input placeholder="Ricerca libera" class="form-control" type="text" name="SearchText" value="{cond(is_set($SearchText),$SearchText|wash())}"/>
 </div>
 
 <a class="btn btn-link btn-sm" data-toggle="collapse" data-target="#OrderSearchPanel">Ordinamento</a>

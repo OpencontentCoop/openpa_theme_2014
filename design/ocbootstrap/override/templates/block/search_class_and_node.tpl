@@ -75,7 +75,7 @@ $(function() {
 
 <form id="search-form-box" action="{'content/search'|ezurl('no')}" method="get">
 
-	<input placeholder="Ricerca libera" {if $search_included} id="Search" size="20" class="halfbox" {else} id="search-string"{/if} type="text" name="SearchText" value="{$search_text}" />
+	<input placeholder="Ricerca libera" {if $search_included} id="Search" size="20" class="halfbox" {else} id="search-string"{/if} type="text" name="SearchText" value="{$search_text|wash()}" />
 
 {if $foldersClasses|contains( $node.class_identifier )}
 	{set $class_filters = $node.data_map.classi_filtro.content|explode(',')}
