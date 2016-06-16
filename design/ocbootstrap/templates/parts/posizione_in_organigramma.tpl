@@ -1,8 +1,8 @@
-<h3><i class="fa fa-sitemap"></i> Posizione nell'organigramma</h3>        
+<h3><i class="fa fa-sitemap"></i> Posizione nell'organigramma</h3>
+{def $organigramma = organigramma($node.contentobject_id)}
 <ul class="org-chart">
   <li>
-    <div class="vcard">{$node.name|wash()}</div>
-    {include node=$node title=false() title=false() icon=false() uri='design:parts/articolazioni_interne.tpl'}
+    {include level=0 uri='design:openpa/organigramma_item.tpl' item=$organigramma name=organigramma_item current_id=$node.contentobject_id}
   </li>
 </ul>
 
