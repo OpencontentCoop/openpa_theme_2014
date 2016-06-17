@@ -240,6 +240,9 @@
 <p>
     <a class="btn btn-sm btn-info" href="{concat('index/object/',$node.contentobject_id)|ezurl(no)}">Controlla indicizzazione contenuto</a>
     <a class="btn btn-sm btn-info" href="{concat('content/history/',$node.contentobject_id)|ezurl(no)}">Gestisci versioni</a>
+    {if $node.class_identifier|eq('organigramma')}
+        <a class="btn btn-sm btn-danger" href="{'openpa/refreshorganigramma'|ezurl(no)}">Aggiorna {$node.class_name}</a>
+    {/if}
     {if fetch(user,current_user).login|eq('admin')}
         <a class="btn btn-sm btn-info" href="{concat('classtools/extra/',$node.class_identifier)|ezurl(no)}">Impostazioni visualizzazione oggetti {$node.class_name}</a>
     {/if}
