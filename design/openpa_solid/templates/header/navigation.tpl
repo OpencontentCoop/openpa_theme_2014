@@ -6,7 +6,7 @@
             <button type="button" data-toggle="collapse" data-target="#main-menu" class="navbar-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
             {/if}
             <a href={"/"|ezurl} title="{ezini('SiteSettings','SiteName')}" class="navbar-brand">
-                {if $pagedata.header.logo.url}
+                {if and( is_set($pagedata.header.logo.url), $pagedata.header.logo.url)}
                     <img class="hidden-xs navbar-logo" src={$pagedata.header.logo.url|ezroot()} alt="{ezini('SiteSettings','SiteName')}" />
                 {/if}
                 <span class="navbar-title">

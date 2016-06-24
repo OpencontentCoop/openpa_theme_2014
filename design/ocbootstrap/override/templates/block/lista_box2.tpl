@@ -24,8 +24,12 @@
         </div>
 	
 	    <div class="col-md-6">
-		  {node_view_gui content_node=$valid_nodes[1] view=line}
+        <div class="widget">
+          <div class="widget_content"> 
+            {node_view_gui content_node=$valid_nodes[1] view=line}          
+          </div>
         </div>
+      </div>  
 	</div>
 	
 {elseif $valid_nodes_count|ge(3)}    
@@ -36,8 +40,12 @@
     <div class="row"> 
     {foreach $valid_nodes as $valid_node }
       <div class="col-md-{$col-width}">
-        {node_view_gui content_node=$valid_node view=line}
+        <div class="widget">
+          <div class="widget_content"> 
+            {node_view_gui content_node=$valid_node view=line}
+          </div>
         </div>
+      </div>
       {delimiter modulo=$modulo}</div><div class="row">{/delimiter}
     {/foreach}
     </div>

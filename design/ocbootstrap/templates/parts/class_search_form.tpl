@@ -44,10 +44,10 @@
   <input placeholder="Ricerca libera" class="form-control" type="text" name="SearchText" value="{cond(is_set($SearchText),$SearchText|wash())}"/>
 </div>
 
-<a class="btn btn-link btn-sm" data-toggle="collapse" data-target="#OrderSearchPanel">Ordinamento</a>
-<a class="btn btn-link btn-sm" data-toggle="collapse" data-target="#AdvancedSearchPanel">Avanzata</a>
+<a class="btn btn-link btn-sm" data-toggle="collapse" data-target="#OrderSearchPanel-{$class.identifier}">Ordinamento</a>
+<a class="btn btn-link btn-sm" data-toggle="collapse" data-target="#AdvancedSearchPanel-{$class.identifier}">Avanzata</a>
 
-<div class="well well-sm clearfix collapse{if $open_advanced} in{/if}" id="OrderSearchPanel">
+<div class="well well-sm clearfix collapse{if $open_advanced} in{/if}" id="OrderSearchPanel-{$class.identifier}">
   <div class="form-group">
   <label for="Sort">Ordina per</label>
   <select class="form-control" id="Sort" name="Sort">
@@ -68,7 +68,7 @@
   </div>
 </div>
 
-<div class="well well-sm clearfix collapse{if $open_advanced} in{/if}" id="AdvancedSearchPanel">
+<div class="well well-sm clearfix collapse{if $open_advanced} in{/if}" id="AdvancedSearchPanel-{$class.identifier}">
   {foreach $attributes as $attribute}
   {switch match=$attribute.data_type_string}
     
