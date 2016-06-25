@@ -99,7 +99,7 @@
 
             {if $day_events_count|ne(0)}
                 <div class="tab-pane active" id="oggi">
-                  <div class="event-carousel" {*id="first-event-carousel"*}>
+                  <div class="event-carousel">
                     <div class="events">
                       {foreach $day_events as $i => $child max 10}
                         {include uri="design:calendar/block_list_item.tpl" item=$child}
@@ -111,8 +111,8 @@
             {/if}
 
             {if $prossimi_count|gt(0)}
-            <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide event-carousel">
-              <div class="event-carousel" {*id="second-event-carousel"*}>
+            <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide">
+              <div class="event-carousel">
                 <div class="events">
                   {foreach $prossimi as $i => $child max 10}
                     {include uri="design:calendar/block_list_item.tpl" item=$child}
@@ -134,4 +134,21 @@
 
 {if is_set($block.custom_attributes.color_style)}</div>{/if}
 
+{ezscript_require( array( 'ezjsc::jquery', 'plugins/owl-carousel/owl.carousel.min.js' ) )}
+{ezcss_require( array( 'plugins/owl-carousel/owl.carousel.css', 'plugins/owl-carousel/owl.theme.css' ) )}
+
+<script type="text/javascript">
+    $(document).ready(function() {ldelim}
+        $(".event-carousel").owlCarousel({ldelim}
+            items : 1,            
+            autoPlay: false,
+            navigation: false,
+            pagination: true,
+        {rdelim});
+    {rdelim});
+</script>
+
+
+
 {/if}
+
