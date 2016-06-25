@@ -22,7 +22,7 @@
       </div>
           <div id="item-{$block.id}-{$item.node_id}-collapse" class="panel-collapse collapse{if $index|eq(0)} in{/if}" role="tabpanel" aria-labelledby="item-{$block.id}-{$item.node_id}-heading">
             <div class="panel-body">
-              {node_view_gui content_node=$item view=line}
+              {node_view_gui content_node=$item view=accordion_content}
               <p class="link">
                 <a href="{object_handler($item).content_link.full_link}" title="{$item.name|wash()}">Leggi</a>
               </p>

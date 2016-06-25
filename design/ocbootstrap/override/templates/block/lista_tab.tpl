@@ -17,19 +17,7 @@
                     <div class="tab-pane{if $index|eq(0)} active{/if}" id="{$block.id}-{$child.name|slugize()}">
                         <div class="media">
                             <div class="media-body">
-                                <div class="clearfix">
-                                  {if and( is_set($child.data_map.image), $child.data_map.image.has_content)}
-                                    <a href="{if is_set( $child.url_alias )}{$child.url_alias|ezurl('no')}{else}#{/if}">
-                                        {attribute_view_gui image_class='medium' attribute=$child.data_map.image href=false() image_css_class="pull-right" fluid=false()}
-                                    </a>
-                                  {elseif and( is_set($child.data_map.sindaco ), $child.data_map.sindaco.content.data_map.image.has_content )}
-                                    <a href="{$child.data_map.sindaco.content.main_node.url_alias|ezurl('no')}">
-                                        {attribute_view_gui image_class='medium' attribute=$child.data_map.sindaco.content.data_map.image href=false() image_css_class="pull-right" fluid=false()}
-                                    </a>
-                                  {/if}
-  
-                                  {$child|abstract()}
-                                </div>
+                                {node_view_gui content_node=$child view=accordion_content image_class=medium}
                                 <p class="link">
                                     <a href="{$child.url_alias|ezurl(no)}" title="Link alla pagina {$child.name|wash()}">Leggi</a>
                                 </p>
