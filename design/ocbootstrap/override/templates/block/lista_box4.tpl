@@ -8,7 +8,7 @@
 {if and( $show_title, $block.name|ne('') )}
 <div class="widget {$block.view}">
     <div class="widget_title">
-        <h3>{$block.name|wash()}</h3>
+        <h3 class='widget_title'>{$block.name|wash()}</h3>
     </div>
     <div class="widget_content">
 {/if}
@@ -21,10 +21,10 @@
                                                     'limit', 4,
                                                     'sort_by', array('published', false())  ))}
     {if $children|count()}
-        <ul>							 
+        <ul class="list-group">							 
             {foreach $children as $child}
-            <li>
-                <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+            <li class="list-group-item">
+                <small>{$child.object.published|datetime(custom, '%j %F %Y')}</small><br />
                 {node_view_gui content_node=$child view=text_linked}
             </li>
             {/foreach}
@@ -47,11 +47,11 @@
                                                         'limit', 4,
                                                         'sort_by', array('published', false())  ))}
         {if $children|count()}
-            <h4>{$valid_nodes[0].name|wash()}</h4>
-            <ul>							 
+            <h3 class='widget_title'>{node_view_gui content_node=$valid_nodes[0] view=text_linked}</h3>
+            <ul class="list-group">							 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li class="list-group-item">
+                    <small>{$child.object.published|datetime(custom, '%j %F %Y')}</small><br />
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -69,11 +69,11 @@
                                                         'limit', 4,
                                                         'sort_by', array('published', false())  ))}
         {if $children|count()}
-            <h4>{$valid_nodes[1].name|wash()}</h4>
-            <ul>							 
+            <h3 class='widget_title'>{node_view_gui content_node=$valid_nodes[1] view=text_linked}</h3>
+            <ul class="list-group">							 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li class="list-group-item">
+                    <small>{$child.object.published|datetime(custom, '%j %F %Y')}</small><br />
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -96,11 +96,11 @@
                                                         'limit', 4,
                                                         'sort_by', array('published', false())  ))}
         {if $children|count()}
-            <h4>{$valid_nodes[0].name|wash()}</h4>
-            <ul>							 
+            <h3 class='widget_title'>{node_view_gui content_node=$valid_nodes[0] view=text_linked}</h3>
+            <ul class="list-group">							 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li class="list-group-item">
+                    <small>{$child.object.published|datetime(custom, '%j %F %Y')}</small><br />
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -118,11 +118,11 @@
                                                         'limit', 4,
                                                         'sort_by', array('published', false())  ))}
         {if $children|count()}
-            <h4>{$valid_nodes[1].name|wash()}</h4>
-            <ul>							 
+            <h3 class='widget_title'>{node_view_gui content_node=$valid_nodes[1] view=text_linked}</h3>
+            <ul class="list-group">							 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li class="list-group-item">
+                    <small>{$child.object.published|datetime(custom, '%j %F %Y')}</small><br />
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
@@ -140,17 +140,17 @@
                                                         'limit', 4,
                                                         'sort_by', array('published', false())  ))}
         {if $children|count()}
-            <h4>{$valid_nodes[2].name|wash()}</h4>
-            <ul>							 
+            <h3 class='widget_title'>{node_view_gui content_node=$valid_nodes[2] view=text_linked}</h3>
+            <ul class="list-group">							 
                 {foreach $children as $child}
-                <li>
-                    <span class="details">{$child.object.published|datetime(custom, '%j %F %Y')}</span>
+                <li class="list-group-item">
+                    <small>{$child.object.published|datetime(custom, '%j %F %Y')}</small><br />
                     {node_view_gui content_node=$child view=text_linked}
                 </li>
                 {/foreach}
             </ul>
         {else}
-            <p>Nessun contenuto disponibile in {$valid_nodes[0].name|wash()}</p>
+            <p>Nessun contenuto disponibile in {$valid_nodes[2].name|wash()}</p>
         {/if}
         </div>
 	</div>

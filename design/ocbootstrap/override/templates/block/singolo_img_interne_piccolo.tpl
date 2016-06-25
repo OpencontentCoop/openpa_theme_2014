@@ -11,8 +11,7 @@
 {/if}
 
   <div class="{if and( $show_title, $block.name|ne('') )}widget_content {/if}">	
-    {include name=block_full uri=$current_openpa.content_main.template openpa=$current_openpa node=$valid_node}
-    {include name=block_full uri=$current_openpa.content_detail.template openpa=$current_openpa node=$valid_node}
+    {include name=block_full uri=$current_openpa.content_main.template openpa=$current_openpa node=$valid_node}    
   </div>
 
 {if and( $show_title, $block.name|ne('') )}

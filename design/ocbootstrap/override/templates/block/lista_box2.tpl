@@ -20,15 +20,19 @@
 
   <div class="row">	
         <div class="col-md-6">
-          {node_view_gui content_node=$valid_nodes[0] view=line}
+          {if or($show_title|not(), $block.name|eq('') )}<div class="widget"><div class="widget_content">{/if}
+            <h4>{node_view_gui content_node=$valid_nodes[0] view=text_linked}</h4>
+            {node_view_gui content_node=$valid_nodes[0] view=accordion_content image_class=small}        
+            <p class="link"><a href="{object_handler($valid_nodes[0]).content_link.full_link}" title="{$valid_nodes[0].name|wash()}">Leggi</a></p>
+          {if or($show_title|not(), $block.name|eq('') )}  </div></div>{/if}
         </div>
 	
 	    <div class="col-md-6">
-        <div class="widget">
-          <div class="widget_content"> 
-            {node_view_gui content_node=$valid_nodes[1] view=line}          
-          </div>
-        </div>
+        {if or($show_title|not(), $block.name|eq('') )}<div class="widget"><div class="widget_content">{/if}
+          <h4>{node_view_gui content_node=$valid_nodes[1] view=text_linked}</h4>
+          {node_view_gui content_node=$valid_nodes[1] view=accordion_content image_class=small}        
+          <p class="link"><a href="{object_handler($valid_nodes[1]).content_link.full_link}" title="{$valid_nodes[1].name|wash()}">Leggi</a></p>         
+        {if or($show_title|not(), $block.name|eq('') )}  </div></div>{/if}
       </div>  
 	</div>
 	
@@ -40,11 +44,11 @@
     <div class="row"> 
     {foreach $valid_nodes as $valid_node }
       <div class="col-md-{$col-width}">
-        <div class="widget">
-          <div class="widget_content"> 
-            {node_view_gui content_node=$valid_node view=line}
-          </div>
-        </div>
+        {if or($show_title|not(), $block.name|eq('') )}<div class="widget"><div class="widget_content">{/if}
+          <h4>{node_view_gui content_node=$valid_node view=text_linked}</h4>
+          {node_view_gui content_node=$valid_node view=accordion_content image_class=small}        
+          <p class="link"><a href="{object_handler($valid_node).content_link.full_link}" title="{$valid_node.name|wash()}">Leggi</a></p>         
+        {if or($show_title|not(), $block.name|eq('') )}  </div></div>{/if}
       </div>
       {delimiter modulo=$modulo}</div><div class="row">{/delimiter}
     {/foreach}

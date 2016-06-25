@@ -11,7 +11,7 @@
 {/if}
 
 {def $calendarDataDay = fetch( openpa, calendario_eventi, hash( 'calendar', $valid_node, 'params', hash( 'interval', 'PT1439M' ) ) )}
-{if $block.custom_attributes.tab_title|ne('')}
+{if and(is_set($block.custom_attributes.tab_title),$block.custom_attributes.tab_title|ne(''))}
     {def $calendarDataOther = fetch( openpa, calendario_eventi, hash( 'calendar', $valid_node, 'params', $block.custom_attributes ) )}
 {else}
     {def $calendarDataOther = false()}

@@ -5,8 +5,11 @@
     </div>
 <div class="widget">
 	<div class=" {$block.view}">
-	    <div class="widget_content">
-	        {node_view_gui content_node=$valid_node view=line image_class=small}
+	    <div class="widget_content">	      
+        {node_view_gui content_node=$valid_node view=accordion_content image_class=small}        
+        <p class="link">
+          <a href="{object_handler($valid_node).content_link.full_link}" title="{$valid_node.name|wash()}">Leggi</a>
+        </p>
 	    </div>
 	</div>
 </div>
