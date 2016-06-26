@@ -10,14 +10,14 @@
 {/if}
     <div class="{if and( $show_title, $block.name|ne('') )}widget_content {/if}carousel-both-control">
         {include name="carousel"
-		  uri='design:atoms/carousel.tpl'
-		  items=$openpa.content
-		  css_id=$block.id
-		  root_node=$openpa.root_node
-		  autoplay=10000
-		  pagination=true()
-		  navigation= false()
-		  items_per_row=1}
+                uri='design:atoms/carousel.tpl'
+                items=$openpa.content
+                css_id=$block.id
+                root_node=$openpa.root_node
+                autoplay=10000
+                pagination=true()
+                navigation= false()
+                items_per_row=1}
     </div>
 
 {if and( $show_title, $block.name|ne('') )}

@@ -42,12 +42,12 @@
       {set $col-width=4 $modulo=3}
     {/if}
     <div class="row"> 
-    {foreach $valid_nodes as $valid_node }
+    {foreach $valid_nodes as $__valid_node}
       <div class="col-md-{$col-width}">
         {if or($show_title|not(), $block.name|eq('') )}<div class="widget"><div class="widget_content">{/if}
-          <h4>{node_view_gui content_node=$valid_node view=text_linked}</h4>
-          {node_view_gui content_node=$valid_node view=accordion_content image_class=small}        
-          <p class="link"><a href="{object_handler($valid_node).content_link.full_link}" title="{$valid_node.name|wash()}">Leggi</a></p>         
+          <h4>{node_view_gui content_node=$__valid_node view=text_linked}</h4>
+          {node_view_gui content_node=$__valid_node view=accordion_content image_class=small}        
+          <p class="link"><a href="{object_handler($__valid_node).content_link.full_link}" title="{$__valid_node.name|wash()}">Leggi</a></p>         
         {if or($show_title|not(), $block.name|eq('') )}  </div></div>{/if}
       </div>
       {delimiter modulo=$modulo}</div><div class="row">{/delimiter}

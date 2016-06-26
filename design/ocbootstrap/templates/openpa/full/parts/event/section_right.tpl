@@ -157,4 +157,8 @@
     </div>
   {/if}
   
+  {if $openpa.content_globalinfo.has_content}        
+    {attribute_view_gui attribute=$openpa.content_globalinfo.object.data_map.page}    
+  {/if}
+  
 </div>

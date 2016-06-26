@@ -75,7 +75,9 @@
                     {include uri='design:footer/copyright.tpl'}
                 </div>
                 <div class="col-md-6 access">
+                  {if $pagedata.is_login_page|not()}
                     {include uri='design:footer/user_access.tpl'}
+                  {/if}
                 </div>
             </div>
         </div>

@@ -140,7 +140,11 @@
 <script type="text/javascript">
     $(document).ready(function() {ldelim}
         $(".event-carousel").owlCarousel({ldelim}
-            items : 1,            
+            items : 1,
+            itemsDesktop : [1000,1], // items between 1000px and 901px
+            itemsDesktopSmall : [900,1], // betweem 900px and 601px
+            itemsTablet: [600,1], // items between 600 and 0
+            itemsMobile : [400,1],
             autoPlay: false,
             navigation: false,
             pagination: true,
