@@ -28,13 +28,15 @@
 ))}
 
 <script type="text/javascript" language="javascript" class="init">
-    var mainQuery = "{concat( 'raw[', solr_meta_subfield('maggioranza_minoranza','id'), '] = ', $node.contentobject_id )}";
+    var mainQuery = "{concat( '(raw[', solr_meta_subfield('evento_vita','id'), '] = ', $node.contentobject_id, ' or raw[', solr_meta_subfield('evento_vita','main_parent_node_id'), '] = ', $node.node_id, ')')}";
     
     console.log(mainQuery);
     {literal}
     
     var facets = [
-        {field: 'raw[meta_class_name_ms]', 'limit': 300, 'sort': 'alpha', name: 'Tipologia di contenuto'}
+        {field: 'raw[meta_class_name_ms]', 'limit': 300, 'sort': 'alpha', name: 'Tipologia di contenuto'},
+        {field: 'argomento.name', 'limit': 300, 'sort': 'alpha', name: 'Argomento'},
+        {field: 'evento_vita.name', 'limit': 300, 'sort': 'alpha', name: 'Evento della vita'}
     ];
 
     $(document).ready(function () {

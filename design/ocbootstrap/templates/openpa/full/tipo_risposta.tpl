@@ -28,7 +28,7 @@
 ))}
 
 <script type="text/javascript" language="javascript" class="init">
-    var mainQuery = "{concat( 'raw[', solr_meta_subfield('maggioranza_minoranza','id'), '] = ', $node.contentobject_id )}";
+    var mainQuery = "{concat( 'raw[', solr_meta_subfield('tipo_risposta','id'), '] = ', $node.contentobject_id )}";
     
     console.log(mainQuery);
     {literal}
