@@ -38,7 +38,7 @@ $(function() {
     
     <div class="well well-sm calendar-tools">            
       <label class="hide" for="calendar_query">Cerca nel testo</label>
-      <input id="calendar_query"  class="query form-control" placeholder="Cerca nel testo" type="text" name="Query" value="{$calendarData.parameters.query|wash()}" />
+      <input id="calendar_query"  class="query form-control" placeholder="Cerca tra gli eventi" type="text" name="Query" value="{$calendarData.parameters.query|wash()}" />
       
       <label class="hide" for="calendar_picker">Seleziona data</label>
       <input id="calendar_picker" class="calendar_picker form-control" placeholder="gg-mm-yyyy" type="text" name="SearchDate" title="Seleziona data" value="{$calendarData.parameters.picker_date|wash()}" />
