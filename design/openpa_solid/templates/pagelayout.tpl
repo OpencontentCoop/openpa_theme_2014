@@ -16,7 +16,7 @@
         {def $extra_cache_key = ''}
     {/if}
 
-{cache-block expiry=86400 keys=array( $module_result.uri, $user_hash_cache_key, $access_type.name, $extra_cache_key )}
+{cache-block keys=array( $module_result.uri, $user_hash_cache_key, $access_type.name, $extra_cache_key )}
     {def $pagedata = openpapagedata()
     $locales = fetch( 'content', 'translation_list' )
     $current_node_id = $pagedata.node_id}
