@@ -52,6 +52,22 @@
                         </li>
                     {/if}
 
+                    {if is_set($pagedata.contacts.linkedin)}
+                        <li>
+                            <a href="{$pagedata.contacts.linkedin}">
+                                <i class="fa fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                    {/if}
+
+                    {if is_set($pagedata.contacts.instagram)}
+                        <li>
+                            <a href="{$pagedata.contacts.instagram}">
+                                <i class="fa fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                    {/if}
+
                     {*<li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>*}
 
                 </ul>
