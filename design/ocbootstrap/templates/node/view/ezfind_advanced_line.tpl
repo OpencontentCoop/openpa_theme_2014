@@ -1,83 +1,94 @@
 {def $valore = ''}
 <tr class="{$sequence}">
 
-  <td>
-  
-      <h4>
-          <a href={$node.url_alias|ezurl()}>{$node.name|wash}</a>
-          <small>{$node.class_name}</small>
-      </h4>
-      <a href={$node.url_alias|ezurl()}><small>{$node.path_with_names}</small></a>
-  
-      {if $node|has_attribute('incarico')}
+    <td>
+
+        <h4>
+            <a href={$node.url_alias|ezurl()}>{$node.name|wash}</a>
+            <small>{$node.class_name}</small>
+        </h4>
+
+        {if $node|has_abstract()}
         <p>
-            <strong>Incarico: </strong></strong>
-            {attribute_view_gui href=nolink attribute=$node.data_map.incarico}
+            {$node|abstract()|oc_shorten(100)}
         </p>
-      {/if}
-      
-      {if $node|has_attribute('servizio')}
-        <p>
-            <strong>Servizio: </strong>
-            {attribute_view_gui href=nolink attribute=$node.data_map.servizio}
+        {/if}
+
+        <p><a href={$node.url_alias|ezurl()}>
+                <small>{$node.path_with_names}</small>
+            </a>
         </p>
-      {/if}
-  
-      
-      {if $node|has_attribute('ufficio')}
-        <p>
-            <strong>Ufficio: </strong>
-            {attribute_view_gui href=nolink attribute=$node.data_map.ufficio}
-        </p>
-      {/if}
-      
-  
-      {if $node|has_attribute('organo_competente')}
-        <p>
-            <strong>Competenza: </strong>
-            {attribute_view_gui href=nolink attribute=$node.data_map.organo_competente}
-        </p>
-      {/if}
-  
-      {if $node|has_attribute('circoscrizione')}
-        <p>
-            <strong>Circoscrizione: </strong></strong>
-            {attribute_view_gui href=nolink attribute=$node.data_map.circoscrizione}
-        </p>
-      {/if}
-  
-      {if $node|has_attribute('struttura')}
-        <p>
-            <strong>Struttura: </strong>
-            {attribute_view_gui href=nolink attribute=$node.data_map.struttura}
-        </p>
-      {/if}
-  
-      {if $node|has_attribute('lista_elettorale')}
-          <p>
-              <strong>Lista: </strong>
-              {attribute_view_gui href=nolink attribute=$node.data_map.lista_elettorale}
-          </p>
-      {/if}
-  
-      {if $node|has_attribute('argomento')}
-        <p>
-            <strong>Argomento: </strong>
-            {attribute_view_gui href=nolink attribute=$node.data_map.argomento}
-        </p>
-      {/if}
-  
-      {if is_set($node.data_map.file)}
-          {if and($node.data_map.file.has_content, $node.class_identifier|eq('file_pdf'))}
-              {attribute_view_gui attribute=$node.data_map.file icon_size='medium' icon_title=$node.name icon='yes'}
-          {/if}
-      {/if}
-  
-  </td>
-  
-  
-  <td>
-      {$node.object.published|l10n(date)}
-  </td>
+
+
+        <ul class="list-unstyled">
+            {if $node|has_attribute('incarico')}
+                <li>
+                    <strong>Incarico: </strong></strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.incarico}
+                </li>
+            {/if}
+
+            {if $node|has_attribute('servizio')}
+                <li>
+                    <strong>Servizio: </strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.servizio}
+                </li>
+            {/if}
+
+            {if $node|has_attribute('ufficio')}
+                <li>
+                    <strong>Ufficio: </strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.ufficio}
+                </li>
+            {/if}
+
+            {if $node|has_attribute('organo_competente')}
+                <li>
+                    <strong>Competenza: </strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.organo_competente}
+                </li>
+            {/if}
+
+            {if $node|has_attribute('circoscrizione')}
+                <li>
+                    <strong>Circoscrizione: </strong></strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.circoscrizione}
+                </li>
+            {/if}
+
+            {if $node|has_attribute('struttura')}
+                <li>
+                    <strong>Struttura: </strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.struttura}
+                </li>
+            {/if}
+
+            {if $node|has_attribute('lista_elettorale')}
+                <li>
+                    <strong>Lista: </strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.lista_elettorale}
+                </li>
+            {/if}
+
+            {if $node|has_attribute('argomento')}
+                <li>
+                    <strong>Argomento: </strong>
+                    {attribute_view_gui href=nolink attribute=$node.data_map.argomento}
+                </li>
+            {/if}
+
+            {if is_set($node.data_map.file)}
+                {if and($node.data_map.file.has_content, $node.class_identifier|eq('file_pdf'))}
+                    <li>{attribute_view_gui attribute=$node.data_map.file icon_size='medium' icon_title=$node.name icon='yes'}</li>
+                {/if}
+            {/if}
+
+        </ul>
+    </td>
+
+
+    <td>
+        {$node.object.published|l10n(date)}
+    </td>
 
 </tr>
