@@ -132,9 +132,12 @@ $(document).ready(function(){
     <a href="{ezini( 'SiteSettings', 'AdditionalLoginFormActionURL' )|explode('user/login')[0]}{$current_node.url_alias}" target="_blank" title="{'Go to admin interface.'|i18n( 'design/standard/parts/website_toolbar' )}"><img src={"websitetoolbar/ezwt-icon-admin.png"|ezimage} alt="{'Go to admin interface.'|i18n( 'design/standard/parts/website_toolbar' )}" /></a>
 {/if}
 
-  <a href={concat('content/view/full/',ezini('NodeSettings', 'MediaRootNode', 'content.ini'))|ezurl} class="btn btn-default btn-xs" style="vertical-align: super;">Media</a>
-  <a href={concat('content/view/full/',ezini('NodeSettings', 'UserRootNode', 'content.ini'))|ezurl} class="btn btn-default btn-xs" style="vertical-align: super;">Utenti</a>
-
+{if openpaini( 'WebsiteToolbar', 'ShowMediaRoot', 'enabled' )|eq('enabled')}
+  <a href="{concat('content/view/full/',ezini('NodeSettings', 'MediaRootNode', 'content.ini'))|ezurl(no)}" class="btn btn-default btn-xs" style="vertical-align: super;">Media</a>
+{/if}
+{if openpaini( 'WebsiteToolbar', 'ShowUsersRoot', 'enabled' )|eq('enabled')}
+  <a href="{concat('content/view/full/',ezini('NodeSettings', 'UserRootNode', 'content.ini'))|ezurl(no)}" class="btn btn-default btn-xs" style="vertical-align: super;">Utenti</a>
+{/if}
 
 </div>
 </form>
