@@ -10,7 +10,7 @@ $attribute_default_category = ezini( 'ClassAttributeSettings', 'DefaultCategory'
 {/foreach}
 
 <ul class="nav nav-tabs">
-    {if $count|gt(1)}
+    {if $count|gt(0)}
         {set $count = 0}
         {foreach $content_attributes_grouped_data_map as $attribute_group => $content_attributes_grouped}
             {if $attribute_group|ne('hidden')}
