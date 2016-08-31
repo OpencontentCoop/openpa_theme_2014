@@ -23,9 +23,22 @@
     }
 {/literal}</style>
 
+<link type="text/css" rel="stylesheet" media="all" href="{'stylesheets/app.css'|ezdesign(no)}" />
+<!-- ie 10 and above and all other browsers -->
+<!--[if gt IE 9]><!-->
+<link type="text/css" rel="stylesheet" media="all" href="{'stylesheets/app.css'}" />
+<!--<![endif]-->
+<!-- only ie 9 and below -->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" media="all" href="{'stylesheets/app_1.css'|ezdesign(no)}" />
+<link type="text/css" rel="stylesheet" media="all" href="{'stylesheets/app_2.css'|ezdesign(no)}" />
+<link type="text/css" rel="stylesheet" media="all" href="{'stylesheets/app_3.css'|ezdesign(no)}" />
+<link type="text/css" rel="stylesheet" media="all" href="{'stylesheets/app_4.css'|ezdesign(no)}" />
+<![endif]-->
+
 {if $load_css_file_list}
 {ezcss_load( array(
-    'app.css', 'app_2.css', 'app_3.css', 'custom.css',
+    'custom.css',
     'leaflet/leaflet.0.7.2.css',
     'debug.css',
     'websitetoolbar.css',

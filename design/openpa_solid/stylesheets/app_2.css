@@ -1709,13 +1709,13 @@ form.edit .tab-pane {
   padding: 20px;
 }
 
-/* line 57, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 56, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 input.main-title {
   font-size: 20px;
   height: 60px;
 }
 
-/* line 62, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 61, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .context-attributes label {
   font-size: 80%;
   color: #777777;
@@ -1723,7 +1723,7 @@ input.main-title {
 }
 
 /* eztags */
-/* line 69, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 68, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.tagssuggest ul li {
   background: #5bc0de;
   border: none;
@@ -1737,17 +1737,17 @@ div.tagssuggest ul li {
   border-radius: 4px;
 }
 
-/* line 82, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 81, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.tagssuggest ul li a {
   line-height: 15px;
 }
 
-/* line 86, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 85, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.jsonSuggestResults {
   top: 33px;
 }
 
-/* line 90, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 89, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.tagssuggestfieldwrap {
   float: left;
   height: 22px;
@@ -1758,23 +1758,23 @@ div.tagssuggestfieldwrap {
   font-size: 10px;
 }
 
-/* line 100, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 99, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.contentstructure ul.content_tree_menu ul {
   padding-left: 0;
 }
 
-/* line 104, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 103, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.tags-list p.loading, div.tags-list p.no-results {
   margin: 0;
 }
 
 /* ezopensemanticentities */
-/* line 110, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 109, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.semantic-edit td span {
   border-radius: 4px;
 }
 
-/* line 114, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 113, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.semantic-edit td div {
   float: left;
   margin-left: 0;
@@ -1782,18 +1782,18 @@ table.semantic-edit td div {
   white-space: nowrap;
 }
 
-/* line 121, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 120, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .entities-container .badge {
   background: #fff;
   color: #5bc0de;
 }
 
-/* line 126, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 125, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 ul.pill-entities > li > a {
   padding: 5px 4px 5px 2px;
 }
 
-/* line 130, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 129, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.semantic {
   display: inline-block;
   font: 12px arial,sans-serif;
@@ -1801,78 +1801,78 @@ table.semantic {
   width: auto;
 }
 
-/* line 137, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 136, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.semantic td span {
   border-radius: 4px;
 }
 
 /* ezobjectrelarionlist */
-/* line 143, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 142, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .ezobject-relation-search-browse {
   margin: 10px 0;
 }
 
-/* line 147, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 146, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .ezobject-relation-search-browse p a {
   cursor: pointer;
 }
 
 /* ezdate ezdatetime */
-/* line 153, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 152, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .form-inline.date,
 .form-inline.time {
   display: inline;
 }
 
-/* line 158, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 157, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .date .form-control {
   width: 30px;
   padding: 0 2px;
   text-align: center;
 }
 
-/* line 163, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 162, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .date .form-control.year {
   width: 40px;
   padding: 0 2px;
   text-align: center;
 }
 
-/* line 168, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 167, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .time .form-control {
   width: 30px;
   padding: 0 2px;
   text-align: center;
 }
 
-/* line 173, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 172, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .time input {
   background: #eeeeee;
 }
 
-/* line 177, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 176, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .edit-row {
   margin-bottom: 30px;
 }
 
-/* line 181, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 180, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .edit-row:nth-of-type(odd) {
   background: #f5f5f5;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/* line 187, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 186, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-calcontainer {
   z-index: 10;
 }
 
-/* line 189, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 188, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .menufieldlabel {
   font-weight: bold;
 }
 
-/* line 191, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 190, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 span.classattribute-description {
   display: block;
   margin-bottom: 10px;
@@ -1883,29 +1883,29 @@ span.classattribute-description {
 
 /* EZPAGE */
 /* BLOCK EDIT: START */
-/* line 202, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 201, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .button-right {
   float: right;
 }
 
-/* line 206, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 205, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .button-left {
   float: left;
 }
 
-/* line 211, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 210, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container {
   margin-bottom: 0.5em;
 }
 
-/* line 216, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 215, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-header {
   padding: 0.5em;
   border: 1px solid #D8D8D8;
   color: #000000;
 }
 
-/* line 223, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 222, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-content {
   border-left: 1px solid #D8D8D8;
   border-right: 1px solid #D8D8D8;
@@ -1913,7 +1913,7 @@ div.block-content {
   padding: 0.5em;
 }
 
-/* line 231, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 230, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 em.trigger {
   vertical-align: middle;
   margin-right: 0.5em;
@@ -1924,27 +1924,27 @@ em.trigger {
   float: left;
 }
 
-/* line 242, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 241, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 em.expand {
   background-image: url(../images/ezpage/expand.gif);
 }
 
-/* line 247, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 246, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 em.collapse {
   background-image: url(../images/ezpage/collapse.gif);
 }
 
-/* line 252, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 251, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.collapsed {
   display: none;
 }
 
-/* line 257, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 256, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.expanded {
   display: block;
 }
 
-/* line 262, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 261, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items {
   font-size: 11px;
   margin-top: 0.5em;
@@ -1952,83 +1952,83 @@ table.items {
   width: 100%;
 }
 
-/* line 270, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 269, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.queue {
   margin-bottom: 0;
 }
 
-/* line 275, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 274, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.online {
   margin-bottom: 0;
 }
 
-/* line 280, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 279, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items td {
   padding: 0.25em;
 }
 
-/* line 285, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 284, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items td.time {
   text-align: right;
   padding-right: 0.75em;
 }
 
-/* line 291, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 290, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.queue tr {
   background-color: #F4F4F4;
 }
 
-/* line 296, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 295, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.online tr {
   background-color: #E9F1F4;
 }
 
-/* line 301, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 300, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.history tr {
   background-color: #F4F2E9;
 }
 
-/* line 306, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 305, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.history td.status {
   font-style: italic;
 }
 
-/* line 311, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 310, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items td.handler {
   cursor: move;
 }
 
-/* line 316, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 315, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items tr.empty td {
   padding: 0.75em;
   text-align: center;
 }
 
-/* line 322, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 321, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items tr.rotation td {
   text-align: right;
   padding-right: 0.75em;
   vertical-align: middle;
 }
 
-/* line 329, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 328, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items tr.spacer td {
   height: 6px;
 }
 
-/* line 334, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 333, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 table.items img, table.items input, table.items select {
   vertical-align: middle;
 }
 
-/* line 339, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 338, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-content div.legend {
   font-size: 11px;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
 
-/* line 346, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 345, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.legend div.queue {
   background-color: #F4F4F4;
   height: 13px;
@@ -2038,7 +2038,7 @@ div.legend div.queue {
   margin-right: 0.25em;
 }
 
-/* line 356, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 355, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.legend div.online {
   background-color: #E9F1F4;
   height: 13px;
@@ -2049,7 +2049,7 @@ div.legend div.online {
   margin-right: 0.25em;
 }
 
-/* line 367, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 366, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.legend div.history {
   background-color: #F4F2E9;
   height: 13px;
@@ -2060,7 +2060,7 @@ div.legend div.history {
   margin-right: 0.25em;
 }
 
-/* line 378, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 377, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container .button {
   border: 1px solid #b9b7b7;
   font-size: 11px;
@@ -2070,12 +2070,12 @@ div.block-container .button {
   margin: 0.25em 0 0.25em 0;
 }
 
-/* line 388, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 387, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 th.tight, td.tight {
   width: 1%;
 }
 
-/* line 393, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 392, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container .list {
   font-size: 11px;
   max-width: 100%;
@@ -2084,19 +2084,19 @@ div.block-container .list {
   border: 1px solid #ccc;
 }
 
-/* line 402, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 401, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container .textfield {
   font-size: 11px;
 }
 
-/* line 407, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 406, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.left {
   float: left;
   clear: left;
   width: 49%;
 }
 
-/* line 414, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 413, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.right {
   float: right;
   clear: right;
@@ -2104,35 +2104,35 @@ div.block-container div.right {
   text-align: right;
 }
 
-/* line 422, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 421, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.blockname .textfield {
   margin-bottom: 0.5em;
   width: 70%;
 }
 
-/* line 428, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 427, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.blockname label {
   display: inline;
   color: #000000;
 }
 
-/* line 434, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 433, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.block-parameters label {
   color: #000000;
 }
 
-/* line 439, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 438, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.block-parameters {
   font-size: 11px;
 }
 
-/* line 444, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 443, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.block-parameters .textbox {
   width: 99%;
   overflow: auto;
 }
 
-/* line 450, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 449, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.block-container div.block-parameters div.source {
   font-weight: bold;
   color: #000000;
@@ -2140,7 +2140,7 @@ div.block-container div.block-parameters div.source {
   width: 80%;
 }
 
-/* line 458, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 457, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .float-break:after {
   content: "-";
   height: 0;
@@ -2149,49 +2149,49 @@ div.block-container div.block-parameters div.source {
   clear: both;
 }
 
-/* line 467, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 466, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .float-break {
   height: 1%;
 }
 
-/* line 472, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 471, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .hidden {
   display: none;
 }
 
-/* line 477, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 476, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .visible {
   display: block;
 }
 
-/* line 482, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 481, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .break {
   clear: both;
 }
 
 /* BLOCK EDIT: END */
 /* ZONE LAYOUT: START */
-/* line 490, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 489, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.zones {
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: 11px;
 }
 
-/* line 496, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 495, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.zones div.zone {
   margin-bottom: 0.5em;
   margin-right: 0.75em;
   float: left;
 }
 
-/* line 503, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 502, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.zones div.zone div.zone-thumbnail, div.zones div.zone div.zone-label, div.zones div.zone div.zone-selector {
   text-align: center;
   margin-bottom: 0.5em;
 }
 
-/* line 509, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 508, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div.zones .button {
   border: 1px solid #b9b7b7;
   font-size: 11px;
@@ -2201,7 +2201,7 @@ div.zones .button {
   margin: 0.25em 0 0.25em 0;
 }
 
-/* line 519, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 518, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div#zone-map-container {
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -2211,77 +2211,77 @@ div#zone-map-container {
   background-repeat: repeat-x;
 }
 
-/* line 529, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 528, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div#zone-map-container p {
   font-size: 1.1em;
 }
 
-/* line 534, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 533, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div#zone-map-container .zone-map-type {
   color: #000000;
   font-weight: bold;
 }
 
-/* line 540, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 539, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div#zone-map-container .zone-map-item {
   float: left;
   margin: 0.5em 1em 1em 0;
 }
 
-/* line 546, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 545, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 div#zone-map-container .zone-map-item label {
   margin-bottom: 0.25em;
   color: #000000;
 }
 
 /* ZONE LAYOUT: END */
-/* line 555, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 554, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-skin-ezflow .yui-navset .yui-content {
   background-color: #fff;
 }
 
-/* line 560, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 559, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-skin-ezflow .yui-navset .yui-content, .yui-skin-ezflow .yui-navset .yui-navset-top .yui-content {
   border-color: #A3A3A3;
 }
 
-/* line 565, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 564, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-skin-ezflow .yui-navset .yui-nav, .yui-skin-ezflow .yui-navset .yui-navset-top .yui-nav {
   border-color: #A3A3A3;
 }
 
-/* line 570, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 569, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-skin-ezflow .yui-navset .yui-nav a, .yui-skin-ezflow .yui-navset .yui-navset-top .yui-nav a {
   background-image: none;
   font-size: 12px;
 }
 
-/* line 576, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 575, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-skin-ezflow .yui-navset .yui-nav .selected a, .yui-skin-ezflow .yui-navset .yui-nav .selected a em {
   border-color: #A3A3A3;
   background-image: none;
   background-color: #A3A3A3;
 }
 
-/* line 583, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 582, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-skin-ezflow .yui-navset .yui-nav a:hover, .yui-skin-ezflow .yui-navset .yui-nav a:focus {
   background-image: none;
   background-color: #A3A3A3;
   color: #FFFFFF;
 }
 
-/* line 590, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 589, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-skin-ezflow .yui-navset .yui-nav .selected a, .yui-skin-ezflow .yui-navset .yui-nav .selected a:focus, .yui-skin-ezflow .yui-navset .yui-nav .selected a:hover {
   background-image: none;
   background-color: #A3A3A3;
 }
 
-/* line 596, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 595, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .block-content label {
   display: block;
 }
 
-/* line 598, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 597, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .fileupload-content .dropzoneHelp {
   border: 1px dashed #777777;
   background-size: 40px 40px;
@@ -2293,79 +2293,79 @@ div#zone-map-container .zone-map-item label {
   font-weight: bold;
 }
 
-/* line 609, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 608, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .fileupload-content table.table, .fileupload-content table.list {
   margin-bottom: 0;
 }
 
-/* line 612, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 611, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .fileupload-content table.table tbody > tr > td, .fileupload-content table.list tbody > tr > td {
   border: none;
 }
 
-/* line 615, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 614, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .fileupload-content table.table td, .fileupload-content table.list td {
   vertical-align: middle;
 }
 
-/* line 619, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 618, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .fileupload .dropzoneHelp.hide,
 #page .fileupload .hide {
   display: none !important;
 }
 
-/* line 625, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 624, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .edit-row {
   margin: 20px 0;
 }
 
-/* line 626, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 625, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .yui-calcontainer {
   z-index: 200;
 }
 
-/* line 627, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 626, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .jsonSuggestResults iframe {
   height: auto !important;
   width: auto !important;
 }
 
-/* line 646, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 645, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .object-left {
   margin: 0 .5em 0 0;
 }
 
-/* line 651, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 650, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .object-right {
   margin: 0 0 0 0.5em;
 }
 
-/* line 656, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 655, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .object-center {
   margin: 0 auto;
 }
 
-/* line 660, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 659, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 p.text-left, td.text-left, th.text-left, *.text-left {
   text-align: left;
 }
 
-/* line 665, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 664, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 p.text-right, #header p.navtools, td.text-right, #header td.navtools, th.text-right, #header th.navtools, *.text-right, #header *.navtools {
   text-align: right;
 }
 
-/* line 670, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 669, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 p.text-center, p.figure, td.text-center, td.figure, th.text-center, th.figure, *.text-center, *.figure {
   text-align: center;
 }
 
-/* line 675, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 674, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 p.text-justify, td.text-justify, th.text-justify, *.text-justify {
   text-align: justify;
 }
 
-/* line 696, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 695, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .message-confirmation h2,
 .message-feedback h2,
 .feedback h2,
@@ -2377,12 +2377,12 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify {
 }
 
 /* SPLIT THREE */
-/* line 718, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 717, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 .spamfilter {
   display: none;
 }
 
-/* line 720, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
+/* line 719, ../../../../ocbootstrap/design/ocbootstrap/scss/_ezpublish.scss */
 #ezwt_create_chosen a.chosen-single {
   line-height: 28px;
   height: 28px;
@@ -8765,7 +8765,7 @@ legend {
 /* line 307, ../scss/solid/_style.scss */
 .content-title h1 {
   color: #555555;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
 }
 /* line 311, ../scss/solid/_style.scss */

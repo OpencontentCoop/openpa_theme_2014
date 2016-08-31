@@ -564,3 +564,171 @@
 #content .color.color-default-6 .widget.events .widget_title a .fa, #content .color.color-default-6 .panels-container .events.media .widget_title a .fa, .panels-container #content .color.color-default-6 .events.media .widget_title a .fa, #content .color.color-default-6 .leaflet-popup-content .events.media .widget_title a .fa, .leaflet-popup-content #content .color.color-default-6 .events.media .widget_title a .fa {
   color: "";
 }
+/* line 101, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget.events .events-tabs li a, #content .color.color-default-6 .panels-container .events.media .events-tabs li a, .panels-container #content .color.color-default-6 .events.media .events-tabs li a, #content .color.color-default-6 .leaflet-popup-content .events.media .events-tabs li a, .leaflet-popup-content #content .color.color-default-6 .events.media .events-tabs li a {
+  background: "";
+  color: "";
+  opacity: 0.5;
+}
+/* line 107, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget.events .events-tabs li.active a, #content .color.color-default-6 .panels-container .events.media .events-tabs li.active a, .panels-container #content .color.color-default-6 .events.media .events-tabs li.active a, #content .color.color-default-6 .leaflet-popup-content .events.media .events-tabs li.active a, .leaflet-popup-content #content .color.color-default-6 .events.media .events-tabs li.active a,
+#content .color.color-default-6 .widget.events .events-tabs li a:hover,
+#content .color.color-default-6 .panels-container .events.media .events-tabs li a:hover,
+.panels-container #content .color.color-default-6 .events.media .events-tabs li a:hover,
+#content .color.color-default-6 .leaflet-popup-content .events.media .events-tabs li a:hover,
+.leaflet-popup-content #content .color.color-default-6 .events.media .events-tabs li a:hover {
+  opacity: 1;
+}
+/* line 116, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .events .calendar-date .month {
+  background-color: "";
+  color: "";
+}
+/* line 120, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .events .calendar-date .day {
+  border-color: "";
+}
+/* line 125, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .lista_accordion_manual .panel-group .panel-default .panel-heading .panel-title a i,
+#content .color.color-default-6 .lista_accordion .panel-group .panel-default .panel-heading .panel-title a i {
+  color: "";
+}
+/* line 133, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .panel-label {
+  background: "";
+  color: "";
+}
+/* line 138, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .media-panel figure {
+  border-bottom-color: "";
+}
+/* line 142, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .panel-story {
+  color: "";
+}
+/* line 144, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .panel-story a {
+  color: "";
+}
+/* line 152, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget_tabs .tab-content,
+#content .color.color-default-6 .widget.events .tab-content,
+#content .color.color-default-6 .panels-container .events.media .tab-content,
+.panels-container #content .color.color-default-6 .events.media .tab-content,
+#content .color.color-default-6 .leaflet-popup-content .events.media .tab-content,
+.leaflet-popup-content #content .color.color-default-6 .events.media .tab-content {
+  border-color: "";
+}
+/* line 156, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget_tabs h2,
+#content .color.color-default-6 .widget.events h2,
+#content .color.color-default-6 .panels-container .events.media h2,
+.panels-container #content .color.color-default-6 .events.media h2,
+#content .color.color-default-6 .leaflet-popup-content .events.media h2,
+.leaflet-popup-content #content .color.color-default-6 .events.media h2 {
+  background: "";
+  color: "";
+}
+/* line 163, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget_tabs .nav-tabs li a,
+#content .color.color-default-6 .widget.events .nav-tabs li a,
+#content .color.color-default-6 .panels-container .events.media .nav-tabs li a,
+.panels-container #content .color.color-default-6 .events.media .nav-tabs li a,
+#content .color.color-default-6 .leaflet-popup-content .events.media .nav-tabs li a,
+.leaflet-popup-content #content .color.color-default-6 .events.media .nav-tabs li a {
+  background-color: "";
+  color: "";
+  opacity: 0.5;
+}
+/* line 168, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget_tabs .nav-tabs li a:hover,
+#content .color.color-default-6 .widget.events .nav-tabs li a:hover,
+#content .color.color-default-6 .panels-container .events.media .nav-tabs li a:hover,
+.panels-container #content .color.color-default-6 .events.media .nav-tabs li a:hover,
+#content .color.color-default-6 .leaflet-popup-content .events.media .nav-tabs li a:hover,
+.leaflet-popup-content #content .color.color-default-6 .events.media .nav-tabs li a:hover {
+  opacity: 1;
+}
+/* line 173, ../scss/solid/_colors_mixin.scss */
+#content .color.color-default-6 .widget_tabs .nav-tabs li.active a,
+#content .color.color-default-6 .widget.events .nav-tabs li.active a,
+#content .color.color-default-6 .panels-container .events.media .nav-tabs li.active a,
+.panels-container #content .color.color-default-6 .events.media .nav-tabs li.active a,
+#content .color.color-default-6 .leaflet-popup-content .events.media .nav-tabs li.active a,
+.leaflet-popup-content #content .color.color-default-6 .events.media .nav-tabs li.active a {
+  background-color: "";
+  color: "";
+  opacity: 1;
+}
+
+/* line 2, ../scss/solid/_editors.scss */
+.content-main h1.title_editor,
+.content-main h2.title_editor,
+.content-main h3.title_editor,
+.content-main h4.title_editor,
+.content-main h5.title_editor,
+.content-main h6.title_editor {
+  background-color: transparent !important;
+  color: #333333 !important;
+  padding: 0.5em 0;
+}
+/* line 13, ../scss/solid/_editors.scss */
+.content-main h1.title_editor {
+  font-size: 27px;
+}
+/* line 17, ../scss/solid/_editors.scss */
+.content-main h2.title_editor {
+  font-size: 24px;
+}
+/* line 21, ../scss/solid/_editors.scss */
+.content-main h3.title_editor {
+  font-size: 21px;
+}
+/* line 25, ../scss/solid/_editors.scss */
+.content-main h4.title_editor {
+  font-size: 18px;
+}
+/* line 29, ../scss/solid/_editors.scss */
+.content-main h5.title_editor {
+  font-size: 15px;
+}
+/* line 33, ../scss/solid/_editors.scss */
+.content-main h6.title_editor {
+  font-size: 12px;
+}
+
+/* line 3, ../scss/solid/_table-calendar.scss */
+.calendar-tools .table-calendar ul {
+  margin: 1em 0.2em 0.5em;
+}
+/* line 5, ../scss/solid/_table-calendar.scss */
+.calendar-tools .table-calendar ul li a {
+  font-size: 1em;
+  color: #286090;
+}
+/* line 11, ../scss/solid/_table-calendar.scss */
+.calendar-tools .table-calendar td .day {
+  float: none;
+}
+/* line 18, ../scss/solid/_table-calendar.scss */
+.calendar-tools .calendar-date .media {
+  background-color: #eeeeee;
+}
+
+/*!
+ * Agid 
+ * Linee Guida
+ */
+/*! 
+ * Google Font Titillium
+ */
+/*! 
+ * Font Awesome
+ */
+/*!  
+ * Bootstrap
+ */
+/*! 
+ * Bootstrap Customization
+ 
+@import "custom";*/
