@@ -17,7 +17,7 @@
   {foreach $items as $item}
     {def $caption=$item.name}
     {if $item|has_attribute( 'caption' )}
-      {set $caption = $item.data_map.caption.data_text|wash()}
+      {set $caption = $item.data_map.caption.data_text|oc_shorten(200)|wash()}
     {/if}
     <a class="gallery-strip-thumbnail" href={$item|attribute('image').content[$wide_class].url|ezroot} title="{$caption}" data-gallery>
       {attribute_view_gui attribute=$item|attribute('image') image_class=$thumbnail_class fluid=$fluid}
