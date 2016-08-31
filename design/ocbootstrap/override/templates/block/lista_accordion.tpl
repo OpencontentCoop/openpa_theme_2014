@@ -5,7 +5,11 @@
 <div class="{$block.view}">
     {if and( $show_title, $block.name|ne('') )}
       <div  class="widget_title">
-        <h3>{$block.name|wash()}</h3>
+        <h3>
+          {if $openpa.root_node}<a href={$openpa.root_node.url_alias|ezurl()}>{/if}
+          {$block.name|wash()}
+            {if $openpa.root_node}</a>{/if}
+        </h3>
       </div>
     {/if}
 
