@@ -1,6 +1,6 @@
 {def $roles = fetch( 'openpa', 'ruoli', hash( 'struttura_object_id', $struttura.contentobject_id ) )}    
 {if or( $roles|count(), and( is_set( $struttura.data_map.responsabile ), $struttura.data_map.responsabile.has_content ) )}
-    
+<div class="attribute-ruoli">
     {if $roles|count()}
         {foreach $roles as $item}
           <h3><i class="fa fa-sitemap"></i> Ruoli</h3>       
@@ -26,5 +26,6 @@
             </dd>
           </dl>
        
-    {/if}    
+    {/if}
+</div>
 {/if}
