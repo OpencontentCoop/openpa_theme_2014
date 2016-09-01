@@ -3,15 +3,15 @@
         {if $openpa.content_contacts.show_label}
             <h4><strong>{$openpa.content_contacts.label}</strong></h4>
         {/if}
-        <div class="row">
-            {foreach $openpa.content_contacts.attributes as $openpa_attribute}
+        {foreach $openpa.content_contacts.attributes as $openpa_attribute}
+            <div class="row">
                 {if $openpa_attribute.full.show_label}
-                <div class="col-md-2"><strong>{$openpa_attribute.label}: </strong></div>
+                    <div class="col-md-2"><strong>{$openpa_attribute.label}: </strong></div>
                 {/if}
                 <div class="col-md-{if $openpa_attribute.full.show_label}10{else}12{/if}">
                     {attribute_view_gui attribute=$openpa_attribute.contentobject_attribute href=cond($openpa_attribute.full.show_link|not, 'no-link', '')}
                 </div>
-            {/foreach}
-        </div>
+            </div>
+        {/foreach}
     </div>
 {/if}
