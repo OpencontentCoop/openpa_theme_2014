@@ -10,7 +10,7 @@
 
         {if $node|has_abstract()}
         <p>
-            {$node|abstract()|oc_shorten(100)}
+            {$node|abstract()|oc_shorten(250)}
         </p>
         {/if}
 

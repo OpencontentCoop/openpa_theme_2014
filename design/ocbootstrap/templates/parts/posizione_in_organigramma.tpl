@@ -7,5 +7,3 @@
   </li>
 </ul>
 {/if}
-
-{include name=ruoli struttura=$node uri='design:parts/ruoli_per_struttura.tpl'}

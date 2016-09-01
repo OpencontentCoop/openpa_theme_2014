@@ -27,9 +27,11 @@
         
         {include struttura=$node uri='design:openpa/full/parts/struttura_responsabile.tpl'}    
         
-        {include uri=$openpa.content_contacts.template}        
-        
-        {include struttura=$node uri='design:openpa/full/parts/struttura_personale.tpl'}    
+        {include uri=$openpa.content_contacts.template}
+
+        {include name=ruoli struttura=$node uri='design:parts/ruoli_per_struttura.tpl'}
+
+        {include struttura=$node uri='design:openpa/full/parts/struttura_personale.tpl'}
 
         {include uri=$openpa.content_detail.template}
         
