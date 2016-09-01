@@ -35,7 +35,7 @@
         {include name=reverse_related_objects_specific_class_and_attribute
                 node=$node
                 classe='pagina_sito'
-                attrib='riferimenti'
+                attrib='riferimento'
                 title="Riferimenti:"
                 uri='design:parts/reverse_related_objects_specific_class_and_attribute.tpl'}
 
