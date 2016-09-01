@@ -243,7 +243,7 @@
     {if $node.class_identifier|eq('organigramma')}
         <a class="btn btn-sm btn-danger" href="{concat('openpa/refreshorganigramma/',$node.contentobject_id)|ezurl(no)}">Aggiorna {$node.class_name}</a>
     {/if}
-    {if fetch(user,current_user).login|eq('admin')}
+    {if fetch( 'user', 'has_access_to', hash( 'module', 'classtools', 'function', 'extra' ) )}
         <a class="btn btn-sm btn-info" href="{concat('classtools/extra/',$node.class_identifier)|ezurl(no)}">Impostazioni visualizzazione oggetti {$node.class_name}</a>
     {/if}
 </p>
