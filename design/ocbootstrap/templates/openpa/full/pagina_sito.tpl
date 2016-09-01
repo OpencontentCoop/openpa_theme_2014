@@ -24,13 +24,20 @@
 
         {include uri=$openpa.content_main.template}
 
-        {include uri=$openpa.content_detail.template}        
+        {include uri=$openpa.content_detail.template}
 
         {if and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
             {include uri=$openpa.content_albotelematico.container_template}
         {else}
             {node_view_gui content_node=$node view=children view_parameters=$view_parameters}
         {/if}
+
+        {include name=reverse_related_objects_specific_class_and_attribute
+                node=$node
+                classe='pagina_sito'
+                attrib='riferimenti'
+                title="Riferimenti:"
+                uri='design:parts/reverse_related_objects_specific_class_and_attribute.tpl'}
 
     </div>
 
