@@ -13997,9 +13997,9 @@ p.text-justify, td.text-justify, th.text-justify, *.text-justify {
   .responsive_table tbody,
   .responsive_table thead,
   .responsive_table tfoot,
-  .responsive_table th:not(.d_xs_none),
+  .responsive_table th:not(.d_xs_none):not(.content-title h1 small),
   .responsive_table tr,
-  .responsive_table td:not(.d_xs_none) {
+  .responsive_table td:not(.d_xs_none):not(.content-title h1 small) {
     display: block;
   }
 
@@ -16302,6 +16302,11 @@ a .fa-download:hover {
 /* line 480, ../scss/solid/_style.scss */
 .tree-folder-select i {
   color: #777777;
+}
+
+/* line 485, ../scss/solid/_style.scss */
+.event-item .day small {
+  font-size: 0.6em;
 }
 
 /* line 186, ../scss/solid/_colors_mixin.scss */
