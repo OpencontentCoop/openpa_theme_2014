@@ -24,6 +24,8 @@
 
         {include uri=$openpa.content_main.template}
 
+        {include uri=$openpa.content_contacts.template}
+
         {include uri=$openpa.content_detail.template}
 
         {if $node|find_first_parent( 'pagina_trasparenza' )}
