@@ -28,6 +28,8 @@
 
         {include uri=$openpa.content_main.template}
 
+        {include uri=$openpa.content_contacts.template}
+
         {include uri=$openpa.content_detail.template}
 
         {include uri=$openpa.content_infocollection.template}
