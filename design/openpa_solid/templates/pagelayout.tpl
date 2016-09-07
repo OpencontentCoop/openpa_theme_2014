@@ -40,7 +40,7 @@
     <div id="header">
         {include uri='design:header/navigation.tpl'}
 
-        {if and( $pagedata.is_homepage, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
+        {if and( or($pagedata.is_homepage, is_area_tematica()), array( 'edit', 'browse' )|contains( $ui_context )|not() )}
             {include uri='design:header/banner.tpl'}
         {/if}
 
