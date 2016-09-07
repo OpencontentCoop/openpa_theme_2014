@@ -27,32 +27,20 @@
         {include uri=$openpa.content_detail.template}
 
         {if $node|find_first_parent( 'pagina_trasparenza' )}
-          {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl' nodes=fetch_alias( 'children', hash( 'parent_node_id', $node.node_id,'sort_by', $node.sort_array, 'load_data_map', false() ) ) nodes_count=fetch_alias( 'children_count', hash( 'parent_node_id', $node.node_id ) ) class=''}        
-        
+          {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl' nodes=fetch_alias( 'children', hash( 'parent_node_id', $node.node_id,'sort_by', $node.sort_array, 'load_data_map', false() ) ) nodes_count=fetch_alias( 'children_count', hash( 'parent_node_id', $node.node_id ) ) class=''}
+        {elseif and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
+          {include uri=$openpa.content_albotelematico.container_template}
         {else}
-          {def $children_count = fetch( openpa, 'list_count', hash( 'parent_node_id', $node.node_id ) )
-               $children = fetch( openpa, 'list', hash( 'parent_node_id', $node.node_id,
-                                                             'offset', $view_parameters.offset,
-                                                             'sort_by', $node.sort_array,
-                                                             'limit', 10 ) )}
-          
-          
-          {if $children_count}
-            <div class="content-view-children">  
-            {foreach $children as $child }
-              {node_view_gui view=line content_node=$child image_class=small}	  
-            {/foreach}
-            </div>
-          
-            {include name=navigator
-                 uri='design:navigator/google.tpl'
-                 page_uri=$node.url_alias
-                 item_count=$children_count
-                 view_parameters=$view_parameters
-                 item_limit=10}
-          
-          {/if}
+            {node_view_gui content_node=$node view=children view_parameters=$view_parameters}
         {/if}
+
+        {include name=reverse_related_objects_specific_class_and_attribute
+                node=$node
+                classe='pagina_sito'
+                attrib='riferimento'
+                title="Riferimenti:"
+                uri='design:parts/reverse_related_objects_specific_class_and_attribute.tpl'}
+
 
     </div>
     
