@@ -87,11 +87,13 @@
         {attribute_view_gui attribute=$openpa.content_globalinfo.object.data_map.page}    
     {/if}
 
-    {*OGGETTI INVERSAMENTE CORRELATI*}
-    {include name = reverse_related_objects 
-             node = $node 
-             title = 'Riferimenti'
-             uri = 'design:parts/reverse_related_objects.tpl'}
+    {if $openpa.content_reverse_related.has_data}
+        {*OGGETTI INVERSAMENTE CORRELATI*}
+        {include name = reverse_related_objects
+                 node = $node
+                 title = 'Riferimenti'
+                 uri = 'design:parts/reverse_related_objects.tpl'}
+    {/if}
 
 
 </div>

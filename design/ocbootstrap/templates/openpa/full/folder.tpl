@@ -38,7 +38,7 @@
 
         {include name=reverse_related_objects_specific_class_and_attribute
                 node=$node
-                classe='pagina_sito'
+                classe='folder'
                 attrib='riferimento'
                 title="Riferimenti:"
                 uri='design:parts/reverse_related_objects_specific_class_and_attribute.tpl'}
@@ -52,3 +52,9 @@
 
 
 </div>
+
+{if $openpa.content_date.show_date}
+    <div class="row"><div class="col-md-12">
+            <p class="pull-right">{include uri=$openpa.content_date.template}</p>
+        </div></div>
+{/if}
