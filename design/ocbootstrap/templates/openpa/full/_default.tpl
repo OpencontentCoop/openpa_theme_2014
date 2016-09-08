@@ -36,11 +36,6 @@
 
         {include uri=$openpa.control_children.template}
 
-        {if or( $openpa.content_attachment.has_content, $openpa.content_attachment.children_count )}
-            <h2>Allegati</h2>
-            {include uri=$openpa.content_attachment.template}
-        {/if}
-
     </div>
 
     {if $openpa.control_menu.show_extra_menu}
