@@ -36,6 +36,11 @@
             {node_view_gui content_node=$node view=children view_parameters=$view_parameters}
         {/if}
 
+        {if or( $openpa.content_attachment.has_content, $openpa.content_attachment.children_count )}
+            <h2>Allegati</h2>
+            {include uri=$openpa.content_attachment.template}
+        {/if}
+
         {include name=reverse_related_objects_specific_class_and_attribute
                 node=$node
                 classe='folder'
