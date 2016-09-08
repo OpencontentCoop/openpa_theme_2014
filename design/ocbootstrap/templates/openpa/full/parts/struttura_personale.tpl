@@ -7,7 +7,7 @@
 
     <h3><i class="fa fa-users"></i> Personale</h3>
 
-    <ul class="list-unstyled">   
+    <ul class="list-unstyled" style="height: 150px; overflow-y: scroll; margin-bottom: 20px;">
     {foreach $dipendenti as $item}
         <li><a href={$item.url_alias|ezurl()}>{$item.name}</a>
 

@@ -2,8 +2,8 @@
 {if or( $roles|count(), and( is_set( $struttura.data_map.responsabile ), $struttura.data_map.responsabile.has_content ) )}
 <div class="attribute-ruoli">
     {if $roles|count()}
+        <h3><i class="fa fa-sitemap"></i> Ruoli</h3>
         {foreach $roles as $item}
-          <h3><i class="fa fa-sitemap"></i> Ruoli</h3>       
           <dl class="dl-horizontal">
             <dt>{$item.name|wash()}</dt>
             <dd>
