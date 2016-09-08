@@ -98,7 +98,7 @@
     {if is_set( $availableValues[$attribute.identifier] )}
       <div class="form-group">			
       <label for="{$attribute.identifier}">{$attribute.name}</label>
-      <select class="form-control" name="Data[{$attribute.identifier}][]" id="{$attribute.identifier}">
+      <select class="form-control reorder" name="Data[{$attribute.identifier}][]" id="{$attribute.identifier}">
         <option value=""> - Seleziona</option>
         {foreach $availableValues[$attribute.identifier] as $name => $count}
         <option value="{$name|wash()}" {if and(is_set($Data[$attribute.identifier]),$Data[$attribute.identifier]|contains($name))}selected="selected"{/if}>{api_read($name).metadata.name['ita-IT']} ({$count})</option>
@@ -177,6 +177,13 @@
       changeYear: true,
       dateFormat: "dd-mm-yy",
       numberOfMonths: 1
+    });
+    $("select.reorder").each(function() {
+      var selectedValue = $(this).val();
+      $(this).html($("option", $(this)).sort(function(a, b) {
+        return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
+      }));
+      $(this).val(selectedValue);
     });
   });
   {/literal}
