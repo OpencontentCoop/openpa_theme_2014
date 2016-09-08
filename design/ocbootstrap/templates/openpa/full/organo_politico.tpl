@@ -72,6 +72,8 @@
           {include uri=$openpa.content_attachment.template}
         {/if}
 
+        {include uri=$openpa.content_gallery.template}
+
         {include uri=$openpa.content_infocollection.template}
         
         {*include uri=$openpa.control_children.template*}
