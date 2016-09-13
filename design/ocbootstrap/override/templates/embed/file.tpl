@@ -8,10 +8,10 @@
                 {if is_set($from_attribute)}
                     {if or( $from_attribute.object.data_map.oggetto.content|contains('revocata'), $from_attribute.object.data_map.oggetto.content|contains('annullata') )}
                         <em>Il  testo del provvedimento è stato rimosso in quanto l'atto è stato revocato o annullato.</em>
-                    {elseif ezini_has_variable( 'OscuraAttiSettings', 'TestoStandard', 'oscuraatti.ini' )}
+                    {elseif ezini_hasvariable( 'OscuraAttiSettings', 'TestoStandard', 'oscuraatti.ini' )}
                         <em>{ezini( 'OscuraAttiSettings', 'TestoStandard', 'oscuraatti.ini' )}</em>
                     {/if}
-                {elseif ezini_has_variable( 'OscuraAttiSettings', 'TestoStandard', 'oscuraatti.ini' )}
+                {elseif ezini_hasvariable( 'OscuraAttiSettings', 'TestoStandard', 'oscuraatti.ini' )}
                     <em>{ezini( 'OscuraAttiSettings', 'TestoStandard', 'oscuraatti.ini' )}</em>
                 {/if}
             {else}
