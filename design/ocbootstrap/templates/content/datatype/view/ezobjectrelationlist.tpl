@@ -16,7 +16,7 @@
 	  {if current_object_id()|eq($Relations.item.contentobject_id )}
 		{set $show_link = false()}
 	  {/if}
-      {content_view_gui view=embed show_link=$show_link content_object=fetch( content, object, hash( object_id, $Relations.item.contentobject_id ) )}
+      {content_view_gui view=embed show_link=$show_link content_object=fetch( content, object, hash( object_id, $Relations.item.contentobject_id ) ) from_attribute=$attribute}
     {/if}
     {if $show_newline}<br />{/if}
 {/if}
