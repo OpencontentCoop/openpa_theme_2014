@@ -1,7 +1,7 @@
 {def $flash_node = $block.valid_nodes[0]}
-{if is_set($flash_node.data_map.ezflowmedia)}
+{if or(is_set($flash_node.data_map.ezflowmedia),is_set($flash_node.data_map.media))}
   {def $siteurl = concat( "http://", ezini( 'SiteSettings', 'SiteURL' ) )  
-       $attribute = $flash_node.data_map.ezflowmedia
+       $attribute = cond( is_set($flash_node.data_map.ezflowmedia), $flash_node.data_map.ezflowmedia, $flash_node.data_map.media)
        $video = concat("content/download/", $attribute.contentobject_id, "/", $attribute.content.contentobject_attribute_id)|ezurl(no)
        $width='100%'
        $height='180px'
