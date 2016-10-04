@@ -8,7 +8,13 @@
             <small>{$node.class_name}</small>
         </h4>
 
-        {if $node|has_abstract()}
+        {if $node|has_attribute('oggetto')}
+            {if $node.data_map.oggetto.data_type_string|eq('ezstring')}
+                <p>{attribute_view_gui attribute=$node.data_map.oggetto}</p>
+            {else}
+                {attribute_view_gui attribute=$node.data_map.oggetto}
+            {/if}
+        {elseif $node|has_abstract()}
         <p>
             {$node|abstract()|oc_shorten(250)}
         </p>
@@ -23,7 +29,7 @@
         <ul class="list-unstyled">
             {if $node|has_attribute('incarico')}
                 <li>
-                    <strong>Incarico: </strong></strong>
+                    <strong>Incarico: </strong>
                     {attribute_view_gui href=nolink attribute=$node.data_map.incarico}
                 </li>
             {/if}
@@ -51,7 +57,7 @@
 
             {if $node|has_attribute('circoscrizione')}
                 <li>
-                    <strong>Circoscrizione: </strong></strong>
+                    <strong>Circoscrizione: </strong>
                     {attribute_view_gui href=nolink attribute=$node.data_map.circoscrizione}
                 </li>
             {/if}
