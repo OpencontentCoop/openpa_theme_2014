@@ -178,9 +178,6 @@ $(function() {
 
         </tbody>
     </table>
-    <figcaption>
-		Calendario degli eventi
-	</figcaption>
 	</figure>
 </form>
 
