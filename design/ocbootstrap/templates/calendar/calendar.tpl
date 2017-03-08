@@ -34,11 +34,11 @@
     <input type='hidden' name="View" value="calendar" />
     <input type="hidden" name="SearchDate" value="{$calendarData.parameters.picker_date}" />
 
-    <div class="navigation-calendar hidden-xs pull-right">
+    <div class="navigation-calendar pull-right">
         <div class="btn-group">
             <input type="submit" name="PrevMonthCalendarButton" class="btn btn-default" value="&laquo;" />
-            <input type="submit" name="ViewCalendarButton" class="btn btn-primary" value="Calendario" />
-            <input type="submit" name="ViewProgramButton" class="btn btn-default" value="Lista" />
+            <input type="submit" name="ViewCalendarButton" class="btn btn-primary hidden-xs " value="Calendario" />
+            <input type="submit" name="ViewProgramButton" class="btn btn-default hidden-xs " value="Lista" />
             <input type="submit" name="NextMonthCalendarButton" class="btn btn-default " value="&raquo;" />
         </div>
     </div>

@@ -10,7 +10,7 @@
          $show_link = false()}
 {/if}
 
-{def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $valid_node, 'params', hash( 'interval', 'P1M' ) ) )}
+{def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $valid_node, 'params', hash( 'interval', 'P30D' ) ) )}
 
 {set_defaults(hash('show_title', true(), 'items_per_row', 1))}
 

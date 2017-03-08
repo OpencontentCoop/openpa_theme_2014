@@ -18,7 +18,7 @@ $(function() {
     <input type='hidden' name="CurrentInterval" value="{$calendarData.parameters.interval}" />
     <input type="hidden" name="SearchDate" value="{$calendarData.parameters.picker_date}" />
 
-    <div class="navigation-calendar hidden-xs pull-right">
+    <div class="navigation-calendar pull-right">
         <div class="btn-group">
             <input type="submit" name="PrevMonthCalendarButton" class="btn btn-default" value="&laquo;" />
             <input type="submit" name="ViewCalendarButton" class="btn btn-default" value="Calendario" />

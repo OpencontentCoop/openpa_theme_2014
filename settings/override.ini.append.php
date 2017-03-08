@@ -1,5 +1,11 @@
 <?php /*
 
+[full_mappa]
+Source=node/view/full.tpl
+MatchFile=full/ocmaps.tpl
+Subdir=templates
+Match[class_identifier]=mappa
+
 ############################################
 ############################################ DATATYPE
 ############################################
