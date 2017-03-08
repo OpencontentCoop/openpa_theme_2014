@@ -22,9 +22,11 @@
                 <tbody>
                     {foreach $nodes as $item}
                     <tr>
-                        <td><a href={$item.url_alias|ezurl()} title="Vai al dettaglio di {$item.name|wash()}">{$item.name|wash()}</a></td>
+                        {def $item_url_alias = cond($item.class_identifier|eq('folder'), $item.url_alias, $item.main_node.url_alias)}
+                        <td><a href={$item_url_alias|ezurl()} title="Vai al dettaglio di {$item.name|wash()}">{$item.name|wash()}</a></td>
                         <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br />
                             <span class="f_size_small">Ultima modifica: <strong>{$item.object.modified|l10n(date)}</strong>{/if}</span></td>
+                        {undef $item_url_alias}
                     </tr>
                     {/foreach}            
                 </tbody>
@@ -83,9 +85,11 @@
                     <tbody>
                         {foreach $nodes as $item}
                         <tr>
-                            <td><a href={$item.url_alias|ezurl()} title="Vai al dettaglio di {$item.name|wash()}">{$item.name|wash()}</a></td>
+                            {def $item_url_alias = cond($item.class_identifier|eq('folder'), $item.url_alias, $item.main_node.url_alias)}
+                            <td><a href={$item_url_alias|ezurl()} title="Vai al dettaglio di {$item.name|wash()}">{$item.name|wash()}</a></td>
                             <td>{$item.object.published|l10n(date)} {if $item.object.modified|gt(sum($item.object.published,86400))}<br />
                                 <span class="f_size_small ">Ultima modifica: <strong>{$item.object.modified|l10n(date)}</strong></span>{/if}</td>
+                            {undef $item_url_alias}
                         </tr>
                         {/foreach}            
                     </tbody>
