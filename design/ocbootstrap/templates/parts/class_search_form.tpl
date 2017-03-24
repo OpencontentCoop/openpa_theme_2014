@@ -101,7 +101,11 @@
       <select class="form-control reorder" name="Data[{$attribute.identifier}][]" id="{$attribute.identifier}">
         <option value=""> - Seleziona</option>
         {foreach $availableValues[$attribute.identifier] as $name => $count}
-        <option value="{$name|wash()}" {if and(is_set($Data[$attribute.identifier]),$Data[$attribute.identifier]|contains($name))}selected="selected"{/if}>{api_read($name).metadata.name['ita-IT']} ({$count})</option>
+          {def $api_content = api_read($name)}
+            {if is_set($api_content.metadata)}
+              <option value="{$name|wash()}" {if and(is_set($Data[$attribute.identifier]),$Data[$attribute.identifier]|contains($name))}selected="selected"{/if}>{api_read($name).metadata.name['ita-IT']} ({$count})</option>
+            {/if}
+          {undef $api_content}
         {/foreach}
       </select>			
       </div>
