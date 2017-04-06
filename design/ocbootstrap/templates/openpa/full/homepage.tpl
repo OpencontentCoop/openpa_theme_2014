@@ -9,7 +9,7 @@
       {if $node.data_map.page.has_content}
         {attribute_view_gui attribute=$node.data_map.page}
       {else}
-        {include uri=$openpa.control_children.template}
+        {node_view_gui content_node=$node view=children view_parameters=$view_parameters}
       {/if}
 
     </div>
