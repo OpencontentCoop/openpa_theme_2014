@@ -10,6 +10,7 @@
     
     {if $show_left}
     <div class="content-title">
+        {include uri='design:openpa/full/parts/node_languages.tpl'}
         <h1>{$node.name|wash()}</h1>
     </div>
     
