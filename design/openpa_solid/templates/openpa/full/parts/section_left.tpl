@@ -3,9 +3,15 @@
     {if count($tree_menu.children)|gt(0)}
         <div class="widget">
             {if and( $openpa.control_menu.side_menu.root_node, $node.node_id|ne($openpa.control_menu.side_menu.root_node.node_id) )}
-                <div class="widget_title">
+                <div class="widget_title clearfix">
                     <h3>{$openpa.control_menu.side_menu.root_node.name|wash()}</h3>
                     <button class="navbar-toggle" data-target="#side-menu" data-toggle="collapse" type="button"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+                </div>
+            {else}
+                <div class="clearfix">
+                    <button class="navbar-toggle" data-target="#side-menu" data-toggle="collapse" type="button">
+                        MENU <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button>
                 </div>
             {/if}
             <div class="widget_content navbar-collapse collapse" id="side-menu">
