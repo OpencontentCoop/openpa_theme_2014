@@ -103,7 +103,7 @@
         {foreach $availableValues[$attribute.identifier] as $name => $count}
           {def $api_content = api_read($name)}
             {if is_set($api_content.metadata)}
-              <option value="{$name|wash()}" {if and(is_set($Data[$attribute.identifier]),$Data[$attribute.identifier]|contains($name))}selected="selected"{/if}>{api_read($name).metadata.name['ita-IT']} ({$count})</option>
+              <option value="{$name|wash()}" {if and(is_set($Data[$attribute.identifier]),$Data[$attribute.identifier]|contains($name))}selected="selected"{/if}>{$api_content.metadata.name['ita-IT']} ({$count})</option>
             {/if}
           {undef $api_content}
         {/foreach}
