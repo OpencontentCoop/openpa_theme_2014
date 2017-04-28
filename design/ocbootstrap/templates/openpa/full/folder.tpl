@@ -26,13 +26,14 @@
 
         {include uri=$openpa.content_contacts.template}
 
-        {include uri=$openpa.content_detail.template}
-
         {if $node|find_first_parent( 'pagina_trasparenza' )}
           {include uri='design:openpa/full/parts/amministrazione_trasparente/children_table.tpl' nodes=fetch_alias( 'children', hash( 'parent_node_id', $node.node_id,'sort_by', $node.sort_array, 'load_data_map', false() ) ) nodes_count=fetch_alias( 'children_count', hash( 'parent_node_id', $node.node_id ) ) class=''}
         {elseif and( is_set( $openpa.content_albotelematico ), $openpa.content_albotelematico.is_container )}
           {include uri=$openpa.content_albotelematico.container_template}
         {else}
+
+            {include uri=$openpa.content_detail.template}
+
             {node_view_gui content_node=$node view=children view_parameters=$view_parameters}
         {/if}
 
