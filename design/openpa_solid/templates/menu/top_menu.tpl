@@ -69,7 +69,7 @@
                                                 </b>
                                                 <ul class="sub_menu list-unstyled{if $child.has_children|not()} no_sub_level{/if}">
                                                 {if $child.has_children}
-                                                    {foreach $child.children as $sub_child max 10}
+                                                    {foreach $child.children as $sub_child max 15}
                                                         <li>{include
                                                                 recursion=3
                                                                 name="top_sub_menu"
