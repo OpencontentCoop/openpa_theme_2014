@@ -161,7 +161,7 @@
             {/if}
           {/if}
 
-          {if and( $conteggio_figli_pagina_trasparenza|eq(0), $conteggio_figli|eq(0), $nota|count()|eq(0), $node.object.remote_id|ne('5a2189cac55adf79ddfee35336e796fa') )}
+          {if and( $conteggio_figli_pagina_trasparenza|eq(0), $conteggio_figli|eq(0), $nota|count()|eq(0), $node.object.remote_id|ne('5a2189cac55adf79ddfee35336e796fa'), openpaini('Trasparenza','MostraAvvisoPaginaVuota', 'disabled')|eq('enabled') )}
           {* se non c'è nemmeno la nota occorre esporre un alert *}
               <div class="alert alert-warning">
                   <p>Sezione in allestimento</p>
