@@ -26,7 +26,10 @@
         var length = $.map(response.enti, function (n, i) {
           return i;
         }).length;
-        if (typeof response.enti != 'undefined' && length > 0) {
+        var countData = $.map(response.series, function (n, i) {
+          return n.reduce(function(a, b) { return a + b; }, 0);
+        }).reduce(function(a, b) { return a + b; }, 0);
+        if (typeof response.enti != 'undefined' && length > 0 && countData > 0) {
           $.each(response.enti, function (i, v) {
             enti.push(v)
           });
