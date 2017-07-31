@@ -62,7 +62,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Site: {ezsys( 'hostname' )} -->
-{if ezsys( 'hostname' )|contains( 'opencontent' )}<meta name="robots" content="NOINDEX,NOFOLLOW" />{/if}
+{if openpaini("Seo", "EnableRobots")|eq('disabled')}<meta name="robots" content="NOINDEX,NOFOLLOW" />{/if}
 
 
 {/default}

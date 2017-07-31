@@ -60,7 +60,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes">    
 <!-- Site: {ezsys( 'hostname' )} -->
-{if ezsys( 'hostname' )|contains( 'opencontent' )}<meta name="robots" content="NOINDEX,NOFOLLOW" />{/if}
+{if openpaini("Seo", "EnableRobots")|eq('disabled')}<meta name="robots" content="NOINDEX,NOFOLLOW" />{/if}
 
 
 {/default}
