@@ -46,6 +46,13 @@
         {include name=reverse_related_objects_specific_class_and_attribute
                 node=$node
                 classe='organo_politico'
+                attrib='presidente'
+                title="Presidente di:"
+                uri='design:parts/reverse_related_objects_specific_class_and_attribute.tpl'}
+
+        {include name=reverse_related_objects_specific_class_and_attribute
+                node=$node
+                classe='organo_politico'
                 attrib='membri'
                 title="Membro di:"
                 uri='design:parts/reverse_related_objects_specific_class_and_attribute.tpl'}
