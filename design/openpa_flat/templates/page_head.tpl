@@ -61,8 +61,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">    
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- Site: {ezsys( 'hostname' )} -->
-{if openpaini("Seo", "EnableRobots")|eq('disabled')}<meta name="robots" content="NOINDEX,NOFOLLOW" />{/if}
-
+{no_index_if_needed()}
 
 {/default}
