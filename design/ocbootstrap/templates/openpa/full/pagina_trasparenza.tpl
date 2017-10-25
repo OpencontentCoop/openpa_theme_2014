@@ -55,8 +55,9 @@
         {* Nota: una sola nota *}
         {if $nota|count()|gt(0)}
         <div class="block">
-            {include name=edit node=$nota[0] uri='design:parts/openpa/edit_buttons.tpl'}
             <em>{attribute_view_gui attribute=$nota[0].data_map.testo_nota}</em>
+            {include uri="design:parts/toolbar/node_trash.tpl" current_node=$nota[0]}
+            {include uri="design:parts/toolbar/node_edit.tpl" current_node=$nota[0]}
         </div>
         {/if}
 
