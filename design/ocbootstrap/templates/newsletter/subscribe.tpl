@@ -176,11 +176,11 @@
 
           <div class="checkbox">
               <label>
-                <input type="checkbox" id="Privacy" /> <p>Dichiaro di essere informato, ai sensi e per gli effetti di cui all’art. 13 del D.Lgs. 196/2003, che i dati personali raccolti saranno trattati, con strumenti cartacei e con strumenti informatici, esclusivamente nell’ambito del procedimento per il quale la presente dichiarazione viene resa e di poter esercitare i diritti di cui all’art. 7 del D.Lgs. 196/2003. *</p>
+                <input type="checkbox" id="Privacy" /> <p>Dichiaro di aver preso visione dell'<a href="#" data-toggle="modal" data-target="#informativa">informativa sul trattamento dei dati personali</a>. *</p>
               </label>
           </div>
 
-            <div class="form-group clearfix">
+            <div class="">
                 <input type="hidden" name="BackUrlInput" value="{cond( ezhttp_hasvariable('BackUrlInput'), ezhttp('BackUrlInput'), 'newsletter/subscribe'|ezurl('no'))}" />
                 <input id="SubscribeButton" class="btn btn-primary btn-lg pull-right" disabled="disabled" type="submit" name="SubscribeButton" value="{'Subscribe'|i18n( 'cjw_newsletter/subscribe' )}" title="{'Add to subscription.'|i18n( 'cjw_newsletter/subscribe' )}" />
                 {*<a href={$node_url|ezurl}><input class="btn btn-danger pull-left" type="submit" name="CancelButton" value="{'Cancel'|i18n( 'cjw_newsletter/subscribe' )}" /></a>*}
@@ -198,6 +198,21 @@
     {/if}
     
 
+</div>
+<div id="informativa" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="clearfix">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="clearfix">
+                    {include uri='design:newsletter/informativa.tpl'}                  
+                    <a class="btn btn-info pull-right" href="#" data-dismiss="modal" aria-hidden="true">Chiudi</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>{literal}
