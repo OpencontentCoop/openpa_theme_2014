@@ -59,7 +59,7 @@
           <p>{'Here you can subscribe to one of our newsletters.'|i18n( 'cjw_newsletter/subscribe' )}</p>
           <p>{'Please fill in the boxes "first name" and "last name" and enter your e-mail address in the corresponding field. Then, select the newsletter you are interested in and the format you prefer.'|i18n( 'cjw_newsletter/subscribe' )}</p>
         </div>
-        
+
           {foreach $newsletter_system_node_list as $system_node}
 
               {def $newsletter_list_node_list = fetch( 'content', 'tree',
@@ -134,10 +134,10 @@
 
                     {undef $newsletter_list_node_list}
                 {/foreach}
-            
+
 
             <p>{'* mandatory fields'|i18n( 'cjw_newsletter/subscribe' )}</p>
-            
+
             {* salutation *}
             <div class="form-group">
               <label class="col-sm-2 control-label">{"Salutation"|i18n( 'cjw_newsletter/subscribe' )}:</label>
@@ -181,6 +181,10 @@
           </div>
 
             <div class="">
+                {if $recaptcha_public_key}
+                <div class="g-recaptcha" data-sitekey="{$recaptcha_public_key}"></div>
+                <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl={fetch( 'content', 'locale' ).country_code|downcase}"></script>
+                {/if}
                 <input type="hidden" name="BackUrlInput" value="{cond( ezhttp_hasvariable('BackUrlInput'), ezhttp('BackUrlInput'), 'newsletter/subscribe'|ezurl('no'))}" />
                 <input id="SubscribeButton" class="btn btn-primary btn-lg pull-right" disabled="disabled" type="submit" name="SubscribeButton" value="{'Subscribe'|i18n( 'cjw_newsletter/subscribe' )}" title="{'Add to subscription.'|i18n( 'cjw_newsletter/subscribe' )}" />
                 {*<a href={$node_url|ezurl}><input class="btn btn-danger pull-left" type="submit" name="CancelButton" value="{'Cancel'|i18n( 'cjw_newsletter/subscribe' )}" /></a>*}
@@ -188,7 +192,7 @@
 
             <div class="block footer">
                 <p>
-                  <strong>{'Further Options'|i18n( 'cjw_newsletter/subscribe' )}:</strong>                
+                  <strong>{'Further Options'|i18n( 'cjw_newsletter/subscribe' )}:</strong>
                   {def $link = concat('<a href=', '/newsletter/subscribe_infomail'|ezurl() ,'>' ) }
                   {"You want to %unsubscribelink or %changesubscribelink your profile?"|i18n('cjw_newsletter/subscribe',, hash( '%unsubscribelink' , concat( $link ,'unsubscribe'|i18n('cjw_newsletter/subscribe'), '</a>'),'%changesubscribelink' , concat( $link,'change'|i18n('cjw_newsletter/subscribe'), '</a>')))}
                   {undef $link}
@@ -196,7 +200,7 @@
             </div>
         </form>
     {/if}
-    
+
 
 </div>
 <div id="informativa" class="modal fade">
@@ -207,7 +211,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="clearfix">
-                    {include uri='design:newsletter/informativa.tpl'}                  
+                    {include uri='design:newsletter/informativa.tpl'}
                     <a class="btn btn-info pull-right" href="#" data-dismiss="modal" aria-hidden="true">Chiudi</a>
                 </div>
             </div>
