@@ -101,7 +101,7 @@
                 <div class="tab-pane active" id="oggi">
                   <div class="event-carousel">
                     <div class="events">
-                      {foreach $day_events as $i => $child max 10}
+                      {foreach $day_events as $i => $child}
                         {include uri="design:calendar/block_list_item.tpl" item=$child}
                         {delimiter modulo=4}</div><div class="events">{/delimiter}
                       {/foreach}
@@ -114,7 +114,7 @@
             <div id="{$block.custom_attributes.tab_title|slugize}" class="tab-pane {if $day_events_count|eq(0)}active{/if} no-js-hide">
               <div class="event-carousel">
                 <div class="events">
-                  {foreach $prossimi as $i => $child max 10}
+                  {foreach $prossimi as $i => $child}
                     {include uri="design:calendar/block_list_item.tpl" item=$child}
                     {delimiter modulo=4}</div><div class="events">{/delimiter}
                   {/foreach}
