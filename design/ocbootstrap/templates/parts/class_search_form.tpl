@@ -27,7 +27,10 @@
 {if count($facetQuery)|gt(0)}
   {def $subtreeQuery = ''}
   {if is_array($subtree)}
-    {set $subtreeQuery = concat( ' subtree [', $subtree|implode(','), '] ')}
+      {if and( count($subtree)|eq(1), $subtree[0]|eq(ezini( 'NodeSettings', 'RootNode', 'content.ini' )))}
+          {set $subtree = $subtree|append(trasparenza_root_node_id())}
+      {/if}
+      {set $subtreeQuery = concat( ' subtree [', $subtree|implode(','), '] ')}
   {/if}  
   {def $searchForFacets = search_query( concat( 'classes [', $class.identifier, '] facets [', $facetQuery|implode(','), ']', $subtreeQuery, 'limit 1' ) )}  
   {if is_set($searchForFacets['SearchExtras'].facet_fields)}
