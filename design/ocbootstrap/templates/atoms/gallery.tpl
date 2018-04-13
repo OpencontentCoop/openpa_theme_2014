@@ -1,7 +1,3 @@
-{* https://github.com/blueimp/Gallery vedi anche page_extra.tpl *}
-{ezscript_require( array( "ezjsc::jquery", "plugins/blueimp/jquery.blueimp-gallery.min.js" ) )}
-{ezcss_require( array( "plugins/blueimp/blueimp-gallery.css" ) )}
-
 {set_defaults( hash(
 'thumbnail_class', 'squarethumb',
 'wide_class', 'imagefullwide',

@@ -101,22 +101,17 @@
         (function(){
 
             // current menu
-            $('[role="navigation"] ul > li:not(.context-menu) > a').each( function(e){
-                var node = $(this).data( 'contentnode' );
-                if (node) {
-                    var href = $(this).attr( 'href' );
-                    if ( UiContext == 'browse' ) {
-                        href = '/content/browse/' + node;
-                    }
-                    $(this).attr( 'href', href );
-                    var self = $(this);
-                    $.each(PathArray, function(i,v){
-                        if (v==node){
-                            self.closest('li').addClass( 'current' );
-                        }
-                    });
+            $('.main-nav a[data-node]').each(function () {
+                if ($.inArray($(this).data('node'), PathArray) > -1){
+                    $(this).parents('li.menu-item').addClass('current');
+                }
+                if ( UiContext == 'browse' ) {
+                    href = '/content/browse/' + $(this).data('node');
                 }
             });
+            if (window.location.pathname == UriPrefix){
+                $('.main-nav a.home').parent().addClass('current');
+            }
 
             // tooltip
             $('.has_tooltip').tooltip();

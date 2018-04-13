@@ -46,9 +46,6 @@
         id="audio-{$attribute.contentobject_id}">
     </a>
 
-
-{ezscript_require(array( 'ezjsc::jquery', ocmp('flowplayer','js') ) )}
-{ezcss_require( 'controls-audio.css' )}
 <script type="text/javascript">
 $(document).ready(function(){ldelim}
     flowplayer("audio-{$attribute.contentobject_id}", {ocmp('flowplayer','flash')},
@@ -78,8 +75,6 @@ $(document).ready(function(){ldelim}
     <div id="audiocontrols-{$attribute.contentobject_id}" class="controls no-js-hide"></div>
     <div id="audiocontrolsdetail-{$attribute.contentobject_id}" class="player-detail no-js-hide"></div>
 
-{ezscript_require(array( 'ezjsc::jquery', ocmp('flowplayer','js'), ocmp('controls','js') ) )}
-{ezcss_require( 'controls-audio.css' )}
 <script type="text/javascript">
 $(document).ready(function(){ldelim}
     flowplayer("audio-{$attribute.contentobject_id}", {ocmp('flowplayer','flash')},

@@ -1,5 +1,7 @@
 <div class="content-related">
 
+    {debug-log msg='content_related'}
+    {debug-accumulator id=content_related name=content_related}
     {if count($openpa.content_related.info)|gt(0)}
         <h2><i class="fa fa-link"></i> Informazioni correlate</h2>
         <div class="widget">
@@ -17,8 +19,11 @@
             </div>
         </div>
     {/if}
+    {/debug-accumulator}
 
 
+    {debug-log msg='content_facets'}
+    {debug-accumulator id=content_facets name=content_facets}
     {if $openpa.content_facets.has_data}
         <h2><i class="fa fa-archive"></i> Riferibili a {$node.name|wash()}</h2>
         <div class="widget">
@@ -38,6 +43,7 @@
             </div>
         </div>
     {/if}
+    {/debug-accumulator}
 
     {* TODO inserire blocco di ricerca nela caso di view filters *}
     {* {if $openpa.control_children.current_view|eq('filters')}{/if} *}
@@ -45,6 +51,8 @@
     {* BLOCCO DI RICERCA
         compare solo nei folder e negli oggetti con padre folder
         qualora il campo 'engine' sia valorizzato la ricerca viene estesa a tutto il database *}
+    {debug-log msg='content_virtual'}
+    {debug-accumulator id=content_virtual name=content_virtual}
     {def $virtualFolder = $openpa.content_virtual.folder}
     {if and( $virtualFolder|not(), $node.parent )}
         {def $parentOpenpa = object_handler( $node.parent )}
@@ -58,8 +66,11 @@
                 open_advanced = cond(is_set($parentOpenpa), false(), true() )
                 uri='design:parts/search_class_and_attributes.tpl' }
     {/if}
+    {/debug-accumulator}
 
 
+    {debug-log msg='content_related_classification'}
+    {debug-accumulator id=content_related_classification name=content_related_classification}
     {def $classification = $openpa.content_related.classification}
     {if count($classification)|gt(0)}
         <h2><i class="fa fa-info"></i> Classificazione dell'informazione</h2>
@@ -77,7 +88,10 @@
         </div>
     {/if}
     {undef $classification}
+    {/debug-accumulator}
 
+    {debug-log msg='content_globalinfo'}
+    {debug-accumulator id=content_globalinfo name=content_globalinfo}
     {* COLONNA DEFINITA NEL EZFLOW DEL FOLDER *}
     {if and( $node|has_attribute('layout'), $node|attribute('layout').content.zone_layout|eq('1ZonesLayoutFolder'), $node.depth|gt(2))}
         <div class="extrainfo-box data_map_layout">
@@ -86,7 +100,10 @@
     {elseif $openpa.content_globalinfo.has_content}
         {attribute_view_gui attribute=$openpa.content_globalinfo.object.data_map.page}    
     {/if}
+    {/debug-accumulator}
 
+    {debug-log msg='content_reverse_related'}
+    {debug-accumulator id=content_reverse_related name=content_reverse_related}
     {if $openpa.content_reverse_related.has_data}
         {*OGGETTI INVERSAMENTE CORRELATI*}
         {include name = reverse_related_objects
@@ -94,6 +111,7 @@
                  title = 'Riferimenti'
                  uri = 'design:parts/reverse_related_objects.tpl'}
     {/if}
+    {/debug-accumulator}
 
 
 </div>

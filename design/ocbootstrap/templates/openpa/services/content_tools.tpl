@@ -11,7 +11,9 @@
 	  <div class="tab-content p_top_10">
 		<div class="tab-pane active" id="info">
     *}
-		  {include uri="design:openpa/services/tools/info.tpl"}		  
+        {debug-accumulator id=editor_tools name=editor_tools}
+        {include uri="design:openpa/services/tools/info.tpl"}
+        {/debug-accumulator}
 		{*
     </div>		
 		<div class="tab-pane" id="settings">

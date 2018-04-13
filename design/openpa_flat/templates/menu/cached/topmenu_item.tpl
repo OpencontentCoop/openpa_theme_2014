@@ -6,7 +6,7 @@
 {elseif $classiAreeTematiche|contains( $node.class_identifier )}{set $href = $node.object.main_node.url_alias|ezurl(no)}{/if}
 {def $target = false()}
 {if and( is_set( $node.data_map.open_in_new_window ), $node.data_map.open_in_new_window.data_int )}{set $target = "_blank"}{/if}
-<a data-contentnode="{$node.node_id}" {if is_set($a_class)}class="{$a_class}"{/if} href="{$href}" {if $target}target="{$target}"{/if} title="{$title}">
+<a {if is_set($hide_data_node)|not()}data-node="{$node.node_id}"{/if} {if is_set($a_class)}class="{$a_class}"{/if} href="{$href}" {if $target}target="{$target}"{/if} title="{$title}">
   {if is_set($b)}<b{if is_set($b_class)} class="{$b_class}"{/if}>{/if}
     {$node.name|wash()}
   {if is_set($b)}</b>{/if}

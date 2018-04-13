@@ -1,8 +1,5 @@
 {if and( $attribute.content.latitude, $attribute.content.longitude )}
 
-  {ezscript_require( array( 'ezjsc::jquery', 'leaflet/leaflet.0.7.2.js', 'leaflet/Leaflet.MakiMarkers.js', 'leaflet/leaflet.markercluster.js') )}
-  {ezcss_require( array( 'leaflet/leaflet.css', 'leaflet/map.css', 'leaflet/MarkerCluster.css', 'leaflet/MarkerCluster.Default.css' ) )}
-
   <div id="map-{$attribute.id}" style="width: 100%; height: 200px;"></div>
   <p class="goto">
     <a class="btn btn-xs btn-success pull-right" target="_blank" href="https://www.google.com/maps/dir//'{$attribute.content.latitude},{$attribute.content.longitude}'/@{$attribute.content.latitude},{$attribute.content.longitude},15z?hl=it">Come arrivare <i class="fa fa-external-link"></i></a>

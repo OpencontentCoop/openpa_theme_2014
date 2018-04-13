@@ -34,8 +34,6 @@
     
     <div id="videocontrols-{$node.node_id}" class="controls"></div>
 
-{ezscript_require(array( 'ezjsc::jquery', ocmp('flowplayer','js'), ocmp('controls','js'), ocmp('playlist','js') ) )}
-{ezcss_require( 'controls-apple.css' )}
 <style type="text/css">
 #videocontrols-{$node.node_id} .track{ldelim}width:{$defaults['width']|sub(20)}px{rdelim}
 </style>

@@ -10,49 +10,50 @@
 <!--<![endif]-->
 <head>
 
-  {def $user_hash_cache_key = concat( $current_user.role_id_list|implode( ',' ), ',', $current_user.limited_assignment_value_list|implode( ',' ) )}
-
-{cache-block expiry=86400 keys=array( $module_result.uri, $user_hash_cache_key, $access_type.name, $extra_cache_key )}
-    {def $pagedata = openpapagedata()
-    $locales = fetch( 'content', 'translation_list' )
-    $current_node_id = $pagedata.node_id}
-
     {include uri='design:page_head.tpl'}
     {include uri='design:page_head_style.tpl'}
     {include uri='design:page_head_script.tpl'}
 
+
 </head>
-<body class="no-js {$pagedata.current_theme}">
+<body class="no-js {$openpacontext().current_theme}">
 
 <script type="text/javascript">{literal}//<![CDATA[(function () {var c = document.body.className;c = c.replace(/no-js/, 'js');document.body.className = c;})();//]]>{/literal}</script>
 
 <div id="page">
-    
+
 
     <div id="header">
         <div class="navbar yamm">
-          <div class="container">
-              <div class="row">
-              <div class="navbar-header col-md-4">
-                  {if $pagedata.is_login_page|not()}
-                  <button type="button" data-toggle="collapse" data-target="#main-menu" class="navbar-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+            <div class="container">
+                <div class="row">
+                    <span class="navbar-header col-md-12 text-center">
+                    {cache-block expiry=86400 keys=array( $access_type.name, 'login' )}
+                    {def $pagedata = openpapagedata()}
+                    {if and( $pagedata.homepage|has_attribute('only_logo'), $pagedata.homepage|attribute('only_logo').data_int|eq(1) )}
+                        <a href="{'/'|ezurl(no)}" title="{ezini('SiteSettings','SiteName')}">
+                        {if $pagedata.header.logo.url}
+                          <img class="img-responsive center-block"
+                               src={$pagedata.header.logo.url|ezroot()} alt="{ezini('SiteSettings','SiteName')}"/>
+                        {/if}
+                        </a>
+                    {else}
+                        <a href={"/"|ezurl} title="{ezini('SiteSettings','SiteName')}">
+                        {if $pagedata.header.logo.url}
+                           <img class="img-responsive center-block"
+                                src={$pagedata.header.logo.url|ezroot()} alt="{ezini('SiteSettings','SiteName')}"/>
+                        {/if}
+                        </a>
+                        <span class="navbar-title">
+                            <h1><a href={"/"|ezurl} title="{ezini('SiteSettings','SiteName')}">{ezini('SiteSettings','SiteName')}</a></h1>
+                        </span>
                   {/if}
-                  <a href={"/"|ezurl} title="{ezini('SiteSettings','SiteName')}" class="navbar-brand">
-                      {if and( is_set($pagedata.header.logo.url), $pagedata.header.logo.url)}
-                          <img class="hidden-xs navbar-logo" src={$pagedata.header.logo.url|ezroot()} alt="{ezini('SiteSettings','SiteName')}" />
-                      {/if}
-                      <span class="navbar-title">
-                          {ezini('SiteSettings','SiteName')}
-                      </span>
-                  </a>
-              </div>              
-              </div>
-          </div>
-      </div>
+                  {/cache-block}
+                </div>
+            </div>
+        </div>
     </div>
 
-
-{/cache-block}
     {include uri='design:page_mainarea.tpl'}
 
 
@@ -61,7 +62,7 @@
             <div class="row">
                 <div class="col-md-6">
                     {include uri='design:footer/copyright.tpl'}
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -69,7 +70,6 @@
 </div>
 
 {include uri='design:page_footer_script.tpl'}
-
 
 
 <!--DEBUG_REPORT-->

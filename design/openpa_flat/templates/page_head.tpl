@@ -50,7 +50,11 @@
     <meta name="generator" content="eZ Publish" />
 
 {if $canonical_link}
-    {include uri="design:canonical_link.tpl"}
+    {if openpacontext().canonical_url}
+        {* Multiple locations, pointing Search Engines to the original *}
+        <link rel="canonical" href="{openpacontext().canonical_url|ezurl('no','full')}" />
+    {/if}
+
 {/if}
 
 {if $enable_link}

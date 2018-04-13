@@ -1,11 +1,3 @@
-{ezscript_require( array(
-  'leaflet/leaflet.0.7.2.js',
-  'ezjsc::jquery',
-  'leaflet/leaflet.markercluster.js',
-  'leaflet/Leaflet.MakiMarkers.js',
-) )}
-{ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css', 'MarkerCluster.css', 'MarkerCluster.Default.css' ) )}
-
 {set_defaults(hash(
   'height', 600,
   'map_type', 'osm',

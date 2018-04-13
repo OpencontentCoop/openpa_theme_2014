@@ -14,19 +14,6 @@
 {/if}
 
 
-{ezcss_require( array(    
-    'dataTables.bootstrap.css'
-))}
-{ezscript_require(array(
-    'ezjsc::jquery',
-    'plugins/chosen.jquery.js',
-    'moment.min.js',
-    'jquery.dataTables.js',
-    'dataTables.bootstrap.js',
-    'jquery.opendataDataTable.js',
-    'jquery.opendataTools.js'    
-))}
-
 <script type="text/javascript" language="javascript" class="init">
     var mainQuery = "{concat( '( raw[', solr_meta_subfield('servizi_offerti','id'), '] = ', $node.contentobject_id, ' or raw[', solr_meta_subfield('servizi_diversamente_abili','id'), '] = ', $node.contentobject_id, ' or raw[', solr_meta_subfield('servizi_famiglie_con_bambini','id'), '] = ', $node.contentobject_id, ' or raw[', solr_meta_subfield('menu','id'), '] = ', $node.contentobject_id, ')' )}";
     

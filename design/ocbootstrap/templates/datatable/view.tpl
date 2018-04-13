@@ -23,13 +23,6 @@
 *}
 
 <div class='row'>
-{ezscript_require(array( 'ezjsc::jquery','ezjsc::jqueryUI',
-                         'plugins/datatables/jquery.dataTables.js',
-                         'plugins/datatables/jquery.dataTables.columnFilter.js',
-                         'plugins/datatables/jquery.dataTables.buttonFilter.js',
-                         'plugins/datatables/dataTables.overrides.js') )}
-{ezcss_require( array( 'plugins/datatables/bootstrap-datatable.css' ) )}
-
 <div class='col-sm-12'>
 <div class='box bordered-box orange-border' style='margin-bottom:0;'>
   <div class='box-content box-no-padding'>

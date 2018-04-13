@@ -30,7 +30,7 @@
                     recursion=0
                     name=top_menu
                     uri='design:menu/top_menu_item.tpl'
-                    menu_item=$tree_menu current=or($tree_menu.item.node_id|eq($current_node_id), $pagedata.path_id_array|contains($tree_menu.item.node_id))}
+                    menu_item=$tree_menu}
                 {if $tree_menu.has_children}
                 <ul class="dropdown-menu">
                     <li>
@@ -44,8 +44,7 @@
                                                 {include
                                                     recursion=1
                                                     name="top_sub_menu" uri='design:menu/top_menu_item.tpl'
-                                                    menu_item=$child
-                                                    current=or($tree_menu.item.node_id|eq($current_node_id), $pagedata.path_id_array|contains($tree_menu.item.node_id))}
+                                                    menu_item=$child}
                                             </li>
                                             {/foreach}
                                         </ul>
@@ -64,8 +63,7 @@
                                                         recursion=2
                                                         name="top_sub_menu"
                                                         uri='design:menu/top_menu_item.tpl'
-                                                        menu_item=$child
-                                                        current=or($tree_menu.item.node_id|eq($current_node_id), $pagedata.path_id_array|contains($tree_menu.item.node_id))}
+                                                        menu_item=$child}
                                                 </b>
                                                 <ul class="sub_menu list-unstyled{if $child.has_children|not()} no_sub_level{/if}">
                                                 {if $child.has_children}
@@ -74,8 +72,7 @@
                                                                 recursion=3
                                                                 name="top_sub_menu"
                                                                 uri='design:menu/top_menu_item.tpl'
-                                                                menu_item=$sub_child
-                                                                current=or($tree_menu.item.node_id|eq($current_node_id), $pagedata.path_id_array|contains($tree_menu.item.node_id))}
+                                                                menu_item=$sub_child}
                                                         </li>
                                                     {/foreach}
                                                 {/if}

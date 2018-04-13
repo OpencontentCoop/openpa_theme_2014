@@ -1,4 +1,5 @@
-<a class="{if $current} current{/if}{if $recursion|eq(0)} toplevel{/if}{if $menu_item.has_children} dropdown-toggle{/if}"
+<a class="{if $recursion|eq(0)} toplevel{/if}{if $menu_item.has_children} dropdown-toggle{/if}"
+   data-node="{$menu_item.item.node_id}"
    {if and( $recursion|eq(0), $menu_item.has_children )}data-toggle="dropdown" data-target="#"{/if}
    href="{if $menu_item.item.internal}{$menu_item.item.url|ezurl(no)}{else}{$menu_item.item.url}{/if}"
         {if $menu_item.item.target}target="{$menu_item.item.target}"{/if}

@@ -36,6 +36,17 @@
         'leaflet/leaflet.0.7.2.css',
         'debug.css',
         'websitetoolbar.css',
+        'plugins/owl-carousel/owl.carousel.css',
+        'plugins/owl-carousel/owl.theme.css',
+        "plugins/blueimp/blueimp-gallery.css",
+        'plugins/table-calendar.css',
+        'leaflet/leaflet.css',
+        'leaflet/map.css',
+        'leaflet/MarkerCluster.css',
+        'leaflet/MarkerCluster.Default.css',
+        'controls-audio.css',
+        'dataTables.bootstrap.css',
+        'fuelux.css',
         ezini( 'StylesheetSettings', 'CSSFileList', 'design.ini' ),
         ezini( 'StylesheetSettings', 'FrontendCSSFileList', 'design.ini' )
     ),
@@ -45,7 +56,18 @@
         'custom.css',
         'leaflet/leaflet.0.7.2.css',
         'debug.css',
-        'websitetoolbar.css'
+        'websitetoolbar.css',
+        'plugins/owl-carousel/owl.carousel.css',
+        'plugins/owl-carousel/owl.theme.css',
+        "plugins/blueimp/blueimp-gallery.css",
+        'plugins/table-calendar.css',
+        'leaflet/leaflet.css',
+        'leaflet/map.css',
+        'leaflet/MarkerCluster.css',
+        'leaflet/MarkerCluster.Default.css',
+        'controls-audio.css',
+        'dataTables.bootstrap.css',
+        'fuelux.css'
     ),
     'all', 'text/css', 'stylesheet' )}
 {/if}

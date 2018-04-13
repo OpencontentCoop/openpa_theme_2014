@@ -6,8 +6,8 @@
 {let name=Path
      path=$module_result.path
      reverse_path=array()}
-  {if is_set($pagedata.path_array)}
-    {set path=$pagedata.path_array}
+  {if is_set(openpacontext().path_array)}
+    {set path=openpacontext().path_array}
   {elseif is_set($module_result.title_path)}
     {set path=$module_result.title_path}
   {/if}
@@ -49,8 +49,8 @@
 
     <meta name="generator" content="eZ Publish" />
 
-{if $canonical_link}
-    {include uri="design:canonical_link.tpl"}
+{if and($canonical_link, $canonical_url)}
+    <link rel="canonical" href="{$canonical_url|ezurl('no','full')}" />
 {/if}
 
 {if $enable_link}

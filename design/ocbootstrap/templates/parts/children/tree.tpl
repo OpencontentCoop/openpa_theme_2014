@@ -15,7 +15,6 @@
 {def $children_count = fetch( openpa, 'list_count', hash( 'parent_node_id', $node.node_id )|merge( $params ) )
      $children = fetch( openpa, 'list', hash( 'parent_node_id', $node.node_id,'sort_by', $node.sort_array )|merge( $params ) ) }
 
-{ezcss_require( array( 'fuelux.css' ) )}
 <div class="content-view-children fuelux panel">    
   <ul class="tree tree-folder-select" role="tree" style="border:none">    
       {foreach $children as $child }
@@ -30,7 +29,6 @@
   </ul>    
 </div>
 
-{ezscript_require(array('ezjsc::jquery','ezjsc::jqueryio'))}
 {literal}
 <script>
   $(document).ready(function(){

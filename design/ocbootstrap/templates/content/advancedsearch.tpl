@@ -25,7 +25,7 @@
      $uri_suffix    = $search['UriSuffix']}
 
 <div class="row">
-  <form action={"/content/advancedsearch/"|ezurl} id="ezfindsearch" method="get">
+  <form action="{'/content/advancedsearch/'|ezurl(no)}" id="ezfindsearch" method="get">
 	
     <div class="col-md-{if $isSingleClassSearch}8{else}9{/if}">
       <h2>

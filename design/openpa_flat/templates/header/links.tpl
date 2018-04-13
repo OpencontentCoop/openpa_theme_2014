@@ -7,13 +7,6 @@
         <li>{node_view_gui content_node=$link view="text_linked"}</li>
       {/foreach}
     {/if}
-  {else}
-    {foreach $pagedata.header.links as $link}
-      <li>{node_view_gui content_node=$link view="text_linked"}</li>
-    {/foreach}
   {/if}
-
-    {*<li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>*}
-
   </ul>
 </div>

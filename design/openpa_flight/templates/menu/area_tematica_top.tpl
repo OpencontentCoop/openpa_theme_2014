@@ -10,16 +10,16 @@
          $current_node_in_path_2 = first_set($pagedata.path_array[2].node_id, 0  )}
 
     <li class="menu-item context-menu firstli">
-        {include uri='design:menu/cached/topmenu_item.tpl' name=menu_item node=$aree_tematiche b=true()}
+        {include uri='design:menu/cached/topmenu_item.tpl' name=menu_item node=$aree_tematiche b=true() hide_data_node}
         {if $aree_tematiche_level_2|count()}
             <div class="sub_menu_wrap">
-                <ul class="sub_menu">{foreach $aree_tematiche_level_2 as $key => $item2}<li>{include name=submenu_item uri='design:menu/cached/topmenu_item.tpl' node=$item2}</li>{/foreach}</ul>
+                <ul class="sub_menu">{foreach $aree_tematiche_level_2 as $key => $item2}<li>{include name=submenu_item uri='design:menu/cached/topmenu_item.tpl' node=$item2 hide_data_node}</li>{/foreach}</ul>
             </div>
         {/if}
     </li>
 
     <li class="menu-item lastli current">
-        {include uri='design:menu/cached/topmenu_item.tpl' name=menu_item node=is_area_tematica()}
+        {include uri='design:menu/cached/topmenu_item.tpl' name=menu_item node=is_area_tematica() hide_data_node}
     </li>
 
 </ul>

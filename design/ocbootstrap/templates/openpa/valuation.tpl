@@ -80,7 +80,6 @@
                             {attribute_view_gui attribute=$data_map.antispam}
                         </div>
                     {else}
-{*                        {ezcss_require( array( 'nxc.captcha.css' ) )}*}
                         <link rel="stylesheet" href="{'stylesheets/nxc.captcha.css'|ezdesign(no)}" property='stylesheet' />
 
                         {ezscript_require( array( 'nxc.captcha.js' ) )}

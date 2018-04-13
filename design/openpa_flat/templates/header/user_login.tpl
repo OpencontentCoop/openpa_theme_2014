@@ -1,25 +1,39 @@
 <div class="header-top-center">
 <ul>
-
-  {if $current_user.is_logged_in}
-
-    {if fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'selfedit' ) )}
-      <li id="myprofile"><a href={"/user/edit/"|ezurl} title="Visualizza il profilo utente">Il mio profilo</a></li>
+    <li id="login" style="display: none"><a href={concat("/user/login?url=",$module_result.uri)|ezurl} title="Esegui il login al sito">Login</a></li>
+    {if and(ezmodule( 'user/register' ), fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'register' ) ))}
+        <li id="registeruser" style="display: none">
+            <a href="{"/user/register"|ezurl(no)}" title="Registrati al sito">Iscriviti</a>
+        </li>
     {/if}
-
-    <li id="logout"><a href={"/user/logout"|ezurl} title="Esegui il logout">Logout ( {$current_user.contentobject.name|wash} )</a></li>
-
-  {else}
-
-    {if fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'register' ) )}
-      <li id="registeruser"><a href={"/user/register"|ezurl} title="Registrati al sito">Iscriviti</a></li>
-    {/if}
-
-    {if fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'login' ) )}
-      <li id="login"><a href={concat("/user/login?url=",$module_result.uri)|ezurl} title="Esegui il login al sito">Login</a></li>
-    {/if}
-
-  {/if}
-
 </ul>
 </div>
+
+
+<script>{literal}
+    $(document).ready(function(){
+        var login = $('#login');
+        var register = $('#registeruser');
+        var injectUserInfo = function(data){
+            if(data.error_text || !data.content){
+                login.show();
+                register.show();
+            }else{
+                login.after('<li id="myprofile"><a href="/user/edit/" title="Visualizza il profilo utente">Il mio profilo</a></li><li id="logout"><a href="/user/logout" title="Logout">Logout ('+data.content.name+')</a></li>');
+                if(data.content.has_access_to_dashboard){
+                    $('#dashboard-access').html('<ul><li id="dashboard"><a href="/content/dashboard/" title="Pannello strumenti">Pannello strumenti</a></li></ul>');
+                }
+                login.remove();
+                register.remove();
+            }
+        };
+        if(CurrentUserIsLoggedIn){
+            $.ez('openpaajax::userInfo', null, function(data){
+                injectUserInfo(data);
+            });
+        }else{
+            login.show();
+            register.show();
+        }
+    });
+{/literal}</script>

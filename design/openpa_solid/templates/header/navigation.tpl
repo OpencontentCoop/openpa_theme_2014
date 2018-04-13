@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
         <div class="navbar-header col-md-4">
-            {if $pagedata.is_login_page|not()}
+            {if openpacontext().is_login_page|not()}
             <button type="button" data-toggle="collapse" data-target="#main-menu" class="navbar-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
             {/if}
             {if and( $pagedata.homepage|has_attribute('only_logo'), $pagedata.homepage|attribute('only_logo').data_int|eq(1) )}
@@ -20,10 +20,12 @@
                 </a>
             {/if}
         </div>
-        {if $pagedata.is_login_page|not()}
+        {if openpacontext().is_login_page|not()}
         <div class="menu-container col-md-8">
             <div id="main-menu" class="navbar-collapse collapse">
+                {if openpacontext().is_edit|not()}
                 {include uri='design:menu/top_menu.tpl'}
+                {/if}
             </div>
         </div>
         {/if}
