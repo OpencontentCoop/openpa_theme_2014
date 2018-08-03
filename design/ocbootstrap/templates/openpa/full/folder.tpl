@@ -39,9 +39,7 @@
 
         {else}
 
-            {include uri=$openpa.content_detail.template}
-
-            {node_view_gui content_node=$node view=children view_parameters=$view_parameters}
+            {include uri="design:parts/children/default.tpl" view_parameters=$view_parameters exclude_classes=array()}
         {/if}
 
         {include name=reverse_related_objects_specific_class_and_attribute
