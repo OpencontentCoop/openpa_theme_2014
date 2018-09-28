@@ -31,5 +31,11 @@
 	  {include uri="design:parts/toolbar/node_edit.tpl" current_node=$item}
 	  {include uri="design:parts/toolbar/node_trash.tpl" current_node=$item}
     </div>      
-  {/foreach}  
+  {/foreach}
+  {include name=navigator
+           uri='design:navigator/google.tpl'
+           page_uri=$node.url_alias
+           item_count=$openpa.content_attachment.children_count
+           view_parameters=$view_parameters
+           item_limit=$openpa.content_attachment.page_limit}
 {/if}
