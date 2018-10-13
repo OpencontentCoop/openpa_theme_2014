@@ -101,16 +101,16 @@
         (function(){
 
             // current menu
-            $('.main-nav a[data-node]').each(function () {
+            $('#main-menu a[data-node]').each(function () {
                 if ($.inArray($(this).data('node'), PathArray) > -1){
-                    $(this).parents('li.menu-item').addClass('current');
+                    $(this).parents('li.toplevel').find('> a').addClass('current');
                 }
                 if ( UiContext == 'browse' ) {
                     href = '/content/browse/' + $(this).data('node');
                 }
             });
             if (window.location.pathname == UriPrefix){
-                $('.main-nav a.home').parent().addClass('current');
+                $('#main-menu a.home').parent().addClass('current');
             }
 
             // tooltip
