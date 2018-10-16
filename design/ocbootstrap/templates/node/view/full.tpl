@@ -15,7 +15,7 @@
 
 {ezpagedata_set('current_main_style', $openpa.content_pagestyle.main_style)}
 
-{if and( $homepage.node_id|eq($node.node_id), $node.class_identifier|ne('frontpage') )|not() }
+{if and( $homepage.node_id|ne($node.node_id), $node.class_identifier|ne('frontpage'), $node.class_identifier|ne('homepage') ) }
     <div id="valuation-container">
         <div class="container">
             <div class="row">
