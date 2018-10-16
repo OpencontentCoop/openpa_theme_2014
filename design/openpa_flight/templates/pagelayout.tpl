@@ -8,6 +8,18 @@
     {def $extra_cache_key = ''}
     {/if}
 
+    {if openpacontext().is_login_page}
+        {set $extra_cache_key = concat($extra_cache_key, 'login')}
+    {/if}
+
+    {if openpacontext().is_edit}
+        {set $extra_cache_key = concat($extra_cache_key, 'edit')}
+    {/if}
+
+    {if openpacontext().is_browse}
+        {set $extra_cache_key = concat($extra_cache_key, 'browse')}
+    {/if}
+
     {if openpacontext().is_area_tematica}
     {set $extra_cache_key = concat($extra_cache_key, 'areatematica_', openpacontext().is_area_tematica)}
     {/if}

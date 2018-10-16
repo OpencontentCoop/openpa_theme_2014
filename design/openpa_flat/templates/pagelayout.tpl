@@ -12,6 +12,18 @@
         {set $extra_cache_key = concat($extra_cache_key, 'areatematica_', openpacontext().is_area_tematica)}
     {/if}
 
+    {if openpacontext().is_login_page}
+        {set $extra_cache_key = concat($extra_cache_key, 'login')}
+    {/if}
+
+    {if openpacontext().is_edit}
+        {set $extra_cache_key = concat($extra_cache_key, 'edit')}
+    {/if}
+
+    {if openpacontext().is_browse}
+        {set $extra_cache_key = concat($extra_cache_key, 'browse')}
+    {/if}
+
     {debug-accumulator id=page_head_style name=page_head_style}
     {include uri='design:page_head_style.tpl'}
     {/debug-accumulator}
