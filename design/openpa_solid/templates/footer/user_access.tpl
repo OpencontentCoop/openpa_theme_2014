@@ -1,6 +1,6 @@
 <ul class="list-inline">
     <li id="login" style="display: none">
-        <a href={concat("/user/login?url=",$module_result.uri)|ezurl} title="Login">Accedi con il tuo account</a>
+        <a href={"/user/login"|ezurl} title="Login">Accedi con il tuo account</a>
     </li>
     {if and(ezmodule( 'user/register' ), fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'register' ) ))}
         <li id="registeruser" style="display: none">

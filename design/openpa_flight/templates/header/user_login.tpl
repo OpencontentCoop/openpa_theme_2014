@@ -1,6 +1,6 @@
 <div class="header-top-center">
     <ul>
-        <li id="login" style="display: none"><a href={concat("/user/login?url=",$module_result.uri)|ezurl} title="Esegui il login al sito">Login</a></li>
+        <li id="login" style="display: none"><a href={"/user/login"|ezurl} title="Esegui il login al sito">Login</a></li>
         {if and(ezmodule( 'user/register' ), fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'register' ) ))}
             <li id="registeruser" style="display: none">
                 <a href="{"/user/register"|ezurl(no)}" title="Registrati al sito">Crea il tuo account</a>
