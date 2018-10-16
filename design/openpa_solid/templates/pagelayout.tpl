@@ -122,6 +122,8 @@ var ModuleResultUri = "{$module_result.uri}";
     {/debug-accumulator}
 </div>
 
+{include uri='design:page_extra.tpl'}
+
 <!--DEBUG_REPORT-->
 </body>
 </html>
