@@ -14,9 +14,23 @@
   <div class="media{if $node|has_attribute('image')} has-image{/if}">
     <div class="caption">
       <h4 class="fw_medium color_dark">
-          <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">{$node.name|openpa_shorten(60)|wash()}</a>
+          <a href="{$openpa.content_link.full_link}" title="{$node.name|wash()}">
+            {if $node|has_attribute('titolo')}
+              {$node.data_map.titolo.content|wash()}
+            {elseif $node|has_attribute('short_title')}
+              {$node.data_map.short_title.content|wash()}
+            {else}
+              {$node.name|wash()}
+            {/if}
+          </a>
+          {if and($node|has_attribute( 'short_title' ), $node|has_attribute('titolo'))}
+            <br /><small style="text-transform: none;">{attribute_view_gui attribute=$node.data_map.short_title}</small>
+          {/if}
           {if $node|has_attribute( 'luogo_svolgimento' )}
-            <br /><small style="text-transform: none;">{attribute_view_gui attribute=$node.data_map.luogo_svolgimento}</small>
+            <br /><small style="text-transform: none;">
+              <i class="fa fa-map-marker"></i>
+              {attribute_view_gui attribute=$node.data_map.luogo_svolgimento}
+            </small>
           {/if}
       </h4>
       {if is_set($is_program)|not()}
