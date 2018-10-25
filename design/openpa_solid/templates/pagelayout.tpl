@@ -122,6 +122,7 @@ var ModuleResultUri = "{$module_result.uri}";
     {/debug-accumulator}
 </div>
 
+{include uri='design:page_footer_script.tpl'}
 {include uri='design:page_extra.tpl'}
 
 <!--DEBUG_REPORT-->
