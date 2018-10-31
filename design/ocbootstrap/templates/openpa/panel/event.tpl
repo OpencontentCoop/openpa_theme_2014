@@ -26,12 +26,6 @@
           {if and($node|has_attribute( 'short_title' ), $node|has_attribute('titolo'))}
             <br /><small style="text-transform: none;">{attribute_view_gui attribute=$node.data_map.short_title}</small>
           {/if}
-          {if $node|has_attribute( 'luogo_svolgimento' )}
-            <br /><small style="text-transform: none;">
-              <i class="fa fa-map-marker"></i>
-              {attribute_view_gui attribute=$node.data_map.luogo_svolgimento}
-            </small>
-          {/if}
       </h4>
       {if is_set($is_program)|not()}
 	  <div class="row">
@@ -43,7 +37,7 @@
 	  {/if}
           
 
-      <div class="abstract">
+      <div class="abstract" style="line-height: 1.5;">
         {if $node|has_attribute( 'indirizzo' )}
             {attribute_view_gui attribute=$node.data_map.indirizzo}
           {/if}          
@@ -51,6 +45,9 @@
             {attribute_view_gui attribute=$node.data_map.comune}
           {/if}
         {$node|abstract()|openpa_shorten(270)}
+        {if $node|has_attribute( 'luogo_svolgimento' )}
+          <p style="line-height: 1;margin-top: 10px;"><small style="text-transform: none;"><i class="fa fa-map-marker"></i> {attribute_view_gui attribute=$node.data_map.luogo_svolgimento}</small></p>
+        {/if}
       </div>
 
       {if is_set($is_program)|not()}
