@@ -197,5 +197,43 @@
             });
         })();
 
+        var editServizioContainer = $('.ezcca-edit-servizio');
+        var editUfficioContainer = $('.ezcca-edit-ufficio');
+        if (editUfficioContainer.length > 0 && editUfficioContainer.length > 0){
+            var showUfficiByServizio = function () {
+                var selectedServizi = [];
+                editServizioContainer.find('[name^="ContentObjectAttribute_data_object_relation_list_"]').each(function () {
+                    var value = $(this).val();
+                    if(($(this).is('input:checkbox') || $(this).is('input:radio')) && !$(this).is(':checked')){
+                        value = 0;
+                    }
+                    if (value > 0 && value !== 'no_relation') selectedServizi.push(value);
+                });
+                if (selectedServizi.length > 0){
+                    editUfficioContainer.find('.col-md-3 p').append('<i id="ufficio-loader" class="fa fa-circle-o-notch fa-spin"></i>');
+                    $.opendataTools.find('select-fields [metadata.id] and classes [ufficio] and servizio.id in ['+selectedServizi.join(',')+'] limit 50', function (response) {
+                        $('#ufficio-loader').remove();
+                        editUfficioContainer.find('option').css("background","none");
+                        editUfficioContainer.find('#ufficio-suggest').remove();
+                        if (response.length > 0) {
+                            if (editUfficioContainer.find('span.classattribute-description').length === 0){
+                                editUfficioContainer.find('.col-md-9').prepend('<span class="classattribute-description"></span>');
+                            }
+                            $.each(response, function () {
+                                editUfficioContainer.find('option[value="' + this + '"]').css("background","#ff0");
+                            });
+                            editUfficioContainer.find('span.classattribute-description').append(
+                                '<span id="ufficio-suggest" style="display: block">Sono evidenziati gli uffici relativi al servizio selezionato</span>'
+                            );
+                        }
+                    });
+                }
+            };
+            showUfficiByServizio();
+            editServizioContainer.find('[name^="ContentObjectAttribute_data_object_relation_list_"]').on('change', function () {
+                showUfficiByServizio();
+            });
+        }
+
     });
 })(jQuery);
