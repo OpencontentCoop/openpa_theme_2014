@@ -36,6 +36,8 @@
 
         {include uri=$openpa.control_children.template}
 
+        {include uri='design:openpa/full/parts/event/prossimi_eventi.tpl'}
+
     </div>
 
     {if $openpa.control_menu.show_extra_menu}

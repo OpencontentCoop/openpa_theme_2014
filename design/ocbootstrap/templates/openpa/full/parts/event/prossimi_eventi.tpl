@@ -1,12 +1,30 @@
-{def $iniziativa = false()}
+{if array('event', 'iniziativa', 'luogo', 'associazione')|contains($node.class_identifier)}
+
+{def $event_data_map = fetch('content', 'class', hash( 'class_id', 'event' )).data_map
+     $iniziativa = false()
+     $associazione = cond(and($node.class_identifier|eq('associazione'), is_set($event_data_map['associazione'])), true(), false())
+     $luogo = cond(and($node.class_identifier|eq('luogo'), is_set($event_data_map['servizio_sul_territorio'])), true(), false())
+     $root = fetch( content, node, hash( node_id, ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ) )}
+
 {if and( is_set($node.data_map.iniziativa), $node.data_map.iniziativa.has_content )}
   {set $iniziativa = fetch( 'content', 'node', hash( 'node_id', $node.data_map.iniziativa.content.relation_list[0].node_id ) )}
   {def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $node.parent, 'params', hash( 'interval', 'P6M',
                                                                                                          'filter', array( concat( '-meta_id_si:', $node.contentobject_id ) ),
                                                                                                          'Manifestazione', concat( $iniziativa.name ) )|merge( $view_parameters ) ) )}
+{elseif $associazione}
+    {def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $root, 'params', hash( 'interval', 'P6M',
+                                                                                                    'filter', array(
+                                                                                                        concat( '-meta_id_si:', $node.contentobject_id ),
+                                                                                                        concat( solr_meta_subfield('associazione','id'), ':', $node.contentobject_id )
+                                                                                                    ) )|merge( $view_parameters ) ) )}
+{elseif $luogo}
+    {def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $root, 'params', hash( 'interval', 'P6M',
+                                                                                                    'filter', array(
+                                                                                                        concat( '-meta_id_si:', $node.contentobject_id ),
+                                                                                                        concat( solr_meta_subfield('servizio_sul_territorio','id'), ':', $node.contentobject_id )
+                                                                                                    ) )|merge( $view_parameters ) ) )}
 {else}
-  {def $root = fetch( content, node, hash( node_id, ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ) )
-       $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $root, 'params', hash( 'interval', 'P6M',
+  {def $calendarData = fetch( openpa, calendario_eventi, hash( 'calendar', $root, 'params', hash( 'interval', 'P6M',
                                                                                                   'filter', array( concat( '-meta_id_si:', $node.contentobject_id ) ),
                                                                                                   'Manifestazione', concat( $node.name ) )|merge( $view_parameters ) ) )}
 {/if}
@@ -15,7 +33,7 @@
 
 
   {if and( $iniziativa, $iniziativa.contentobject_id|ne( $node.contentobject_id ) )}
-    <p>Questo evento fa parte della manifestazione <a href={$iniziativa.url_alias|ezurl()} title="Vedi il dettaglio di {$iniziativa.name|wash()}">{$iniziativa.name|wash()}</a></p>
+    <p>Questo evento fa parte della manifestazione <a href="{$iniziativa.url_alias|ezurl(no)}" title="Vedi il dettaglio di {$iniziativa.name|wash()}">{$iniziativa.name|wash()}</a></p>
     <h3>{$iniziativa.name|wash()}: i prossimi appuntamenti</h3>
   {else}
     <h2>I prossimi appuntamenti in programma</h2>
@@ -48,4 +66,5 @@
 {elseif and( $iniziativa, $iniziativa.contentobject_id|ne( $node.contentobject_id ) )}
   <p>Questo evento fa parte della manifestazione <a href={$iniziativa.url_alias|ezurl()} title="Vedi il dettaglio di {$iniziativa.name|wash()}">{$iniziativa.name|wash()}</a></p>
 {/if}
-{undef $iniziativa}
+{undef $iniziativa $associazione $luogo}
+{/if}
