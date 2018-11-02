@@ -70,6 +70,14 @@
                         </li>
                     {/if}
 
+                    {if is_set($pagedata.contacts.newsletter)}
+                        <li>
+                            <a href="{$pagedata.contacts.newsletter}">
+                                <i class="fa fa-envelope-square fa-2x"></i>
+                            </a>
+                        </li>
+                    {/if}
+
                     {*<li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>*}
 
                 </ul>
