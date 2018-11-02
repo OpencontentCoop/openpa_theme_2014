@@ -26,6 +26,21 @@
 
         {include uri=$openpa.content_detail.template}
 
+        {def $nota = fetch( 'content', 'list', hash( 'parent_node_id', $node.node_id,
+                                                     'class_filter_type', 'include',
+                                                     'class_filter_array', array( 'nota_trasparenza' ),
+                                                     'sort_by', array( 'published', false() ),
+                                                     'limit', 1 ) )}
+
+        {* Nota: una sola nota *}
+        {if $nota|count()|gt(0)}
+            <div class="block">
+                <em>{attribute_view_gui attribute=$nota[0].data_map.testo_nota}</em>
+                {include uri="design:parts/toolbar/node_trash.tpl" current_node=$nota[0]}
+                {include uri="design:parts/toolbar/node_edit.tpl" current_node=$nota[0]}
+            </div>
+        {/if}
+
         {include uri=$openpa.content_infocollection.template}
 
     </div>
