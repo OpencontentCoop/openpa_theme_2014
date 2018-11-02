@@ -69,6 +69,7 @@
                                                                           'params', hash( 'siteaccess', array( 'current_siteaccess' ) ) ),
                                                                'class_filter_type', 'include',
                                                                'class_filter_array', array('cjw_newsletter_list'),
+                                                               'sort_by', $system_node.sort_array,
                                                                'limitation', hash() )
                                                      )
                    $newsletter_list_node_list_count = $newsletter_list_node_list|count}
