@@ -54,7 +54,7 @@
     {debug-log msg='content_virtual'}
     {debug-accumulator id=content_virtual name=content_virtual}
     {def $virtualFolder = $openpa.content_virtual.folder}
-    {if and( $virtualFolder|not(), $node.parent )}
+    {if and( $virtualFolder|not(), $node.parent, $node.parent.node_id|gt(1) )}
         {def $parentOpenpa = object_handler( $node.parent )}
         {set $virtualFolder = $parentOpenpa.content_virtual.folder}
     {/if}
