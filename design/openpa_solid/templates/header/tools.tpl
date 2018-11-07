@@ -78,6 +78,14 @@
                         </li>
                     {/if}
 
+                    {if is_set($pagedata.contacts.youtube)}
+                        <li>
+                            <a href="{$pagedata.contacts.youtube}">
+                                <i class="fa fa-youtube fa-2x"></i>
+                            </a>
+                        </li>
+                    {/if}
+
                     {*<li><a href="javascript:window.print()" title="Stampa la pagina corrente">Versione stampabile</a></li>*}
 
                 </ul>
