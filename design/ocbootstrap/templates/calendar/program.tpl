@@ -1,9 +1,10 @@
 {ezscript_require(array( 'ezjsc::jquery' ) )}
 <script type="text/javascript">
 {literal}
-$(function() {	    
-    if (location.hash == '') {      
-      $("html, body").animate({ scrollTop: $("#today").offset().top });
+$(document).ready(function() {
+    if (location.hash === '') {
+        var today = $("#today");
+        if (today.length > 0) $("html, body").animate({ scrollTop: today.offset().top });
     }
     $(".calendar_picker").datepicker({
       defaultDate: "+1w",
