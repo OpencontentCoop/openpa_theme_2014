@@ -4,8 +4,8 @@
      $isSubtreeSearch     = cond( and( $Subtree, $Subtree[0]|ne( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ) ), true(), false() )     
      $Class               = cond( $isSingleClassSearch, fetch( 'content', 'class', hash( 'class_id', $isSingleClassSearch ) ), false() )
      $RootNode            = cond( $Subtree, fetch( content, node, hash( node_id, $Subtree[0] ) ), false())
-     $Sort                = cond( ezhttp( 'Sort','get','hasVariable' ), ezhttp( 'Sort', 'get' ), false() )
-     $Order               = cond( ezhttp( 'Order','get','hasVariable' ), ezhttp( 'Order', 'get' ) )
+     $Sort                = cond( ezhttp( 'Sort','get','hasVariable' ), ezhttp( 'Sort', 'get' )|wash(), false() )
+     $Order               = cond( ezhttp( 'Order','get','hasVariable' ), ezhttp( 'Order', 'get' )|wash() )
      $Anno                = cond( ezhttp( 'Anno','get','hasVariable' ), ezhttp( 'Anno', 'get' ) )
      $Logic               = cond( ezhttp( 'Logic','get','hasVariable' ), ezhttp( 'Logic', 'get' ) )}
      

@@ -85,7 +85,7 @@
         <input type="text" class="from_picker form-control" placeholder="GG-MM-AAAA"
            id="{$field.identifier}_from"
            name="Data[{$field.identifier}][]" title="Dalla data"
-           value="{cond(is_set($Data[$field.identifier]),$Data[$field.identifier][0])}"/>
+           value="{cond(is_set($Data[$field.identifier]),$Data[$field.identifier][0]|wash())}"/>
       </label>
       </div>
       <div class="col-xs-6 form-group" style="padding: 0">
@@ -93,7 +93,7 @@
           <input class="to_picker form-control" type="text" placeholder="GG-MM-AAAA"
              id="{$field.identifier}_to"
              name="Data[{$field.identifier}][]" title="Alla data"
-             value="{cond(is_set($Data[$field.identifier]),$Data[$field.identifier][1])}"/>
+             value="{cond(is_set($Data[$field.identifier]),$Data[$field.identifier][1]|wash())}"/>
         </label>
       </div>
     </fieldset>
@@ -124,7 +124,7 @@
          type="text"
          class="form-control"
          name="Data[{$field.identifier}]"
-         value="{cond(is_set($Data[$field.identifier]),$Data[$field.identifier])}"/>
+         value="{cond(is_set($Data[$field.identifier]),$Data[$field.identifier]|wash())}"/>
     </div>
     {/case}
 
@@ -143,7 +143,7 @@
        name="Data[published][]"
        title="Dalla data"
        placeholder="GG-MM-AAAA"
-       value="{cond(is_set($Data['published']),$Data['published'][0])}"/>
+       value="{cond(is_set($Data['published']),$Data['published'][0]|wash())}"/>
   </div>
   <div class="col-xs-6  form-group" style="padding: 0">
     <label for="published_to">Alla data:</label>
@@ -153,7 +153,7 @@
        name="Data[published][]"
        title="Dalla data"
        placeholder="GG-MM-AAAA"
-       value="{cond(is_set($Data['published']),$Data['published'][1])}"/>
+       value="{cond(is_set($Data['published']),$Data['published'][1]|wash())}"/>
   </div>
   </fieldset>
 
