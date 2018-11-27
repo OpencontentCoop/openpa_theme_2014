@@ -1,5 +1,9 @@
 <?php /*
 
+[TopMenu]
+LimitePrimoLivello=50
+LimiteSecondoLivello=50
+
 [DisplayBlocks]
 oggetti_correlati[]
 oggetti_correlati[]=organo_competente
