@@ -1,3 +1,8 @@
 <p class="f_left f_mxs_none m_mxs_bottom_10">&copy; {currentdate()|datetime( 'custom', '%Y' )} <span class="color_light">{fetch('openpa','homepage').name|wash()}</span>
-    powered by <a href="http://www.comunweb.it/" title="Progetto ComunWEB - Consorzio dei Comuni Trentini">ComunWEB</a> con il supporto di <a href="http://www.opencontent.it" title="OpenContent - Free Software Solutions">OpenContent Scarl</a>
+    powered by
+    <a href="{openpaini('CreditsSettings', 'Url', 'http://www.opencontent.it/openpa')}" title="{openpaini('CreditsSettings', 'Title', 'OpenPA - Strumenti di comunicazione per la pubblica amministrazione')}">
+        {openpaini('CreditsSettings', 'Name', 'OpenPA')}
+    </a>
+    con il supporto di
+    <a href="http://www.opencontent.it" title="OpenContent - Free Software Solutions">OpenContent Scarl</a>
 </p>
