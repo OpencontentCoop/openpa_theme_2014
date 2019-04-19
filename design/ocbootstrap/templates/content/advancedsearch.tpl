@@ -26,6 +26,12 @@
 
 <div class="row">
   <form action="{'/content/advancedsearch/'|ezurl(no)}" id="ezfindsearch" method="get">
+
+    {if $isSubtreeSearch}
+        {foreach $Subtree as $item}
+            <input type="hidden" name="SubTreeArray[]" value="{$item|wash()}" />
+        {/foreach}
+    {/if}
 	
     <div class="col-md-{if $isSingleClassSearch}8{else}9{/if}">
       <h2>
