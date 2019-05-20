@@ -14,7 +14,7 @@
 {/if}
 
 <script type="text/javascript" language="javascript" class="init">
-    var mainQuery = "{concat( 'raw[', solr_meta_subfield('posti_disponibili','id'), '] = ', $node.contentobject_id )}";
+    var mainQuery = "({concat( 'raw[', solr_meta_subfield('posti_disponibili','id'), '] = ', $node.contentobject_id )} or {concat( 'raw[', solr_meta_subfield('disponibilita_posti','id'), '] = ', $node.contentobject_id )})";
     
     console.log(mainQuery);
     {literal}
