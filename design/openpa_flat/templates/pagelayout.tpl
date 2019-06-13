@@ -30,6 +30,7 @@
 
     {debug-accumulator id=page_head_script name=page_head_script}
     {include uri='design:page_head_script.tpl'}
+    {include uri='design:page_head_google_tag_manager.tpl'}
     {/debug-accumulator}
 
     {debug-accumulator id=page_head name=page_head}
@@ -49,7 +50,7 @@ var PathArray = [{if is_set( openpacontext().path_array[0].node_id )}{foreach op
 var ModuleResultUri = "{$module_result.uri|wash()}";
 //]]>
 </script>
-
+{include uri='design:page_body_google_tag_manager.tpl'}
 
 <div id="page">
 
