@@ -34,7 +34,6 @@
     'openpa_solid.js'
 ))}
 
-<!--[if lt IE 9]>    
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>        
+<!--[if lt IE 9]>
 <script type="text/javascript" src={"javascript/respond.min.js"|ezdesign()} ></script>
 <![endif]-->
