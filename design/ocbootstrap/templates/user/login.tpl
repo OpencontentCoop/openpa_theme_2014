@@ -58,3 +58,13 @@
     </div>
   </div>
 </div>
+
+
+{ezscript_require(array("password-score/password.js"))}
+{literal}
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $('[name="Password"]').password({strengthMeter:false});
+      });
+  </script>
+{/literal}

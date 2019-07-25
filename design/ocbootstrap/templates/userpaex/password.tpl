@@ -1,8 +1,10 @@
 {ezscript_require(array(
-  "password-score/password-score.js",
-  "password-score/password-score-options.js",
-  "password-score/bootstrap-strength-meter.js"
+    "password-score/password-score.js",
+    "password-score/password-score-options.js",
+    "password-score/bootstrap-strength-meter.js",
+    "password-score/password.js"
 ))}
+{ezcss_require(array('password-score/password.css'))}
 
 <div class="row">
 
@@ -53,7 +55,7 @@
               {if or($newPasswordNotMatch,$newPasswordNotValidate)}*{/if}
               <label>Nuova password</label>
               <input id="pwd-input" type="password" class="form-control" name="newPassword" size="11" value="{$newPassword}" />
-              <span id="pwd-text"></span>
+              {include uri='design:parts/password_meter.tpl'}
           </div>
           <div class="col-md-6">
               {if or($newPasswordNotMatch,$newPasswordNotValidate)}*{/if}
@@ -75,20 +77,17 @@
 
 </form>
 
+
+{literal}
 <script type="text/javascript">
-  $(document).ready(function() {ldelim}
-    $('#pwd-input').strengthMeter('text', {ldelim}
-      container: $('#pwd-text'),
-      hierarchy: {ldelim}
-        '0':  ['text-danger', 'Valutazione della complessità: pessima'],
-        '10': ['text-danger', 'Valutazione della complessità: molto debole'],
-        '20': ['text-warning', 'Valutazione della complessità: debole'],
-        '30': ['text-info', 'Valutazione della complessità: buona'],
-        '40': ['text-success', 'Valutazione della complessità: molto buona'],
-        '50': ['text-success', 'Valutazione della complessità: ottima']
-        {rdelim}
-      {rdelim});
-    {rdelim});
+    $(document).ready(function() {
+        $('#pwd-input').password({
+            minLength:{/literal}{ezini('UserSettings', 'MinPasswordLength')}{literal}
+        });
+        $('[name="confirmPassword"]').password({strengthMeter:false});
+    });
 </script>
+{/literal}
+
 
 </div>
