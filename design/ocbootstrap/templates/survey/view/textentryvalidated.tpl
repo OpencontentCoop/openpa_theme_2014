@@ -7,7 +7,7 @@
 {if is_set($survey_validation.post_variables.variables[$question.id])}
   {def $previous_vars=$survey_validation.post_variables.variables[$question.id]}
 {/if}
-  <input class="form-control" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" type="text" size="{$question.num}" value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer}{else}{$question_result.text|wash('xhtml')}{/if}" />
+  <input class="form-control" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" type="text" size="{$question.num}" value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.text|wash('xhtml')}{/if}" />
 {section-else}
   <input class="form-control" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" type="text" size="{$question.num}" value="{$question.answer|wash('xhtml')}" />
 {/section}
