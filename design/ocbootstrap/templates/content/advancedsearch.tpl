@@ -121,7 +121,7 @@
       
       </fieldset>
       
-      {* FORSE CERCAVI... *}
+      {* FORSE CERCAVI...
       {if $search_extras.spellcheck_collation}
           {def $spell_url=concat('content/advancedsearch/',$search_text|count_chars()|gt(0)|choose('',concat('?SearchText=',$search_extras.spellcheck_collation|urlencode)))|ezurl}
           <p>
@@ -130,6 +130,7 @@
             </small>
           </p>
       {/if}
+      *}
   
       {* PAROLE ESCLUSE *}
       {if $stop_word_array}
