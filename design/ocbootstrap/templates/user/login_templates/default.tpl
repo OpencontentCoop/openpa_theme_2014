@@ -1,6 +1,6 @@
 {def $redirect = $User:redirect_uri|wash}
 {if ezhttp( 'url', 'get' )}
-    {set $redirect = ezhttp( 'url', 'get' )}
+    {set $redirect = ezhttp( 'url', 'get' )|wash()}
 {/if}
 <h1 class='text-center title'>
     {if ezini_hasvariable(concat('LoginTemplate_', $login_module_setting), 'Title', 'app.ini')}
