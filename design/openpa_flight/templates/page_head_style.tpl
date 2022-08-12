@@ -1,7 +1,7 @@
 {if is_unset( $load_css_file_list )}
     {def $load_css_file_list = true()}
 {/if}
-
+<link type="text/css" rel="stylesheet" media="all" href="{'stylesheets/roboto.css'|ezdesign(no)}" />
 {if $load_css_file_list}
   {ezcss_load( array( 'app.css',
                       'app_2.css',
