@@ -25,3 +25,5 @@
     </script>
     <!-- End Matomo Code -->
 {/if}
+
+{include uri='design:page_footer_plausible.tpl'}
